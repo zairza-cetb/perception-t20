@@ -158,7 +158,7 @@ html {
 	height: calc(100% + var(--gap-vertical) * 2);
   background: url(../assets/img/landscapes.jpg) no-repeat 50% 0;
   background-color: var(--blend-color-1);
-  opacity: 0.9;
+  opacity: 1;
 	background-size: 100% 100%;
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
