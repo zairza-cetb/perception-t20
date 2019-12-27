@@ -1,5 +1,5 @@
 {
-	setTimeout(() => document.body.classList.add('render'), 20);
+	setTimeout(() => document.body.classList.add('render'), 60);
 	const navdemos = Array.from(document.querySelectorAll('nav.demos > .demo'));
 	const total = navdemos.length;
 	const current = navdemos.findIndex(el => el.classList.contains('demo--current'));
