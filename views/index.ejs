@@ -3,8 +3,6 @@
   <head>
     <title>Perception</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
-    <script src="js/glitch.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -38,6 +36,7 @@
       <div class="glitch__img"></div>
       <div class="glitch__img"></div>
       <div class="glitch__img"></div>
+      <div class="glitch__img"></div>
     </div>
     <div class="main">
       <div class="container" style="height: 40%;">
@@ -45,7 +44,10 @@
       </div>
       <div class="container" style="height: 50%;  " >
           <%- include('partials/eventcards') %>  
-      </div>
-    
+          <div class="d-flex justify-content-center " style="margin: 2%;">
+            <button type="button" class="btn btn-primary active btn-lg " style="border-radius: 25px ; width: 150px ; position: sticky; z-index: 500; ">Register</button>
+        </div>
+        </div>
+      
   </body>
 </html>
