@@ -141,19 +141,17 @@ html {
 	animation-iteration-count: infinite;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
 }
-
 .glitch__img {
-  position: absolute;
-  top: calc(-1 * var(--gap-vertical));
-  left: calc(-1 * var(--gap-horizontal));
-  width: calc(100% + var(--gap-horizontal) * 2);
-  height: calc(100% + var(--gap-vertical) * 2);
-  background: url(../assets/img/landscapes.jpg) no-repeat 50% 0;
-  background-color: var(--blend-color-1);
-  opacity: 1;
-  background-size: 100% 100%;
-  transform: translate3d(0, 0, 0);
-  background-blend-mode: var(--blend-mode-1);
+	position: absolute;
+	top: calc(-1 * var(--gap-vertical));
+	left: calc(-1 * var(--gap-horizontal));
+	width: calc(100% + var(--gap-horizontal) * 2);
+	height: calc(100% + var(--gap-vertical) * 2);
+	background: url(../assets/img/landscapes.jpg) no-repeat 50% 0;
+	background-color: var(--blend-color-1);
+	background-size: cover;
+	transform: translate3d(0,0,0);
+	background-blend-mode: var(--blend-mode-1);
 }
 
 .glitch__img:nth-child(n + 2) {
