@@ -7,9 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 
-
-router.get('/sign', function(req, res, next){
-   res.render('m');
+router.get('/register', function(req,res,next){
+   res.render('register');
 });
 
 
