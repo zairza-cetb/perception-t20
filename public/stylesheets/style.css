@@ -209,9 +209,6 @@ html {
     height: 1.5em;
     opacity: 0.9;
   }
-
-  
-  .hr span { background:#fff; padding:0 10px; }
   .hr-text:after {
     content: attr(data-content);
     position: relative;
@@ -221,8 +218,7 @@ html {
     line-height: 1.5em;
     color:white;
 	  background-color:rgba(94, 112, 110, 0);
-    opacity:0.9;
-    text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px;
+    opacity:0.8;
   }
 
 .glitch__img:nth-child(n+2) {
