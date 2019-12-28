@@ -11,5 +11,17 @@ router.get('/register', function(req,res,next){
    res.render('register');
 });
 
+router.get('/techevents', function(req, res, next){
+	res.render('event1');
+});
+
+router.get('/litevents', function(req,res,next){
+	res.render('event2');
+});
+
+router.get('/manevents', function(req,res,next){
+	res.render('event3');
+});
+
 
 module.exports = router;
