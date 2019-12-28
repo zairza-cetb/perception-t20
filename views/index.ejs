@@ -27,6 +27,12 @@
     ></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
     <%- include('partials/navbar') %>
@@ -44,10 +50,8 @@
       </div>
       <div class="container" style="height: 50%;  " >
           <%- include('partials/eventcards') %>  
-          <div class="d-flex justify-content-center " style="margin: 2%;">
-            <button type="button" class="btn btn-primary active btn-lg " style="border-radius: 25px ; width: 150px ; position: sticky; z-index: 500;">Register</button>
-        </div>
-        </div>
+          <%- include('partials/button') %>  
+      </div>
       
   </body>
 </html>
