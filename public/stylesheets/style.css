@@ -160,7 +160,11 @@ html {
 
 /* glitch CSS */
 .glitch {
+<<<<<<< HEAD
 	position: absolute;
+=======
+	position: fixed;
+>>>>>>> 58ecbedc2ddd87ebd0593c4aa635817430757977
 	top: 0;
 	left: 0;
 	width: var(--glitch-width);
@@ -174,10 +178,17 @@ html {
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
+<<<<<<< HEAD
   background: url(../assets/img/landscapes.jpg) no-repeat 50% 0;
   background-color: var(--blend-color-1);
   opacity: 1;
 	background-size: 100% 100%;
+=======
+  	background: url(../assets/img/landscapes.jpg) no-repeat 50% 0;
+ 	 background-color: var(--blend-color-1);
+  	opacity: 1;
+	background-size: cover;
+>>>>>>> 58ecbedc2ddd87ebd0593c4aa635817430757977
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
 }
