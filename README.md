@@ -2,4 +2,4 @@
 
 Website for PERCEPTION 2020
 
-Deployed at : https://perception2020.herokuapp.com/
+Deployed at : https://perception-t20.herokuapp.com/
