@@ -3,6 +3,7 @@
   <head>
     <title>Perception</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -28,11 +29,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
     <script
-			  src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
-        
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
   </head>
   <body>
     <%- include('partials/navbar') %>
@@ -48,10 +50,11 @@
       <div class="container" style="height: 40%;">
         <%- include('partials/title') %>
       </div>
+      <div class="container" style="height:60%"></div>
       <div class="container" style="height: 50%;  " >
-          <%- include('partials/eventcards') %>  
-          <%- include('partials/button') %>  
+        <%- include('About_Us')%>
+        <%- include('partials/eventcards') %>  
+
       </div>
-      
   </body>
 </html>
