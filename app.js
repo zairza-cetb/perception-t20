@@ -6,6 +6,8 @@ var logger = require('morgan');
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 
+require('dotenv').config()
+
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 var routes = require("./routes/index");
@@ -27,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 
 // SETUP DATABASE FOR REGISTRATION:
-mongoose.connect("mongodb://localhost:27017/userDB", {
+mongoose.connect("mongodb+srv://admin-zairza:" + process.env.MONGO_ADMIN + "@cluster0-mtkdh.mongodb.net/userDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
