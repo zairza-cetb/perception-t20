@@ -178,6 +178,7 @@ html {
 /* glitch CSS */
 .glitch {
 	position: fixed;
+
 	top: 0;
 	left: 0;
 	width: var(--glitch-width);
