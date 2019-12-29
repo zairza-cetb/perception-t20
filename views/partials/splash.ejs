@@ -1,0 +1,49 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+
+<div
+  class="splash__screen"
+  style="
+background-image: url(/assets/img/Perception.jpeg);
+position: absolute;
+top:0;
+left:0;
+height: 100vh;
+width: 100vw;
+background-size: cover;
+z-index:1000;
+overflow: hidden;
+opacity: 100%;
+"
+>
+  <!-- <div id="block"></div> -->
+</div>
+
+<script>
+  var lastScrollTop = 0,
+    at_splash = true,
+    scrolling_offset = 20;
+
+  var blockTween = new TweenMax.to(".splash__screen", 1.5, {
+    scale: 100,
+    opacity: 0,
+    paused: true,
+    onComplete: () => {
+      $(".splash__screen").remove();
+    }
+  });
+
+  $(window).scroll(function(event) {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+      // on down scroll
+      if (st > scrolling_offset && at_splash) {
+        at_splash = false;
+        blockTween.play();
+        console.log("scrolled");
+      }
+    }
+
+    lastScrollTop = st;
+  });
+</script>
