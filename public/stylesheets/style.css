@@ -20,15 +20,10 @@ html {
   --blend-color-2: transparent;
   --blend-color-3: transparent;
   --blend-color-4: transparent;
-  --blend-color-5: #af4949;
+  --blend-color-5: #2a3a1c;
   margin: 0;
   padding: 0;
-  /* background-color: black; */
-
-  --text-color: hsla(210, 50%, 85%, 1);
-  --shadow-color: hsla(210, 40%, 52%, .4);
-  --btn-color: hsl(210, 80%, 42%);
-  --bg-color: #141218;
+   background-color: black; 
 }
 .main {
   height: 100vh;
@@ -192,13 +187,39 @@ html {
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-  	background: url("https://wallpaperplay.com/walls/full/9/7/0/145562.jpg") no-repeat 50% 0;
- 	background-color: var(--blend-color-1);
+	background: url("https://wallpaperplay.com/walls/full/9/7/0/145562.jpg") no-repeat 50% 0;
+ 	 background-color: var(--blend-color-1);
   	opacity: 1;
 	background-size: cover;
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
 }
+.container_class {
+    max-width: 50%;
+    margin: 20px 80px;
+  }
+  
+  .hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: white;
+    text-align: center;
+    height: 1.5em;
+    opacity: 0.9;
+  }
+  .hr-text:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding: 5px;
+    line-height: 1.5em;
+    color:white;
+	  background-color:rgba(94, 112, 110, 0);
+    opacity:0.8;
+  }
 
 .glitch__img:nth-child(n+2) {
 	opacity: 0;
