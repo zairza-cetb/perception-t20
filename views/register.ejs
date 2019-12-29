@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Register</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -26,15 +26,16 @@
 </head>
 
 <body>
+    
     <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
             <div class="card card-3">
-                <div class="card-heading"></div>
+                <div class="card-heading" style="background-size:contain;background-position-y: center;""></div>
                 <div class="card-body">
                     <h2 class="title">Registration Info</h2>
                     <form action="/register" method="POST">
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="name">
+                            <input class="input--style-3" type="text" placeholder="Name" name="username" required>
                         </div>
                        
                         <div class="input-group">
@@ -49,16 +50,16 @@
                             </div>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="email">
+                            <input class="input--style-3" type="email" placeholder="Email" name="email" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="password" placeholder="Password" name="password">
+                            <input class="input--style-3" type="password" placeholder="Password" name="password" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                            <input class="input--style-3" type="text" placeholder="Phone" name="phone" pattern="[1-9]{1}[0-9]{9}" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="College" name="college">
+                            <input class="input--style-3" type="text" placeholder="College" name="college" required>
                         </div>
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit">Submit</button>

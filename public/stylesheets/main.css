@@ -500,7 +500,7 @@ input {
 }
 
 .card-3 .card-heading {
-  background: url("../assets/img/bg-heading-03.jpg") top left/cover no-repeat;
+  background: url("../assets/img/bg-heading-03.png") top left/cover no-repeat;
   display: table-cell;
   width: 50%;
 }

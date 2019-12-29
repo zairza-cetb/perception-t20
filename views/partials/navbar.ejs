@@ -20,8 +20,11 @@
      </div>
   </div>
   
-  <a class="section-static top" href="#profile"></a>
-  <a class="section-static bottom" href="#dashboard"></a>
+  <a class="section-static top" href="/login"></a>
+  <% if(currentUser) { %>
+   <a class="section-static bottom" href="#dashboard"></a>
+   <% } %>
+
 </div>
 <script>
   $(".menu").click(function(){
