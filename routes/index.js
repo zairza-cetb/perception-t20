@@ -6,7 +6,6 @@ router.get("/", function(req, res, next) {
     res.render('index');
 });
 
-
 router.get("/register", function (req, res, next) {
     res.render("register");
 });
@@ -26,6 +25,5 @@ router.get('/litevents', function(req,res,next){
 router.get('/manevents', function(req,res,next){
 	res.render('event3');
 });
-
 
 module.exports = router;
