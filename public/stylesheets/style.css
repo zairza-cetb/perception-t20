@@ -138,7 +138,7 @@ html {
   position: relative;
   font-size: 5em;
   font-family: "Bungee", cursive;
-  color: ghostwhite;
+  color: ghostwhite ;
 
   animation-name: glitch-anim-text;
   animation-duration: var(--time-anim);
