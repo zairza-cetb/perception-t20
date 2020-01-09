@@ -10,6 +10,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
     position: relative;
+    overflow: hidden !important;
   }
   footer p {
     color: #ccc;
@@ -85,15 +86,12 @@
     background-position: bottom;
     position: relative;
   }
-  .mapouter {
-    position: relative;
-    text-align: right;
+  
+  .gmap_canvas {
+    
+    background: none !important;
     height: 300px;
     width: 500px;
-  }
-  .gmap_canvas {
-    overflow: hidden;
-    background: none !important;
   }
   iframe {
     height: 300px;
@@ -173,7 +171,6 @@
       </div>
 
       <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-2">
-        <div class="mapouter">
           <div class="gmap_canvas">
             <iframe
               id="gmap_canvas"
@@ -185,7 +182,7 @@
             ></iframe
             ><a href="https://www.bitgeeks.net"></a>
           </div>
-        </div>
+        
       </div>
     </div>
   </div>

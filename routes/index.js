@@ -26,4 +26,8 @@ router.get('/manevents', function(req,res,next){
 	res.render('event3');
 });
 
+router.get('/comingsoon', function(req,res,next){
+	res.render('comingsoon');
+});
+
 module.exports = router;
