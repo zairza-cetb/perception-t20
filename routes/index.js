@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-    res.render('index');
+    res.render('index', );
 });
 
 router.get("/register", function (req, res, next) {
@@ -29,7 +29,5 @@ router.get('/manevents', function(req,res,next){
 router.get('/comingsoon', function(req,res,next){
 	res.render('comingsoon');
 });
-
-
 
 module.exports = router;

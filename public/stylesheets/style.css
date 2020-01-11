@@ -137,7 +137,8 @@ html {
 .content__title {
   position: relative;
   font-size: 5em;
-  font-family: "Bungee", cursive;
+  font-weight: 100;
+  font-family: 'Times New Roman', Times, serif;
   color: ghostwhite ;
 
   animation-name: glitch-anim-text;
@@ -816,7 +817,7 @@ body .base.close .section-static {
   .box .card-block {
     height: 200px;
     width: 200px;
-    margin-left: 75px;
+    align-self: center;
   }
   .title {
     font-size: 10vw;
@@ -835,4 +836,19 @@ body .base.close .section-static {
   .card-block .imgBx {
     bottom: 80px;
   }
+  .img-responsive {
+    padding-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "montserrat", sans-serif; */
+  box-sizing: border-box;
+  /* background-color: black; */
+}
+
