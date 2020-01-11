@@ -35,7 +35,11 @@ html {
   width: 100%;
 }
 
+.event-cards{
+  background-image: url('../assets/img/21633.jpg');
+  z-index: 100;
 
+}
 
 .box {
   display: grid;
@@ -51,7 +55,7 @@ html {
   justify-content: space-evenly;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 200;
+  z-index: 10;
 }
 .box .card {
   position: relative;
@@ -62,7 +66,7 @@ html {
   justify-content: space-evenly;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 200;
+  z-index: 10;
 }
 
 .card-block:before,
