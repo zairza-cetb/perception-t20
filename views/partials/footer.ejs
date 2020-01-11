@@ -1,0 +1,214 @@
+<style>
+  /*=-footer-=*/
+  footer {
+    color: #fff;
+    background-attachment: fixed;
+    /* background-color: black; */
+    background-image: url('../assets/img/IMG-20200111-WA0022.jpg');  
+    background-size: cover;
+    background-position: bottom;
+    margin-bottom: 0;
+    margin-top: 50px;
+    padding-bottom: 0;
+    position: relative;
+    overflow: hidden !important;
+    bottom: 0;
+  }
+  footer p {
+    color: #ccc;
+  }
+  footer a {
+    color: #ccc;
+  }
+  .social-pet li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .social-pet li a {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    line-height: 35px;
+    background-color: #3a5a95;
+    color: #fff;
+  }
+  .social-pet li:nth-child(2) a {
+    background-color: #57aced;
+  }
+  .social-pet li:nth-child(3) a {
+    background-color: #dd4f43;
+  }
+  .social-pet li:nth-child(4) a {
+    background-color: #6b27b2;
+  }
+  .social-pet li a:hover {
+    background-color: #0141a2;
+  }
+  .social-pet li a:hover i {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+  .recent-post li {
+    display: block;
+    color: #ccc;
+    margin-bottom: 25px;
+  }
+  .recent-post li label {
+    float: left;
+    border: 2px solid #ccc;
+    padding: 1px 7px;
+    text-align: center;
+  }
+  .recent-post li label span {
+    color: #fff;
+  }
+  footer .input-group-addon {
+    background-color: #0141a2;
+    padding: 10px;
+  }
+  .f-address li {
+    display: inline-block;
+  }
+  .f-address li i {
+    color: #2995de;
+    font-size: 18px;
+  }
+  .f-address li a {
+    color: #ccc;
+  }
+  /*=-Copyright-=*/
+  .copyright {
+    margin-top: 0;
+    background-color: black;
+    padding: 12px 0;
+    font-size: 14px;
+    background-position: bottom;
+    position: relative;
+  }
+  
+  .gmap_canvas {
+    
+    background: none !important;
+    height: 350px;
+    width: 500px;
+   
+  }
+  iframe {
+    height: 350px;
+    width: 600px;
+  }
+  @media only screen and (max-width: 800px) {
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      height: 300px;
+      width: 360px;
+      margin: 0;
+     
+    }
+    iframe {
+      width: 300px;
+      height: 300px;
+      border-radius: 20%;
+      
+    }
+  }
+</style>
+<!-- Footer -->
+<footer class="pt-5 mb-0" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+        <h5 class="mb-4 font-weight-bold">ABOUT US</h5>
+        <p class="mb-4"></p>
+        <ul class="f-address">
+          <li>
+            <div class="row">
+              <div class="col-1"><i class="fas fa-map-marker"></i></div>
+              <div class="col-10">
+                <h6 class="font-weight-bold mb-0">Address:</h6>
+                <p>
+                  College of Engineering & Technology, Ghatikia, Kalinga Nagar
+                  Bhubaneswar- 751003 Odisha, India
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-1"><i class="far fa-envelope"></i></div>
+              <div class="col-10">
+                <h6 class="font-weight-bold mb-0">Have any questions?</h6>
+                <p><a href="#">perceptioncet@gmail.com</a></p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-1"><i class="fas fa-phone-volume"></i></div>
+              <div class="col-10">
+                <h6 class="font-weight-bold mb-0">Contact us:</h6>
+                <p><a href="#">+91 9438688816</a></p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        <ul class="social-pet mt-4">
+          <li>
+            <a href="https://www.facebook.com/perception.cetb/" title="facebook"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="perceptioncet@gmail.com" title="google-plus"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/perception.cetb/" title="instagram"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+
+        
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-2">
+        
+        <div class="footer-item">
+<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fperception.cetb%2F&tabs=timeline&width=250&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-2">
+          <div class="gmap_canvas">
+            <iframe
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=college%20of%20engineering%20and%20technology%2C%20bhubaneswar&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              frameborder="1"
+              
+              
+            ></iframe
+            ><a href="https://www.bitgeeks.net"></a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Copyright -->
+<section class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="text-center text-white">
+          &copy; 2020 College of Engineering and Technology. All Rights
+          Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
