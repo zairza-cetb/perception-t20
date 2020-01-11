@@ -137,8 +137,8 @@ html {
 .content__title {
   position: relative;
   font-size: 5em;
-  font-weight: 100;
-  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-family: 'Audiowide';
   color: ghostwhite ;
 
   animation-name: glitch-anim-text;
@@ -820,7 +820,7 @@ body .base.close .section-static {
     align-self: center;
   }
   .title {
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: 500;
     color: antiquewhite;
   }
