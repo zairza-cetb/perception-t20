@@ -14,7 +14,7 @@
     "express": "~4.16.1",
     "express-session": "^1.17.0",
     "http-errors": "~1.6.3",
-    "mongoose": "^5.8.3",
+    "mongoose": "^5.8.7",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
