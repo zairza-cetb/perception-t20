@@ -30,4 +30,6 @@ router.get('/comingsoon', function(req,res,next){
 	res.render('comingsoon');
 });
 
+
+
 module.exports = router;
