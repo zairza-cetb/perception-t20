@@ -35,12 +35,6 @@ html {
   width: 100%;
 }
 
-.event-cards{
-  background-image: url('../assets/img/21633.jpg');
-  z-index: 100;
-
-}
-
 .box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
