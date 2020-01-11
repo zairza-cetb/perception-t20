@@ -35,6 +35,8 @@ html {
   width: 100%;
 }
 
+
+
 .box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -164,9 +166,9 @@ html {
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
-  background: url("https://wallpaperplay.com/walls/full/9/7/0/145562.jpg")
-    no-repeat 50% 0;
-  background-color: var(--blend-color-1);
+  background: url('../assets/img/perceptionbg.jpg') 
+     no-repeat 50% 0 ;
+     background-position: relative;
   opacity: 1;
   background-size: cover;
   transform: translate3d(0, 0, 0);
