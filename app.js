@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema ({
   password: String,
   phone: Number,
   college: String,
-  events: [mongoose.Schema.Types.ObjectId]
+  events: [String]
 });
 
 userSchema.plugin(localMongoose);
@@ -70,8 +70,8 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/', routes);
-app.post("/register", function (req, res) {
 
+app.post("/register", function (req, res) {
   const newUser = new User({
     username: req.body.username,
     email: req.body.email,
@@ -93,6 +93,7 @@ app.post("/register", function (req, res) {
 app.post("/login", passport.authenticate("local",
 {
     successRedirect: "/",
+
     failureRedirect: "/login"
   }),
 );
@@ -122,7 +123,7 @@ app.post("/admin", (req, res) => {
   }
 });
 
-app.get('/event1/:eventID', (req, res) => {
+app.get('/register/:eventID', (req, res) => {
   User.updateOne(
     {
       _id: req.user._id
@@ -133,7 +134,26 @@ app.get('/event1/:eventID', (req, res) => {
       }
     }
   );
+  User.find({_id:req.user._id},(er,data)=>{console.log(data)});
+  res.send("done");
 });
+
+app.get('/unregister/:eventID', (req, res) => {
+  User.updateOne(
+    {
+      _id: req.user._id
+    },
+    {
+      $pull: {
+        events: req.params.eventID
+      }
+    }
+  );
+  User.find({_id:req.user._id},(er,data)=>{console.log(data)});
+  res.send("done");
+});
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

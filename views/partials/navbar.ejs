@@ -19,12 +19,14 @@
         </div>
      </div>
   </div>
-  <a class="section-static bottom" href="#dashboard"></a>
-  <% if(currentUser) { %>
-      <a class="section-static top" href="/logout"></a>
-   <% } else { %>
+
+  <a class="section-static bottom" href="https://www.facebook.com/perception.cetb/videos/1706944176106621/"></a>
+  
+  <% if(!currentUser) { %>
       <a class="section-static top" href="/login"></a>
-   <% } %>
+   <% } else { %>
+      <a class="section-static top" href="/logout"></a>
+   <% } %>      
 
 </div>
 <script>
