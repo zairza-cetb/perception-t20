@@ -32,6 +32,7 @@ body{
     display: flex;
     width: 30%;
     margin: 30px -22px;
+    border-radius: 10px;
 }
 .container .card .imgBx{
     position: absolute;
@@ -46,6 +47,7 @@ body{
     align-items: center;
     overflow: hidden;
     transition: 0.5s ease-in-out;
+    border-radius: 7.5px;
 }
 .container .card:hover .imgBx{
     width: 90px;
@@ -55,7 +57,7 @@ body{
     transition: 0.5s ease-in-out;
     background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
 }
-.container .card .imgBx:before{
+.container .card .imgBx:before{ 
     content: attr(data-text);
     position: absolute;
     bottom: 0;
@@ -63,15 +65,17 @@ body{
     width: 100%;
     text-align: center;
     font-size: 2em;
-    color: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.1);
     font-weight: 700;
 }
 .container .card .imgBx img{
-    max-width: 60px;
+    padding-bottom: 20px;
+    max-width: 70px;
     transition: 0.5s ease-in-out;
 }
 .container .card:hover .imgBx img{
-    max-width: 65px;
+  padding-bottom: 0px;
+    max-width: 50px;
 }
 .container .card .content{
     position: absolute;
@@ -123,6 +127,84 @@ body{
 }
 
 
+.eventh_border {
+  max-width: 650px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+  padding: 7px;
+  margin-top: 40px;
+}
+
+.eventh{
+  background-color:#222;
+  color:white;
+  font-size: 30px;
+  height: 70px;
+  
+}
+
+
+
+.slash-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+.slash-text .top,
+.slash-text .bottom {
+  text-align: center;
+  font: 62px/100px arial;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+.slash-text .top:before,
+.slash-text .bottom:before {
+  content: attr(title);
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.slash-text .top {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  right: 0;
+  bottom: 50%;
+}
+.slash-text .top:before {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  font-size: 50px;
+}
+.slash-text .bottom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 5px;
+  bottom: 0;
+}
+.slash-text .bottom:before {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  font-size: 50px;
+}
 
 
 

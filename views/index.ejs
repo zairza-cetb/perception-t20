@@ -4,6 +4,7 @@
     <title>Perception</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -43,10 +44,18 @@
       />   
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
+
   <body>
 
     <%- include('partials/splash') %>
     <%- include('partials/navbar') %>
+    <%	if(!currentUser){ %>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Signup</a></li>
+      <%	} else { %>
+      <li><a href="#">Signed in as <%= currentUser.username %></a></li>
+      <li><a href="/logout">Logout</a></li>
+      <%	} %>
     <div class="glitch">
       <div class="glitch__img"></div>
       <div class="glitch__img"></div>
@@ -67,6 +76,33 @@
         <section >
           <%- include('partials/button') %>  
         </section>
+        <div class="container">
+            <div class="separator" style="height: 120px;"><h1>S P O N S O R S</h1></div>
+
+            <div class="row">
+
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+            </div>    
+          </div>    
         <section>
           <%- include('partials/gallery') %>
         </section>  
