@@ -6,13 +6,39 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/stylenew.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     </head>
     <body>
         <%- include('partials/preloader') %>
-        <center><div class="eventh_border"><div class="eventh"><div class="slash-text">
-            <div title="LITERARY EVENTS" class="top"></div>
-            <div title="LITERARY EVENTS" class="bottom"></div>
-          </div></div></div> </center>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
+        <style type="text/css">
+            .card {
+                opacity: 0;
+                -webkit-transform: translateX(-100px);
+                     -moz-transform: translateX(-100px);
+                        -ms-transform: translateX(-100px);
+                         -o-transform: translateX(-100px);
+                                transform: translateX(-100px);
+                -webkit-transition: all 2.6s ease-out;
+                     -moz-transition: all 1.6s ease-out;
+                        -ms-transition: all 1.6s ease-out;
+                         -o-transition: all 1.6s ease-out;
+                                transition: all 0.6s ease-out;
+            }
+            .card.visible {
+                opacity: 1;
+                -webkit-transform: none;
+                     -moz-transform: none;
+                        -ms-transform: none;
+                         -o-transform: none;
+                                transform: none;
+            }
+        </style>
+      <center><a href="#" class="gradient-box"><span>LITERARY EVENTS</span></a></center>
       <div class="wrapper">
         <div class="container">
       <div class="card ">
@@ -160,8 +186,20 @@
       </div>
 
       </div>
-     
-      
-
+      <script>
+        // build scenes
+        var revealElements = document.getElementsByClassName("card");
+        for (var i=0; i<revealElements.length; i++) {
+            new ScrollMagic.Scene({
+                                triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                                offset: 30,												 // start a little later
+                                triggerHook: 0.98,
+                                reverse:false,
+                            })
+                            .setClassToggle(revealElements[i], "visible") // add class toggle
+                         //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+                            .addTo(controller);
+        }
+    </script>
     </body>
 </html>

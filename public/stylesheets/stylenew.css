@@ -570,3 +570,53 @@ body{
     clip: rect(29px, 9999px, 15px, 0);
   }
 }
+/* gradient-box */
+.gradient-box {
+  width: 300px;
+  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+  text-align: center;
+  /* margin-top: 10px; */
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  display: block; 
+  top: 2vh;
+  font-weight: normal;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box; 
+}
+
+.gradient-box:hover {
+  -webkit-animation: play .6s ease-in infinite;
+}
+
+.gradient-box span {
+  padding: 14px 0;
+  font-size: 22px;
+  display: block;
+  margin: 3px;
+  background: #000;
+  border-radius: 5px;
+}
+
+@-webkit-keyframes play {
+  0% {
+      background-position: 0px;
+  }
+  20% {
+      background-position: -110px;
+  }
+  35% {
+      background-position: -180px;
+  }
+  50% {
+      background-position: -210px;
+  }
+  80% {
+      background-position: -350px;
+  }
+  100% {
+      background-position: -390px;
+  }
+}
