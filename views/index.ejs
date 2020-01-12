@@ -2958,7 +2958,7 @@ html, body {
     return test.complete || test.width+test.height > 0;
     }
 
-   if(!cached("/assets/img/Tech.png")){
+   if(!cached("/assets/img/perceptionbg.jpg")){
        setTimeout(function(){
        var e = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
       console.log("keypress");
@@ -2998,7 +2998,10 @@ html, body {
         <%- include('partials/title') %>  
       </div>
       <div class="container">
-      <div class="container" style="height: 100%; " >
+      <div class="container" style="height: fit-content; " >
+        <section>
+          <%- include('partials/aboutus') %>
+        </section>
         <section class="event-cards">
           <%- include('partials/eventcards') %>
         </section>
