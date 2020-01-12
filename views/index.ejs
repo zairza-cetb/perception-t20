@@ -8,16 +8,6 @@ function incr_progress(lo=10){
     console.log("progress",lo);
     progress_speed+=lo*6;
 };
-
-
-function cached(url){
-    var test = document.createElement("img");
-    test.src = url;
-    return test.complete || test.width+test.height > 0;
-}
-if(cached("/assets/img/Perception.png")){
-    myspeed=2;
-}
 (function () {
     'use strict';
     /**
@@ -821,7 +811,7 @@ if(cached("/assets/img/Perception.png")){
             console.log("ooso");
             c[0].remove();
             document.getElementById("master").hidden=false;
-        },1000);
+            },1000);
 
             
         },
@@ -2964,18 +2954,32 @@ html, body {
 
 <script>
    var mysttime=1000;
+   function cached(url){
+    var test = document.createElement("img");
+    test.src = url;
+    return test.complete || test.width+test.height > 0;
+    }
+
+   if(cached("/assets/img/Perception.png")){
    setTimeout(function(){
        var e = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
       console.log("keypress");
       document.dispatchEvent(e);
    },mysttime);
-   document.onkeydown = function(evt) {
-   evt = evt || window.event;
-   if (evt.keyCode == 32) {
-    //    var box = document.getElementById("messageBox");
+
    }
-   function myFunction() {
-        setTimeout(function(){ document.getElementsByClassName("runner-container").style.width="100%"; }, 3000);
+   var c=document.getElementsByClassName("preloader");
+   c[0].remove();
+   console.log("ooso");
+   c[0].remove();
+   document.getElementById("master").hidden=false;
+//    document.onkeydown = function(evt) {
+//    evt = evt || window.event;
+//    if (evt.keyCode == 32) {
+//     //    var box = document.getElementById("messageBox");
+//    }
+//    function myFunction() {
+//         setTimeout(function(){ document.getElementsByClassName("runner-container").style.width="100%"; }, 3000);
 }
 };
 </script>
