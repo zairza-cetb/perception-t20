@@ -6,15 +6,44 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/stylenew.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     </head>
     <body>
         <%- include('partials/preloader') %>
-      <center><h1 style="margin-top: 20px; color: #fff;">TECHNICAL EVENTS</h1> </center>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
+        <style type="text/css">
+            .card {
+                opacity: 0;
+                -webkit-transform: translateX(-100px);
+                     -moz-transform: translateX(-100px);
+                        -ms-transform: translateX(-100px);
+                         -o-transform: translateX(-100px);
+                                transform: translateX(-100px);
+                -webkit-transition: all 2.6s ease-out;
+                     -moz-transition: all 1.6s ease-out;
+                        -ms-transition: all 1.6s ease-out;
+                         -o-transition: all 1.6s ease-out;
+                                transition: all 0.6s ease-out;
+            }
+            .card.visible {
+                opacity: 1;
+                -webkit-transform: none;
+                     -moz-transform: none;
+                        -ms-transform: none;
+                         -o-transform: none;
+                                transform: none;
+            }
+        </style>
+      <center><a href="#" class="gradient-box"><span>TECHNICAL EVENTS</span></a></center>
       <div class="wrapper">
      <div class="container">
         <div class="card">
             <div class="imgBx" data-text="Code Busters">
-                 <img src="assets/img/books.png">
+                 <img src="assets/img/eventicons/cb.png">
             </div>
             <div class="content">
                 <div>
@@ -25,7 +54,7 @@
         </div>
         <div class="card">
             <div class="imgBx" data-text="Web Weavers">
-                 <img src="assets/img/books.png">
+                 <img src="assets/img/eventicons/webdesign.png">
             </div>
             <div class="content">
                 <div>
@@ -36,7 +65,7 @@
         </div>
         <div class="card">
             <div class="imgBx" data-text="Dig The Web">
-                 <img src="assets/img/books.png">
+                 <img src="assets/img/eventicons/digtheweb.png">
             </div>
             <div class="content">
                 <div>
@@ -47,7 +76,7 @@
         </div>
         <div class="card">
             <div class="imgBx" data-text="Rescue Rangers">
-                 <img src="assets/img/books.png">
+                 <img src="assets/img/eventicons/robot.png">
             </div>
             <div class="content">
                 <div>
@@ -58,7 +87,7 @@
         </div>
         <div class="card">
             <div class="imgBx" data-text="Enchanted Maze">
-                <img src="assets/img/code.png">
+                <img src="assets/img/eventicons/maze.png">
             </div>
             <div class="content">
                <div>
@@ -69,7 +98,7 @@
         </div>
         <div class="card">
             <div class="imgBx" data-text="Game of Drones">
-                <img src="assets/img/code.png">
+                <img src="assets/img/eventicons/drone_2.png">
             </div>
             <div class="content">
                <div>
@@ -80,7 +109,7 @@
         </div>
         <div class="card">
             <div class="imgBx" data-text="Daily Hacks">
-                <img src="assets/img/code.png">
+                <img src="assets/img/eventicons/chip.png">
             </div>
             <div class="content">
                <div>
@@ -91,19 +120,19 @@
         </div>
         
         <div class="card">
-            <div class="imgBx" data-text="Circuitrix">
-                <img src="assets/img/hands.png">
+            <div class="imgBx" data-text="Automotive Hunt">
+                <img src="assets/img/eventicons/thinking.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Circuitrix">Circuitrix</h3>
-                   <p class="glitch" data-text="Build hardware circuit">Build hardware circuit</p>
+                   <h3 class="glitch" data-text="Automotive Hunt">Automotive Hunt</h3>
+                   <p class="glitch" data-text="Electrical Quiz">Electrical Quiz</p>
                </div>
             </div>
         </div>
         <div class="card">
             <div class="imgBx" data-text="Biobuzz">
-                <img src="assets/img/money.png">
+                <img src="assets/img/eventicons/quiz.png">
             </div>
             <div class="content">
                <div>
@@ -113,8 +142,8 @@
             </div>
         </div>
          <div class="card">
-            <div class="imgBx" data-text="Model Presentation">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="MD">
+                <img src="assets/img/eventicons/presentation.png">
             </div>
             <div class="content">
                <div>
@@ -124,63 +153,63 @@
             </div>
      </div>
       <div class="card">
-            <div class="imgBx" data-text="Cad-de-Zine">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Catapult Throw">
+                <img src="assets/img/eventicons/catapult.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Cad-de-Zine">Cad-de-Zine</h3>
-                   <p class="glitch" data-text="3D Modelling using Design software">3D Modelling using Design software</p>
+                   <h3 class="glitch" data-text="Catapult Throw">Catapult Throw</h3>
+                   <p class="glitch" data-text="Design a Catapult">Design a Catapult</p>
                </div>
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="Junk Yard Wars">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Dress Your Book">
+                <img src="assets/img/eventicons/coverbook.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Junk Yard Wars">Junk Yard Wars</h3>
-                   <p class="glitch" data-text="Aptitude Brain Teaser Build structures">Aptitude Brain Teaser Build structures</p>
+                   <h3 class="glitch" data-text="Dress Your Book">Dress Your Book</h3>
+                   <p class="glitch" data-text="Design a cover for your book">Design a cover for your book</p>
                </div>
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="Robo Football">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="PMC">
+                <img src="assets/img/eventicons/product.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Robo Football">Robo Football</h3>
-                   <p class="glitch" data-text="Football played using manual bots">Football played using manual bots</p>
+                   <h3 class="glitch" data-text="Product Modification Challenge">Product Modification Challenge</h3>
+                   <p class="glitch" data-text="Modify your product">Modify your product</p>
                </div>
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="H2GO">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Test your endurance">
+                <img src="assets/img/eventicons/bicycle.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="H2GO">H2GO</h3>
-                   <p class="glitch" data-text="Water rocket using plastic">Water rocket using plastic</p>
+                   <h3 class="glitch" data-text="Test your endurance">Test your endurance</h3>
+                   <p class="glitch" data-text="Knock Out Cycle Race">Knock Out Cycle Race</p>
                </div>
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="Crane O Mania">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Water Rocket">
+                <img src="assets/img/eventicons/waterrocket.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Crane O Mania">Crane O Mania</h3>
-                   <p class="glitch" data-text="Design a tower crane with popsickles">Design a tower crane with popsickles</p>
+                   <h3 class="glitch" data-text="Water Rocket">Water Rocket</h3>
+                   <p class="glitch" data-text="Build a Water Rocket">Build a Water Rocket</p>
                </div>
             </div>
       </div>
        <div class="card">
             <div class="imgBx" data-text="Town Planning">
-                <img src="assets/img/money.png">
+                <img src="assets/img/eventicons/town-plan.png">
             </div>
             <div class="content">
                <div>
@@ -190,38 +219,117 @@
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="Hydram">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Designstein">
+                <img src="assets/img/eventicons/cad.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Hydram">Hydram</h3>
-                   <p class="glitch" data-text="Hydroulic">Hydroulic</p>
+                   <h3 class="glitch" data-text="Designstein">Designstein</h3>
+                   <p class="glitch" data-text="Design a CAD">Design a CAD</p>
                </div>
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="Tech Paper Presentation">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Junkyard Wars">
+                <img src="assets/img/eventicons/junk.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Tech Paper Presentation">Tech Paper Presentation</h3>
-                   <p class="glitch" data-text="Presentation">Presentation</p>
+                   <h3 class="glitch" data-text="Junkyard Wars">Junkyard Wars</h3>
+                   <p class="glitch" data-text="Build from Junk">Build from Junk</p>
                </div>
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="Find The Electronic Treasure(FET)">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Auto Quiz">
+                <img src="assets/img/eventicons/quiz_2.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Find The Electronic Treasure(FET)">Find The Electronic Treasure(FET)</h3>
-                   <p class="glitch" data-text="treasure hunt">Treasure hunt</p>
+                   <h3 class="glitch" data-text="Auto Quiz">Auto Quiz</h3>
+                   <p class="glitch" data-text="Auto Trivia">Auto Trivia</p>
                </div>
             </div>
       </div>
+      <div class="card">
+        <div class="imgBx" data-text="Lead the Beast">
+            <img src="assets/img/eventicons/buggies.png">
+        </div>
+        <div class="content">
+           <div>
+               <h3 class="glitch" data-text="Lead the Beast">Lead the Beast</h3>
+               <p class="glitch" data-text="Ride the ATV">Ride the ATV</p>
+           </div>
+        </div>
+  </div>
+  
+<div class="card">
+    <div class="imgBx" data-text="Embrace the speed">
+        <img src="assets/img/eventicons/buggies.png">
     </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Embrace the speed">Embrace the speed</h3>
+           <p class="glitch" data-text="Ride the e-vehicle">Ride the e-vehicle</p>
+       </div>
+    </div>
+    
+</div>
+<div class="card">
+    <div class="imgBx" data-text="TPP">
+        <img src="assets/img/eventicons/presentation.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="TPP">TPP</h3>
+           <p class="glitch" data-text=""></p>
+       </div>
+    </div>
+    
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Automotive Hunt">
+        <img src="assets/img/eventicons/treasurehunt.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Automotive Hunt">Automotive Hunt</h3>
+           <p class="glitch" data-text="Treasure Hunt on Automobile Industry">Treasure Hunt on Automobile Industry</p>
+       </div>
+    </div>
+
+
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Claw your way out">
+        <img src="assets/img/eventicons/thinking.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Claw your way out">Claw your way out</h3>
+           <p class="glitch" data-text="Contest on Real Time Problem Solving">Contest on Real Time Problem Solving</p>
+       </div>
+    </div>
+</div>
+<!-- <div class="check"style="height:200px ;" ></div> -->
+</div>
+<script>
+    // build scenes
+    var revealElements = document.getElementsByClassName("card");
+    for (var i=0; i<revealElements.length; i++) {
+        new ScrollMagic.Scene({
+                            triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                            offset: 30,												 // start a little later
+                            triggerHook: 0.98,
+                            reverse:false,
+                        })
+                        .setClassToggle(revealElements[i], "visible") // add class toggle
+                     //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+                        .addTo(controller);
+    }
+</script>
+
+    
+
     </body>
 </html>
