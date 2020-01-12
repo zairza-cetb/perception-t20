@@ -587,7 +587,7 @@ body{
   box-sizing: border-box; 
 }
 
-.gradient-box:hover {
+.gradient-box {
   -webkit-animation: play .6s ease-in infinite;
 }
 
