@@ -3,8 +3,8 @@
   <head>
 <script>      
 var myspeed=0.6;
-var progress_speed=300;
-function incr_progress(lo=10){
+var progress_speed=200;
+function incr_progress(lo=100){
     console.log("progress",lo);
     progress_speed+=lo*6;
 };
@@ -2929,7 +2929,7 @@ html, body {
       />   
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
-  <body onload="incr_progress(60)" class="offline" id="t">
+  <body onload="incr_progress()" class="offline" id="t">
     <div id="messageBox" class="sendmessage preloader" style="height:20%;">
         <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;"></h1>
         <div class="niokbutton" onclick="okbuttonsend()"></div>
@@ -2966,13 +2966,13 @@ html, body {
       console.log("keypress");
       document.dispatchEvent(e);
       },mysttime);
-
-   }
+   }else{
    var c=document.getElementsByClassName("preloader");
    c[0].remove();
    console.log("ooso");
    c[0].remove();
    document.getElementById("master").hidden=false;
+   }
 //    document.onkeydown = function(evt) {
 //    evt = evt || window.event;
 //    if (evt.keyCode == 32) {
