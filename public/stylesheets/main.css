@@ -230,18 +230,24 @@ h6 {
 /* ==========================================================================
    #BUTTON
    ========================================================================== */
+   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+
 .btn {
   display: inline-block;
   line-height: 40px;
   padding: 0 33px;
-  font-family: Poppins, Arial, "Helvetica Neue", sans-serif;
-  cursor: pointer;
-  color: #fff;
+  font-family: "Source Code Pro";
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 30px;  
+  color: #000;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   font-size: 18px;
+  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+
 }
 
 .btn--radius {
@@ -257,11 +263,12 @@ h6 {
 }
 
 .btn--green {
-  background: #57b846;
+  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+
 }
 
 .btn--green:hover {
-  background: #4dae3c;
+  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
 }
 
 /* ==========================================================================
