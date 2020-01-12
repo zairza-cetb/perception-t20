@@ -9,6 +9,15 @@ function incr_progress(lo=10){
     progress_speed+=lo*6;
 };
 
+
+function cached(url){
+    var test = document.createElement("img");
+    test.src = url;
+    return test.complete || test.width+test.height > 0;
+}
+if(cached("/assets/img/Perception.png")){
+    myspeed=2;
+}
 (function () {
     'use strict';
     /**
