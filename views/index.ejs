@@ -2951,7 +2951,7 @@ html, body {
    </div>
 </div>
 
-
+<div id="master" hidden>
 <script>
    var mysttime=1000;
    function cached(url){
@@ -2960,12 +2960,12 @@ html, body {
     return test.complete || test.width+test.height > 0;
     }
 
-   if(cached("/assets/img/Perception.png")){
-   setTimeout(function(){
+   if(!cached("/assets/img/Perception.png")){
+       setTimeout(function(){
        var e = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
       console.log("keypress");
       document.dispatchEvent(e);
-   },mysttime);
+      },mysttime);
 
    }
    var c=document.getElementsByClassName("preloader");
@@ -2981,7 +2981,7 @@ html, body {
 //    function myFunction() {
 //         setTimeout(function(){ document.getElementsByClassName("runner-container").style.width="100%"; }, 3000);}};
 </script>
-  <div id="master" hidden>
+
     <%- include('partials/splash') %>
     <%- include('partials/navbar') %>
     <div class="glitch">
