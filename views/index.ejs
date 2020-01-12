@@ -2982,13 +2982,9 @@ html, body {
 
     <%- include('partials/splash') %>
     <%- include('partials/navbar') %>
-    <%	if(!currentUser){ %>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/register">Signup</a></li>
-      <%	} else { %>
-      <li><a href="#">Signed in as <%= currentUser.username %></a></li>
-      <li><a href="/logout">Logout</a></li>
-      <%	} %>
+    <%	if(currentUser){ %>
+        <li><a href="#">Signed in as <%= currentUser.username %></a></li>
+    <% } %>
     <div class="glitch">
       <div class="glitch__img"></div>
       <div class="glitch__img"></div>
@@ -3012,9 +3008,33 @@ html, body {
         <section >
           <%- include('partials/button') %>  
         </section>
-        <section>
-          <%- include('partials/sponsers') %>
-        </section>
+        <div class="container">
+            <div class="separator" style="height: 120px;"><h1>SPONSORS</h1></div>
+
+            <div class="row">
+
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
+                  <a class="thumbnail" href="#">
+                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
+                  </a>
+              </div>
+            </div>    
+          </div>    
         <section>
           <%- include('partials/gallery') %>
         </section>  
