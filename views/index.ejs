@@ -46,7 +46,7 @@
   </head>
 
   <body>
-
+    <div id="masterpiece" >
     <%- include('partials/splash') %>
     <%- include('partials/navbar') %>
     <%	if(!currentUser){ %>
@@ -76,33 +76,9 @@
         <section >
           <%- include('partials/button') %>  
         </section>
-        <div class="container">
-            <div class="separator" style="height: 120px;"><h1>S P O N S O R S</h1></div>
-
-            <div class="row">
-
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-            </div>    
-          </div>    
+        <section>
+          <%- include('partials/sponsers') %>
+        </section>
         <section>
           <%- include('partials/gallery') %>
         </section>  
@@ -114,6 +90,6 @@
           <%- include('partials/footer') %>
         </section> 
       </div>
-      
+  </div>    
   </body>
 </html>
