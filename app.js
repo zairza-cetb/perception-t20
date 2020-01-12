@@ -66,7 +66,6 @@ app.use(passport.session());
 
 ///////////////////////////////////////////////////
 app.use((req, res, next) => {
-  console.log('user', req.user);
   res.locals.currentUser = req.user;
   next();
 });
@@ -111,7 +110,6 @@ app.get("/admin", (req, res) => {
 app.post("/admin", (req, res) => {
   var username = req.body.username;
   var password = req.body.password;
-  console.log(username);
   if(username == "zairza" && password == "database"){
     User.find({}, (err, data) => {
       if (err) console.log(err);
