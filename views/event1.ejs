@@ -251,25 +251,6 @@
                </div>
             </div>
       </div>
-<<<<<<< HEAD
-      <div class="check"style="height:200px ;" ></div>
-    </div>
-    <script>
-        // build scenes
-        var revealElements = document.getElementsByClassName("card");
-        for (var i=0; i<revealElements.length; i++) {
-            new ScrollMagic.Scene({
-                                triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-                                offset: 30,												 // start a little later
-                                triggerHook: 0.98,
-                                reverse:false,
-                            })
-                            .setClassToggle(revealElements[i], "visible") // add class toggle
-                         //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
-                            .addTo(controller);
-        }
-    </script>
-=======
       <div class="card">
         <div class="imgBx" data-text="Lead the Beast">
             <img src="assets/img/eventicons/buggies.png">
@@ -330,10 +311,25 @@
        </div>
     </div>
 </div>
-
+<div class="check"style="height:200px ;" ></div>
+</div>
+<script>
+    // build scenes
+    var revealElements = document.getElementsByClassName("card");
+    for (var i=0; i<revealElements.length; i++) {
+        new ScrollMagic.Scene({
+                            triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                            offset: 30,												 // start a little later
+                            triggerHook: 0.98,
+                            reverse:false,
+                        })
+                        .setClassToggle(revealElements[i], "visible") // add class toggle
+                     //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+                        .addTo(controller);
+    }
+</script>
 
     
 
->>>>>>> 2edc4e141853b13ad0e03b61f39ea47e52e323ae
     </body>
 </html>
