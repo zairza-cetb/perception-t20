@@ -2995,46 +2995,26 @@ html, body {
     </div>
     <div class="main">
       <div class="container" style="height: 100%;">
-        <%- include('partials/title') %>  
+        
+        <section style="height: 60%;">
+            <%- include('partials/title') %>
+        </section> 
+        <section style="height: 40%;">
+            <%- include('partials/aboutus') %>
+        </section>
       </div>
+      
       <div class="container">
       <div class="container" style="height: fit-content; " >
-        <section>
-          <%- include('partials/aboutus') %>
-        </section>
         <section class="event-cards">
           <%- include('partials/eventcards') %>
         </section>
         <section >
           <%- include('partials/button') %>  
         </section>
-        <div class="container">
-            <div class="separator sp" style="height: 120px;"><div class="headr">SPONSORS</div class="headr"></div>
-
-            <div class="row">
-
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-10 thumb" style="padding-left: 20px;">
-                  <a class="thumbnail" href="#">
-                      <img class="img-responsive" src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" alt="">
-                  </a>
-              </div>
-            </div>    
-          </div>    
+        <section>
+            <%- include('partials/sponsers') %>
+        </section>
         <section>
           <%- include('partials/gallery') %>
         </section>  
