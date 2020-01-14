@@ -811,6 +811,8 @@ body .base.close .section-static {
 
 
 @media only screen and (max-width: 800px) {
+  
+  
   .box {
     width: 200px;
     display: grid;
