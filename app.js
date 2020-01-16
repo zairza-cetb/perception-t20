@@ -6,6 +6,7 @@ var logger = require('morgan');
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var passport = require("passport");
+var flash = require("connect-flash");
 var localStrategy = require("passport-local");
 var localMongoose = require("passport-local-mongoose");
 
@@ -111,8 +112,8 @@ app.post("/admin", (req, res) => {
     User.find({}, (err, data) => {
       if (err) console.log(err);
       else 
-        // res.render("data1", { data: data });
-        res.send(data);
+        res.render("data1", { data: data });
+        // res.send(data);
     });
   } else {
     res.redirect("/admin");

@@ -4,8 +4,27 @@
     <title>Admin</title>
 </head>
 <body>
-    <% data.forEach(function(data){ %>
-       <%= data.name %>
-    <% }); %>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>No.</th>
+                <th>college</th>
+                <th>Events</th>
+            </tr>
+        </thead>
+        <% data.forEach(function(data){ %>
+        <tbody>
+                <td> <%= data.name %> </td>
+                <td> <%= data.username%> </td>
+                <td> <%= data.gender%> </td>
+                <td> <%= data.phone %> </td>
+                <td> <%= data.college%> </td>
+                <td> <%= data.events%> </td>
+        </tbody>
+        <% }); %>
+    </table>
 </body>
 </html>
