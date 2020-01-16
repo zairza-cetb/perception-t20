@@ -1,479 +1,594 @@
-<html>  
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylesheets/stylenew.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    </head>
-    <body>
-        <%- include('partials/preloader') %>
-        <script>
-            // init controller
-            var controller = new ScrollMagic.Controller();
-        </script>
-        <style type="text/css">
-            .card {
-                opacity: 0;
-                -webkit-transform: translateX(-100px);
-                     -moz-transform: translateX(-100px);
-                        -ms-transform: translateX(-100px);
-                         -o-transform: translateX(-100px);
-                                transform: translateX(-100px);
-                -webkit-transition: all 2.6s ease-out;
-                     -moz-transition: all 1.6s ease-out;
-                        -ms-transition: all 1.6s ease-out;
-                         -o-transition: all 1.6s ease-out;
-                                transition: all 0.6s ease-out;
-            }
-            .card.visible {
-                opacity: 1;
-                -webkit-transform: none;
-                     -moz-transform: none;
-                        -ms-transform: none;
-                         -o-transform: none;
-                                transform: none;
-            }
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylesheets/stylenew.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
 
-        </style>
+  <body>
+    <%- include('partials/preloader') %>
+    <script>
+      // init controller
+      var controller = new ScrollMagic.Controller();
+    </script>
+    <style type="text/css">
+      .card {
+        opacity: 0;
+        -webkit-transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -o-transform: translateX(-100px);
+        transform: translateX(-100px);
+        -webkit-transition: all 2.6s ease-out;
+        -moz-transition: all 1.6s ease-out;
+        -ms-transition: all 1.6s ease-out;
+        -o-transition: all 1.6s ease-out;
+        transition: all 0.6s ease-out;
+      }
 
-   
-   <%- include('partials/homebutton') %>
+      .card.visible {
+        opacity: 1;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+      }
+    </style>
 
-<section>
+    <%- include('partials/homebutton') %>
 
-
-      <center><a href="#" class="gradient-box"><span>TECHNICAL EVENTS</span></a></center>
+    <section>
+      <center style="background-color: #222;">
+        <a href="#" class="gradient-box"><span>TECHNICAL EVENTS</span></a>
+      </center>
       <div class="wrapper">
-     <div class="container">
-        <div class="card">
+        <div class="container">
+          <div class="card">
             <div class="imgBx" data-text="Code Busters">
-                 <img src="assets/img/eventicons/cb.png">
+              <img src="assets/img/eventicons/cb.png" />
             </div>
             <div class="content">
-                <div>
-                    <h3 class="glitch" data-text="Code Busters">Code Busters</h3>
-                    <p class="glitch" data-text="Coding challenge">Coding challenge</p>
-                </div>
+              <div>
+                <h3 class="glitch" data-text="Code Busters">Code Busters</h3>
+                <p class="glitch" data-text="Coding challenge">
+                  Coding challenge
+                </p>
+                <button id="eventButton1" class="btn btn-light-green" data-toggle="modal" data-target="#eventModal1" style="background:
+                cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+              </div>
             </div>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Web Weavers">
-                 <img src="assets/img/eventicons/webdesign.png">
+              <img src="assets/img/eventicons/webdesign.png" />
             </div>
             <div class="content">
-                <div>
-                    <h3 class="glitch" data-text="Web Weavers">Web Weavers</h3>
-                    <p class="glitch" data-text="Difficult task to search from web">Difficult task to search from web</p>
-                    <button class="button" id="eventButton2">Know More</button>
-                </div>
+              <div>
+                <h3 class="glitch" data-text="Web Weavers">Web Weavers</h3>
+                <p class="glitch" data-text="Difficult task to search from web">
+                  Difficult task to search from web
+                </p>
+                <button class="button" id="eventButton2">Know More</button>
+              </div>
             </div>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Dig The Web">
-                 <img src="assets/img/eventicons/digtheweb.png">
+              <img src="assets/img/eventicons/digtheweb.png" />
             </div>
             <div class="content">
-                <div>
-                    <h3 class="glitch" data-text="Dig The Web">Dig The Web</h3>
-                    <p class="glitch" data-text="Find clues from Google">Find clues from Google</p>
-                </div>
+              <div>
+                <h3 class="glitch" data-text="Dig The Web">Dig The Web</h3>
+                <p class="glitch" data-text="Find clues from Google">
+                  Find clues from Google
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Rescue Rangers">
-                 <img src="assets/img/eventicons/robot.png">
+              <img src="assets/img/eventicons/robot.png" />
             </div>
             <div class="content">
-                <div>
-                    <h3 class="glitch" data-text="Rescue Rangers">Rescue Rangers</h3>
-                    <p class="glitch" data-text="Manual robots complete tarcks and hurdles">Manual robots complete tarcks and hurdles</p>
-                </div>
+              <div>
+                <h3 class="glitch" data-text="Rescue Rangers">
+                  Rescue Rangers
+                </h3>
+                <p
+                  class="glitch"
+                  data-text="Manual robots complete tarcks and hurdles"
+                >
+                  Manual robots complete tarcks and hurdles
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Enchanted Maze">
-                <img src="assets/img/eventicons/maze.png">
+              <img src="assets/img/eventicons/maze.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Enchanted Maze">Enchanted Maze</h3>
-                   <p class="glitch" data-text="Line following robot">Line following robot</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Enchanted Maze">
+                  Enchanted Maze
+                </h3>
+                <p class="glitch" data-text="Line following robot">
+                  Line following robot
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Game of Drones">
-                <img src="assets/img/eventicons/drone_2.png">
+              <img src="assets/img/eventicons/drone_2.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Game of Drones">Game of Drones</h3>
-                   <p class="glitch" data-text="Flying drones in perticular paths">Flying drones in perticular paths</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Game of Drones">
+                  Game of Drones
+                </h3>
+                <p class="glitch" data-text="Flying drones in perticular paths">
+                  Flying drones in perticular paths
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Daily Hacks">
-                <img src="assets/img/eventicons/chip.png">
+              <img src="assets/img/eventicons/chip.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Daily Hacks">Daily Hacks</h3>
-                   <p class="glitch" data-text="Technical layout of waste">Technical layout of waste</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Daily Hacks">Daily Hacks</h3>
+                <p class="glitch" data-text="Technical layout of waste">
+                  Technical layout of waste
+                </p>
+              </div>
             </div>
-        </div>
-        
-        <div class="card">
+          </div>
+
+          <div class="card">
             <div class="imgBx" data-text="Automotive Hunt">
-                <img src="assets/img/eventicons/thinking.png">
+              <img src="assets/img/eventicons/thinking.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Automotive Hunt">Automotive Hunt</h3>
-                   <p class="glitch" data-text="Electrical Quiz">Electrical Quiz</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Automotive Hunt">
+                  Automotive Hunt
+                </h3>
+                <p class="glitch" data-text="Electrical Quiz">
+                  Electrical Quiz
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Biobuzz">
-                <img src="assets/img/eventicons/quiz.png">
+              <img src="assets/img/eventicons/quiz.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Biobuzz">Biobuzz</h3>
-                   <p class="glitch" data-text="Biology quiz">Biology quiz</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Biobuzz">Biobuzz</h3>
+                <p class="glitch" data-text="Biology quiz">Biology quiz</p>
+              </div>
             </div>
-        </div>
-         <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="MD">
-                <img src="assets/img/eventicons/presentation.png">
+              <img src="assets/img/eventicons/presentation.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Model Presentation">Model Presentation</h3>
-                   <p class="glitch" data-text="Bio-presentation">Bio-presentation</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Model Presentation">
+                  Model Presentation
+                </h3>
+                <p class="glitch" data-text="Bio-presentation">
+                  Bio-presentation
+                </p>
+              </div>
             </div>
-     </div>
-      <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Catapult Throw">
-                <img src="assets/img/eventicons/catapult.png">
+              <img src="assets/img/eventicons/catapult.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Catapult Throw">Catapult Throw</h3>
-                   <p class="glitch" data-text="Design a Catapult">Design a Catapult</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Catapult Throw">
+                  Catapult Throw
+                </h3>
+                <p class="glitch" data-text="Design a Catapult">
+                  Design a Catapult
+                </p>
+              </div>
             </div>
-      </div>
-       <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="PMC">
-                <img src="assets/img/eventicons/product.png">
+              <img src="assets/img/eventicons/product.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Product Modification Challenge">Product Modification Challenge</h3>
-                   <p class="glitch" data-text="Modify your product">Modify your product</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Product Modification Challenge">
+                  Product Modification Challenge
+                </h3>
+                <p class="glitch" data-text="Modify your product">
+                  Modify your product
+                </p>
+              </div>
             </div>
-      </div>
-       <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="TYE">
-                <img src="assets/img/eventicons/bicycle.png">
+              <img src="assets/img/eventicons/bicycle.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Test your endurance">Test your endurance</h3>
-                   <p class="glitch" data-text="Knock Out Cycle Race">Knock Out Cycle Race</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Test your endurance">
+                  Test your endurance
+                </h3>
+                <p class="glitch" data-text="Knock Out Cycle Race">
+                  Knock Out Cycle Race
+                </p>
+              </div>
             </div>
-      </div>
-       <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Water Rocket">
-                <img src="assets/img/eventicons/waterrocket.png">
+              <img src="assets/img/eventicons/waterrocket.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Water Rocket">Water Rocket</h3>
-                   <p class="glitch" data-text="Build a Water Rocket">Build a Water Rocket</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Water Rocket">Water Rocket</h3>
+                <p class="glitch" data-text="Build a Water Rocket">
+                  Build a Water Rocket
+                </p>
+              </div>
             </div>
-      </div>
-       <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Town Planning">
-                <img src="assets/img/eventicons/town-plan.png">
+              <img src="assets/img/eventicons/town-plan.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Town Planning">Town Planning</h3>
-                   <p class="glitch" data-text="Make your own town">Make your own town</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Town Planning">Town Planning</h3>
+                <p class="glitch" data-text="Make your own town">
+                  Make your own town
+                </p>
+              </div>
             </div>
-      </div>
-       <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Designstein">
-                <img src="assets/img/eventicons/cad.png">
+              <img src="assets/img/eventicons/cad.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Designstein">Designstein</h3>
-                   <p class="glitch" data-text="Design a CAD">Design a CAD</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Designstein">Designstein</h3>
+                <p class="glitch" data-text="Design a CAD">Design a CAD</p>
+              </div>
             </div>
-      </div>
-       <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Junkyard Wars">
-                <img src="assets/img/eventicons/junk.png">
+              <img src="assets/img/eventicons/junk.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Junkyard Wars">Junkyard Wars</h3>
-                   <p class="glitch" data-text="Build from Junk">Build from Junk</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Junkyard Wars">Junkyard Wars</h3>
+                <p class="glitch" data-text="Build from Junk">
+                  Build from Junk
+                </p>
+              </div>
             </div>
-      </div>
-       <div class="card">
+          </div>
+          <div class="card">
             <div class="imgBx" data-text="Auto Quiz">
-                <img src="assets/img/eventicons/quiz_2.png">
+              <img src="assets/img/eventicons/quiz_2.png" />
             </div>
             <div class="content">
-               <div>
-                   <h3 class="glitch" data-text="Auto Quiz">Auto Quiz</h3>
-                   <p class="glitch" data-text="Auto Trivia">Auto Trivia</p>
-               </div>
+              <div>
+                <h3 class="glitch" data-text="Auto Quiz">Auto Quiz</h3>
+                <p class="glitch" data-text="Auto Trivia">Auto Trivia</p>
+              </div>
             </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Lead the Beast">
+              <img src="assets/img/eventicons/buggies.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Lead the Beast">
+                  Lead the Beast
+                </h3>
+                <p class="glitch" data-text="Ride the ATV">Ride the ATV</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBx" data-text="ETS">
+              <img src="assets/img/eventicons/buggies.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Embrace the speed">
+                  Embrace the speed
+                </h3>
+                <p class="glitch" data-text="Ride the e-vehicle">
+                  Ride the e-vehicle
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="TPP">
+              <img src="assets/img/eventicons/presentation.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Tech Paper Presentation">
+                  Tech Paper Presentation
+                </h3>
+                <p
+                  class="glitch"
+                  data-text="Presentation on Automobile Industry"
+                >
+                  Presentation on Automobile Industry
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Automotive Hunt">
+              <img src="assets/img/eventicons/treasurehunt.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Automotive Hunt">
+                  Automotive Hunt
+                </h3>
+                <p
+                  class="glitch"
+                  data-text="Treasure Hunt on Automobile Industry"
+                >
+                  Treasure Hunt on Automobile Industry
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="CYWO">
+              <img src="assets/img/eventicons/thinking.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Claw your way out">
+                  Claw your way out
+                </h3>
+                <p
+                  class="glitch"
+                  data-text="Contest on Real Time Problem Solving"
+                >
+                  Contest on Real Time Problem Solving
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBx" data-text="Cetronics">
+              <img src="assets/img/eventicons/thinking.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Cetronics">Cetronics</h3>
+                <p class="glitch" data-text="Electronics quiz">
+                  Electronics Quiz
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBx" data-text="UAV Killer">
+              <img src="assets/img/eventicons/drone.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="UAV Killer">UAV Killer</h3>
+                <p class="glitch" data-text="Make a RC-Drone">
+                  Make a RC-Drone
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Paper Wings">
+              <img src="assets/img/eventicons/paperplane.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Paper Wings Challenge ">
+                  Paper Wings Challenge
+                </h3>
+                <p class="glitch" data-text="Build a Paper Plane">
+                  Build a Paper Plane
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Turbulance">
+              <img src="assets/img/eventicons/thinking.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Turbulance">Turbulance</h3>
+                <p class="glitch" data-text="Aerospace Quiz">Aerospace Quiz</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="LSPC">
+              <img src="assets/img/eventicons/presentation.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3
+                  class="glitch"
+                  data-text="Light Speed Presentation Challenge"
+                >
+                  Light Speed Presentation Challenge
+                </h3>
+                <p class="glitch" data-text=""></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="EL Cartel">
+              <img src="assets/img/eventicons/poster.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="EL Cartel">EL Cartel</h3>
+                <p
+                  class="glitch"
+                  data-text="Poster Making on Biology,Biotech and Environment"
+                >
+                  Poster Making on Biology,Biotech and Environment
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Pictionary">
+              <img src="assets/img/eventicons/posterthinking.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Pictionary">Pictionary</h3>
+                <p class="glitch" data-text="Guess the Drawing!">
+                  Guess the Drawing!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Tech Talk">
+              <img src="assets/img/eventicons/speech.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Tech Talk">Tech Talk</h3>
+                <p class="glitch" data-text="Seminar on Technology">
+                  Seminar on Technology
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Hocus Focus">
+              <img src="assets/img/eventicons/karo.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Hocus Focus">Hocus Focus</h3>
+                <p class="glitch" data-text="Solve the board puzzle">
+                  Solve the board puzzle
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="TPP">
+              <img src="assets/img/eventicons/poster.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Technical Poster Presentation">
+                  Technical Poster Presentation
+                </h3>
+                <p class="glitch" data-text="Poster Making">Poster Making</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Design Challenge">
+              <img src="assets/img/eventicons/designchallenge_2.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Design Challenge">
+                  Design Challenge
+                </h3>
+                <p
+                  class="glitch"
+                  data-text="Present your solution to the design problem"
+                >
+                  Present your solution to the design problem
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Bridge Making">
+              <img src="assets/img/eventicons/bridge.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Bridge Making">Bridge Making</h3>
+                <p class="glitch" data-text=""></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Civi Quiz">
+              <img src="assets/img/eventicons/quiz.png" />
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="glitch" data-text="Civi Quiz">Civi Quiz</h3>
+                <p class="glitch" data-text=""></p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="check"style="height:200px ;" ></div> -->
+        </div>
       </div>
-      <div class="card">
-        <div class="imgBx" data-text="Lead the Beast">
-            <img src="assets/img/eventicons/buggies.png">
-        </div>
-        <div class="content">
-           <div>
-               <h3 class="glitch" data-text="Lead the Beast">Lead the Beast</h3>
-               <p class="glitch" data-text="Ride the ATV">Ride the ATV</p>
-           </div>
-        </div>
-  </div>
-  
-<div class="card">
-    <div class="imgBx" data-text="ETS">
-        <img src="assets/img/eventicons/buggies.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Embrace the speed">Embrace the speed</h3>
-           <p class="glitch" data-text="Ride the e-vehicle">Ride the e-vehicle</p>
-       </div>
-    </div>
-    
-</div>
-<div class="card">
-    <div class="imgBx" data-text="TPP">
-        <img src="assets/img/eventicons/presentation.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Tech Paper Presentation">Tech Paper Presentation</h3>
-           <p class="glitch" data-text="Presentation on Automobile Industry">Presentation on Automobile Industry</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Automotive Hunt">
-        <img src="assets/img/eventicons/treasurehunt.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Automotive Hunt">Automotive Hunt</h3>
-           <p class="glitch" data-text="Treasure Hunt on Automobile Industry">Treasure Hunt on Automobile Industry</p>
-       </div>
-    </div>
-
-
-</div>
-<div class="card">
-    <div class="imgBx" data-text="CYWO">
-        <img src="assets/img/eventicons/thinking.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Claw your way out">Claw your way out</h3>
-           <p class="glitch" data-text="Contest on Real Time Problem Solving">Contest on Real Time Problem Solving</p>
-       </div>
-    </div>
-</div>
-
-<div class="card">
-    <div class="imgBx" data-text="Cetronics">
-        <img src="assets/img/eventicons/thinking.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Cetronics">Cetronics</h3>
-           <p class="glitch" data-text="Electronics quiz">Electronics Quiz</p>
-       </div>
-    </div>
-</div>
-
-<div class="card">
-    <div class="imgBx" data-text="UAV Killer">
-        <img src="assets/img/eventicons/drone.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="UAV Killer">UAV Killer</h3>
-           <p class="glitch" data-text="Make a RC-Drone">Make a RC-Drone</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Paper Wings">
-        <img src="assets/img/eventicons/paperplane.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Paper Wings Challenge ">Paper Wings Challenge </h3>
-           <p class="glitch" data-text="Build a Paper Plane">Build a Paper Plane</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Turbulance">
-        <img src="assets/img/eventicons/thinking.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Turbulance">Turbulance</h3>
-           <p class="glitch" data-text="Aerospace Quiz">Aerospace Quiz</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="LSPC">
-        <img src="assets/img/eventicons/presentation.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Light Speed Presentation Challenge">Light Speed Presentation Challenge</h3>
-           <p class="glitch" data-text=""></p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="EL Cartel">
-        <img src="assets/img/eventicons/poster.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="EL Cartel">EL Cartel</h3>
-           <p class="glitch" data-text="Poster Making on Biology,Biotech and Environment">Poster Making on Biology,Biotech and Environment</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Pictionary">
-        <img src="assets/img/eventicons/posterthinking.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Pictionary">Pictionary</h3>
-           <p class="glitch" data-text="Guess the Drawing!">Guess the Drawing!</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Tech Talk">
-        <img src="assets/img/eventicons/speech.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Tech Talk">Tech Talk</h3>
-           <p class="glitch" data-text="Seminar on Technology">Seminar on Technology</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Hocus Focus">
-        <img src="assets/img/eventicons/karo.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Hocus Focus">Hocus Focus</h3>
-           <p class="glitch" data-text="Solve the board puzzle">Solve the board puzzle</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="TPP">
-        <img src="assets/img/eventicons/poster.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Technical Poster Presentation">Technical Poster Presentation</h3>
-           <p class="glitch" data-text="Poster Making">Poster Making</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Design Challenge">
-        <img src="assets/img/eventicons/designchallenge_2.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Design Challenge">Design Challenge</h3>
-           <p class="glitch" data-text="Present your solution to the design problem">Present your solution to the design problem</p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Bridge Making">
-        <img src="assets/img/eventicons/bridge.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Bridge Making">Bridge Making</h3>
-           <p class="glitch" data-text=""></p>
-       </div>
-    </div>
-</div>
-<div class="card">
-    <div class="imgBx" data-text="Civi Quiz">
-        <img src="assets/img/eventicons/quiz.png">
-    </div>
-    <div class="content">
-       <div>
-           <h3 class="glitch" data-text="Civi Quiz">Civi Quiz</h3>
-           <p class="glitch" data-text=""></p>
-       </div>
-    </div>
-</div>
-<!-- <div class="check"style="height:200px ;" ></div> -->
-</div>
-</div>
-      </section>
-<script>
-    // build scenes
-    var revealElements = document.getElementsByClassName("card");
-    for (var i=0; i<revealElements.length; i++) {
+    </section>
+    <script>
+      // build scenes
+      var revealElements = document.getElementsByClassName("card");
+      for (var i = 0; i < revealElements.length; i++) {
         new ScrollMagic.Scene({
-                            triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
-                            offset: 30,												 // start a little later
-                            triggerHook: 0.98,
-                            reverse:false,
-                        })
-                        .setClassToggle(revealElements[i], "visible") // add class toggle
-                     //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
-                        .addTo(controller);
-    }
-</script>
-
-    
-
-    </body>
+          triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+          offset: 30, // start a little later
+          triggerHook: 0.98,
+          reverse: false
+        })
+          .setClassToggle(revealElements[i], "visible") // add class toggle
+          //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+          .addTo(controller);
+      }
+    </script>
+  </body>
 </html>
