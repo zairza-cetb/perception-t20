@@ -39,48 +39,11 @@
                                 transform: none;
             }
 
-            .link-to-home {
-    position:absolute;
-    top: 30px;
-    left: 50px;
-    z-index: 200;
-    cursor: pointer;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    border-radius: 3px;
-    background-position: center center;
-    background-size: cover;
-    background-image: url('../assets/img/Homelogo.png');
-    box-shadow: 0 0 0 2px rgba(12,12,12,.1);
-    transition: opacity .2s, border-radius .2s, box-shadow .2s;
-    transition-timing-function: ease-out;
-    }
-    .link-to-home:hover {
-    opacity: 0.8;
-    border-radius: 50%;
-    box-shadow: 0 0 0 20px rgba(12,12,12,.1);
-    }
-    @media (max-width: 767px){
-    .Homelogo{
-        height: 120px;
-        padding: 20px 0px;
-          
-    }
-    .Homelogo .link-to-home{
-        margin-left:32vw;
-        margin-right:auto ;
-        display: block;
-        
-    }
-    
-}
+
         </style>
 
           <!-- home button -->
-       <section class="Homelogo">
-        <a href="/" class="link-to-home" ></a>
-    </section>
+          <%- include('partials/homebutton') %>
 
     <section>
       <center><a href="#" class="gradient-box"><span>FLAGSHIP EVENTS</span></a></center>
