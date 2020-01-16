@@ -25,9 +25,13 @@ body{
     margin: 20px;
     margin-top: 40px;
 }
+button{
+  bottom: 10px;
+}
+
 .container .card{
     position: relative;
-    height:  150px;
+    height:  210px;
     background: #fff;
     display: flex;
     width: 30%;
