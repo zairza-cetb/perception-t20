@@ -165,7 +165,7 @@ html {
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
-  background: url('../assets/img/perceptionbg.jpg') 
+  background: url('../assets/img/david-becker-crs2vlkSe98-unsplash.jpg') 
      no-repeat 50% 0 ;
      background-position: relative;
   opacity: 1;
