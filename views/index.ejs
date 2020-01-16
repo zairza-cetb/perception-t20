@@ -2958,7 +2958,7 @@ html, body {
     return test.complete || test.width+test.height > 0;
     }
 
-   if(!cached("/assets/img/Tech.png")){
+   if(!cached("/assets/img/perceptionbg.jpg")){
        setTimeout(function(){
        var e = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
       console.log("keypress");
@@ -2982,13 +2982,9 @@ html, body {
 
     <%- include('partials/splash') %>
     <%- include('partials/navbar') %>
-    <%	if(!currentUser){ %>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/register">Signup</a></li>
-      <%	} else { %>
+    <%	if(currentUser){ %>
       <li><a href="#">Signed in as <%= currentUser.username %></a></li>
-      <li><a href="/logout">Logout</a></li>
-      <%	} %>
+    <% } %>
     <div class="glitch">
       <div class="glitch__img"></div>
       <div class="glitch__img"></div>
@@ -3002,7 +2998,10 @@ html, body {
         <%- include('partials/title') %>  
       </div>
       <div class="container">
-      <div class="container" style="height: 100%; " >
+      <div class="container" style="height: fit-content; " >
+        <section>
+          <%- include('partials/aboutus') %>
+        </section>
         <section class="event-cards">
           <%- include('partials/eventcards') %>
         </section>
@@ -3010,7 +3009,7 @@ html, body {
           <%- include('partials/button') %>  
         </section>
         <div class="container">
-            <div class="separator" style="height: 120px;"><h1>S P O N S O R S</h1></div>
+            <div class="separator sp" style="height: 120px;"><div class="headr">SPONSORS</div class="headr"></div>
 
             <div class="row">
 
