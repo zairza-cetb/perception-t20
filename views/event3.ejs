@@ -38,45 +38,88 @@
                          -o-transform: none;
                                 transform: none;
             }
+
+            .link-to-home {
+    position:absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 200;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border-radius: 3px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../assets/img/Homelogo.png');
+    box-shadow: 0 0 0 2px rgba(12,12,12,.1);
+    transition: opacity .2s, border-radius .2s, box-shadow .2s;
+    transition-timing-function: ease-out;
+    }
+    .link-to-home:hover {
+    opacity: 0.8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(12,12,12,.1);
+    }
+    @media (max-width: 767px){
+    .Homelogo{
+        margin-left:32vw;
+        margin-right:auto ;
+        display: block;
+    }
+    
+}
         </style>
+
+
+       <!-- home button -->
+       <section class="Homelogo">
+        <a href="/" class="link-to-home" ></a>
+    </section>
+        
+
+<section>
       <center><a href="#" class="gradient-box"><span>MANAGEMENT EVENTS</span></a></center>
      <div class="wrapper">
      <div class="container">
       
       <div class="card">
-            <div class="imgBx" data-text="Idea Challenge">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Biz Quiz">
+                <img src="assets/img/eventicons/quiz.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Idea Challenge">Idea Challenge</h3>
-                   <p class="glitch" data-text="Business plan competetion">Business plan competetion </p>
+                   <h3 class="glitch" data-text="Biz Quiz">Biz Quiz</h3>
+                   <p class="glitch" data-text="Quiz On Business">Quiz On Business </p>
                </div>
             </div>
       </div>
        <div class="card">
-            <div class="imgBx" data-text="Karobar">
-                <img src="assets/img/money.png">
+            <div class="imgBx" data-text="Idea Challenge">
+                <img src="assets/img/eventicons/idea.png">
             </div>
             <div class="content">
                <div>
-                   <h3 class="glitch" data-text="Karobar">Karobar</h3>
-                   <p class="glitch" data-text=""></p>
+                   <h3 class="glitch" data-text="Idea Challenge">Idea Challenge</h3>
+                   <p class="glitch" data-text="Present Your Creative Idea!">Present Your Creative Idea!</p>
                </div>
             </div>
       </div>
        <div class="card">
             <div class="imgBx" data-text="Logo Quiz">
-                <img src="assets/img/money.png">
+                <img src="assets/img/eventicons/thinking.png">
             </div>
             <div class="content">
                <div>
                    <h3 class="glitch" data-text="Logo Quiz">Logo Quiz</h3>
-                   <p class="glitch" data-text=""></p>
+                   <p class="glitch" data-text="Guess the Logo!">Guess the Logo!</p>
                </div>
             </div>
       </div>
     </div>
+     </div>
+</section>
+
     <script>
         // build scenes
         var revealElements = document.getElementsByClassName("card");
