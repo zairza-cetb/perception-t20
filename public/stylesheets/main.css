@@ -524,11 +524,11 @@ input {
 .link-to-home {
  position: absolute ;
 top: 30px;
-left: 50px;
+left: 40px;
 z-index: 200;
 cursor: pointer;
-width: 70px;
-height: 70px;
+width: 50px;
+height: 50px;
 text-align: center;
 border-radius: 3px;
 background-position: center center;
@@ -548,6 +548,7 @@ box-shadow: 0 0 0 20px rgba(12,12,12,.1);
 @media (max-width: 767px) {
   .page-wrapper {
     padding:0px;
+    left:20px;
   }
   
   .card-3 {
