@@ -30,4 +30,22 @@ router.get('/comingsoon', function(req,res,next){
 	res.render('comingsoon');
 });
 
+// router.post("/admin", (req, res) => {
+// 	console.log("hi2");
+// 	var username = req.body.username;
+// 	var password = req.body.password;
+// 	if(username == "zairza" && password == "database"){
+// 	  User.find({}, (err, data) => {
+// 		console.log("hi1");
+
+// 		if (err) console.log(err);
+// 		else {
+// 			console.log("hi");
+// 		  res.send(data);}
+// 	  });
+// 	} else {
+// 	  res.redirect("/admin");
+// 	}
+//   });
+
 module.exports = router;

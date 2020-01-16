@@ -47,7 +47,6 @@ app.use(require("express-session")({
 const userSchema = new mongoose.Schema ({
   name: String,
   gender: String,
-  email: String,
   password: String,
   phone: Number,
   college: String,
@@ -74,7 +73,7 @@ app.use('/', routes);
 app.post("/register", function (req, res) {
   const newUser = new User({
     username: req.body.username,
-    email: req.body.email,
+   name: req.body.name,
     gender: req.body.gender,
     phone: req.body.phone,
     college: req.body.college
@@ -90,12 +89,9 @@ app.post("/register", function (req, res) {
     });
 });
 
-app.post("/login", passport.authenticate("local",
-{
-    successRedirect: "/",
-
-    failureRedirect: "/login"
-  }),
+app.post('/login', passport.authenticate('local', {
+  successRedirect: '/',
+  failureRedirect: '/login' })
 );
 
 app.get("/logout", (req, res) => {
@@ -115,7 +111,7 @@ app.post("/admin", (req, res) => {
     User.find({}, (err, data) => {
       if (err) console.log(err);
       else 
-        // res.send(data);
+        // res.render("data1", { data: data });
         res.send(data);
     });
   } else {
@@ -124,36 +120,39 @@ app.post("/admin", (req, res) => {
 });
 
 app.get('/register/:eventID', (req, res) => {
-  User.updateOne(
-    {
-      _id: req.user._id
-    },
-    {
-      $push: {
-        events: req.params.eventID
+  User.findOne({_id:req.user._id},(err,user)=>{
+    user.events.push(req.params.eventID)
+    user.save((err, data)=>{
+      if(err) console.log(err)
+      else { res.redirect("back")
+    console.log(data)  }
+    })
+  })
+});
+
+app.get('/chregister/:eventID', (req, res) => {
+  var ID = req.params.eventID;
+  User.findOne({_id: req.user._id}, (err,user) => {
+    User.find({events: ID}, (err, found) => {
+      if(err) console.log(0)
+      else {
+        console.log(1)
+        res.redirect('/')
       }
-    }
-  );
-  User.find({_id:req.user._id},(er,data)=>{console.log(data)});
-  res.send("done");
+    })
+  })
 });
 
 app.get('/unregister/:eventID', (req, res) => {
-  User.updateOne(
-    {
-      _id: req.user._id
-    },
-    {
-      $pull: {
-        events: req.params.eventID
-      }
-    }
-  );
-  User.find({_id:req.user._id},(er,data)=>{console.log(data)});
-  res.send("done");
+  User.findOne({_id:req.user._id},(err,user)=>{
+    user.events.pull(req.params.eventID)
+    user.save((err, data)=>{
+      if(err) console.log(err)
+      else { res.redirect('back');
+    console.log(data)  }
+    })
+  })
 });
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
