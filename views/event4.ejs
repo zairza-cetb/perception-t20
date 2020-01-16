@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/stylenew.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    </head>
+    <body>
+        <%- include('partials/preloader') %>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
+        <style type="text/css">
+            .card {
+                opacity: 0;
+                -webkit-transform: translateX(-100px);
+                     -moz-transform: translateX(-100px);
+                        -ms-transform: translateX(-100px);
+                         -o-transform: translateX(-100px);
+                                transform: translateX(-100px);
+                -webkit-transition: all 2.6s ease-out;
+                     -moz-transition: all 1.6s ease-out;
+                        -ms-transition: all 1.6s ease-out;
+                         -o-transition: all 1.6s ease-out;
+                                transition: all 0.6s ease-out;
+            }
+            .card.visible {
+                opacity: 1;
+                -webkit-transform: none;
+                     -moz-transform: none;
+                        -ms-transform: none;
+                         -o-transform: none;
+                                transform: none;
+            }
+        </style>
+      <center><a href="#" class="gradient-box"><span>FLAGSHIP EVENTS</span></a></center>
+     <div class="wrapper">
+     <div class="container">
+      
+      <div class="card">
+            <div class="imgBx" data-text="Rescue Rangers">
+                <img src="assets/img/eventicons/robot.png">
+            </div>
+            <div class="content">
+               <div>
+                   <h3 class="glitch" data-text="Rescue Rangers">Rescue Rangers</h3>
+                   <p class="glitch" data-text="RoboRace Challenge">RoboRace Challenge</p>
+               </div>
+            </div>
+      </div>
+       <div class="card">
+            <div class="imgBx" data-text="Code Busters">
+                <img src="assets/img/eventicons/cb.png">
+            </div>
+            <div class="content">
+               <div>
+                   <h3 class="glitch" data-text="Code Busters">Code Busters</h3>
+                   <p class="glitch" data-text="Code for a Challenge">Code for a Challenge</p>
+               </div>
+            </div>
+      </div>
+       <div class="card">
+            <div class="imgBx" data-text="Wartalap">
+                <img src="assets/img/eventicons/debate.png">
+            </div>
+            <div class="content">
+               <div>
+                   <h3 class="glitch" data-text="Wartalap">Wartalap</h3>
+                   <p class="glitch" data-text="Don’t settle! Debate!
+                   ">Don’t settle! Debate!
+                </p>
+               </div>
+            </div>
+      </div>
+      <div class="card">
+        <div class="imgBx" data-text="Wordsworth">
+            <img src="assets/img/eventicons/ww.png">
+        </div>
+        <div class="content">
+           <div>
+               <h3 class="glitch" data-text="Wordsworth">Wordsworth</h3>
+               <p class="glitch" data-text="Challenge Your Vocabulary!
+               ">Challenge Your Vocabulary!
+            </p>
+           </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="imgBx" data-text="Qurious">
+        <img src="assets/img/eventicons/quiz.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Qurious">Qurious</h3>
+           <p class="glitch" data-text="
+           ">
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Mock Loksabha">
+        <img src="assets/img/eventicons/voting.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Mock Loksabha">Mock Loksabha</h3>
+           <p class="glitch" data-text="Experience a mock Lok Sabha">Experience a mock Lok Sabha</p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Karobar">
+        <img src="assets/img/eventicons/karo.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Karobar">Karobar</h3>
+           <p class="glitch" data-text="Sell me this!">Sell me this!</p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Hoverpod">
+        <img src="assets/img/eventicons/drone.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Hoverpod">Hoverpod</h3>
+           <p class="glitch" data-text="Hoverpod! Hoverpod! 
+           ">Hoverpod! Hoverpod! 
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Robo Dangal">
+        <img src="assets/img/eventicons/robowar.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Robo Dangal">Robo Dangal</h3>
+           <p class="glitch" data-text="Robot is indeed a fighter!">Robot is indeed a fighter!</p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="RGC">
+        <img src="assets/img/eventicons/machine.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Goldberg Challenge">Goldberg Challenge</h3>
+           <p class="glitch" data-text="It’s simple! Complex it!
+           ">It’s simple! Complex it!
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Widget Mania">
+        <img src="assets/img/eventicons/buggies.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Widget Mania">Widget Mania</h3>
+           <p class="glitch" data-text="Welcome motorheads! ">Welcome motorheads! </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Robo soccer">
+        <img src="assets/img/eventicons/robosoccer.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="Robo soccer">Robo soccer</h3>
+           <p class="glitch" data-text="Hey bots! Time for  a soccer match!
+           ">Hey bots! Time for  a soccer match!
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="FET">
+        <img src="assets/img/eventicons/mindmaze.png">
+    </div>
+    <div class="content">
+       <div>
+           <h3 class="glitch" data-text="FET">FET</h3>
+           <p class="glitch" data-text=""></p>
+       </div>
+    </div>
+</div>
+
+    </div>
+    <script>
+        // build scenes
+        var revealElements = document.getElementsByClassName("card");
+        for (var i=0; i<revealElements.length; i++) {
+            new ScrollMagic.Scene({
+                                triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                                offset: 30,												 // start a little later
+                                triggerHook: 0.98,
+                                reverse:false,
+                            })
+                            .setClassToggle(revealElements[i], "visible") // add class toggle
+                         //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+                            .addTo(controller);
+        }
+    </script>
+    </body>
+</html>
