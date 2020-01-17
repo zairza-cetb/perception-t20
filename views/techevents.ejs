@@ -46,6 +46,9 @@
   <body background="#222">
     <%- include('partials/preloader') %>
     <%- include('partials/navbar') %>
+
+    <%- include('partials/modal') %>
+
     <script>
       // init controller
       var controller = new ScrollMagic.Controller();
@@ -73,6 +76,10 @@
         -o-transform: none;
         transform: none;
       }
+
+      .card .event__cover,.event__desc {
+          display: none;
+      }
     </style>
     <section style="margin-top: 75px;">   
       <center style="background-color: #222;">
@@ -81,24 +88,26 @@
       <div class="wrapper">
         <div class="container">
           <div class="card">
-            <div class="imgBx" data-text="Code Busters">
+            <div class="imgBx" data-text="Code Busters" data-id="1" data-desc="Lorem Ipsum">
               <img src="assets/img/eventicons/cb.png" />
             </div>
             <div class="content">
-                <div>
-                    <h3 class="glitch" data-text="Code Busters">Code Busters</h3>
+                <div data-title="Code Busters" data-id="1" data-desc="Lorem Ipsum">
+                    <h3 class="glitch event__title" data-text="Code Busters">Code Busters</h3>
                     <p class="glitch" data-text="Coding challenge">Coding challenge</p>
-                    <button id="eventButton1" class="btn btn-light-green" data-toggle="modal" data-target="#eventModal1" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                    <button id="eventButton1" class="btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                    <!-- <img class="event__cover" src="/assets/img/Tech.png">
+                    <p class="event__desc">Lorem Ipsum Dolor Simet</p> -->
                 </div>
             </div>
         </div>
         <div class="card">
-            <div class="imgBx" data-text="Web Weavers">
+            <div class="imgBx" data-text="Web Weavers" data-desc="lorem">
               <img src="assets/img/eventicons/webdesign.png" />
             </div>
             <div class="content">
                 <div>
-                    <h3 class="glitch" data-text="Web Weavers">Web Weavers</h3>
+                    <h3 class="glitch event__title" data-text="Web Weavers">Web Weavers</h3>
                     <p class="glitch" data-text="Difficult task to search from web">Difficult task to search from web</p>
                     <button id="eventButton2" class="btn btn-light-green" data-toggle="modal" data-target="#eventModal2" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
                 </div>
