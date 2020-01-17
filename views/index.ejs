@@ -811,7 +811,8 @@ function incr_progress(lo=100){
             c[0].remove();
             console.log("ooso");
             c[0].remove();
-            document.getElementById("master").hidden=false;
+            document.getElementById("master").style["opacity"]=1;
+            document.getElementsByTagName("body")[0].style.overflow="unset";
             },1000);
 
             
@@ -2894,16 +2895,17 @@ html, body {
       crossorigin="anonymous"
     ></script>
     <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
-    <script
-			  src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
+    
         <link
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -2919,8 +2921,8 @@ html, body {
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
 
-  
-<body onload="incr_progress()" class="offline" id="t">
+
+<body onload="incr_progress()" class="offline" id="t" style="overflow:hidden;">
     <div id="messageBox" class="sendmessage preloader" style="height:20%;text-align:center; display:table;width:100%;">
         <h1  style="text-align: center;font-family: 'Audiowide', sans-serif;display:table-cell; vertical-align:middle;">Breaking the Internet ....</h1>
         <div class="niokbutton" onclick="okbuttonsend()"></div>
@@ -2942,7 +2944,7 @@ html, body {
    </div>
 </div>
 
-<div id="master" hidden>
+<div id="master" style="opacity:0;">
 <script>
    var mysttime=1000;
    function cached(url){
@@ -2951,7 +2953,7 @@ html, body {
     return test.complete || test.width+test.height > 0;
     }
 
-   if(!cached("/assets/img/perceptionbg.jpg")){
+   if(!cached("/assets/img/david-becker-crs2vlkSe98-unsplash.jpg")){
        setTimeout(function(){
        var e = new KeyboardEvent('keydown',{'keyCode':32,'which':32});
       console.log("keypress");
@@ -2962,7 +2964,8 @@ html, body {
    c[0].remove();
    console.log("ooso");
    c[0].remove();
-   document.getElementById("master").hidden=false;
+   document.getElementById("master").style.opacity=1;
+   document.getElementsByTagName("body")[0].style.overflow="unset";
    }
 //    document.onkeydown = function(evt) {
 //    evt = evt || window.event;
