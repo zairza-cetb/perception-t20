@@ -124,18 +124,31 @@ app.post("/admin", (req, res) => {
 });
 
 app.get('/register/:eventID', (req, res) => {
-  User.updateOne(
-    {
-      _id: req.user._id
-    },
-    {
-      $push: {
-        events: req.params.eventID
-      }
+  User.findOne({_id:req.user._id},(err,user)=>{
+    user.events.push(req.params.eventID)
+    user.save((err, data)=>{
+      if(err) console.log(err)
+      else { res.redirect("back")
+    console.log(data)  }
+    })
+  })
+});
+
+app.get('/chregister/:eventID', (req, res) => {
+  var ID = req.params.eventID;
+  User.findOne({_id: req.user._id}, (err,user) => {
+    if(err) console.log(err);
+    else{
+      User.findOne({events: ID}, (err, found) => {
+        if(err) console.log('0');
+        else if(found) 
+          console.log("YES");
+        else 
+          console.log("NO");
+        res.redirect('/');
+      });
     }
-  );
-  User.find({_id:req.user._id},(er,data)=>{console.log(data)});
-  res.send("done");
+  });
 });
 
 app.get('/unregister/:eventID', (req, res) => {
