@@ -188,7 +188,11 @@ h6 {
 }
 
 .p-t-180 {
-  padding-top: 180px;
+  padding-top: 120px;
+}
+
+.p-t-150 {
+  padding-top: 150px;
 }
 
 .p-t-20 {
