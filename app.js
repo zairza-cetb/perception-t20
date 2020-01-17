@@ -134,14 +134,18 @@ app.get('/register/:eventID', (req, res) => {
 app.get('/chregister/:eventID', (req, res) => {
   var ID = req.params.eventID;
   User.findOne({_id: req.user._id}, (err,user) => {
-    User.find({events: ID}, (err, found) => {
-      if(err) console.log(0)
-      else {
-        console.log(1)
-        res.redirect('/')
-      }
-    })
-  })
+    if(err) console.log(err);
+    else{
+      User.findOne({events: ID}, (err, found) => {
+        if(err) console.log('0');
+        else if(found) 
+          console.log("YES");
+        else 
+          console.log("NO");
+        res.redirect('/');
+      });
+    }
+  });
 });
 
 app.get('/unregister/:eventID', (req, res) => {
