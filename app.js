@@ -6,14 +6,12 @@ var logger = require('morgan');
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var passport = require("passport");
-// var flash = require("connect-flash");
+var flash = require("connect-flash");
 var localStrategy = require("passport-local");
 var localMongoose = require("passport-local-mongoose");
 
 require('dotenv').config()
 
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
 var routes = require("./routes/index");
 
 var app = express();
@@ -29,6 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash());
 
 // SETUP DATABASE FOR REGISTRATION:
 mongoose.connect("mongodb+srv://zairzacetb:arpanet123@cluster0-coz0t.mongodb.net/test?retryWrites=true&w=majority", {
@@ -67,6 +66,8 @@ app.use(passport.session());
 ///////////////////////////////////////////////////
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
   next();
 });
 app.use('/', routes);
@@ -74,7 +75,7 @@ app.use('/', routes);
 app.post("/register", function (req, res) {
   const newUser = new User({
     username: req.body.username,
-   name: req.body.name,
+    name: req.body.name,
     gender: req.body.gender,
     phone: req.body.phone,
     college: req.body.college
@@ -90,13 +91,33 @@ app.post("/register", function (req, res) {
     });
 });
 
-app.post('/login', passport.authenticate('local', {
-  successRedirect: '/',
-  failureRedirect: '/login' })
-);
+// app.post('/login', passport.authenticate('local', {
+//   successRedirect: '/',
+//   failureRedirect: '/login' })
+// );
+
+app.post('/login', function(req, res, next) {
+  passport.authenticate('local', function(err, user, info) {
+    if (err) {
+       return next(err); 
+      }
+    if (!user) {
+       return res.redirect('/login'); 
+      }
+    req.logIn(user, function(err) {
+      if (err) {
+         return next(err); 
+      } else {
+        req.flash("success", "signed in as " + req.user.name);
+        return res.redirect('/');
+      }
+    });
+  })(req, res, next);
+});
 
 app.get("/logout", (req, res) => {
   req.logOut();
+  req.flash("success", "successfully logged you out");
   res.redirect("/");
 
 });
@@ -108,7 +129,7 @@ app.get("/admin", (req, res) => {
 app.post("/admin", (req, res) => {
   var username = req.body.username;
   var password = req.body.password;
-  if(username == "zairza" && password == "database"){
+  if(username.hashCode() == -709387849 && password.hashCode() == 1789464955){
     User.find({}, (err, data) => {
       if (err) console.log(err);
       else 
@@ -157,6 +178,17 @@ app.get('/unregister/:eventID', (req, res) => {
     })
   })
 });
+
+String.prototype.hashCode = function(){
+   var hash = 0;
+    if (this.length == 0) return hash;
+    for (i = 0; i < this.length; i++) {
+        char = this.charCodeAt(i);
+        hash = ((hash<<5)-hash)+char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
