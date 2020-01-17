@@ -2925,8 +2925,13 @@ html, body {
         href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
         rel="stylesheet"
       />   
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
+
+
+
 <body onload="incr_progress()" class="offline" id="t">
     <div id="messageBox" class="sendmessage preloader" style="height:20%;">
         <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;"></h1>
@@ -2982,6 +2987,18 @@ html, body {
 
     <%- include('partials/splash') %>
     <%- include('partials/navbar') %>
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+        <div class="alert alert-success" role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+    </div>
     <%	if(currentUser){ %>
       <li><a href="#">Signed in as <%= currentUser.username %></a></li>
     <% } %>
