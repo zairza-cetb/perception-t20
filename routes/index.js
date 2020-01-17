@@ -15,19 +15,19 @@ router.get("/login", function (req, res, next) {
 });
 
 router.get('/techevents', function(req, res, next){
-	res.render('event1');
+	res.render('techevents');
 });
 
 router.get('/litevents', function(req,res,next){
-	res.render('event2');
+	res.render('litevents');
 });
 
 router.get('/manevents', function(req,res,next){
-	res.render('event3');
+	res.render('manaevents');
 });
 
 router.get('/flagevents', function(req,res,next){
-	res.render('event4');
+	res.render('flasshipevents');
 });
 
 
