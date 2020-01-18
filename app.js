@@ -4,22 +4,18 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require("body-parser");
-var mongoose = require("mongoose");
-var passport = require("passport");
 var flash = require("connect-flash");
-var localStrategy = require("passport-local");
-var localMongoose = require("passport-local-mongoose");
 
 require('dotenv').config()
 
 var routes = require("./routes/index");
+var handler = require("./routes/handler");
 
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -29,166 +25,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 
-// SETUP DATABASE FOR REGISTRATION:
-mongoose.connect("mongodb+srv://zairzacetb:arpanet123@cluster0-coz0t.mongodb.net/test?retryWrites=true&w=majority", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
 //Express-Session n
 app.use(require("express-session")({
   secret: "Secrets shall not be disclosed",
   resave: false,
   saveUninitialized: false
 }));
-
-const userSchema = new mongoose.Schema ({
-  name: String,
-  gender: String,
-  password: String,
-  phone: Number,
-  college: String,
-  events: [String]
-});
-
-userSchema.plugin(localMongoose);
-
-const User = new mongoose.model("User", userSchema);
-
-passport.use(new localStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-app.use(passport.initialize());
-app.use(passport.session());
-
-///////////////////////////////////////////////////
-app.use((req, res, next) => {
-  res.locals.currentUser = req.user;
-  res.locals.error = req.flash("error");
-  res.locals.success = req.flash("success");
-  next();
-});
+app.use('/', handler);
 app.use('/', routes);
-
-app.post("/register", function (req, res) {
-  const newUser = new User({
-    username: req.body.username,
-    name: req.body.name,
-    gender: req.body.gender,
-    phone: req.body.phone,
-    college: req.body.college
-  });
-
-    User.register(newUser, req.body.password, (err, user) => {
-        if (err) {
-            console.log(err);
-        }
-        passport.authenticate("local")(req, res, () => {
-            res.redirect("/");
-        });
-    });
-});
-
-// app.post('/login', passport.authenticate('local', {
-//   successRedirect: '/',
-//   failureRedirect: '/login' })
-// );
-
-app.post('/login', function(req, res, next) {
-  passport.authenticate('local', function(err, user, info) {
-    if (err) {
-       return next(err); 
-      }
-    if (!user) {
-       return res.redirect('/login'); 
-      }
-    req.logIn(user, function(err) {
-      if (err) {
-         return next(err); 
-      } else {
-        req.flash("success", "signed in as " + req.user.name);
-        return res.redirect('/');
-      }
-    });
-  })(req, res, next);
-});
-
-app.get("/logout", (req, res) => {
-  req.logOut();
-  req.flash("success", "successfully logged you out");
-  res.redirect("/");
-
-});
-
-app.get("/admin", (req, res) => {
-  res.render("adminlog");
-});
-
-app.post("/admin", (req, res) => {
-  var username = req.body.username;
-  var password = req.body.password;
-  if(username.hashCode() == -709387849 && password.hashCode() == 1789464955){
-    User.find({}, (err, data) => {
-      if (err) console.log(err);
-      else 
-        res.render("data", { data: data });
-    });
-  } else {
-    res.redirect("/admin");
-  }
-});
-
-app.get('/register/:eventID', (req, res) => {
-  User.findOne({_id:req.user._id},(err,user)=>{
-    user.events.push(req.params.eventID)
-    user.save((err, data)=>{
-      if(err) console.log(err)
-      else { res.redirect("back")
-     }
-    })
-  })
-});
-
-app.get('/chregister/:eventID', (req, res) => {
-  var ID = req.params.eventID;
-  User.findOne({_id: req.user._id}, (err,user) => {
-    if(err) console.log(err);
-    else{
-      User.findOne({events: ID}, (err, found) => {
-        if(err) console.log('0');
-        else if(found) 
-          console.log("YES");
-        else 
-          console.log("NO");
-        res.redirect('/');
-      });
-    }
-  });
-});
-
-app.get('/unregister/:eventID', (req, res) => {
-  User.findOne({_id:req.user._id},(err,user)=>{
-    user.events.pull(req.params.eventID)
-    user.save((err, data)=>{
-      if(err) console.log(err)
-      else { res.redirect('back');
-      }
-    })
-  })
-});
-
-String.prototype.hashCode = function(){
-   var hash = 0;
-    if (this.length == 0) return hash;
-    for (i = 0; i < this.length; i++) {
-        char = this.charCodeAt(i);
-        hash = ((hash<<5)-hash)+char;
-        hash = hash & hash; // Convert to 32bit integer
-    }
-    return hash;
-}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
