@@ -31,19 +31,19 @@ router.get("/admin", (req, res) => {
 
   /* GET techevents page. */
   router.get('/techevents', function(req, res, next) {
-	res.render('event1');
+	res.render('techevents');
 });
 /* GET litevents page. */
 router.get('/litevents', function(req,res,next) {
-	res.render('event2');
+	res.render('litevents');
 });
 /* GET management events page. */
 router.get('/manevents', function(req,res,next) {
-	res.render('event3');
+	res.render('manaevents');
 });
 /* GET flag page. */
 router.get('/flagevents', function(req,res,next) {
-	res.render('event4');
+	res.render('flagshipevents');
 });
 
 /* GET comingsoon page. */
