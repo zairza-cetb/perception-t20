@@ -31,7 +31,7 @@ router.post("/register", function (req, res) {
               console.log(err);
           }
           passport.authenticate("local")(req, res, () => {
-              res.redirect("/");
+              res.redirect("back");
           });
       });
   });
@@ -49,7 +49,7 @@ router.post("/register", function (req, res) {
            return next(err); 
         } else {
           req.flash("success", "signed in as " + req.user.name);
-          return res.redirect('/');
+          return res.redirect('back');
         }
       });
     })(req, res, next);
@@ -68,8 +68,11 @@ router.get('/register/:eventID', (req, res) => {
 	User.findOne({_id:req.user._id},(err,user)=>{
 	  user.events.push(req.params.eventID)
 	  user.save((err, data)=>{
-		if(err) console.log(err)
-		else { res.redirect("back")
+		if(err) {
+      console.log(err);
+      res.send("F")
+    }
+		else { res.send("T");
 	   }
 	  })
 	})
@@ -83,10 +86,9 @@ router.get('/chregister/:eventID', (req, res) => {
 		User.findOne({events: ID}, (err, found) => {
 		  if(err) console.log('0');
 		  else if(found) 
-			console.log("YES");
+			res.send("T");
 		  else 
-			console.log("NO");
-		  res.redirect('/');
+			res.send("F");
 		});
 	  }
 	});
@@ -96,8 +98,12 @@ router.get('/unregister/:eventID', (req, res) => {
 	User.findOne({_id:req.user._id},(err,user)=>{
 	  user.events.pull(req.params.eventID)
 	  user.save((err, data)=>{
-		if(err) console.log(err)
-		else { res.redirect('back');
+		if(err) {
+      console.log(err);
+      res.send("F");
+    }
+		else {
+      res.send("T");
 		}
 	  })
 	})

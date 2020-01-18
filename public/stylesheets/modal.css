@@ -166,3 +166,8 @@
 .hide-overflow {
   overflow: hidden;
 }
+
+
+.hide {
+  visibility: hidden;
+}

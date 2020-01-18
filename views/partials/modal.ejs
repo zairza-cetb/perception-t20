@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/stylesheets/modal.css" />
 <script src="/js/modal.js"></script>
-<div class="mod">
+<div class="mod" data-eventID="">
   <div class="overlay"></div>
   <div class="mod__contents mod--transition">
     <a class="mod__close" href="#">✕</a>
@@ -14,9 +14,9 @@
         delectus voluptate?
       </p>
       <%	if(currentUser){ %>
-        <a href="/chregister/1">
-          <button class="btn btn-danger register-btn">Register</button>
-        </a>
+          <button id="regbtn" class="btn btn-success hide"></button>
+      <% } else { %>
+        <a href="/login">Please Log In before registering for events</a>
       <% } %>
     </div>
   </div>
