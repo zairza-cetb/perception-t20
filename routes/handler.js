@@ -11,6 +11,13 @@ passport.deserializeUser(User.deserializeUser());
 router.use(passport.initialize());
 router.use(passport.session());
 
+router.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
+  next();
+});
+
 router.post("/register", function (req, res) {
     const newUser = new User({
       username: req.body.username,
@@ -54,6 +61,7 @@ router.post("/register", function (req, res) {
     res.redirect("/");
   
   });
+
 ///////////////////////////////////////////////////////////////////////
 /* Backend for event registration */
 router.get('/register/:eventID', (req, res) => {

@@ -2,6 +2,13 @@ var express = require('express');
 var User = require("./model");
 var router = express.Router();
 
+router.use((req, res, next) => {
+	res.locals.currentUser = req.user;
+	res.locals.error = req.flash("error");
+	res.locals.success = req.flash("success");
+	next();
+  });
+
 /* GET home page. */
 router.get("/", function(req, res, next) {
     res.render('index');
@@ -22,22 +29,8 @@ router.get("/admin", (req, res) => {
 	res.render("adminlog");
 });
 
-/* POST admin page. */
-router.post("/admin", (req, res) => {
-	var username = req.body.username;
-	var password = req.body.password;
-	if(username.hashCode() == -709387849 && password.hashCode() == 1789464955){
-	  User.find({}, (err, data) => {
-		if (err) console.log(err);
-		else 
-		  res.render("data", { data: data });
-	  });
-	} else {
-	  res.redirect("/admin");
-	}
-});
-/* GET techevents page. */
-router.get('/techevents', function(req, res, next) {
+  /* GET techevents page. */
+  router.get('/techevents', function(req, res, next) {
 	res.render('event1');
 });
 /* GET litevents page. */
@@ -52,9 +45,25 @@ router.get('/manevents', function(req,res,next) {
 router.get('/flagevents', function(req,res,next) {
 	res.render('event4');
 });
+
 /* GET comingsoon page. */
 router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
+});
+
+/* POST admin page. */
+router.post("/admin", (req, res) => {
+	var username = req.body.username;
+	var password = req.body.password;
+	if(username.hashCode() == -709387849 && password.hashCode() == 1789464955){
+	  User.find({}, (err, data) => {
+		if (err) console.log(err);
+		else 
+		  res.render("data", { data: data });
+	  });
+	} else {
+	  res.redirect("/admin");
+	}
 });
 
 /* Hash function */

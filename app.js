@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var User = require("./routes/model");
 var bodyParser = require("body-parser");
 var flash = require("connect-flash");
 
@@ -32,15 +31,8 @@ app.use(require("express-session")({
   resave: false,
   saveUninitialized: false
 }));
-
-app.use((req, res, next) => {
-  res.locals.currentUser = req.user;
-  res.locals.error = req.flash("error");
-  res.locals.success = req.flash("success");
-  next();
-});
-app.use('/', routes);
 app.use('/', handler);
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

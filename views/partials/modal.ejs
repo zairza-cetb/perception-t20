@@ -13,7 +13,11 @@
         distinctio dignissimos ut? Facilis voluptates eligendi sapiente in
         delectus voluptate?
       </p>
-      <button class="btn btn-danger register-btn">Register</button>
+      <%	if(currentUser){ %>
+        <a href="/chregister/1">
+          <button class="btn btn-danger register-btn">Register</button>
+        </a>
+      <% } %>
     </div>
   </div>
 </div>
