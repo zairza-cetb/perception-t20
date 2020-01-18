@@ -12,21 +12,11 @@
     <!-- Title Page-->
     <title>Login</title>
 
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
     <link
         href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
-    <link href="stylesheets/main.css" rel="stylesheet" media="all">
-    
-    <!-- <link
+    <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
@@ -47,18 +37,18 @@
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
+    
+    <link href="stylesheets/main.css" rel="stylesheet" media="all">
 </head>
 
 <body>
     <%- include('partials/preloader') %>
 
     <!-- home button -->
-    <!-- <%- include('partials/homebutton') %> -->
-  
-  
-
-    <div class="page-wrapper bg-gra-01 p-t-150 p-b-100 font-poppins">
+    <%- include('partials/navbar') %>
+ 
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
             <div class="card card-3">
                 <div class="card-heading"></div>
@@ -79,11 +69,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="vendor/select2/select2.min.js"></script>
 
     <!-- Main JS-->
     <script src="   js/global.js"></script>

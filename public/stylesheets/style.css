@@ -40,6 +40,9 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 10%;
 }
+.box .card-deck{
+  justify-content: space-between;
+}
 .box .card-block {
   position: relative;
   width: 300px;
