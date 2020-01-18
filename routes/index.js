@@ -36,23 +36,23 @@ router.post("/admin", (req, res) => {
 	  res.redirect("/admin");
 	}
 });
-    
+/* GET techevents page. */
 router.get('/techevents', function(req, res, next) {
 	res.render('event1');
 });
-
+/* GET litevents page. */
 router.get('/litevents', function(req,res,next) {
 	res.render('event2');
 });
-
+/* GET management events page. */
 router.get('/manevents', function(req,res,next) {
 	res.render('event3');
 });
-
+/* GET flag page. */
 router.get('/flagevents', function(req,res,next) {
 	res.render('event4');
 });
-
+/* GET comingsoon page. */
 router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
 });

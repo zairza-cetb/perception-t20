@@ -41,48 +41,7 @@ app.use((req, res, next) => {
 });
 app.use('/', routes);
 app.use('/', handler);
-///////////////////////////////////////////////////////////////////////////////
 
-app.get('/register/:eventID', (req, res) => {
-	User.findOne({_id:req.user._id},(err,user)=>{
-	  user.events.push(req.params.eventID)
-	  user.save((err, data)=>{
-		if(err) console.log(err)
-		else { res.redirect("back")
-	   }
-	  })
-	})
-});
-
-app.get('/chregister/:eventID', (req, res) => {
-	var ID = req.params.eventID;
-	User.findOne({_id: req.user._id}, (err,user) => {
-	  if(err) console.log(err);
-	  else{
-		User.findOne({events: ID}, (err, found) => {
-		  if(err) console.log('0');
-		  else if(found) 
-			console.log("YES");
-		  else 
-			console.log("NO");
-		  res.redirect('/');
-		});
-	  }
-	});
-});
-  
-app.get('/unregister/:eventID', (req, res) => {
-	User.findOne({_id:req.user._id},(err,user)=>{
-	  user.events.pull(req.params.eventID)
-	  user.save((err, data)=>{
-		if(err) console.log(err)
-		else { res.redirect('back');
-		}
-	  })
-	})
-});
-  
-////////////////////////////////////////////////////////////////////////////////
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

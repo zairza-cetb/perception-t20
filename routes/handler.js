@@ -3,7 +3,8 @@ var express = require("express"),
     localStrategy = require("passport-local"),
     User = require("./model"),
     router = express.Router();
-
+    
+//Initialization of passportjs
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -53,5 +54,46 @@ router.post("/register", function (req, res) {
     res.redirect("/");
   
   });
+///////////////////////////////////////////////////////////////////////
+/* Backend for event registration */
+router.get('/register/:eventID', (req, res) => {
+	User.findOne({_id:req.user._id},(err,user)=>{
+	  user.events.push(req.params.eventID)
+	  user.save((err, data)=>{
+		if(err) console.log(err)
+		else { res.redirect("back")
+	   }
+	  })
+	})
+});
+
+router.get('/chregister/:eventID', (req, res) => {
+	var ID = req.params.eventID;
+	User.findOne({_id: req.user._id}, (err,user) => {
+	  if(err) console.log(err);
+	  else{
+		User.findOne({events: ID}, (err, found) => {
+		  if(err) console.log('0');
+		  else if(found) 
+			console.log("YES");
+		  else 
+			console.log("NO");
+		  res.redirect('/');
+		});
+	  }
+	});
+});
+  
+router.get('/unregister/:eventID', (req, res) => {
+	User.findOne({_id:req.user._id},(err,user)=>{
+	  user.events.pull(req.params.eventID)
+	  user.save((err, data)=>{
+		if(err) console.log(err)
+		else { res.redirect('back');
+		}
+	  })
+	})
+});
+///////////////////////////////////////////////////////////////////////// 
 
 module.exports = router;
