@@ -24,22 +24,6 @@ router.get("/login", function (req, res, next) {
     res.render("login");
 });
 
-<<<<<<< HEAD
-router.get('/techevents', function(req, res, next){
-	res.render('techevents');
-});
-
-router.get('/litevents', function(req,res,next){
-	res.render('litevents');
-});
-
-router.get('/manevents', function(req,res,next){
-	res.render('manaevents');
-});
-
-router.get('/flagevents', function(req,res,next){
-	res.render('flasshipevents');
-=======
 /* GET admin page. */
 router.get("/admin", (req, res) => {
 	res.render("adminlog");
@@ -60,7 +44,6 @@ router.get('/manevents', function(req,res,next) {
 /* GET flag page. */
 router.get('/flagevents', function(req,res,next) {
 	res.render('event4');
->>>>>>> 6cd78de97947cada501c48f30d6c61ba76c613b2
 });
 
 /* GET comingsoon page. */
