@@ -5,7 +5,7 @@ $(document).ready(function() {
     window.currentItem = $(event.target).parent();
     console.log("clicked", currentItem);
     if (!$(mod).hasClass("mod--show")) {
-      let coverURL = `/assets/img/poster/${$(currentItem).attr("data-id")}.png`;
+      let coverURL = `assets/img/poster/${$(currentItem).attr("data-id")}.jpg`;
       let title = $(currentItem).attr("data-title");
       let desc =
         $(currentItem)

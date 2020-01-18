@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require("body-parser");
 var flash = require("connect-flash");
+var favicon = require('serve-favicon');
 
 require('dotenv').config()
 
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
+app.use(favicon(path.join(__dirname, 'public','assets','img', 'Homelogo.png')));
 
 //Express-Session n
 app.use(require("express-session")({
