@@ -336,6 +336,10 @@
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                       <a class="nav-link" href="/register">Register</a>
                   </li>
+                <% } else { %>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link">Signed in as <%= currentUser.name %></a>
+                </li>
                 <% } %>
               </ul>
             </div>

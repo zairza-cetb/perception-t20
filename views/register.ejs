@@ -46,6 +46,8 @@
         />
         <!-- Main CSS-->
         <link href="stylesheets/main.css" rel="stylesheet" media="all">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 </head>
 <body>
     <%- include('partials/preloader') %>
@@ -105,6 +107,19 @@
     <!-- Main JS-->
     <script src="js/global.js"></script>
     <script src="js/password.js"></script>
+
+
+    <% if(err) { %>
+        <script src="js/sweet.js"></script>
+        <script>
+          let err = "<%= err %>",
+              message = err === "UserExistsError"? "A user with the given username is already registered" : "Internal Server Error";
+          Toast.fire({
+              icon:"error",
+            title: message
+          });
+        </script>
+      <% } %>
 </body>
 </html>
 <!-- end document-->

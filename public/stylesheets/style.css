@@ -810,7 +810,9 @@ body .base.close .section-static {
 .separator::after {
   margin-left: .25em;
 }
-
+.register {
+  
+}
 
 
 @media only screen and (max-width: 800px) {
