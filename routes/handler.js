@@ -31,7 +31,7 @@ router.post("/register", function (req, res) {
               console.log(err);
           }
           passport.authenticate("local")(req, res, () => {
-              res.redirect("back");
+              res.redirect("/");
           });
       });
   });
@@ -49,7 +49,7 @@ router.post("/register", function (req, res) {
            return next(err); 
         } else {
           req.flash("success", "signed in as " + req.user.name);
-          return res.redirect('back');
+          return res.redirect('/');
         }
       });
     })(req, res, next);

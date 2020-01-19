@@ -6,6 +6,7 @@ var logger = require('morgan');
 var bodyParser = require("body-parser");
 var flash = require("connect-flash");
 var favicon = require('serve-favicon');
+const compression = require('compression');
 
 require('dotenv').config()
 
@@ -26,6 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 app.use(favicon(path.join(__dirname, 'public','assets','img', 'Homelogo.png')));
+app.use(compression());
 
 //Express-Session n
 app.use(require("express-session")({
