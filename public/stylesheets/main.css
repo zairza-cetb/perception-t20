@@ -267,12 +267,13 @@ h6 {
 }
 
 .btn--green {
-  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+  /* background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d); */
 
 }
 
 .btn--green:hover {
-  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+  /* background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d); */
+  
 }
 
 /* ==========================================================================
@@ -525,14 +526,38 @@ input {
   background:#333333;
 }
 
-
-
+.login-link{
+  font-size: 15px;
+  /* margin-left: -28px; */
+  position: relative;
+  top: 20px ;
+  color:lightskyblue;
+  left: 10px;
+}
+.register-link{
+  font-size: large;
+  position: relative;
+  top: 20px;
+}
 @media (max-width: 767px) {
+  
   .page-wrapper {
     padding:0px;
     left:20px;
   }
-  
+  .register-link{
+    font-size:20px;
+    position: relative;
+    top: 25px;
+    left: 24%;
+  }
+  .login-link{
+    font-size: 20px;
+    left: 30%;
+    position: relative;
+    top: 20px;
+    color: lightskyblue;
+  }
   .card-3 {
     display: block;
   }
@@ -547,5 +572,6 @@ input {
     width: 100%;
     padding: 37px 30px;
     padding-bottom: 45px;
+    height: 100vh;
   }
 }

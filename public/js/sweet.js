@@ -2,7 +2,7 @@
 // window.onload() = function() {
 const Toast = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: 'top',
     showConfirmButton: false,
     timer: 5000,
     timerProgressBar: true,
