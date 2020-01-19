@@ -167,7 +167,26 @@
   overflow: hidden;
 }
 
+#regbtn {
+  color: white;
+}
+
+.spinner__container {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+#regbtn.hide + .spinner__container {
+  visibility: visible;
+}
 
 .hide {
+  position: absolute;
   visibility: hidden;
+}
+
+
+.mod__text a {
+  margin-top: 50px;
 }
