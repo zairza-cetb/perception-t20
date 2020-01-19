@@ -16,8 +16,13 @@
       <%	if(currentUser){ %>
           <button id="regbtn" class="btn btn-success hide"></button>
       <% } else { %>
-        <a href="/login">Please Log In before registering for events</a>
+        <a href="/login">Please Log In to register for events</a>
       <% } %>
+      <div class="spinner__container">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -20,25 +20,49 @@ $(document).ready(function() {
         console.log(message);
         if (message == "T") {
 
+          // Make the button into a Deregister button
           buttonText = "Deregister";
-          $("#regbtn").removeClass("btn-success");
-          $("#regbtn").addClass("btn-danger");
+          $("#regbtn")
+            .removeClass("btn-success")
+            .addClass("btn-danger")
+            .text(buttonText)
+            .removeClass("hide");
         } else {
 
+          // Make the button into a Register button
           buttonText = "Register";
-          $("#regbtn").removeClass("btn-danger");
-          $("#regbtn").addClass("btn-success");
+          $("#regbtn")
+            .removeClass("btn-danger")
+            .addClass("btn-success")
+            .text(buttonText)
+            .removeClass("hide");
         }
-        $("#regbtn").text(buttonText);
-        $("#regbtn").removeClass("hide");
+        // $("#regbtn").text(buttonText);
+        // $("#regbtn").removeClass("hide");
       });
       console.log("clicked", title, coverURL, desc);
+
+      // Add a cover image, title and description to the modal
       $("#mod__cover").attr("src", coverURL);
       $("#mod__title").text(title);
       $("#mod__desc").text(desc);
+    } else {
+
+      // When the modal closes, remove both classes and hide the button
+      $("#regbtn").removeClass("btn-success").removeClass("btn-danger").addClass("hide");
+
+
+      // Remove the previously linked cover image
+      $("#mod__cover").attr("src", "/assets/img/Tech.png");
+
+      // Empty the title and description
+      $("#mod__title").text("Loading...");
+      $("#mod__desc").text("");
     }
 
     console.log("btn clicked");
+
+    // Show the modal
     $(mod).toggleClass("mod--show");
     $("body").toggleClass("hide-overflow");
   });
@@ -46,17 +70,35 @@ $(document).ready(function() {
   $(".overlay").click(function() {
     $(mod).toggleClass("mod--show");
     $("body").toggleClass("hide-overflow");
+    $("#regbtn").addClass("hide");
+
+
+    $("#regbtn").removeClass("btn-success").removeClass("btn-danger");
+    $("#mod__cover").attr("src", "/assets/img/Tech.png");
+    $("#mod__title").text("Loading...");
+    $("#mod__desc").text("");
   });
 
   $(".mod__close").click(function() {
     $(mod).toggleClass("mod--show");
     $("body").toggleClass("hide-overflow");
+    $("#regbtn").addClass("hide");
+
+
+    $("#regbtn").removeClass("btn-success").removeClass("btn-danger").addClass("hide");
+      $("#mod__cover").attr("src", "/assets/img/Tech.png");
+      $("#mod__title").text("Loading...");
+      $("#mod__desc").text("");
   });
 
   $("#regbtn").click(function() {
 
     // Disable the button after it is clicked
     $("#regbtn").attr("disabled", true);
+    $("#regbtn")
+      .addClass("hide")
+      .removeClass("btn-success")
+      .removeClass("btn-danger");
 
     if ($("#regbtn").text() == "Register") {
 
@@ -71,12 +113,13 @@ $(document).ready(function() {
 
           // Change text to Deregister
           $("#regbtn").text("Deregister");
-          $("#regbtn").removeClass("btn-success");
           $("#regbtn").addClass("btn-danger");
         }
 
         // Enable the button
         $("#regbtn").attr("disabled", false);
+        $("#regbtn").removeClass("hide");
+
       })
     } else if ($("#regbtn").text() == "Deregister") {
 
@@ -91,12 +134,12 @@ $(document).ready(function() {
 
           // Change text to Deregister
           $("#regbtn").text("Register");
-          $("#regbtn").removeClass("btn-danger");
           $("#regbtn").addClass("btn-success");
         }
 
         // Enable the button
         $("#regbtn").attr("disabled", false);
+        $("#regbtn").removeClass("hide");
       })
     }
   });
