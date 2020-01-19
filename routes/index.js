@@ -4,24 +4,39 @@ var router = express.Router();
 
 router.use((req, res, next) => {
 	res.locals.currentUser = req.user;
-	res.locals.error = req.flash("error");
-	res.locals.success = req.flash("success");
 	next();
   });
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-    res.render('index');
+	let message, registered;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.registerSuccess == "1") {
+		registered = true;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+    res.render('index', {
+		message,
+		registered
+	});
 });
 
 /* GET register page. */
 router.get("/register", function (req, res, next) {
-    res.render("register");
+    res.render("register", {
+		err: req.query.err
+	});
 });
 
 /* GET login page. */
 router.get("/login", function (req, res, next) {
-    res.render("login");
+    res.render("login", {
+		err: req.query.err
+	});
 });
 
 /* GET admin page. */
