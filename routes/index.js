@@ -66,6 +66,12 @@ router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
 });
 
+
+router.get('/cards', function(req,res,next) {
+	res.render('cards');
+});
+
+
 /* POST admin page. */
 router.post("/admin", (req, res) => {
 	var username = req.body.username;
