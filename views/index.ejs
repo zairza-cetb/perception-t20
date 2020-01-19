@@ -39,28 +39,17 @@
         href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
         rel="stylesheet"
       />  
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
 
 
 <body>
     <%- include('partials/preloader') %>
     <%	if(!currentUser){ %>
-       <%- include('partials/splash') %>
+       <!-- <%- include('partials/splash') %> -->
     <% } %>
     <%- include('partials/navbar') %>
-    <div class="container">
-        <% if(error && error.length > 0){ %>
-        <div class="alert alert-danger" role="alert">
-            <%= error %>
-        </div>
-        <% } %>
-        <% if(success && success.length > 0){ %>
-        <div class="alert alert-success" role="alert">
-            <%= success %>
-        </div>
-        <% } %>
-    </div>
     <%	if(currentUser){ %>
       <li><a href="#">Signed in as <%= currentUser.name %></a></li>
     <% } %>
@@ -105,5 +94,27 @@
         </section> 
       </div>
       </div>
+      <% if(message) { %>
+        <script src="js/sweet.js"></script>
+        <script>
+          let message = "<%= message %>";
+          Toast.fire({
+            title: message
+          });
+        </script>
+      <% } %>
+      <% if(registered) { %>
+        <div class="register">
+          <script>
+            Swal.fire({
+              // position: 'top-end',
+              icon: 'success',
+              title: 'You have successfully registered for Perception 2020.',
+              showConfirmButton: false,
+              timer: 7000
+            })
+            </script>
+          </div>
+        <% } %>
   </body>
 </html>

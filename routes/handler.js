@@ -13,8 +13,7 @@ router.use(passport.session());
 
 router.use((req, res, next) => {
   res.locals.currentUser = req.user;
-  res.locals.error = req.flash("error");
-  res.locals.success = req.flash("success");
+  // res.locals.message = "Registered successfully";
   next();
 });
 
@@ -28,10 +27,15 @@ router.post("/register", function (req, res) {
     });
       User.register(newUser, req.body.password, (err, user) => {
           if (err) {
-              console.log(err);
+              return res.redirect(`/register?err=${err.name}`);
           }
           passport.authenticate("local")(req, res, () => {
-              res.redirect("/");
+              // res.locals.message = "Registered successfully";
+              if (req.query.redirect) {
+                res.redirect(`/${req.query.redirect}?registerSuccess=1`);
+              } else {
+                res.redirect('/?registerSuccess=1');
+              }
           });
       });
   });
@@ -39,17 +43,23 @@ router.post("/register", function (req, res) {
   router.post('/login', function(req, res, next) {
     passport.authenticate('local', function(err, user, info) {
       if (err) {
-         return next(err); 
+         return console.log(err); 
         }
       if (!user) {
-         return res.redirect('/login'); 
+        console.log(info.message);
+        
+         return res.redirect(`/login?err=${info.name}`); 
         }
       req.logIn(user, function(err) {
         if (err) {
-           return next(err); 
+           return console.log(err); 
         } else {
-          req.flash("success", "signed in as " + req.user.name);
-          return res.redirect('/');
+          // res.locals.message = `Welcome ${user.name}`;
+          if (req.query.redirect) {
+            return res.redirect(`/${req.query.redirect}?loginSuccess=1`);
+          } else {
+            res.redirect('/?loginSuccess=1');
+          }
         }
       });
     })(req, res, next);
@@ -57,9 +67,7 @@ router.post("/register", function (req, res) {
   
   router.get("/logout", (req, res) => {
     req.logOut();
-    req.flash("success", "successfully logged you out");
-    res.redirect("/");
-  
+    res.redirect("/?logoutSuccess=1");
   });
 
 ///////////////////////////////////////////////////////////////////////
