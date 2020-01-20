@@ -29,7 +29,7 @@ Primary style
     color: #091d23;
     background-color: #ffb441;
   } */
-  body{
+  .cd-primary-nav{
     font-family: 'Merienda', cursive;
   }
   .cd-primary-nav a{
@@ -57,6 +57,9 @@ Primary style
   .cd-nav-trigger {
     position: fixed;
     display: inline-block;
+  }
+  .cd-icon{
+    
   }
   
   /* .cd-logo {
@@ -91,10 +94,19 @@ Primary style
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     display: inline-block;
+    /* justify-content: space-between; */
     width: 18px;
     height: 3px;
     background-color: #ffffff;
     z-index: 510;
+  }
+  .cd-icon{
+    height: 100px;
+    width: 18px;
+  }
+  .cd-nav-trigger .cd-icon::before,.cd-nav-trigger .cd-icon:after{
+    height: 100px;
+    width: 18px;
   }
   .cd-nav-trigger .cd-icon::before, .cd-nav-trigger .cd-icon:after {
     /* upper and lower lines of the menu icon */
