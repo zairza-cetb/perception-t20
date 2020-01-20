@@ -69,16 +69,14 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
-
-
+    
     <% if(err) { %>
         <script src="js/sweet.js"></script>
         <script>
-          let err = "<%= err %>",
-              message = err === "IncorrectPasswordError"? "Password or username is incorrect" : "Internal Server Error";
+          let err = "<%= err %>";
           Toast.fire({
               icon:"error",
-            title: message
+            title: err
           });
         </script>
       <% } %>

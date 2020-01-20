@@ -113,11 +113,10 @@
     <% if(err) { %>
         <script src="js/sweet.js"></script>
         <script>
-          let err = "<%= err %>",
-              message = err === "UserExistsError"? "A user with the given username is already registered" : "Internal Server Error";
+          let err = "<%= err %>";
           Toast.fire({
               icon:"error",
-            title: message
+            title: err
           });
         </script>
       <% } %>

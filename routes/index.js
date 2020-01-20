@@ -1,6 +1,5 @@
 var express = require('express');
-var User = require("./model");
-var event_json=require("./events.json");
+var User = require("../models/model");
 var router = express.Router();
 
 router.use((req, res, next) => {
