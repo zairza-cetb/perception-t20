@@ -48,6 +48,7 @@
 
       .content {
         display: flex;
+        margin: 0 auto;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -244,8 +245,8 @@
           <section id="details">
             <p>Name: <%= currentUser.name %></p>
             <p>Email id: <%= currentUser.username %></p>
-            <p>Phone No.: <%= currentUser.phone %></p>
-            <p>College Name: <%= currentUser.college %></p>
+            <p>Phone No: <%= currentUser.phone %></p>
+            <p>College: <%= currentUser.college %></p>
           </section>
         </section>
       </div>
@@ -264,17 +265,18 @@
               class="front"
               style="background-image: url(/assets/img/poster/<%= d %>.jpg);"
             >
-              <!-- <p><%= evjson[d]["event"]%></p> -->
+              <p><%= evjson[d]["event"]%></p>
             </div>
             <div class="back">
               <div>
-                <div style="color: black; word-wrap:break-word;"><%= evjson[d]["desc"].substring(0,100) %></div>
+                <div style="color: black; word-wrap:break-word;"><%= evjson[d]["desc"].substring(0,100) %>...</div>
                 <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
                 <button class="button" onclick="unreg(<%= d %>)">Unregister</button>
               </div>
             </div></a>
           <% }); %>  
       </div>
+    </div>
     </div>
     <script>
         function unreg(id) {

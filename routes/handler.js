@@ -89,17 +89,16 @@ router.get('/chregister/:eventID', (req, res) => {
 	User.findOne({_id: req.user._id}, (err,user) => {
 	  if(err) console.log(err);
 	  else{
-		User.findOne({events: ID}, (err, found) => {
+		let found = user.events.includes(ID);
 		  if(err) console.log('0');
 		  else if(found) 
 			res.send("T");
 		  else 
 			res.send("F");
-		});
 	  }
 	});
 });
-  
+
 router.get('/unregister/:eventID', (req, res) => {
 	User.findOne({_id:req.user._id},(err,user)=>{
 	  user.events.pull(req.params.eventID)
