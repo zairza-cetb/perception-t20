@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
 		overlayContent = $('.cd-overlay-content'),
 		navigation = $('.cd-primary-nav'),
 		toggleNav = $('.cd-nav-trigger');
-
+	console.log("123check");
 	//inizialize navigation and content layers
 	layerInit();
 	$(window).on('resize', function(){
