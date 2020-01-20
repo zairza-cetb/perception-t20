@@ -56,11 +56,14 @@ router.get('/litevents', function(req,res,next) {
 router.get('/manevents', function(req,res,next) {
 	res.render('manaevents');
 });
-/* GET flag page. */
+/* GET flagship events page. */
 router.get('/flagevents', function(req,res,next) {
 	res.render('flagshipevents');
 });
-
+/* GET fun events page. */
+router.get('/funevents', function(req,res,next) {
+	res.render('funevents');
+});
 /* GET comingsoon page. */
 router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
