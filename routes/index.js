@@ -1,5 +1,5 @@
 var express = require('express');
-var User = require("./model");
+var User = require("../models/model");
 var router = express.Router();
 
 router.use((req, res, next) => {
@@ -56,11 +56,14 @@ router.get('/litevents', function(req,res,next) {
 router.get('/manevents', function(req,res,next) {
 	res.render('manaevents');
 });
-/* GET flag page. */
+/* GET flagship events page. */
 router.get('/flagevents', function(req,res,next) {
 	res.render('flagshipevents');
 });
-
+/* GET fun events page. */
+router.get('/funevents', function(req,res,next) {
+	res.render('funevents');
+});
 /* GET comingsoon page. */
 router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
@@ -68,7 +71,15 @@ router.get('/comingsoon', function(req,res,next) {
 
 
 router.get('/profile', function(req,res,next) {
-	res.render('profile');
+  if(req.user){
+	User.findOne({_id:req.user._id}, (err, data) => {
+		if (err) console.log(err);
+		else 
+		  res.render("profile", { data: data ,evjson:event_json});
+	  });
+  }else{
+	  res.redirect("/login");
+  }
 });
 
 
@@ -86,6 +97,7 @@ router.post("/admin", (req, res) => {
 	  res.redirect("/admin");
 	}
 });
+
 
 /* Hash function */
 String.prototype.hashCode = function(){

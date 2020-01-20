@@ -1,6 +1,4 @@
 
-
-
 	<!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'> -->
 
 	<!-- <link rel="stylesheet" href="css/reset.css"> CSS reset -->
@@ -20,26 +18,29 @@
     <header>
 		<!-- <a class="cd-logo" href="#0"><img src="img/cd-logo.svg" alt="Logo"></a> -->
 	</header>
-
-    
 	<nav>
 		<ul class="cd-primary-nav" style="list-style-type: none;">
             <li><a href="/">HOME</a></li>
             <li>
                 <label>
                     <input id="dd__cb" name="abc" type="checkbox">
-                    <a id="eve" style="cursor: pointer;"">EVENTS</a>
+                    <a id="eve" style="cursor: pointer;">EVENTS</a>
                     <ul class="dropdown"  style="list-style-type: none;">
                         <li><a class="text" href="/techevents">TECHNICAL EVENTS</a c></li>
                         <li><a  class="text" href="/litevents">LITERARY EVENTS</a></li>
                         <li><a  class="text" href="/manevents">MANAGEMENT EVENTS</a></li>
-                        <li><a  class="text" href="/flagshipevents">FLAGSHIP EVENTS</a></li>
+                        <li><a  class="text" href="/flagevents">FLAGSHIP EVENTS</a></li>
                         <li><a  class="text" href="/funevents">FUN EVENTS</a></li>
                         <li><a  class="text" href="/workshop">WORKSHOPS</a></li>
                         <li><a  class="text" href="/starnight">STAR NIGHT</a></li>
-            </ul></label></li>
-            <li><a href="/login">LOGIN</a></li>
-            <li><a href="/register">REGISTER</a></li>
+			</ul></label></li>
+			<% if(!currentUser) { %>
+				<li><a href="/register">REGISTER</a></li>
+				<li><a href="/login">LOGIN</a></li>
+			<% } else { %>
+				<li><a href="/profile">PROFILE</a></li>
+				<li><a href="/logout">LOGOUT</a></li>
+			<% } %>
 		</ul>
 	</nav>
 

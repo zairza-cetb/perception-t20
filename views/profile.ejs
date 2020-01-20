@@ -232,18 +232,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <title>
+      Profile
+    </title>
   </head>
   <body>
-    <!-- <%- include('partials/navbar') %> -->
+    <%- include('partials/navbar') %>
     <div class="conatiner">
       <div class="row1">
         <section>
           <h1 class="heading">Your Details</h1>
           <section id="details">
-            <p>Name:</p>
-            <p>Email id:</p>
-            <p>Phone No.:</p>
-            <p>College Name:</p>
+            <p>Name: <%= currentUser.name %></p>
+            <p>Email id: <%= currentUser.username %></p>
+            <p>Phone No.: <%= currentUser.phone %></p>
+            <p>College Name: <%= currentUser.college %></p>
           </section>
         </section>
       </div>
@@ -255,118 +258,35 @@
             You can check the details of registered events or unregister from an
             event.
           </p>
-          <a class="card" href="#!">
+         <% data.events.forEach(function(d){ %> 
+          <a class="card" href="#!" id= <%= d %> >
             
             <div
               class="front"
-              style="background-image: url(//source.unsplash.com/300x401);"
+              style="background-image: url(/assets/img/poster/<%= d %>.jpg);"
             >
-              <p>Event Name</p>
+              <p><%= evjson[d]["event"]%></p>
             </div>
             <div class="back">
               <div>
-                <p style="color: black;">Consectetur adipisicing elit. Possimus, praesentium?</p>
-                <p style="color: black;">
-                  Provident consectetur natus voluptatem quis tenetur sed beatae
-                  eius sint.
-                </p>
+                <div style="color: black; word-wrap:break-word;"><%= evjson[d]["desc"].substring(0,100) %></div>
                 <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
-                <button class="button">Unregister</button>
+                <button class="button" onclick="unreg(<%= d %>)">Unregister</button>
               </div>
-            </div></a
-          ><a class="card" href="#!">
-            <div
-              class="front"
-              style="background-image: url(//source.unsplash.com/300x402);"
-            >
-              <p>Event Name</p>
-            </div>
-            <div class="back">
-              <div>
-                <p style="color: black;">Consectetur adipisicing elit. Possimus, praesentium?</p>
-                <p style="color: black;">
-                  Provident consectetur natus voluptatem quis tenetur sed beatae
-                  eius sint.
-                </p>
-                <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
-                <button class="button">Unregister</button>
-              </div>
-            </div></a
-          ><a class="card" href="#!">
-            <div
-              class="front"
-              style="background-image: url(//source.unsplash.com/300x403);"
-            >
-              <p>Event Name</p>
-            </div>
-            <div class="back">
-              <div>
-                <p style="color: black;">Consectetur adipisicing elit. Possimus, praesentium?</p>
-                <p style="color: black;">
-                  Provident consectetur natus voluptatem quis tenetur sed beatae
-                  eius sint.
-                </p>
-                <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
-                <button class="button">Unregister</button>
-              </div>
-            </div></a
-          ><a class="card" href="#!">
-            <div
-              class="front"
-              style="background-image: url(//source.unsplash.com/300x404);"
-            >
-              <p>Event Name</p>
-            </div>
-            <div class="back">
-              <div>
-                <p style="color: black;">Consectetur adipisicing elit. Possimus, praesentium?</p>
-                <p style="color: black;">
-                  Provident consectetur natus voluptatem quis tenetur sed beatae
-                  eius sint.
-                </p>
-                <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
-                <button class="button">Unregister</button>
-              </div>
-            </div></a
-          ><a class="card" href="#!">
-            <div
-              class="front"
-              style="background-image: url(//source.unsplash.com/300x405);"
-            >
-              <p>Event Name</p>
-            </div>
-            <div class="back">
-              <div>
-                <p style="color: black;">Consectetur adipisicing elit. Possimus, praesentium?</p>
-                <p style="color: black;">
-                  Provident consectetur natus voluptatem quis tenetur sed beatae
-                  eius sint.
-                </p>
-                <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
-                <button class="button">Unregister</button>
-              </div>
-            </div></a
-          ><a class="card" href="#!">
-            <div
-              class="front"
-              style="background-image: url(//source.unsplash.com/300x406);"
-            >
-              <p>Event Name</p>
-            </div>
-            <div class="back">
-              <div>
-                <p style="color: black;">Consectetur adipisicing elit. Possimus, praesentium?</p>
-                <p style="color: black;">
-                  Provident consectetur natus voluptatem quis tenetur sed beatae
-                  eius sint.
-                </p>
-                <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
-                <button class="button">Unregister</button>
-              </div>
-            </div></a
-          >
-        </div>
+            </div></a>
+          <% }); %>  
       </div>
     </div>
+    <script>
+        function unreg(id) {
+           el=document.getElementById(id);
+           fetch(`/unregister/${id}`).then((res)=>{
+              return res.text();
+           }).then((d)=>{
+            if (d == "T") { 
+              el.remove();
+           }});
+        };
+    </script>
   </body>
 </html>

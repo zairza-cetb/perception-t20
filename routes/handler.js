@@ -1,7 +1,7 @@
 var express = require("express"),
     passport = require("passport"),
     localStrategy = require("passport-local"),
-    User = require("./model"),
+    User = require("../models/model"),
     router = express.Router();
     
 //Initialization of passportjs
@@ -27,7 +27,7 @@ router.post("/register", function (req, res) {
     });
       User.register(newUser, req.body.password, (err, user) => {
           if (err) {
-              return res.redirect(`/register?err=${err.name}`);
+              return res.redirect(`/register?err=${err.message}`);
           }
           passport.authenticate("local")(req, res, () => {
               // res.locals.message = "Registered successfully";
@@ -46,9 +46,7 @@ router.post("/register", function (req, res) {
          return console.log(err); 
         }
       if (!user) {
-        console.log(info.message);
-        
-         return res.redirect(`/login?err=${info.name}`); 
+         return res.redirect(`/login?err=${info.message}`); 
         }
       req.logIn(user, function(err) {
         if (err) {
