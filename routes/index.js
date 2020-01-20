@@ -1,5 +1,6 @@
 var express = require('express');
 var User = require("./model");
+var event_json=require("./events.json");
 var router = express.Router();
 
 router.use((req, res, next) => {
@@ -68,7 +69,15 @@ router.get('/comingsoon', function(req,res,next) {
 
 
 router.get('/profile', function(req,res,next) {
-	res.render('profile');
+  if(req.user){
+	User.findOne({_id:req.user._id}, (err, data) => {
+		if (err) console.log(err);
+		else 
+		  res.render("profile", { data: data ,evjson:event_json});
+	  });
+  }else{
+	  res.redirect("/login");
+  }
 });
 
 
@@ -86,6 +95,7 @@ router.post("/admin", (req, res) => {
 	  res.redirect("/admin");
 	}
 });
+
 
 /* Hash function */
 String.prototype.hashCode = function(){
