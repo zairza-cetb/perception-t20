@@ -91,7 +91,7 @@ router.post("/admin", (req, res) => {
 	  User.find({}, (err, data) => {
 		if (err) console.log(err);
 		else 
-		  res.render("data", { data: data });
+		  res.render("data", { data: data, evjson: event_json });
 	  });
 	} else {
 	  res.redirect("/admin");
