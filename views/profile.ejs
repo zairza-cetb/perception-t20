@@ -234,15 +234,16 @@
     />
   </head>
   <body>
+    <%- include('partials/navbar') %>
     <div class="conatiner">
       <div class="row1">
         <section>
           <h1 class="heading">Your Details</h1>
           <section id="details">
-            <p>Name:</p>
-            <p>Email id:</p>
-            <p>Phone No.:</p>
-            <p>College Name:</p>
+            <p>Name: <%= currentUser.name %></p>
+            <p>Email id: <%= currentUser.username %></p>
+            <p>Phone No.: <%= currentUser.phone %></p>
+            <p>College Name: <%= currentUser.college %></p>
           </section>
         </section>
       </div>
