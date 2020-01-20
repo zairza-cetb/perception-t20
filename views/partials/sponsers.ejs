@@ -125,7 +125,7 @@
         display: block;
         visibility: visible;
     }
-    .carousel-item .carousel-item-prev:hover , .carousel-item .carousel-item-right:hover{
+    .carousel-item.carousel-item-prev:hover , .carousel-item-right:hover{
         background-color: rgba(0, 0, 0, 0.4);
     } 
 }
@@ -161,11 +161,11 @@
                     <img src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" class="img-fluid mx-auto d-block" alt="img8">
                 </div>
             </div>
-            <a class="carousel-control-prev"  role="button" data-slide="prev" >
+            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev" >
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next"  role="button" data-slide="next"  >
+            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next"  >
                 <span class="carousel-control-next-icon" aria-hidden="true" ></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -174,6 +174,10 @@
 </div>
 </div>
 <script>
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+// $('.carousel').
 $('#carousel-example').on('slide.bs.carousel', function (e) {
 var $e = $(e.relatedTarget);
 var idx = $e.index();
