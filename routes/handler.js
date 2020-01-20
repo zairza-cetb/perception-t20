@@ -32,7 +32,7 @@ router.post("/register", function (req, res) {
           passport.authenticate("local")(req, res, () => {
               // res.locals.message = "Registered successfully";
               if (req.query.redirect) {
-                res.redirect(`/${req.query.redirect}?registerSuccess=1`);
+                res.redirect(`${req.query.ref}?registerSuccess=1`);
               } else {
                 res.redirect('/?registerSuccess=1');
               }
@@ -56,7 +56,7 @@ router.post("/register", function (req, res) {
         } else {
           // res.locals.message = `Welcome ${user.name}`;
           if (req.query.redirect) {
-            return res.redirect(`/${req.query.redirect}?loginSuccess=1`);
+            return res.redirect(`${req.query.ref}?loginSuccess=1`);
           } else {
             res.redirect('/?loginSuccess=1');
           }
