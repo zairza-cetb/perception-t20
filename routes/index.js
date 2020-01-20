@@ -67,8 +67,8 @@ router.get('/comingsoon', function(req,res,next) {
 });
 
 
-router.get('/cards', function(req,res,next) {
-	res.render('cards');
+router.get('/profile', function(req,res,next) {
+	res.render('profile');
 });
 
 
