@@ -174,13 +174,7 @@
 </div>
 </div>
 <script>
-
-// for every slide in carousel, copy the next slide's item in the slide.
-// Do the same for the next, next item.
 $('#carousel-example').on('slide.bs.carousel', function (e) {
-/*
-    CC 2.0 License Iatek LLC 2018 - Attribution required
-*/
 var $e = $(e.relatedTarget);
 var idx = $e.index();
 var itemsPerSlide = 5;
@@ -198,5 +192,8 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
         }
     }
 }
+});
+$('#carousel-example').carousel({
+  interval: 500
 });
 </script>
