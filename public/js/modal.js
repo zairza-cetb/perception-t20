@@ -11,6 +11,8 @@ $(document).ready(function() {
       let title = $(currentItem).attr("data-title");
       let desc = $(currentItem).attr('data-desc');
 
+      $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
+
       // Check if the user is already registered for the event
       // and set the function of the button as required
       fetch(`/chregister/${eventID}`).then(function(res) {
@@ -53,7 +55,7 @@ $(document).ready(function() {
 
 
       // Remove the previously linked cover image
-      $("#mod__cover").attr("src", "/assets/img/Tech.png");
+      // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
 
       // Empty the title and description
       $("#mod__title").text("Loading...");
@@ -74,7 +76,7 @@ $(document).ready(function() {
 
 
     $("#regbtn").removeClass("btn-success").removeClass("btn-danger");
-    $("#mod__cover").attr("src", "/assets/img/Tech.png");
+    // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
     $("#mod__title").text("Loading...");
     $("#mod__desc").text("");
   });
@@ -86,7 +88,7 @@ $(document).ready(function() {
 
 
     $("#regbtn").removeClass("btn-success").removeClass("btn-danger").addClass("hide");
-      $("#mod__cover").attr("src", "/assets/img/Tech.png");
+      // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
   });
