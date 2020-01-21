@@ -18,26 +18,26 @@
 	</header>
 	<nav>
 		<ul class="cd-primary-nav" style="list-style-type: none;">
-            <li><a href="/">HOME</a></li>
+            <li><a href="/" style="text-decoration: none;">HOME</a></li>
             <li>
                 <label>
                     <input id="dd__cb" name="abc" type="checkbox">
-                    <a id="eve" style="cursor: pointer;">EVENTS</a>
+                    <a id="eve" style="cursor: pointer;text-decoration: none;">EVENTS</a>
                     <ul class="dropdown"  style="list-style-type: none;padding:0;">
-                        <li><a class="text" href="/techevents">TECHNICAL EVENTS</a c></li>
-                        <li><a  class="text" href="/litevents">LITERARY EVENTS</a></li>
-                        <li><a  class="text" href="/manevents">MANAGEMENT EVENTS</a></li>
-                        <li><a  class="text" href="/flagevents">FLAGSHIP EVENTS</a></li>
-                        <li><a  class="text" href="/funevents">FUN EVENTS</a></li>
-                        <li><a  class="text" href="/workshop">WORKSHOPS</a></li>
-                        <li><a  class="text" href="/starnight">STAR NIGHT</a></li>
+                        <li><a class="text" href="/techevents" style="text-decoration: none;">TECHNICAL EVENTS</a c></li>
+                        <li><a  class="text" href="/litevents" style="text-decoration: none;">LITERARY EVENTS</a></li>
+                        <li><a  class="text" href="/manevents" style="text-decoration: none;">MANAGEMENT EVENTS</a></li>
+                        <li><a  class="text" href="/flagevents" style="text-decoration: none;">FLAGSHIP EVENTS</a></li>
+                        <li><a  class="text" href="/funevents" style="text-decoration: none;">FUN EVENTS</a></li>
+                        <li><a  class="text" href="/workshop" style="text-decoration: none;">WORKSHOPS</a></li>
+                        <li><a  class="text" href="/starnight" style="text-decoration: none;">STAR NIGHT</a></li>
 			</ul></label></li>
 			<% if(!currentUser) { %>
-				<li><a href="/register">REGISTER</a></li>
-				<li><a href="/login">LOGIN</a></li>
+				<li><a href="/register" style="text-decoration: none;">REGISTER</a></li>
+				<li><a href="/login" style="text-decoration: none;">LOGIN</a></li>
 			<% } else { %>
-				<li><a href="/profile">PROFILE</a></li>
-				<li><a href="/logout">LOGOUT</a></li>
+				<li><a href="/profile" style="text-decoration: none;">PROFILE</a></li>
+				<li><a href="/logout" style="text-decoration: none;">LOGOUT</a></li>
 			<% } %>
 		</ul>
 	</nav>
