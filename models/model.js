@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema ({
     password: String,
     phone: Number,
     college: String,
-    events: [String]
+    events: [Number]
   });
 
 userSchema.plugin(localMongoose);

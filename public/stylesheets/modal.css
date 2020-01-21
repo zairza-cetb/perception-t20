@@ -33,7 +33,7 @@
   left: 20rem; */
   /* min-height: 32rem; */
   height: 80vh;
-  overflow: auto;
+  overflow: hidden;
 
   /* centering */
   position: fixed;

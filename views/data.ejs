@@ -2,11 +2,73 @@
 <html lang="en">
 <head>
     <title>Admin</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        #myInput {
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        
+        .Table {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+        
+        .Table th, .Table td {
+          text-align: left;
+          padding: 12px;
+        }
+        
+        .Table tr {
+          border-bottom: 1px solid #ddd;
+        }
+        
+        .Table tr.header, .Table tr:hover {
+          background-color: #f1f1f1;
+        }
+        </style>
+   
 </head>
 <body>
-    <table border="1">
-        <thead>
-            <tr>
+    <h1 style="text-align: center;">Search Table</h1>
+   
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for events.." title="Type in a name">
+
+    <table border="1" id="myTable" class="Table">
+        <% let i=1; %>
+            <tr class="header">
+                <th>Events</th>
+                <th>Name of the Participant</th>
+            </tr>
+        <% while(i!=51) { %>
+       <tr class="header">
+           <td><%= evjson[i]["event"] %></td>
+           <% data.forEach(function(d) { %>
+            <% d.events.forEach(function(ev) { %>
+                <% if(ev == i) { %>
+                    <td> <%= d.name %> </td>
+                <% } %>
+            <% }); %>
+        <% }); %>
+       </tr>
+       <% i++; } %>
+    </table>
+
+    
+    <h1 style="text-align: center;">Main Table</h1>
+    <table border="1" class="Table">
+            <tr class="header">
+                <th>Sl No.</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Gender</th>
@@ -14,17 +76,39 @@
                 <th>college</th>
                 <th>Events</th>
             </tr>
-        </thead>
+        <% let j=0; %>
         <% data.forEach(function(data){ %>
-        <tbody>
+            <% j++; %>
+            <tr>
+                <td> <%= j %>.</td>
                 <td> <%= data.name %> </td>
                 <td> <%= data.username%> </td>
                 <td> <%= data.gender%> </td>
                 <td> <%= data.phone %> </td>
                 <td> <%= data.college%> </td>
                 <td> <%= data.events%> </td>
-        </tbody>
+            </tr>
         <% }); %>
     </table>
+    <script>
+        function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        }
+    </script>
 </body>
 </html>
