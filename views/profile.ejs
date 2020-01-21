@@ -244,6 +244,7 @@
   </head>
   <body>
     <%- include('partials/navbar') %>
+    <%- include('partials/preloader') %>
     <div class="conatiner">
       <div class="row1">
         <section class="row1-section" >
@@ -271,7 +272,6 @@
               class="front"
               style="background-image: url(/assets/img/poster/<%= d %>.jpg);"
             >
-              <p><%= evjson[d]["event"]%></p>
             </div>
             <div class="back">
               <div>

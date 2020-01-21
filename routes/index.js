@@ -45,25 +45,60 @@ router.get("/admin", (req, res) => {
 	res.render("adminlog");
 });
 
-  /* GET techevents page. */
-  router.get('/techevents', function(req, res, next) {
-	res.render('techevents');
+/* GET techevents page. */
+router.get('/techevents', function(req, res, next) {
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('techevents', { message: message });
 });
 /* GET litevents page. */
 router.get('/litevents', function(req,res,next) {
-	res.render('litevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('litevents', { message: message });
 });
 /* GET management events page. */
 router.get('/manevents', function(req,res,next) {
-	res.render('manaevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('manaevents', { message: message });
 });
 /* GET flagship events page. */
 router.get('/flagevents', function(req,res,next) {
-	res.render('flagshipevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('flagshipevents', { message: message });
 });
 /* GET fun events page. */
 router.get('/funevents', function(req,res,next) {
-	res.render('funevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('funevents', { message: message });
 });
 /* GET comingsoon page. */
 router.get('/comingsoon', function(req,res,next) {
@@ -76,7 +111,7 @@ router.get('/profile', function(req,res,next) {
 	User.findOne({_id:req.user._id}, (err, data) => {
 		if (err) console.log(err);
 		else 
-		  res.render("profile", { data: data ,evjson:event_json});
+		  res.render("profile", { data: data, evjson:event_json });
 	  });
   }else{
 	  res.redirect("/login");
@@ -98,6 +133,13 @@ router.post("/admin", (req, res) => {
 	}
 });
 
+router.get("/evtable", (req, res) => {
+	User.find({}, (err, data) => {
+		if(err) console.log(err);
+		else
+		  res.render('evdata', { data: data, value: req.query.value, evjson: event_json });
+	});
+});
 
 /* Hash function */
 String.prototype.hashCode = function(){
