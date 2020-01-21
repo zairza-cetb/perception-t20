@@ -13,7 +13,8 @@
         line-height: 1.5;
         font-weight: 300;
         color: white;
-        font-family: "Nunito Sans", sans-serif;
+        /* font-family: "Nunito Sans", sans-serif; */
+        /* font-family: 'Gelasio', serif; */
       }
 
       .container {
@@ -223,10 +224,15 @@
         transform: translateZ(-20px);
         top: 12px;
       }
-    
-      /* @media screen and (max-width: 800px) {
-       
-      } */
+
+      .row1 .row1-section{
+        margin-left: 8em;
+      }
+      @media screen and (max-width: 800px) {
+       .row1 .row1-section{
+         margin-left: 0em;
+       }
+      }
     </style>
     <link
       rel="stylesheet"
@@ -240,9 +246,9 @@
     <%- include('partials/navbar') %>
     <div class="conatiner">
       <div class="row1">
-        <section>
+        <section class="row1-section" >
           <h1 class="heading">Your Details</h1>
-          <section id="details">
+          <section id="details" style="margin-left: 1em;">
             <p>Name: <%= currentUser.name %></p>
             <p>Email id: <%= currentUser.username %></p>
             <p>Phone No: <%= currentUser.phone %></p>

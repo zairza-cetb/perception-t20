@@ -1,65 +1,106 @@
 <!-- <link href="stylesheets/gallery.css" rel="stylesheet" media="all"> -->
 <style>
-.gallery {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-gap: 10px;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-    overflow: hidden;
-    margin-top: 20px;
-}
+      .grid-container {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
 
-.gallery-img {
-    width: 100%;
-    height: auto;
-    transition: 500ms;
-    margin-bottom: 10px;
-    opacity: 0.99;
-    page-break-inside: avoid; /* For Firefox. */
-    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
-    break-inside: avoid; /* For standard browsers like IE. :-) */
-}
+      .grid-row,
+      .grid-item {
+        width: 100%;
+        height: auto;
+        transition: 500ms;
+        margin-bottom: 10px;
+        opacity: 0.99;
+        page-break-inside: avoid; /* For Firefox. */
+        -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+        break-inside: avoid;
+      }
 
+      .grid-item img {
+        width: 100%;
+        height: auto;
+        transition: 500ms;
+        margin-bottom: 10px;
+        opacity: 0.99;
+        page-break-inside: avoid; /* For Firefox. */
+        -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+        break-inside: avoid;
+      }
 
-@media screen and (max-width: 800px) {
-    .gallery {
+      .grid-item {
+        -webkit-transform: translateY(-10%);
+        transform: translateY(-10%);
+        opacity: 0;
+        transition: 600ms opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) 300ms,
+          600ms -webkit-transform cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: 600ms transform cubic-bezier(0.55, 0.055, 0.675, 0.19),
+          600ms opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) 300ms;
+        transition: 600ms transform cubic-bezier(0.55, 0.055, 0.675, 0.19),
+          600ms opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) 300ms,
+          600ms -webkit-transform cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      .grid-item.inview {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      @media only screen and (max-width: 800px){
+        .grid-container {
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
-    }
-    .gallery-img {
-    width: 100%;
-    height: auto;
-    transition: 500ms;
-    margin-bottom: 10px;
-    opacity: 0.8;
-    page-break-inside: avoid; /* For Firefox. */
-    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
-    break-inside: avoid; /* For standard browsers like IE. :-) */
-}
-    .gallery div {
-        margin: 0;
-        width: 200px;
-    }
-}
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      }
+
 </style>
 <div class="container">
   <div class="separator" style="padding-top: 100px;"><h1>GALLERY</h1></div>
-  <div class="gallery">
-      <img src="/assets/img/gallery/1.jpg" alt="1"  class="gallery-img" />
-      <img src="/assets/img/gallery/2.jpg" alt="2"  class="gallery-img" />
-      <img src="/assets/img/gallery/3.jpg" alt="3"  class="gallery-img" />
-      <img src="/assets/img/gallery/4.jpg" alt="4"  class="gallery-img" />
-      <img src="/assets/img/gallery/5.jpg" alt="5"  class="gallery-img" />
-      <img src="/assets/img/gallery/6.jpg" alt="6"  class="gallery-img" />
-      <img src="/assets/img/gallery/7.jpg" alt="7"  class="gallery-img" />
-      <img src="/assets/img/gallery/8.jpg" alt="8"  class="gallery-img" />
-      <img src="/assets/img/gallery/9.jpg" alt="9"  class="gallery-img" />
-      <img src="/assets/img/gallery/10.jpg" alt="10" class="gallery-img" />
-      <img src="/assets/img/gallery/11.jpg" alt="11"  class="gallery-img" />
-      <img src="/assets/img/gallery/12.jpg" alt="12"  class="gallery-img" />
-      <img src="/assets/img/gallery/13.jpg" alt="13"  class="gallery-img" />
-    </div>
+  <div class="grid-container">
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/1.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/2.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/3.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/4.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/5.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/6.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/7.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/8.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/9.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/10.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/11.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/12.jpg" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/13.jpg" alt="1" /></div>
   </div>
+  </div>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        // const rand = Math.floor(Math.random() * 30);
+        if (entry.isIntersecting === true) {
+          const img = entry.target.querySelector("img");
+          entry.target.classList.add("inview");
+          img.src = img.dataset.src;
+        } else {
+          entry.target.classList.remove("inview");
+        }
+      });
+    });
+    const items = document.querySelectorAll(".grid-item");
+    console.log(items);
+    items.forEach((item, index) => {
+      observer.observe(item, index);
+    });
+  </script>
