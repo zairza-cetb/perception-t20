@@ -92,9 +92,9 @@ router.get('/chregister/:eventID', (req, res) => {
 		let found = user.events.includes(ID);
 		  if(err) console.log('0');
 		  else if(found) 
-			res.send("T");
+		  	res.send("T");
 		  else 
-			res.send("F");
+			  res.send("F");
 	  }
 	});
 });

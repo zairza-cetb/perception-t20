@@ -1,6 +1,7 @@
 var express = require('express');
 var User = require("../models/model");
 var event_json=require("./events.json");
+var request = require('request');
 var router = express.Router();
 
 router.use((req, res, next) => {
@@ -42,41 +43,75 @@ router.get("/login", function (req, res, next) {
 
 /* GET admin page. */
 router.get("/admin", (req, res) => {
-	res.render("adminlog");
+	res.render("adminlog", { err: req.query.err });
 });
 
   /* GET techevents page. */
   router.get('/techevents', function(req, res, next) {
-	res.render('techevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('techevents', { message });
 });
 /* GET litevents page. */
 router.get('/litevents', function(req,res,next) {
-	res.render('litevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('litevents', { message });
 });
 /* GET management events page. */
 router.get('/manevents', function(req,res,next) {
-	res.render('manaevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('manaevents', { message });
 });
 /* GET flagship events page. */
 router.get('/flagevents', function(req,res,next) {
-	res.render('flagshipevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('flagshipevents', { message });
 });
 /* GET fun events page. */
 router.get('/funevents', function(req,res,next) {
-	res.render('funevents');
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('funevents', { message });
 });
 /* GET comingsoon page. */
 router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
 });
 
-
 router.get('/profile', function(req,res,next) {
   if(req.user){
 	User.findOne({_id:req.user._id}, (err, data) => {
 		if (err) console.log(err);
 		else 
-		  res.render("profile", { data: data ,evjson:event_json});
+		  res.render("profile", { data: data, evjson:event_json });
 	  });
   }else{
 	  res.redirect("/login");
@@ -94,7 +129,7 @@ router.post("/admin", (req, res) => {
 		  res.render("data", { data: data, evjson: event_json });
 	  });
 	} else {
-	  res.redirect("/admin");
+	  res.redirect("/admin?err=noadmin");
 	}
 });
 

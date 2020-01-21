@@ -53,10 +53,12 @@
         <% while(i!=51) { %>
        <tr class="header">
            <td><%= evjson[i]["event"] %></td>
+           <% var m = 0; %>
            <% data.forEach(function(d) { %>
             <% d.events.forEach(function(ev) { %>
                 <% if(ev == i) { %>
-                    <td> <%= d.name %> </td>
+                    <% m++; %>
+                    <td> <%= m %> - <%= d.name %> </td>
                 <% } %>
             <% }); %>
         <% }); %>
@@ -72,8 +74,8 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Gender</th>
-                <th>No.</th>
-                <th>college</th>
+                <th>Phone No.</th>
+                <th>College</th>
                 <th>Events</th>
             </tr>
         <% let j=0; %>
