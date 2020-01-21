@@ -134,7 +134,7 @@
   <div class="separator" style="height: 120px;"><h1>SPONSORS</h1></div>
   <div class="top-content">
     <div class="container-fluid">
-        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+        <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="2000">
             <div class="carousel-inner row w-100 mx-auto" role="listbox">
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
                     <img src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" class="img-fluid mx-auto d-block" alt="img1">
@@ -177,7 +177,7 @@
 
 // for every slide in carousel, copy the next slide's item in the slide.
 // Do the same for the next, next item.
-// $('.carousel').
+
 $('#carousel-example').on('slide.bs.carousel', function (e) {
 var $e = $(e.relatedTarget);
 var idx = $e.index();
@@ -196,8 +196,5 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
         }
     }
 }
-});
-$('#carousel-example').carousel({
-  interval: 500
 });
 </script>
