@@ -2,7 +2,8 @@ var express = require("express"),
     passport = require("passport"),
     localStrategy = require("passport-local"),
     User = require("../models/model"),
-    router = express.Router();
+    router = express.Router(),
+    nodemailer =require("nodemailer");
     
 //Initialization of passportjs
 passport.use(new localStrategy(User.authenticate()));
@@ -15,6 +16,14 @@ router.use((req, res, next) => {
   res.locals.currentUser = req.user;
   // res.locals.message = "Registered successfully";
   next();
+});
+
+const transporter=nodemailer.createTransport({
+  service:"gmail",
+  auth:{
+    user:"perceptioncet@gmail.com",
+    pass:"********"                                 //TODO:use the password after hosting
+  }
 });
 
 router.post("/register", function (req, res) {
@@ -31,6 +40,18 @@ router.post("/register", function (req, res) {
           }
           passport.authenticate("local")(req, res, () => {
               // res.locals.message = "Registered successfully";
+              transporter.sendMail({
+                from: 'Perception Cet 2020',
+                to: 'patrabiswajit133@gmail.com',
+                subject: 'Welcome to Perception 2020',
+                text: `Hi, ${req.user.name},Go through all the events and register in your dream-events`
+              }, function(error, info){
+                if (error) {
+                  console.log("mail error",error);
+                } else {
+                  console.log('Email sent: ' + info.response);
+                }
+              });
               if (req.query.ref) {
                 res.redirect(`${req.query.ref}?registerSuccess=1`);
               } else {
