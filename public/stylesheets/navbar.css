@@ -3,6 +3,7 @@
 Primary style
 
 -------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
 #navid >*,#navid>*::after,#navbar> *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15,7 +16,7 @@ Primary style
 
 
 a {
-  color: #1e6074;
+  color: #05f7fe;
   text-decoration: none;
 }
 
@@ -31,9 +32,11 @@ Main components
 /* header {
   z-index: 3;
 } */
-
+body{
+  font-family: 'Gelasio', serif;
+}
 .cd-nav-trigger {
-  position: fixed;
+  position: absolute;
   display: inline-block;
 }
 
@@ -56,6 +59,9 @@ Main components
   text-indent: 100%;
   white-space: nowrap;
 }
+.cd-nav-trigger.close-nav{
+  position:fixed;
+}
 .cd-nav-trigger .cd-icon {
   /* icon created in CSS */
   position: absolute;
@@ -69,8 +75,8 @@ Main components
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   display: inline-block;
-  width: 18px;
-  height: 3px;
+  width: 54px;
+  height: 5px;
   background-color: #ffffff;
   z-index: 10;
 }
@@ -96,18 +102,18 @@ Main components
   transition: transform .3s;
 }
 .cd-nav-trigger .cd-icon::before {
-  -webkit-transform: translateY(-6px) rotate(0deg);
-  -moz-transform: translateY(-6px) rotate(0deg);
-  -ms-transform: translateY(-6px) rotate(0deg);
-  -o-transform: translateY(-6px) rotate(0deg);
-  transform: translateY(-6px) rotate(0deg);
+  -webkit-transform: translateY(-10px) rotate(0deg);
+  -moz-transform: translateY(-10px) rotate(0deg);
+  -ms-transform: translateY(-10px) rotate(0deg);
+  -o-transform: translateY(-10px) rotate(0deg);
+  transform: translateY(-10px) rotate(0deg);
 }
 .cd-nav-trigger .cd-icon::after {
-  -webkit-transform: translateY(6px) rotate(0deg);
-  -moz-transform: translateY(6px) rotate(0deg);
-  -ms-transform: translateY(6px) rotate(0deg);
-  -o-transform: translateY(6px) rotate(0deg);
-  transform: translateY(6px) rotate(0deg);
+  -webkit-transform: translateY(10px) rotate(0deg);
+  -moz-transform: translateY(10px) rotate(0deg);
+  -ms-transform: translateY(10px) rotate(0deg);
+  -o-transform: translateY(10px) rotate(0deg);
+  transform: translateY(10px) rotate(0deg);
 }
 .cd-nav-trigger::before, .cd-nav-trigger::after {
   /* 2 rounded colored backgrounds for the menu icon */
@@ -130,7 +136,7 @@ Main components
   transition-property: transform;
 }
 .cd-nav-trigger::before {
-  background-color: #ffb441;
+  background-color: #091d23;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -142,6 +148,7 @@ Main components
   -webkit-transition-delay: 0.4s;
   -moz-transition-delay: 0.4s;
   transition-delay: 0.4s;
+  transition-property: transform;
 }
 .cd-nav-trigger::after {
   background-color: #ffb441;
@@ -150,15 +157,16 @@ Main components
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  -webkit-transition-duration: 0s;
-  -moz-transition-duration: 0s;
-  transition-duration: 0s;
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 .cd-nav-trigger.close-nav::before {
   /* user clicks on the .cd-nav-trigger element - 1st rounded background disappears */
+
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -167,6 +175,7 @@ Main components
 }
 .cd-nav-trigger.close-nav::after {
   /* user clicks on the .cd-nav-trigger element - 2nd rounded background appears */
+  /* background-color: red; */
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -193,6 +202,7 @@ Main components
   -o-transform: translateY(0) rotate(45deg);
   transform: translateY(0) rotate(45deg);
 }
+
 .cd-nav-trigger.close-nav .cd-icon::after {
   -webkit-transform: translateY(0) rotate(-45deg);
   -moz-transform: translateY(0) rotate(-45deg);
@@ -210,7 +220,7 @@ Main components
   width: 100%;
   padding: 80px 5%;
   z-index: 3;
-  background-color: #ffb441;
+  background-color:#091d23;
   overflow: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
@@ -242,9 +252,30 @@ Main components
   visibility: visible;
   opacity: 1;
 }
-@media only screen and (min-width: 768px) {
+.dropdown a{
+  color:    #f9fb07;
+}
+@media only screen and (max-width: 768px) {
   .cd-primary-nav li {
     margin: 2em 0;
+  }
+  .cd-nav-trigger .cd-icon{
+    width: 18px;
+   height: 3px;
+  }
+  .cd-nav-trigger .cd-icon::before {
+    -webkit-transform: translateY(-6px) rotate(0deg);
+    -moz-transform: translateY(-6px) rotate(0deg);
+    -ms-transform: translateY(-6px) rotate(0deg);
+    -o-transform: translateY(-6px) rotate(0deg);
+    transform: translateY(-6px) rotate(0deg);
+  }
+  .cd-nav-trigger .cd-icon::after {
+    -webkit-transform: translateY(6px) rotate(0deg);
+    -moz-transform: translateY(6px) rotate(0deg);
+    -ms-transform: translateY(6px) rotate(0deg);
+    -o-transform: translateY(6px) rotate(0deg);
+    transform: translateY(6px) rotate(0deg);
   }
   .cd-primary-nav a {
     font-size: 28px;
@@ -263,7 +294,7 @@ Main components
 
 .cd-overlay-nav, .cd-overlay-content {
   /* containers of the 2 main rounded backgrounds - these containers are used to position the rounded bgs behind the menu icon */
-  position: fixed;
+  position: fixed; 
   top: 18px;
   right: 5%;
   height: 4px;
@@ -312,7 +343,7 @@ Main components
   z-index: 2;
 }
 .cd-overlay-nav span {
-  background-color: #ffb441;
+  background-color:  #091d23;
 }
 
 .cd-overlay-content {
@@ -320,13 +351,14 @@ Main components
   z-index: 4;
 }
 .cd-overlay-content span {
-  background-color: transparent;
+  background-color:  #05f7fe;
 }
+
 #dd__cb ~ .dropdown {
   display: none;  
   }
   #eve{
-      color:#FF7043;
+      color:#05f7fe;
   }
   #eve:hover{
   color: #ffffff;

@@ -814,13 +814,16 @@ body .base.close .section-static {
 
 @media only screen and (max-width: 800px) {
   .box {
-    width: 200px;
+    width: 100%;
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     grid-row-gap: 40px;
   }
   .card-deck{
-    margin-left: 100px;
+    width: 100%;
+    /* position: relative;
+    left: 50%;
+    margin-left: -150px; */
   }
   .box .card-block {
     height: 200px;
