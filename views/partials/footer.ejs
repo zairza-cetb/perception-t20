@@ -3,8 +3,8 @@
   footer {
     color: #fff;
     background-attachment: fixed;
-    /* background-color: black; */
-    background-image: url('../assets/img/IMG-20200111-WA0022.jpg');  
+    background-color: black;
+    background-image: url('../assets/img/footer-bg.png');  
     background-size: cover;
     background-position: bottom;
     margin-bottom: 0;
@@ -102,18 +102,37 @@
   }
   @media only screen and (max-width: 800px) {
     .gmap_canvas {
-      overflow: hidden;
+      overflow: hidden; 
       background: none !important;
       height: 300px;
       width: 360px;
-      margin: 0;
-     
+      margin: 48px;
+      
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-right:0;
+    }
+    #gmap_container {
+      margin:auto !important;
+      text-align: center !important;
+    }
+    #fb_canvas{
+      /* margin: 18%; */
     }
     iframe {
       width: 300px;
       height: 300px;
- 
-      
+    }
+    .social-pet {
+      margin-left: 25%;
+      padding-top: 40px;
+    }
+    .footer-item{
+      display: grid;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 </style>
@@ -177,22 +196,24 @@
       <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-2">
         
         <div class="footer-item">
-<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fperception.cetb%2F&tabs=timeline&width=250&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>        </div>
+<iframe title="perception-facebook" id="fb_canvas" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fperception.cetb%2F&tabs=timeline&width=250&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="250" height="400" style="border:none;overflow:hidden;width:250px" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>        </div>
       </div>
 
       <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-2">
-          <div class="gmap_canvas">
+          <div class="" id="gmap_container" style="">
             <iframe
+              title="cet-map"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=college%20of%20engineering%20and%20technology%2C%20bhubaneswar&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
               scrolling="no"
               marginheight="0"
               marginwidth="0"
-              frameborder="1"
+              frameborder="0"
               
               
             ></iframe
-            ><a href="https://www.bitgeeks.net"></a>
+
+            >
           </div>
         
       </div>

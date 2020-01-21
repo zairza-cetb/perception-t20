@@ -1,89 +1,106 @@
 <!-- <link href="stylesheets/gallery.css" rel="stylesheet" media="all"> -->
 <style>
-.gallery {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-gap: 10px;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-    overflow: hidden;
-    margin-top: 20px;
-}
+      .grid-container {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
 
-.gallery-img {
-    width: 100%;
-    height: auto;
-    transition: 500ms;
-    margin-bottom: 10px;
-    opacity: 0.99;
-    page-break-inside: avoid; /* For Firefox. */
-    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
-    break-inside: avoid; /* For standard browsers like IE. :-) */
-}
+      .grid-row,
+      .grid-item {
+        width: 100%;
+        height: auto;
+        transition: 500ms;
+        margin-bottom: 10px;
+        opacity: 0.99;
+        page-break-inside: avoid; /* For Firefox. */
+        -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+        break-inside: avoid;
+      }
 
-/* .modal-img,.model-vid{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  display: table
-}
-.modal-body{
-  padding: 0px;
-}
+      .grid-item img {
+        width: 100%;
+        height: auto;
+        transition: 500ms;
+        margin-bottom: 10px;
+        opacity: 0.99;
+        page-break-inside: avoid; /* For Firefox. */
+        -webkit-column-break-inside: avoid; /* For Chrome & friends. */
+        break-inside: avoid;
+      }
 
-.modal-dialog {
-  height: 100%;
-      position: relative;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+      .grid-item {
+        -webkit-transform: translateY(-10%);
+        transform: translateY(-10%);
+        opacity: 0;
+        transition: 600ms opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) 300ms,
+          600ms -webkit-transform cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: 600ms transform cubic-bezier(0.55, 0.055, 0.675, 0.19),
+          600ms opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) 300ms;
+        transition: 600ms transform cubic-bezier(0.55, 0.055, 0.675, 0.19),
+          600ms opacity cubic-bezier(0.55, 0.055, 0.675, 0.19) 300ms,
+          600ms -webkit-transform cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      .grid-item.inview {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
 
-.modal-content {
-  border: none;
-} */
-
-
-@media screen and (max-width: 800px) {
-    .gallery {
+      @media only screen and (max-width: 800px){
+        .grid-container {
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
-    }
-    .gallery-img {
-    width: 100%;
-    height: auto;
-    transition: 500ms;
-    margin-bottom: 10px;
-    opacity: 0.8;
-    page-break-inside: avoid; /* For Firefox. */
-    -webkit-column-break-inside: avoid; /* For Chrome & friends. */
-    break-inside: avoid; /* For standard browsers like IE. :-) */
-}
-    .gallery div {
-        margin: 0;
-        width: 200px;
-    }
-}
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      }
+
 </style>
 <div class="container">
   <div class="separator" style="padding-top: 100px;"><h1>GALLERY</h1></div>
-  <div class="gallery">
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t31.0-8/12307597_1638340693084108_2675093450356651134_o.jpg?_nc_cat=105&_nc_ohc=_ubciTmCU34AQkDx6drZwFA4u2IudA_d-fBH6fVDZlbStSDiZ3P0HJmTQ&_nc_ht=scontent.fmaa8-1.fna&oh=351b40954766aae546815c5d2bac861f&oe=5EB167C5" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t31.0-8/12240306_1638340526417458_2086226271429442647_o.jpg?_nc_cat=109&_nc_ohc=qxZ8oSBBx6oAQmJIGy0baGMh2azbH3pMMB19IPCVBQNTLwoGf5Gz0fJOg&_nc_ht=scontent.fmaa8-1.fna&oh=718c204b5f9e23b8f6e7aaa26c1af10d&oe=5EA92B0E" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t31.0-8/12291737_1638340523084125_4524062352391533069_o.jpg?_nc_cat=109&_nc_ohc=GcaG5LkqyEgAQknuwRJ3KkXUIoXmf-ReBOBqRz1gUcr830nirYa0cI5iA&_nc_ht=scontent.fmaa8-1.fna&oh=698bf4acc6642c6a0e96fb675520e333&oe=5EA32081" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t31.0-8/12308157_1638339873084190_3122797091999861503_o.jpg?_nc_cat=100&_nc_ohc=5nRT08VEQ7gAQkX-_V7CBG2LRIScOAovblsbNohD0IFz5peja35QixM8A&_nc_ht=scontent.fmaa8-1.fna&oh=d67bf013b3734ebb2d34c31e38cb4d4f&oe=5EA42016" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t31.0-8/12314211_1638338693084308_9066889949486071555_o.jpg?_nc_cat=101&_nc_ohc=BxT57U4HLT0AQnlV2FdOuCis_Cfdw8I9IxCiI53e15dVm0kZOwZAnh7LA&_nc_ht=scontent.fmaa8-1.fna&oh=0bfebcc3ecd670eda7aa8bb67d9f3feb&oe=5EA7F711" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t1.0-9/78987146_1297910660396975_668701570191327232_o.jpg?_nc_cat=108&_nc_ohc=lWachJws78IAQnaTBtZQY3_hcyMRrN5WDg_R2aPaN3Vyk6hcF5ssCQ4kw&_nc_ht=scontent.fmaa8-1.fna&oh=1c4ae3eca65e76d2429988647e0a2a3d&oe=5E944B0E" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t31.0-0/p640x640/1496027_1551840361734142_5963008081279127309_o.jpg?_nc_cat=104&_nc_ohc=t2U1yGtF9kYAQkX_gYf8C1wtuSR-lqmjnfxryYnKLjlEjfgfSvsGHe9iw&_nc_ht=scontent.fmaa8-1.fna&_nc_tp=1&oh=0dafaf0eef73ee63972fff586a04f415&oe=5EA58A80" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t1.0-9/77157132_1282354228619285_3244539194432815104_o.jpg?_nc_cat=107&_nc_ohc=ZlMBE79dzDUAQlxVwp4POmsye1z_A-qqotx569E0quvvFZzQQDyD7KgHw&_nc_ht=scontent.fmaa8-1.fna&oh=da5ff728728017483ff1fb6ed05afd6e&oe=5EB39850" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t31.0-8/12309639_1638337599751084_5310717402990634628_o.jpg?_nc_cat=101&_nc_ohc=3kc65YV8_mAAQmnq4eoB24YEDOaMRTeqC7f2K6D2JOrxj22yPh3oRH7qQ&_nc_ht=scontent.fmaa8-1.fna&oh=52909eae39ec8c31e3ece8760bd7ef14&oe=5EB111DA" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t1.0-9/74153857_1280691498785558_3494826910368661504_o.jpg?_nc_cat=106&_nc_ohc=O12tlaM9VNoAQklkMvxZJkda5lWnTuFUOn0I2BKFFu6sFNI8jDYVGI_5w&_nc_ht=scontent.fmaa8-1.fna&oh=98708d3717045d1f65fb17b5c4fb7322&oe=5E91C15B" alt="" class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t1.0-9/74634437_1280662955455079_4821562876701442048_o.jpg?_nc_cat=106&_nc_ohc=xpLF5DH_5w4AQl87_4YT4pekDVk6WNb5408nCJ6DLP_Nl2ZN7RY-ZZINQ&_nc_ht=scontent.fmaa8-1.fna&oh=d6c3cd033bcbec5eeeb679b8db9bb9c9&oe=5EA0DE2A" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t1.0-9/74274978_1280606045460770_335217661967335424_o.jpg?_nc_cat=104&_nc_ohc=Pk6F7YvxcagAQlG1MkzXhq61Jhed4m02VC4O-Q92vSlVadWztiIrhbjWg&_nc_ht=scontent.fmaa8-1.fna&oh=cdee0da2e4b72dbd695898e07b3cece1&oe=5E9A8056" alt=""  class="gallery-img" />
-      <img src="https://scontent.fmaa8-1.fna.fbcdn.net/v/t1.0-9/78715271_1297910373730337_1868776721877041152_o.jpg?_nc_cat=102&_nc_ohc=NBU7PjQ6DT0AQnaiTjqsTTRpUu0utBmGtXVKYszA0PPIAUIOG69SZOp_w&_nc_ht=scontent.fmaa8-1.fna&oh=6280a4ee2db2b5e74091c62758cda2d8&oe=5EA9EA19 " alt=""  class="gallery-img" />
-    </div>
+  <div class="grid-container">
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/1.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/2.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/3.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/4.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/5.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/6.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/7.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/8.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/9.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/10.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/11.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/12.webp" alt="1" /></div>
+    <div class="grid-item"><img src="https://placehold.it/960x540" data-src="assets/img/gallery/13.webp" alt="1" /></div>
   </div>
+  </div>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        // const rand = Math.floor(Math.random() * 30);
+        if (entry.isIntersecting === true) {
+          const img = entry.target.querySelector("img");
+          entry.target.classList.add("inview");
+          img.src = img.dataset.src;
+        } else {
+          entry.target.classList.remove("inview");
+        }
+      });
+    });
+    const items = document.querySelectorAll(".grid-item");
+    console.log(items);
+    items.forEach((item, index) => {
+      observer.observe(item, index);
+    });
+  </script>

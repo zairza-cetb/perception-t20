@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Flagship Events </title>
+    <meta name="description" content="Flagship events of Perception 2020">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/stylenew.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+</head>
+    <body>
+        <%- include('partials/preloader') %>
+        <%- include('partials/navbar') %>
+        <%- include('partials/modal') %>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
+        <style type="text/css">
+            .card {
+                opacity: 0;
+                -webkit-transform: translateX(-100px);
+                     -moz-transform: translateX(-100px);
+                        -ms-transform: translateX(-100px);
+                         -o-transform: translateX(-100px);
+                                transform: translateX(-100px);
+                -webkit-transition: all 2.6s ease-out;
+                     -moz-transition: all 1.6s ease-out;
+                        -ms-transition: all 1.6s ease-out;
+                         -o-transition: all 1.6s ease-out;
+                                transition: all 0.6s ease-out;
+            }
+            .card.visible {
+                opacity: 1;
+                -webkit-transform: none;
+                     -moz-transform: none;
+                        -ms-transform: none;
+                         -o-transform: none;
+                                transform: none;
+            }
+
+
+        </style>
+
+    <section>
+      <center style="background-color: #222;"><div class="gradient-box"><span>FLAGSHIP EVENTS</span></div></center>
+     <div class="wrapper">
+     <div class="container">
+      
+        <div class="card">
+            <div class="imgBx" data-text="Rescue Rangers">
+                <img src="assets/img/eventicons/1.png">
+            </div>
+            <div class="content">
+                <div data-title="Rescue Rangers" data-id="1" data-desc="The participating teams will have to build their manual robot that conquers the various obstacles and hurdles put forward. Inclined planes, rough terrain, fire and water, slippery roads and whatnot. The robot that finishes the track in one piece, scoring the highest points in the minimum amount of time, earns its team the winning title.">
+                   <h3 class="glitch" data-text="Rescue Rangers">Rescue Rangers</h3>
+                   <p class="glitch" data-text="RoboRace Challenge">RoboRace Challenge</p>
+                   <button id="eventButton43" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div>
+       <div class="card">
+            <div class="imgBx" data-text="Code Busters">
+                <img src="assets/img/eventicons/2.png">
+            </div>
+            <div class="content">
+                <div data-title="Code Busters" data-id="2" data-desc="A competitive coding challenge in which the participating teams will have to code to find solutions for the given problems in an allotted time.">
+                   <h3 class="glitch" data-text="Code Busters">Code Busters</h3>
+                   <p class="glitch" data-text="Code for a Challenge">Code for a Challenge</p>
+                   <button id="eventButton44" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div>
+       
+      
+  <div class="card">
+    <div class="imgBx" data-text="Qurious">
+        <img src="assets/img/eventicons/8.png">
+    </div>
+    <div class="content">
+        <div data-title="Qurious" data-id="8" data-desc="The annual general quiz of CET Bhubaneswar, QURIOUS, promises to be a treat for the geeks and nerds. It will be an exercise for your grey cells. In a society where knowledge is power, the event is bound to enrich and enhance your quest for it.">
+           <h3 class="glitch" data-text="Qurious">Qurious</h3>
+           <p class="glitch" data-text=""></p>
+           <button id="eventButton47" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Mock Loksabha">
+        <img src="assets/img/eventicons/11.png">
+    </div>
+    <div class="content">
+        <div data-title="Mock Loksabha" data-id="11" data-desc="Does politics excite you? Which policies or laws do you agree on? 'Mock Lok Sabha' is an attempt to look into the way our nation's Lok Sabha works. It looks at the current and relevant topics to be discussed and welcomes opinions on all fronts. Come share your ideologies with us.">
+           <h3 class="glitch" data-text="Mock Loksabha">Mock Loksabha</h3>
+           <p class="glitch" data-text="Experience a mock Lok Sabha">Experience a mock Lok Sabha</p>
+           <button id="eventButton48" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Karobaar">
+        <img src="assets/img/eventicons/16.png">
+    </div>
+    <div class="content">
+        <div data-title="Karobaar" data-id="16" data-desc="Karobaar' is a test. A test to prove your mettle in being the best businessman who can pair up and succeed in the group of businessmen. Pair up with your partner and clear the rounds through the event to sell your product in this makeshift marketplace.">
+           <h3 class="glitch" data-text="Karobaar">Karobaar</h3>
+           <p class="glitch" data-text="Sell me this!">Sell me this!</p>
+           <button id="eventButton49" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Hoverpod">
+        <img src="assets/img/eventicons/17.png">
+    </div>
+    <div class="content">
+        <div data-title="Hoverpod" data-id="17" data-desc="Hoverpod' is the event of amphibious vehicles that can traverse in both land and water. The participating teams will have to build an amphibious robot, according to specified criteria, that will be tested on both land and water. The robots might also have to overcome certain obstacles and rough terrains. The robot that earns the maximum points will be declared the winner.">
+           <h3 class="glitch" data-text="Hoverpod">Hoverpod</h3>
+           <p class="glitch" data-text="Hoverpod! Hoverpod! ">Hoverpod! Hoverpod!</p>
+           <button id="eventButton50" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button> 
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Robo Dangal">
+        <img src="assets/img/eventicons/18.png">
+    </div>
+    <div class="content">
+        <div data-title="Robo Dangal" data-id="18" data-desc="Robo Dangal' is a robot combat competition where the robots will have to compete against each other in a one-on-one match inside an arena, in a knockout tournament. Both manually-controlled and remote-controlled robots are welcomed. The participating teams' robot will have to overpower its opponents to end at the top and win the competition. Now, you can either play smart or play hard, it's up to you.">
+           <h3 class="glitch" data-text="Robo Dangal">Robo Dangal</h3>
+           <p class="glitch" data-text="Robot is indeed a fighter!">Robot is indeed a fighter!</p>
+           <button id="eventButton51" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Water Rocket">
+        <img src="assets/img/eventicons/25.png">
+    </div>
+    <div class="content">
+      <div data-title="Robo Dangal" data-id="25" data-desc="A water rocket is a type of model rocket that uses water as its reaction mass. It works based on Newton's Third Law of Motion, in which water is forced out the bottom of the rocket by air pressure. In the 'Water Rocket' event, the participating teams will have to build working water rockets. The participant whose rocket covers the maximum distance and maximum height of projectile will win the competition.">
+           <h3 class="glitch" data-text="Water Rocket">Water Rocket</h3>
+           <p class="glitch" data-text="It’s simple! Complex it!">It’s simple! Complex it!</p>
+           <button id="eventButton52" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Widget Mania">
+        <img src="assets/img/eventicons/26.png">
+    </div>
+    <div class="content">
+        <div data-title="Widget Mania" data-id="26" data-desc="Welcome motorheads! 'Widget Mania' is the event of automobile designing. The participating teams will be given different parts that constitute an automobile. The teams need to design and build the model of the automobile of their own.">
+           <h3 class="glitch" data-text="Widget Mania">Widget Mania</h3>
+           <p class="glitch" data-text="Welcome motorheads! ">Welcome motorheads! </p>
+           <button id="eventButton53" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Robo soccer">
+        <img src="assets/img/eventicons/35.png">
+    </div>
+    <div class="content">
+        <div data-title="Robo soccer" data-id="35" data-desc="As the name suggests, 'Robo Soccer' is a soccer match event between soccer robots. To make it more interesting, only wireless robots (autonomous robots or remote-controlled robots) will be allowed to participate in the event. All the matches will be one-on-one where the team whose robot scores the maximum goals within a specified time frame wins the game.">
+           <h3 class="glitch" data-text="Robo soccer">Robo soccer</h3>
+           <p class="glitch" data-text="Hey bots! Time for  a soccer match!">Hey bots! Time for  a soccer match!</p>
+           <button id="eventButton54" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+        </p>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="FET">
+        <img src="assets/img/eventicons/36.png">
+    </div>
+    <div class="content">
+        <div data-title="FET" data-id="36" data-desc="Find the Electronics Treasure (FET) is unlike any treasure hunts you think can of. This event will be testing your skills on finding the treasure, as well as your knowledge on electronics, electrical and instrumentation. Questions, riddles, puzzles and whatnot. Only the prepared and knowledgeable teams will find it easy to tackle all the problems we provide them with.Pull up your socks and tighten your pants. It’s going to be a bumpy, fun and an interesting treasure hunt.">
+           <h3 class="glitch" data-text="FET">Find the Electronics</h3>
+           <p class="glitch" data-text="">Electronics treasure hunt</p>
+           <button id="eventButton55" class="evbtn btn btn-light-green" data-toggle="modal" data-target="#eventModal55" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Biobuzz">
+        <img src="assets/img/eventicons/42.png">
+    </div>
+    <div class="content">
+        <div data-title="Biobuzz" data-id="42" data-desc="This Perception, let's groove into the world of biology and biotechnology, as we bring you the 'Biobuzz', a quiz competition. The objective of this quiz is to create awareness and help students understand science and biotechnology in a more comprehensive manner keeping them abreast of the latest developments in this particular field.">
+           <h3 class="glitch" data-text="Biobuzz">Biobuzz</h3>
+           <p class="glitch" data-text="">Biology Quiz</p>
+           <button id="eventButton54" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+        </p>
+       </div>
+    </div>
+</div>
+
+    </div>
+     </div>
+    </section>
+
+    <script>
+        // build scenes
+        var revealElements = document.getElementsByClassName("card");
+        for (var i=0; i<revealElements.length; i++) {
+            new ScrollMagic.Scene({
+                                triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                                offset: 30,												 // start a little later
+                                triggerHook: 0.98,
+                                reverse:false,
+                            })
+                            .setClassToggle(revealElements[i], "visible") // add class toggle
+                         //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+                            .addTo(controller);
+        }
+    </script>
+    </body>
+</html>

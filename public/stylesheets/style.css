@@ -24,6 +24,7 @@ html {
   margin: 0;
   padding: 0;
   /* background-color: black; */
+  font-family: 'Gelasio', serif;
 
   --text-color: hsla(210, 50%, 85%, 1);
   --shadow-color: hsla(210, 40%, 52%, 0.4);
@@ -40,6 +41,9 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 10%;
 }
+.box .card-deck{
+  justify-content: space-between;
+}
 .box .card-block {
   position: relative;
   width: 300px;
@@ -49,7 +53,7 @@ html {
   justify-content: space-evenly;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+  z-index: 1;
 }
 .box .card {
   position: relative;
@@ -809,13 +813,18 @@ body .base.close .section-static {
 }
 
 
-
 @media only screen and (max-width: 800px) {
   .box {
-    width: 200px;
+    width: 100%;
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     grid-row-gap: 40px;
+  }
+  .card-deck{
+    width: 100%;
+    /* position: relative;
+    left: 50%;
+    margin-left: -150px; */
   }
   .box .card-block {
     height: 200px;

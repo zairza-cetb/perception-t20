@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Technical Events </title>
+    <meta name="description" content="Technical events of Perception 2020" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylesheets/stylenew.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+  </head>
+
+  <body background="#222">
+    <%- include('partials/preloader') %>
+    <%- include('partials/navbar') %>
+
+    <%- include('partials/modal') %>
+    <script>
+      // init controller
+      var controller = new ScrollMagic.Controller();
+    </script>
+    <style type="text/css">
+      .card {
+        opacity: 0;
+        -webkit-transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -o-transform: translateX(-100px);
+        transform: translateX(-100px);
+        -webkit-transition: all 2.6s ease-out;
+        -moz-transition: all 1.6s ease-out;
+        -ms-transition: all 1.6s ease-out;
+        -o-transition: all 1.6s ease-out;
+        transition: all 0.6s ease-out;
+      }
+
+      .card.visible {
+        opacity: 1;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+      }
+
+      .card .event__cover,.event__desc {
+          display: none;
+      }
+    </style>
+    <section">   
+      <center style="background-color: #222;">
+        <div class="gradient-box"><span>TECHNICAL EVENTS</span></div>
+      </center>
+      <div class="wrapper">
+        <div class="container">
+          <!-- <div class="card">
+            <div class="imgBx" data-text="Code Busters" data-id="1" data-desc="Lorem Ipsum">
+              <img src="assets/img/eventicons/cb.png" />
+            </div>
+            <div class="content">
+                <div data-title="Code Busters" data-id="1" data-desc="A competitive coding challenge in which all the teams will code to solve the given problems in given time.">
+                    <h3 class="glitch event__title" data-text="Code Busters">Code Busters</h3>
+                    <p class="glitch" data-text="Coding challenge">Coding challenge</p>
+                    <button id="eventButton1" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                </div>
+            </div>
+        </div> -->
+        <div class="card">
+            <div class="imgBx" data-text="Web Weavers">
+              <img src="assets/img/eventicons/3.png"/>
+            </div>
+            <div class="content">
+                <div data-title="Web Weavers" data-id="3" data-desc="The participants will be provided with mini-tasks relating to Web Development. Their final work (after the completion of specified time) will be evaluated to check if they meet the specified criteria for the problem statement.">
+                    <h3 class="glitch event__title" data-text="Web Weavers">Web Weavers</h3>
+                    <p class="glitch" data-text="Difficult task to search from web">Difficult task to search from web</p>
+                    <button id="eventButton2" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx" data-text="Dig The Web">
+              <img src="assets/img/eventicons/4.png"/>
+            </div>
+            <div class="content">
+                <div data-title="Dig The Web" data-id="4" data-desc="Believe it or not, the participating teams will be allowed to access the Internet in this event. The teams will be given tricky questions which they might not be able to solve in their first glance. To find the answer, the Internet will be their best friend. The team that makes the best of the Internet to earn the maximum points will be declared the winner.">
+                    <h3 class="glitch" data-text="Dig The Web">Dig The Web</h3>
+                    <p class="glitch" data-text="Find clues from Google">Find clues from Google</p>
+                    <button id="eventButton3" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                </div>          
+            </div>
+        </div>
+        <!-- <div class="card">
+            <div class="imgBx" data-text="Rescue Rangers">
+              <img src="assets/img/eventicons/robot.png" />
+            </div>
+            <div class="content">
+                <div data-title="Rescue Rangers" data-id="4" data-desc="All teams will build their manual robots to complete the track full of hurdles. The team with who finishes the track first takes the game.">
+                    <h3 class="glitch" data-text="Rescue Rangers">Rescue Rangers</h3>
+                    <p class="glitch" data-text="Manual robots complete tarcks and hurdles">Manual robots complete tarcks and hurdles</p>
+                    <button id="eventButton4" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                </div>
+            </div>
+        </div> -->
+        <div class="card">
+            <div class="imgBx" data-text="Enchanted Maze">
+              <img src="assets/img/eventicons/5.png" />
+            </div>
+            <div class="content">
+                <div data-title="Enchanted Maze" data-id="5" data-desc="The participating teams will have to build a line follower robot that senses and follows a certain path, and avoids any obstacles (if any). The team which is able to complete the track in the minimum time will be the winner.">
+                   <h3 class="glitch" data-text="Enchanted Maze">Enchanted Maze</h3>
+                   <p class="glitch" data-text="Line following robot">Line following robot</p>
+                   <button id="eventButton5" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+        </div>
+        <!-- <div class="card">
+            <div class="imgBx" data-text="Game of Drones">
+              <img src="assets/img/eventicons/drone_2.png" />
+            </div>
+            <div class="content">
+                <div data-title="Game of Drones" data-id="6" data-desc="Lorem Ipsum">
+                   <h3 class="glitch" data-text="Game of Drones">Game of Drones</h3>
+                   <p class="glitch" data-text="Flying drones in perticular paths">Flying drones in perticular paths</p>
+                   <button id="eventButton6" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+        </div> -->
+        <div class="card">
+            <div class="imgBx" data-text="Daily Hacks">
+              <img src="assets/img/eventicons/20.png" />
+            </div>
+            <div class="content">
+                <div data-title="Daily Hacks" data-id="20" data-desc="Are you interested in circuit design? Do you have the unique ability to craft a distinctive circuit? Participate in the 'Daily Hacks' event and replicate your electrical instincts on the design board to fabricate an exclusive circuit. The participating teams will have to pass a quiz on basic electrical questions in the first round. The teams that qualify from the first round will then have to design an electrical circuit (on a bread board) according to the given problem statement to win the competition.">
+                   <h3 class="glitch" data-text="Daily Hacks">Daily Hacks</h3>
+                   <p class="glitch" data-text="Technical layout of waste">Technical layout of waste</p>
+                   <button id="eventButton7" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+        </div>
+        
+        <!-- <div class="card">
+            <div class="imgBx" data-text="Automotive Hunt">
+              <img src="assets/img/eventicons/thinking.png" />
+            </div>
+            <div class="content">
+                <div data-title="Automotive Hunt" data-id="33" data-desc="A treasure hunt that has its own thrills. The 'Automotive Hunt' is a treasure hunt event where the participating teams will be able to find clues to the target only if they solve a riddle, a puzzle or a question based on or related to the automobile industry.">
+                   <h3 class="glitch" data-text="Automotive Hunt">Automotive Hunt</h3>
+                   <p class="glitch" data-text="Electrical Quiz">Electrical Quiz</p>
+                   <button id="eventButton8" class="evbtn btn btn-light-green"style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+        </div> -->
+        <div class="card">
+            <div class="imgBx" data-text="Electrivia">
+              <img src="assets/img/eventicons/19.png" />
+            </div>
+            <div class="content">
+                <div data-title="Electrivia" data-id="19" data-desc="Awaken the Tesla within you. We are engulfed with electrical components in our daily life. Small electrical phenomena often go unnoticed, that is exactly what we want you to decipher. 'Electrivia' is an electrical quiz. Participate in the electrical quiz and test your knowledge in the electrical domain.">
+                   <h3 class="glitch" data-text="Electrivia">Electrivia</h3>
+                   <p class="glitch" data-text="Electrical quiz">Electrical quiz</p>
+                   <button id="eventButton9" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="imgBx" data-text="MD">
+              <img src="assets/img/eventicons/presentation.png" />
+            </div>
+            <div class="content">
+                <div data-title="Model Presentation" data-id="10" data-desc="Lorem Ipsum">
+                   <h3 class="glitch" data-text="Model Presentation">Model Presentation</h3>
+                   <p class="glitch" data-text="Bio-presentation">Bio-presentation</p>
+                   <button id="eventButton10" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+     </div> -->
+      <div class="card">
+            <div class="imgBx" data-text="Catapult Throw">
+              <img src="assets/img/eventicons/22.png" />
+            </div>
+            <div class="content">
+                <div data-title="Catapult Throw" data-id="22" data-desc="In the 'Catapult Throw' event, the participants will be provided with materials required to successfully construct a catapult. A catapult is a type of machine used as a weapon to throw rocks, large arrows, or other things such as hot tar, that would cause damage to something else.Catapults use weights and levers to send the rocks or other things into the air.The participants will have to design and construct a working model of a catapult keeping in mind the given specifications. The winner will be declared based on the maximum distance and maximum height of projectile covered by the object thrown by the catapult.">
+                   <h3 class="glitch" data-text="Catapult Throw">Catapult Throw</h3>
+                   <p class="glitch" data-text="Design a Catapult">Design a Catapult</p>
+                   <button id="eventButton11" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                </div>
+            </div>
+      </div>
+       <div class="card">
+            <div class="imgBx" data-text="PMC">
+              <img src="assets/img/eventicons/23.png" />
+            </div>
+            <div class="content">
+                <div data-title="Product Modification Challenge" data-id="23" data-desc="Product modification is an adjustment made to an existing product, usually made for greater appeal or functionality. A modification may include a change to a product's shape, adding a feature or improving its performance. The participants of 'Product Modification Challenge' will be given a product, which may vary from participant to participant. They will have to present the modifications proposed by them in front of the jury.">
+                   <h3 class="glitch" data-text="Product Modification Challenge">Product Modification Challenge</h3>
+                   <p class="glitch" data-text="Modify your product">Modify your product</p>
+                   <button id="eventButton12" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div>
+       <!-- <div class="card">
+            <div class="imgBx" data-text="TYE">
+              <img src="assets/img/eventicons/bicycle.png"/>
+            </div>
+            <div class="content">
+                <div data-title="Test Your Endurance" data-id="24" data-desc="The 'Test your Endurance' is a knock out cycle race between the riders to test their endurance.">
+                   <h3 class="glitch" data-text="Test your endurance">Test your endurance</h3>
+                   <p class="glitch" data-text="Knock Out Cycle Race">Knock Out Cycle Race</p>
+                   <button id="eventButton13" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div> -->
+       <div class="card">
+            <div class="imgBx" data-text="RBC">
+              <img src="assets/img/eventicons/21.png"/>
+            </div>
+            <div class="content">
+                <div data-title="Rube Goldberg Challenge" data-id="21" data-desc="As the name suggests, the 'Rube Goldberg Challenge' event challenges you to design a Rube Goldberg machine. It is a machine designed to perform a simple task in an indirect and overly complicated way. Usually, these machines consist of a series of simple unrelated devices; the action of each triggers the initiation of the next, eventually resulting in achieving a stated goal. The participants will have to design and construct the machine using the given materials, according to the specified guidelines. The winner will be declared based on the effectiveness of the design prepared by the team.">
+                   <h3 class="glitch" data-text="RGC">Rube Goldberg Challenge</h3>
+                   <p class="glitch" data-text="Build a Rube Goldberg Machine">Build a Rube Goldberg Machine</p>
+                   <button id="eventButton14" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div>
+       <!-- <div class="card">
+            <div class="imgBx" data-text="Town Planning">
+              <img src="assets/img/eventicons/town-plan.png" />
+            </div>
+            <div class="content">
+                <div data-title="Town Planning" data-id="15" data-desc="Lorem Ipsum">
+                   <h3 class="glitch" data-text="Town Planning">Town Planning</h3>
+                   <p class="glitch" data-text="Make your own town">Make your own town</p>
+                   <button id="eventButton15" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div> -->
+       <div class="card">
+            <div class="imgBx" data-text="Designstein">
+              <img src="assets/img/eventicons/27.png" />
+            </div>
+            <div class="content">
+                <div data-title="Designstein" data-id="27" data-desc="If designing new parts of an automobile or creating new shapes or modifying the efficiency and productivity of a designer, 'Designstein' is the event for you. A nerve-wracking CAD design competition where the participant will have to design a certain shape or a product based on the problem statement given to them.">
+                   <h3 class="glitch" data-text="Designstein">Designstein</h3>
+                   <p class="glitch" data-text="Design a CAD">Design a CAD</p>
+                   <button id="eventButton16" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Junkyard Wars">
+              <img src="assets/img/eventicons/28.png" />
+            </div>
+            <div class="content">
+                <div data-title="Junkyard Wars" data-id="28" data-desc="Does throwing away something saddens you? Do you think you have the ability and skills to design and build something out from a box full of junk? Participate in the fun-filled event 'Junkyard Wars', where the participating teams will be provided with some used objects and they need to build something usable out of the scrap. Become the HUNK by building from the JUNK.">
+                   <h3 class="glitch" data-text="Junkyard Wars">Junkyard Wars</h3>
+                   <p class="glitch" data-text="Build from Junk">Build from Junk</p>
+                   <button id="eventButton17" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div>
+       <div class="card">
+            <div class="imgBx" data-text="Auto Quiz">
+              <img src="assets/img/eventicons/29.png"/>
+            </div>
+            <div class="content">
+                <div data-title="Auto Quiz" data-id="29" data-desc="It is not easy being a mechanical engineer, in contrast to what everybody thinks. Starting from thermodynamics to manufacturing of automobiles, from the strength of materials to fluid mechanics, there are numerous other topics which make this field a difficult one. To challenge your knowledge of mechanical engineering and automobiles, we have the 'Auto Quiz' for you.">
+                   <h3 class="glitch" data-text="Auto Quiz">Auto Quiz</h3>
+                   <p class="glitch" data-text="Auto Trivia">Auto Trivia</p>
+                   <button id="eventButton18" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+               </div>
+            </div>
+      </div>
+      <!-- <div class="card">
+        <div class="imgBx" data-text="Lead the Beast">
+            <img src="assets/img/eventicons/buggies.png">
+        </div>
+        <div class="content">
+            <div data-title="Lead the Beast" data-id="19" data-desc="How cool will it be to ride an all-terrain vehicle (ATV) in a track filled with different obstacles? We present you the 'Lead the Beast' event, where the participants will be given a chance of riding an ATV. Be a part of this thrilling ride on the beast and win a cashback on completing the challenge.">
+               <h3 class="glitch" data-text="Lead the Beast">Lead the Beast</h3>
+               <p class="glitch" data-text="Ride the ATV">Ride the ATV</p>
+               <button id="eventButton19" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+           </div>
+        </div>
+  </div> -->
+  
+<!-- <div class="card">
+    <div class="imgBx" data-text="ETS">
+        <img src="assets/img/eventicons/buggies.png">
+    </div>
+    <div class="content">
+        <div data-title="Embrace the Speed" data-id="20" data-desc="If an ATV ride is not enough for you, then how does riding an e-vehicle sound? We will give a chance to ride the e-vehicle and feel the instinct racing in you. Win a cashback on completing the challenge.">
+           <h3 class="glitch" data-text="Embrace the speed">Embrace the speed</h3>
+           <p class="glitch" data-text="Ride the e-vehicle">Ride the e-vehicle</p>
+           <button id="eventButton20" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+    
+</div> -->
+<div class="card">
+    <div class="imgBx" data-text="TPP">
+        <img src="assets/img/eventicons/32.png">
+    </div>
+    <div class="content">
+        <div data-title="Technical Paper Presentation" data-id="32" data-desc="Be a part of some exciting research paper presentations in the automobile field. Feel free to showcase your talent on any kind of advancement that you would like to see in the automobile industry and get an opportunity to get involved in the actual implementation of that project, if feasible.">
+           <h3 class="glitch" data-text="Tech Paper Presentation">Tech Paper Presentation</h3>
+           <p class="glitch" data-text="Presentation on Automobile Industry">Presentation on Automobile Industry</p>
+           <button id="eventButton21" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<!-- <div class="card">
+    <div class="imgBx" data-text="Automotive Hunt">
+        <img src="assets/img/eventicons/treasurehunt.png">
+    </div>
+    <div class="content">
+        <div data-title="Automotive Hunt" data-id="22" data-desc="A treasure hunt that has its own thrills. The 'Automotive Hunt' is a treasure hunt event where the participating teams will be able to find clues to the target only if they solve a riddle, a puzzle or a question based on or related to the automobile industry.">
+           <h3 class="glitch" data-text="Automotive Hunt">Automotive Hunt</h3>
+           <p class="glitch" data-text="Treasure Hunt on Automobile Industry">Treasure Hunt on Automobile Industry</p>
+           <button id="eventButton22" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div> 
+
+
+</div>-->
+<div class="card">
+    <div class="imgBx" data-text="CYWO">
+        <img src="assets/img/eventicons/34.png">
+    </div>
+    <div class="content">
+        <div data-title="Claw Your Way Out" data-id="34" data-desc="In the 'Claw your Way Out' event, the participating teams will be given some real-world problems. The teams have to solve and answer the problems correctly using their technical knowledge and skills to win the competition.">
+           <h3 class="glitch" data-text="Claw your way out">Claw your way out</h3>
+           <p class="glitch" data-text="Contest on Real Time Problem Solving">Contest on Real Time Problem Solving</p>
+           <button id="eventButton23" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="imgBx" data-text="CETronics">
+        <img src="assets/img/eventicons/37.png">
+    </div>
+    <div class="content">
+        <div data-title="CETronics" data-id="37" data-desc="As a matter of fact, we are living in a world of surplus electronic parts. We are habituated with electronic components in our daily life to so much extent that we hardly think of a way the world would be without electronics. So fuel up your enthusiasm, glaze your knowledge on electronic circuits and concepts and be geared up to experience the most anticipated quizzing event, “CETronics”, an electronics quiz. Be there to explore the world of Electronics and to compete with the finest.">
+           <h3 class="glitch" data-text="Cetronics">CETronics</h3>
+           <p class="glitch" data-text="Electronics quiz">Electronics Quiz</p>
+           <button id="eventButton24" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="imgBx" data-text="UAV Killer">
+        <img src="assets/img/eventicons/38.png">
+    </div>
+    <div class="content">
+        <div data-title="UAV Killer" data-id="38" data-desc="The aim of the 'UAV Killer' event is to make an RC-drone that shall pop the balloons of a particular colour. There will be balloons of two colours tied to a surface. The red balloons will represent a terrorist and green balloons will represent civilians. The challenge is to kill the terrorists among the civilians. So grab the challenge and shoot the target.">
+           <h3 class="glitch" data-text="UAV Killer">UAV Killer</h3>
+           <p class="glitch" data-text="Make a RC-Drone">Make a RC-Drone</p>
+           <button id="eventButton25" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Paper Wings">
+        <img src="assets/img/eventicons/39.png">
+    </div>
+    <div class="content">
+        <div data-title="Paper Wings Challenge" data-id="39" data-desc="No kerosene, no engines required! The 'Paper Wings Challenge' challenges you to design and create a paper plane from a given sheet of paper and throw it farther than anyone else. The paper planes will be judged based on the maximum height of the projectile, the flight time and distance covered. So let the wings flutter and join us to fly beyond the sky.">
+           <h3 class="glitch" data-text="Paper Wings Challenge ">Paper Wings Challenge </h3>
+           <p class="glitch" data-text="Build a Paper Plane">Build a Paper Plane</p>
+           <button id="eventButton26" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Civi Quiz">
+        <img src="assets/img/eventicons/50.png">
+    </div>
+    <div class="content">
+        <div data-title="Civi Quiz" data-id="50" data-desc="Our world is surrounded by products designed by civil engineers. From buildings to roads, there is a huge number of processes required to design and construct, keeping my mind the different aspects of it. We bring you the Civi Quiz, a civil engineering quiz. Participate in this quiz to showcase your knowledge in the field of civil engineering.">
+           <h3 class="glitch" data-text="Civi Quiz">Civi Quiz</h3>
+           <p class="glitch" data-text=""></p>
+           <button id="eventButton27" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Turbulance">
+        <img src="assets/img/eventicons/40.png">
+    </div>
+    <div class="content">
+        <div data-title="Turbulance" data-id="40" data-desc="With all the space explorations and discoveries made, space, as we know it, is still unknown to us in many ways. From new stars to new planets, there is always something that lurks in space that we are far from learning about. We bring you the Aerospace Quiz - 'Turbulence'. Participate in this quiz to showcase your knowledge of space and challenge others.">
+           <h3 class="glitch" data-text="Turbulance">Turbulance</h3>
+           <p class="glitch" data-text="Aerospace Quiz">Aerospace Quiz</p>
+           <button id="eventButton28" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="LSPC">
+        <img src="assets/img/eventicons/41.png">
+    </div>
+    <div class="content">
+        <div data-title="Light Speed Presentation Challenge" data-id="41" data-desc="The 'Light Speed Presentation Challenge' is an ideation challenge where the participating teams will have to choose a topic on the Space and Aviation Industry. The teams will then have to present a maximum of 20 images related to the chosen topic and will be allowed to describe the shown images within a maximum of 30 seconds per image. The team with the best presentation wins the competition.">
+           <h3 class="glitch" data-text="Light Speed Presentation Challenge">Light Speed Presentation Challenge</h3>
+           <p class="glitch" data-text=""></p>
+           <button id="eventButton29" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="EL Cartel">
+        <img src="assets/img/eventicons/43.png">
+    </div>
+    <div class="content">
+        <div data-title="EL Cartel" data-id="43" data-desc="Poster-designing is an art of presenting your ideas and thoughts to the audience in a visual format. Perception brings a unique opportunity to combine your ideas and thoughts relating to the world of Biology and Biotechnology, in the form of a poster-making competition through the 'EI Cartel' event.">
+           <h3 class="glitch" data-text="EL Cartel">EL Cartel</h3>
+           <p class="glitch" data-text="Poster Making on Biology,Biotech">Poster Making on Biology,Biotech</p>
+           <button id="eventButton30" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<!-- <div class="card">
+    <div class="imgBx" data-text="Pictionary">
+        <img src="assets/img/eventicons/posterthinking.png">
+    </div>
+    <div class="content">
+        <div data-title="Pictionary" data-id="31" data-desc="Perception brings you Pictionary, a classic icebreaker game in which the goal is to get your teammates to correctly identify something that is drawn within the time limit. It consists of a team of two where one member is asked to pick up a chit which has things written on it. The second member will be assigned the work of drawing the things mentioned in the chit.">
+           <h3 class="glitch" data-text="Pictionary">Pictionary</h3>
+           <p class="glitch" data-text="Guess the Drawing!">Guess the Drawing!</p>
+           <button id="eventButton31" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div> -->
+<!-- <div class="card">
+    <div class="imgBx" data-text="Tech Talk">
+        <img src="assets/img/eventicons/speech.png">
+    </div>
+    <div class="content">
+        <div data-title="Tech Talk" data-id="45" data-desc="The 'Tech Talk' is a seminar by a renowned scientist, which is open for all students and faculty.">
+           <h3 class="glitch" data-text="Tech Talk">Tech Talk</h3>
+           <p class="glitch" data-text="Seminar on Technology">Seminar on Technology</p>
+           <button id="eventButton32" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div> -->
+<!-- <div class="card">
+    <div class="imgBx" data-text="Hocus Focus">
+        <img src="assets/img/eventicons/karo.png">
+    </div>
+    <div class="content">
+        <div data-title="Hocus Focus" data-id="46" data-desc="The 'Hocus Focus' is the event of puzzles, consisting of different rounds based on the difficulty of the puzzles. The participating teams will be given a set of board puzzles to solve. The elimination of the teams will be based on the time taken to solve it and onaccuracy. The last team standing will win the game.">
+           <h3 class="glitch" data-text="Hocus Focus">Hocus Focus</h3>
+           <p class="glitch" data-text="Solve the board puzzle">Solve the board puzzle</p>
+           <button id="eventButton33" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div> -->
+<div class="card">
+    <div class="imgBx" data-text="TPP">
+        <img src="assets/img/eventicons/47.png">
+    </div>
+    <div class="content">
+        <div data-title="Technical Poster Presentation" data-id="47" data-desc="Every mind must possess a well-developed ability to communicate. This poster-making competition is designed to emphasize the ability to deliver a visual presentation. The subject matter of the poster is to be related to some area in the field of innovation and development. The subject matter must address a technical, economic or environmental aspect of engineering, or other basic engineering themes provided it pertains to some sphere in which an engineer is or should be involved.">
+           <h3 class="glitch" data-text="Technical Poster Presentation">Technical Poster Presentation</h3>
+           <p class="glitch" data-text=""></p>
+           <button id="eventButton34" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Design Challenge">
+        <img src="assets/img/eventicons/48.png">
+    </div>
+    <div class="content">
+        <div data-title="Design Challenge" data-id="48" data-desc="The 'Design Challenge' event provides a platform for students to present their solutions to a range of design problems - from everyday household tasks to groundbreaking space exploration. Each team is required to design, construct and operate a prototype meeting the requirements of an annually determined problem statement.">
+           <h3 class="glitch" data-text="Design Challenge">Design Challenge</h3>
+           <p class="glitch" data-text="Present your solution">Present your solution</p>
+           <button id="eventButton35" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+<div class="card">
+    <div class="imgBx" data-text="Construzione">
+        <img src="assets/img/eventicons/49.png">
+    </div>
+    <div class="content">
+        <div data-title="Construzione" data-id="49" data-desc="Bridges are one of the finest inventions engineers have produced. Although some of the basic bridges are made of logs and ropes, the bridge construction has never been easy. The real challenge is whether it can be built using any given material and whether you have the required skills. Unleash your creative ideas in 'Construzione' to construct a bridge using the given materials, making sure it sustains because we may ask you to stand on it.">
+           <h3 class="glitch" data-text="Bridge Making">Construzione</h3>
+           <p class="glitch" data-text=""></p>
+           <button id="eventButton36" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+       </div>
+    </div>
+</div>
+
+<!-- <div class="check"style="height:200px ;" ></div> -->
+</div>
+</div>
+      </section>
+<script>
+    // build scenes
+    var revealElements = document.getElementsByClassName("card");
+    for (var i=0; i<revealElements.length; i++) {
+        new ScrollMagic.Scene({
+          triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+          offset: 30, // start a little later
+          triggerHook: 0.98,
+          reverse: false
+        })
+          .setClassToggle(revealElements[i], "visible") // add class toggle
+          //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+          .addTo(controller);
+      }
+    </script>
+  </body>
+</html>

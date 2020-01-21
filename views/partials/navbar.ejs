@@ -1,36 +1,75 @@
 
-<div class="base">
-  <div class="menu">
-     <div class="icon">   
-        <div class="bar"></div>
-     </div>
-  </div>
-  <div class="icons">
-     <i class="fa fa-user" aria-hidden="true"></i>
-     <i class="fa fa-calendar-o" aria-hidden="true"></i>
-     <i class="fa fa-tachometer" aria-hidden="true"></i>
-     <i class="fa fa-tachometer" aria-hidden="true"></i>
-  </div>
+	<!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'> -->
 
-  <div class="section">
-     <div class="cover1">
-        <div class="cover2">
-           <a class="content" href="#calender"></a>
-        </div>
-     </div>
-  </div>
+	<!-- <link rel="stylesheet" href="css/reset.css"> CSS reset -->
+	<link rel="stylesheet" href="stylesheets/navbar.css"> <!--Resource style -->
+	<!-- <script src="js/modernizr.js"></script> Modernizr -->
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"
+	crossorigin="anonymous"></script>  
+    	<header class="cd-header container-nav flex justify-between items-center">   
+			<a href="#cd-3d-nav" class="cd-header__nav-trigger" aria-label="Toggle menu">
+			  <span aria-hidden="true"></span>
+			</a>
+			</header>
+	<nav class="cd-3d-nav js-cd-3d-nav" id="cd-3d-nav">
+		<ul class="cd-3d-nav__list">
+			<li class="cd-3d-nav__item cd-3d-nav__item--selected">
+				<a href="/">
+		 		<img aria-hidden="true" class="icon icon--md" src="assets/img/menuicons/home.png"/>
+		  <span>Home</span>
+        </a>
+			</li>
 
-  <a class="section-static bottom" href="https://www.facebook.com/perception.cetb/videos/1706944176106621/"></a>
-  
-  <% if(!currentUser) { %>
-      <a class="section-static top" href="/login"></a>
-   <% } else { %>
-      <a class="section-static top" href="/logout"></a>
-   <% } %>      
+			<li class="cd-3d-nav__item">
+				<a href="#">
+					<img aria-hidden="true" class="icon icon--md" src="assets/img/menuicons/event.png"/>
+         	 		<span>Events</span>
+        	</a>
+			</li>
 
-</div>
-<script>
-  $(".menu").click(function(){
- $(this).parent().toggleClass("close");
-});
-</script>
+			
+			<%	if(!currentUser){ %>
+			<li class="cd-3d-nav__item">
+				<a href="/register">
+					<img aria-hidden="true" class="icon icon--md" src="assets/img/menuicons/register.png"/>
+          		<span>Register</span>
+        	</a>
+			</li>
+			<% } else { %> 
+			<li class="cd-3d-nav__item">
+				<a href="/profile">
+					<img aria-hidden="true" class="icon icon--md" src="assets/img/menuicons/profile.png"/>
+          		<span>Profile</span>
+        		</a>
+			</li>
+			<% } %>
+			<%	if(!currentUser){ %>
+				<li class="cd-3d-nav__item">
+					<a href="/login">
+						<img aria-hidden="true" class="icon icon--md" src="assets/img/menuicons/login.png"/>
+					  <span>Log In</span>
+					</a>
+				</li>
+				<% } else { %> 
+				<li class="cd-3d-nav__item">
+					<a href="/logout">
+						<img aria-hidden="true" class="icon icon--md" src="assets/img/menuicons/logout.png"/>
+					  <span>Log Out</span>
+					</a>
+				</li>
+				<% } %>
+			
+		</ul>
+
+		<span class="cd-3d-nav__marker cd-3d-nav__marker--col-1" aria-hidden="true"></span>	
+	</nav>
+
+	
+<script src="https://cdn.bootcss.com/velocity/1.1.0/velocity.min.js"></script>
+<script src="js/navbar.js"></script> <!-- Resource jQuery -->
+

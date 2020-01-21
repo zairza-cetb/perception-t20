@@ -267,12 +267,13 @@ h6 {
 }
 
 .btn--green {
-  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+  /* background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d); */
 
 }
 
 .btn--green:hover {
-  background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d);
+  /* background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d); */
+  
 }
 
 /* ==========================================================================
@@ -525,36 +526,38 @@ input {
   background:#333333;
 }
 
-.link-to-home {
- position: absolute ;
-top: 30px;
-left: 40px;
-z-index: 200;
-cursor: pointer;
-width: 50px;
-height: 50px;
-text-align: center;
-border-radius: 3px;
-background-position: center center;
-background-size: cover;
-background-image: url('../assets/img/Homelogo.png');
-box-shadow: 0 0 0 2px rgba(12,12,12,.1);
-transition: opacity .2s, border-radius .2s, box-shadow .2s;
-transition-timing-function: ease-out;
+.login-link{
+  font-size: 15px;
+  /* margin-left: -28px; */
+  position: relative;
+  top: 20px ;
+  color:lightskyblue;
+  left: 10px;
 }
-.link-to-home:hover {
-opacity: 0.8;
-border-radius: 50%;
-box-shadow: 0 0 0 20px rgba(12,12,12,.1);
+.register-link{
+  font-size: large;
+  position: relative;
+  top: 20px;
 }
-
-
 @media (max-width: 767px) {
+  
   .page-wrapper {
     padding:0px;
     left:20px;
   }
-  
+  .register-link{
+    font-size:20px;
+    position: relative;
+    top: 25px;
+    left: 24%;
+  }
+  .login-link{
+    font-size: 20px;
+    left: 30%;
+    position: relative;
+    top: 20px;
+    color: lightskyblue;
+  }
   .card-3 {
     display: block;
   }
@@ -569,5 +572,6 @@ box-shadow: 0 0 0 20px rgba(12,12,12,.1);
     width: 100%;
     padding: 37px 30px;
     padding-bottom: 45px;
+    height: 100vh;
   }
 }

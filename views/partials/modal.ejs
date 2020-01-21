@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/stylesheets/modal.css" />
+<script src="/js/modal.js"></script>
+<div class="mod" data-eventID="">
+  <div class="overlay"></div>
+  <div class="mod__contents mod--transition">
+    <a class="mod__close" href="#">✕</a>
+    <img id="mod__cover" onerror="this.src='/assets/img/alt.jpeg';" src="/assets/img/alt.jpeg" />
+    <div class="mod__text">
+      <h1 id="mod__title">Lorem ipsum</h1>
+      <p id="mod__desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eveniet, in
+        nisi nihil accusamus et voluptatum, harum dolores incidunt sapiente
+        distinctio dignissimos ut? Facilis voluptates eligendi sapiente in
+        delectus voluptate?
+      </p>
+      <%	if(currentUser){ %>
+          <button id="regbtn" class="btn btn-success hide"></button>
+      <% } else { %>
+        <a href="/login">Please Log In to register for events</a>
+      <% } %>
+      <div class="spinner__container">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

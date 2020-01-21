@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
 
 *{
-    font-family: 'Roboto Mono', monospace;
+  font-family: 'Gelasio', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body{
 .wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background: #222;
     min-height: 100vh;
 }
@@ -93,7 +93,7 @@ button{
 }
 .container .card .content h3{
     margin-bottom: 5px;
-    font-size: 24px;
+    font-size: 25px;
 }
 @media (max-width: 992px){
     .container{
@@ -127,6 +127,9 @@ button{
     .container .card .content{
         position: relative;
         width: 100% ;
+    }
+    center{
+      padding-top: 63px;
     }
 }
 
@@ -574,6 +577,7 @@ button{
     clip: rect(29px, 9999px, 15px, 0);
   }
 }
+
 /* gradient-box */
 .gradient-box {
   width: 300px;
