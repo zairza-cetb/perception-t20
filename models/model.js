@@ -1,5 +1,5 @@
 //mongodb url
-const mongourl="mongodb+srv://zairzacetb:arpanet123@cluster0-coz0t.mongodb.net/test?retryWrites=true&w=majority";
+const mongourl="mongodb+srv://zairzacetb:arpanet123@cluster0-coz0t.mongodb.net/test?retryWrites=true&w=majority";   //TODO:change the url while hosting
 
 var mongoose = require("mongoose"),
     localMongoose = require("passport-local-mongoose");
