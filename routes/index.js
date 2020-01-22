@@ -105,7 +105,7 @@ router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
 });
 
-
+/*GET profile page*/
 router.get('/profile', function(req,res,next) {
   if(req.user){
 	User.findOne({_id:req.user._id}, (err, data) => {
@@ -117,6 +117,7 @@ router.get('/profile', function(req,res,next) {
 	  res.redirect("/login");
   }
 });
+
 
 /* POST admin page. */
 router.post("/admin", (req, res) => {
