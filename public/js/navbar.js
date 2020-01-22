@@ -53,7 +53,6 @@ jQuery(document).ready(function($){
 	};
   
   $(window).on('scroll',function() {
-    console.log('hihi');
     toggle3dBlock(false);
   });
    $(".cd-header").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function() {
