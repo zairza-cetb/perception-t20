@@ -52,7 +52,6 @@ jQuery(document).ready(function($){
 	};
   
   $(window).on('scroll',function() {
-    console.log('hihi');
     toggle3dBlock(false);
   });
    $(".cd-3d-nav-trigger").click(function() {

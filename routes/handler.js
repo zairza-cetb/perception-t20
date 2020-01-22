@@ -42,7 +42,7 @@ router.post("/register", function (req, res) {
               // res.locals.message = "Registered successfully";
               transporter.sendMail({
                 from: 'Perception Cet 2020',
-                to: 'patrabiswajit133@gmail.com',
+                to: req.user.username,
                 subject: 'Welcome to Perception 2020',
                 text: `Hi, ${req.user.name},Go through all the events and register in your dream-events`  //TODO:email sending
               }, function(error, info){
