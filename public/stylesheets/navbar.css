@@ -65,6 +65,9 @@ body {
   font-family: "Open Sans", sans-serif;
   background-color: #333333; } */
 
+body{
+  overflow-x: hidden;
+}
 .cd-3d-nav-container a {
   text-decoration: none; }
 

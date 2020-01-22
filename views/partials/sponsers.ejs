@@ -1,5 +1,5 @@
  <style>
-       @media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     /* Show 4th slide on md if col-md-4*/
     .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
         position: absolute;
@@ -64,6 +64,10 @@
         display: block;
         visibility: visible;
     }
+    .carousel-item .img-fluid{
+        height: 250px;
+        width: 250px;
+    }
 }
 /* MD */
 @media (min-width: 768px) {
@@ -91,6 +95,10 @@
         visibility: visible;
         display: block;
         visibility: visible;
+    }
+    .carousel-item .img-fluid{
+        height: 250px;
+        width: 250px;
     }
 }
 /* LG */
@@ -128,6 +136,7 @@
     .carousel-item.carousel-item-prev:hover , .carousel-item-right:hover{
         background-color: rgba(0, 0, 0, 0.4);
     } 
+    
 }
 </style>
 <div class="container">
