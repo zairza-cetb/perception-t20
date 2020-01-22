@@ -1,4 +1,3 @@
-<!-- <link href="stylesheets/gallery.css" rel="stylesheet" media="all"> -->
 <style>
       .grid-container {
         -webkit-column-count: 3;
@@ -93,9 +92,10 @@
           const img = entry.target.querySelector("img");
           entry.target.classList.add("inview");
           img.src = img.dataset.src;
-        } else {
-          entry.target.classList.remove("inview");
-        }
+         } 
+            // else {
+        //   entry.target.classList.remove("inview");
+        // }
       });
     });
     const items = document.querySelectorAll(".grid-item");
