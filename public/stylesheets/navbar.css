@@ -55,15 +55,15 @@ Primary style
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; } */
-
+/* 
 html {
   font-size: 62.5%; }
 
 body {
   font-size: 62.5%;
-  /* height: 200vh; */
+  height: 200vh;
   font-family: "Open Sans", sans-serif;
-  background-color: #333333; }
+  background-color: #333333; } */
 
 .cd-3d-nav-container a {
   text-decoration: none; }
