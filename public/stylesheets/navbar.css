@@ -3,7 +3,7 @@
 Primary style
 
 -------------------------------- */
-@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 #navid >*,#navid>*::after,#navbar> *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -33,7 +33,7 @@ Main components
   z-index: 3;
 } */
 body{
-  font-family: 'Gelasio', serif;
+  font-family: 'Tomorrow', sans-serif;
 }
 .cd-nav-trigger {
   position: absolute;
