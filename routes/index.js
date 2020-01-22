@@ -35,9 +35,11 @@ router.get("/register", function (req, res, next) {
 
 /* GET login page. */
 router.get("/login", function (req, res, next) {
-    res.render("login", {
+	if(req.user){
+		res.redirect("/");
+	}else{res.render("login", {
 		err: req.query.err
-	});
+	});}
 });
 
 /* GET admin page. */
