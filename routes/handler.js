@@ -44,7 +44,7 @@ router.post("/register", function (req, res) {
                 from: 'Perception Cet 2020',
                 to: 'patrabiswajit133@gmail.com',
                 subject: 'Welcome to Perception 2020',
-                text: `Hi, ${req.user.name},Go through all the events and register in your dream-events`
+                text: `Hi, ${req.user.name},Go through all the events and register in your dream-events`  //TODO:email sending
               }, function(error, info){
                 if (error) {
                   console.log("mail error",error);
