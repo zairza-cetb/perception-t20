@@ -7,13 +7,18 @@
     box-sizing: border-box;
 }
 body{
-    background: #222;
+    /* background: #222; */
+    background:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 .wrapper{
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    background: #222;
+    /* background: #222; */
     min-height: 100vh;
 }
 .container{
