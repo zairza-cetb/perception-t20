@@ -33,6 +33,7 @@ jQuery(document).ready(function($){
 
 		$('.cd-marker').removeClassPrefix('color').addClass('color-'+ selectedItemPosition).css({
 			'left': leftPosition,
+			'visibility':'visible'
 		});
 		if( type == 'close') {
 			$('.cd-marker').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
@@ -55,7 +56,7 @@ jQuery(document).ready(function($){
     console.log('hihi');
     toggle3dBlock(false);
   });
-   $(".cd-3d-nav-trigger").click(function() {
+   $(".cd-header").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function() {
 	 // Set selected tab based on page
 	 let pathname = window.location.pathname
 	 let tabIndex = {
@@ -67,5 +68,5 @@ jQuery(document).ready(function($){
 	 }
 	 $(`#${tabIndex[pathname]}`).addClass('cd-selected');
 	 updateSelectedNav();
-   })
+   });
 });

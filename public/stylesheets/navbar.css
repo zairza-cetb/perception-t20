@@ -77,8 +77,9 @@ Main Components
   height: 80px;
   width: 90%;
   margin: 0 auto;
-  position: relative;
+  position: absolute;
   z-index: 9439832766;
+  background-color: transparent;
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   transition: transform 0.5s;
@@ -345,6 +346,7 @@ Main Components
 
 .cd-marker {
   /* line at the bottom of nav selected item */
+  visibility: hidden;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -403,11 +405,11 @@ Main Components
 .color-5 {
   color: #77cd91; }
 
-main {
+  /* Force Hardware Acceleration in WebKit */
+/* main {
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   transition: transform 0.5s;
-  /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -438,4 +440,4 @@ main {
       transform: translateY(170px); }
     main h1 {
       font-size: 3.6rem;
-      margin: 4em auto; } }
+      margin: 4em auto; } } */
