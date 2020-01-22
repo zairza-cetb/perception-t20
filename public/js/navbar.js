@@ -1,85 +1,72 @@
 jQuery(document).ready(function($){
-	var overlayNav = $('.cd-overlay-nav'),
-		overlayContent = $('.cd-overlay-content'),
-		navigation = $('.cd-primary-nav'),
-		toggleNav = $('.cd-nav-trigger');
-	console.log("123check");
-	//inizialize navigation and content layers
-	layerInit();
-	$(window).on('resize', function(){
-		window.requestAnimationFrame(layerInit);
+	//toggle 3d navigation
+	$('.cd-3d-nav-trigger').on('click', function(){
+		toggle3dBlock(!$('.cd-header').hasClass('nav-is-visible'));
 	});
 
-	//open/close the menu and cover layers
-	toggleNav.on('click', function(){
-		if(!toggleNav.hasClass('close-nav')){
-			//it means navigation is not visible yet - open it and animate navigation layer
-			toggleNav.addClass('close-nav');
-			
-			overlayNav.children('span').velocity({
-				translateZ: 0,
-				scaleX: 1,
-				scaleY: 1,
-			}, 500, 'easeInCubic', function(){
-				navigation.addClass('fade-in');
-			});
-		} else {
-			//navigation is open - close it and remove navigation layer
-			toggleNav.removeClass('close-nav');
-			
-			overlayContent.children('span').velocity({
-				translateZ: 0,
-				scaleX: 1,
-				scaleY: 1,
-			}, 500, 'easeInCubic', function(){
-				navigation.removeClass('fade-in');
-				
-				overlayNav.children('span').velocity({
-					translateZ: 0,
-					scaleX: 0,
-					scaleY: 0,
-				}, 0);
-				
-				overlayContent.addClass('is-hidden').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-					overlayContent.children('span').velocity({
-						translateZ: 0,
-						scaleX: 0,
-						scaleY: 0,
-					}, 0, function(){overlayContent.removeClass('is-hidden')});
-				});
-				if($('html').hasClass('no-csstransitions')) {
-					overlayContent.children('span').velocity({
-						translateZ: 0,
-						scaleX: 0,
-						scaleY: 0,
-					}, 0, function(){overlayContent.removeClass('is-hidden')});
-				}
+	//select a new item from the 3d navigation
+	$('.cd-3d-nav a').on('click', function(){
+		var selected = $(this);
+		selected.parent('li').addClass('cd-selected').siblings('li').removeClass('cd-selected');
+		updateSelectedNav('close');
+	});
+
+	$(window).on('resize', function(){
+		window.requestAnimationFrame(updateSelectedNav);
+	});
+
+	function toggle3dBlock(addOrRemove) {
+		if(typeof(addOrRemove)==='undefined') addOrRemove = true;	
+		$('.cd-header').toggleClass('nav-is-visible', addOrRemove);
+		$('main').toggleClass('nav-is-visible', addOrRemove);
+		$('.cd-3d-nav-container').toggleClass('nav-is-visible', addOrRemove);
+	}
+
+	//this function update the .cd-marker position
+	function updateSelectedNav(type) {
+		var selectedItem = $('.cd-selected'),
+			selectedItemPosition = selectedItem.index() + 1, 
+			leftPosition = selectedItem.offset().left,
+			backgroundColor = selectedItem.data('color');
+		
+			console.log('mema',leftPosition)
+
+		$('.cd-marker').removeClassPrefix('color').addClass('color-'+ selectedItemPosition).css({
+			'left': leftPosition,
+			'visibility':'visible'
+		});
+		if( type == 'close') {
+			$('.cd-marker').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				toggle3dBlock(false);
 			});
 		}
-	});
-	
-	function layerInit(){
-		var diameterValue = (Math.sqrt( Math.pow($(window).height(), 2) + Math.pow($(window).width(), 2))*2);
-		overlayNav.children('span').velocity({
-			scaleX: 0,
-			scaleY: 0,
-			translateZ: 0,
-		}, 50).velocity({
-			height : diameterValue+'px',
-			width : diameterValue+'px',
-			top : -(diameterValue/2)+'px',
-			left : -(diameterValue/2)+'px',
-		}, 0);
-
-		overlayContent.children('span').velocity({
-			scaleX: 0,
-			scaleY: 0,
-			translateZ: 0,
-		}, 50).velocity({
-			height : diameterValue+'px',
-			width : diameterValue+'px',
-			top : -(diameterValue/2)+'px',
-			left : -(diameterValue/2)+'px',
-		}, 0);
 	}
+
+	$.fn.removeClassPrefix = function(prefix) {
+	    this.each(function(i, el) {
+	        var classes = el.className.split(" ").filter(function(c) {
+	            return c.lastIndexOf(prefix, 0) !== 0;
+	        });
+	        el.className = $.trim(classes.join(" "));
+	    });
+	    return this;
+	};
+  
+  $(window).on('scroll',function() {
+    console.log('hihi');
+    toggle3dBlock(false);
+  });
+   $(".cd-header").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function() {
+	 // Set selected tab based on page
+	 let pathname = window.location.pathname
+	 let tabIndex = {
+		 '/': 'cd-home-link',
+		 '/profile': 'cd-profile-link',
+		 '/register': 'cd-register-link',
+		 '/login': 'cd-login-link',
+		 '/events': 'cd-event-link'
+	 }
+	 $(`#${tabIndex[pathname]}`).addClass('cd-selected');
+	 updateSelectedNav();
+   });
 });
