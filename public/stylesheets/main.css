@@ -2,12 +2,17 @@
 /* ==========================================================================
    #FONT
    ========================================================================== */
-.font-robo {
+   @import url('https://fonts.googleapis.com/css?family=Tomorrow:500&display=swap');
+/* .font-robo {
   font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
 }
 
 .font-poppins {
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+} */
+body{
+  font-family: 'Tomorrow', sans-serif;
+
 }
 
 /* ==========================================================================
