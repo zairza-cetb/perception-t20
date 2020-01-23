@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tomorrow:500&display=swap');
 
 *{
-  font-family: 'Gelasio', serif;
+  font-family: 'Tomorrow', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
