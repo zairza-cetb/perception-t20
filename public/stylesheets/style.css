@@ -190,7 +190,7 @@ html {
 }
 
 .glitch[data-type="partial"] .glitch__img{
-  background: url("../assets/img/homepage-desktop.jpeg") no-repeat 50% 0;
+  background: url("../assets/img/homepage-compressed-pc.jpg") no-repeat 50% 0;
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -834,7 +834,7 @@ body .base.close .section-static {
 @media only screen and (max-width: 800px) {
 
   .main .title_section {
-    background-image: url("../assets/img/homepage-mobilev.jpeg");
+    background-image: url("../assets/img/homepage-compressed-mobile.jpg");
     background-size: center;
   }
 
