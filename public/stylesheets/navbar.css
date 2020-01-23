@@ -1,4 +1,4 @@
-/* https://meyerweb.com/eric/tools/css/reset/ 
+/* https://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 } */
 /* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
+/* article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, main {
 	display: block;
 }
@@ -46,7 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 } */
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -55,7 +55,7 @@ Primary style
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; } */
-/* 
+/*
 html {
   font-size: 62.5%; }
 
@@ -70,11 +70,12 @@ body{
   font-family: 'Tomorrow', sans-serif;
 }
 .cd-3d-nav-container a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
 .cd-header {
@@ -259,7 +260,7 @@ Main Components
       background-image: url(/assets/img/navicons/home.png); }
     .cd-3d-nav li:nth-of-type(2) a::before {
       background-image: url(/assets/img/navicons/event.png); }
-    
+
     /* .cd-3d-nav li:nth-of-type(4) a::before {
       background-image: url(https://www.w3schools.com/images/colorpicker.gif); }
     .cd-3d-nav li:nth-of-type(5) a::before {

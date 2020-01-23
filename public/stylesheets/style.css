@@ -10,7 +10,7 @@ html {
   --gap-horizontal: 10px;
   --gap-vertical: 5px;
   --time-anim: 4s;
-  --delay-anim: 2s;
+  --delay-anim: 0.5s;
   --blend-mode-1: none;
   --blend-mode-2: none;
   --blend-mode-3: none;
@@ -38,9 +38,13 @@ html {
 .main .title_section {
   width: 100vw;
   position: relative;
+<<<<<<< HEAD
   background-image: url("../assets/img/homepage-desktop.jpeg");
   background-attachment: fixed;
   background-position: center;
+=======
+  /* background-image: url("../assets/img/homepage-desktop.jpeg"); */
+>>>>>>> d6c663571e60049c9b09fe40e20c49e3f37b3298
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -171,18 +175,30 @@ html {
   overflow: hidden;
 }
 
+.glitch[data-type="partial"]{
+  position: absolute;
+}
+
+
 .glitch__img {
   position: absolute;
   top: calc(-1 * var(--gap-vertical));
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
-  background: url("../assets/img/bg1.jpg") no-repeat 50% 0;
+  background: url("../assets/img/middle-bg2.jpg") no-repeat 50% 0;
   background-position: relative;
   opacity: 1;
   background-size: cover;
   transform: translate3d(0, 0, 0);
   background-blend-mode: var(--blend-mode-1);
+}
+
+.glitch[data-type="partial"] .glitch__img{
+  background: url("../assets/img/homepage-desktop.jpeg") no-repeat 50% 0;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 .glitch__img:nth-child(n + 2) {
@@ -814,14 +830,14 @@ body .base.close .section-static {
   border-bottom: 1px solid #fff;
 }
 .separator::before {
-  margin-right: 0.25em;
+  margin-right: 2em;
 }
 .separator::after {
-  margin-left: 0.25em;
+  margin-left: 2em;
 }
 
 @media only screen and (max-width: 800px) {
-  
+
   .main .title_section {
     background-image: url("../assets/img/homepage-mobilev.jpeg");
     background-size: center;
