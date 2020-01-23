@@ -38,13 +38,9 @@ html {
 .main .title_section {
   width: 100vw;
   position: relative;
-<<<<<<< HEAD
   background-image: url("../assets/img/homepage-desktop.jpeg");
   background-attachment: fixed;
   background-position: center;
-=======
-  /* background-image: url("../assets/img/homepage-desktop.jpeg"); */
->>>>>>> d6c663571e60049c9b09fe40e20c49e3f37b3298
   background-repeat: no-repeat;
   background-size: cover;
 }
