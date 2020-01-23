@@ -24,7 +24,7 @@ html {
   margin: 0;
   padding: 0;
   /* background-color: black; */
-  font-family: "Gelasio", serif;
+  /* font-family: "Gelasio", serif; */
 
   --text-color: hsla(210, 50%, 85%, 1);
   --shadow-color: hsla(210, 40%, 52%, 0.4);
@@ -36,9 +36,11 @@ html {
   width: 100%;
 }
 .main .title_section {
-  width: 100vw;
-  position: relative;
   background-image: url("../assets/img/homepage-desktop.jpeg");
+  width: 100vw;
+  /* position: relative; */
+  height: 100%;
+  
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -837,6 +839,12 @@ body .base.close .section-static {
   .main .title_section {
     background-image: url("../assets/img/homepage-mobilev.jpeg");
     background-size: center;
+  }
+  .separator::before {
+    margin-right: .2em;
+  }
+  .separator::after {
+    margin-left: .2em;
   }
 
   .box {
