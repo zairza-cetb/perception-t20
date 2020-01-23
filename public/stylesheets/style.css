@@ -10,7 +10,7 @@ html {
   --gap-horizontal: 10px;
   --gap-vertical: 5px;
   --time-anim: 4s;
-  --delay-anim: 2s;
+  --delay-anim: 0.5s;
   --blend-mode-1: none;
   --blend-mode-2: none;
   --blend-mode-3: none;
@@ -38,7 +38,7 @@ html {
 .main .title_section {
   width: 100vw;
   position: relative;
-  background-image: url("../assets/img/homepage-desktop.jpeg");
+  /* background-image: url("../assets/img/homepage-desktop.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -170,6 +170,11 @@ html {
   overflow: hidden;
 }
 
+.glitch[data-type="partial"]{
+  position: absolute;
+}
+
+
 .glitch__img {
   position: absolute;
   top: calc(-1 * var(--gap-vertical));
@@ -182,6 +187,11 @@ html {
   background-size: cover;
   transform: translate3d(0, 0, 0);
   background-blend-mode: var(--blend-mode-1);
+}
+
+.glitch[data-type="partial"] .glitch__img{
+  background: url("../assets/img/homepage-desktop.jpeg") no-repeat 50% 0;
+  background-size: cover;
 }
 
 .glitch__img:nth-child(n + 2) {
