@@ -181,7 +181,7 @@ html {
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
-  background: url("../assets/img/bg1.jpg") no-repeat 50% 0;
+  background: url("../assets/img/middle-bg2.jpg") no-repeat 50% 0;
   background-position: relative;
   opacity: 1;
   background-size: cover;
@@ -825,14 +825,14 @@ body .base.close .section-static {
   border-bottom: 1px solid #fff;
 }
 .separator::before {
-  margin-right: 0.25em;
+  margin-right: 2em;
 }
 .separator::after {
-  margin-left: 0.25em;
+  margin-left: 2em;
 }
 
 @media only screen and (max-width: 800px) {
-  
+
   .main .title_section {
     background-image: url("../assets/img/homepage-mobilev.jpeg");
     background-size: center;

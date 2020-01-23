@@ -1,6 +1,7 @@
 var express = require('express');
 var User = require("../models/model");
 var event_json=require("./events.json");
+
 var router = express.Router();
 
 router.use((req, res, next) => {
@@ -112,7 +113,7 @@ router.get('/profile', function(req,res,next) {
   if(req.user){
 	User.findOne({_id:req.user._id}, (err, data) => {
 		if (err) console.log(err);
-		else 
+		else
 		  res.render("profile", { data: data, evjson:event_json });
 	  });
   }else{
@@ -128,7 +129,7 @@ router.post("/admin", (req, res) => {
 	if(username.hashCode() == -709387849 && password.hashCode() == 1789464955){
 	  User.find({}, (err, data) => {
 		if (err) console.log(err);
-		else 
+		else
 		  res.render("data", { data: data, evjson: event_json });
 	  });
 	} else {
@@ -157,5 +158,3 @@ String.prototype.hashCode = function(){
  }
 
 module.exports = router;
-
-  
