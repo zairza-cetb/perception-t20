@@ -192,6 +192,8 @@ html {
 .glitch[data-type="partial"] .glitch__img{
   background: url("../assets/img/homepage-desktop.jpeg") no-repeat 50% 0;
   background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
 }
 
 .glitch__img:nth-child(n + 2) {
