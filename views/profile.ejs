@@ -1,5 +1,7 @@
 <html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       *,
@@ -36,14 +38,18 @@
       }
 
       .p.i.fa:hover {
-        background-color: #1a57e6 no-repeat;
+        background-color: #1a57e6 no-repeat; 
       }
 
       body {
         margin: 0;
         padding: 0;
         height: 100vh;
-        background-color: black;
+        background: #3a6186;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #796d70 , #3a6186 );  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #89253e , #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
         background-attachment: fixed;
       }
 
@@ -246,19 +252,22 @@
     <%- include('partials/navbar') %>
     <%- include('partials/preloader') %>
     <div class="conatiner">
-      <div class="row1">
-        <section class="row1-section" >
-          <h1 class="heading">Your Details</h1>
+      <div class="row">
+        
+          <div class="col-lg-3" style="margin-top: 6rem; margin-left:40px;color: white; ">
+          <h1 class="heading"> My Profile</h1>
+          <img src="../assets/img/profile.png" alt="" height="100" width="150">
           <section id="details" style="margin-left: 1em;">
             <p>Name: <%= currentUser.name %></p>
             <p>Email id: <%= currentUser.username %></p>
             <p>Phone No: <%= currentUser.phone %></p>
             <p>College: <%= currentUser.college %></p>
           </section>
-        </section>
-      </div>
+          </div>
 
-      <div class="row2">
+      
+
+      <div class="col-lg-8" style="margin-top: 6rem; color: white;">
         <div class="content">
           <h1 class="heading">Registered Events</h1>
           <p class="description">
@@ -284,6 +293,7 @@
       </div>
     </div>
     </div>
+    </div>
     <script>
         function unreg(id) {
            el=document.getElementById(id);
@@ -295,5 +305,9 @@
            }});
         };
     </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
+  
 </html>

@@ -64,7 +64,7 @@ body {
   height: 200vh;
   font-family: "Open Sans", sans-serif;
   background-color: #333333; } */
-@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Tomorrow:500&display=swap');
 body{
   overflow-x: hidden;
   font-family: 'Tomorrow', sans-serif;
@@ -396,19 +396,19 @@ Main Components
 
 /* these are the colors of the markers - line + arrow */
 .color-1 {
-  color: #9a57bd; }
+  color: #f78620; }
 
 .color-2 {
-  color: #c96aa4; }
+  color: #f78620; }
 
 .color-3 {
-  color: #d6915e; }
+  color: #f78620; }
 
 .color-4 {
-  color: #5397c7; }
+  color: #f78620; }
 
 .color-5 {
-  color: #77cd91; }
+  color: #f78620; }
 
   /* Force Hardware Acceleration in WebKit */
 /* main {

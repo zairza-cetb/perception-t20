@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tomorrow:500&display=swap');
 
 *{
-  font-family: 'Gelasio', serif;
+  font-family: 'Tomorrow', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,7 @@ body{
     background:fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('../assets/img/download.png');
+    background-image: url('/assets/img/download.png');
 
 }
 .wrapper{
