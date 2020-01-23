@@ -39,9 +39,10 @@ html {
   width: 100vw;
   position: relative;
   background-image: url("../assets/img/homepage-desktop.jpeg");
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 .box {
   display: grid;

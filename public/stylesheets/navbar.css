@@ -64,9 +64,10 @@ body {
   height: 200vh;
   font-family: "Open Sans", sans-serif;
   background-color: #333333; } */
-
+  @import url('https://fonts.googleapis.com/css?family=Tomorrow:500&display=swap');
 body{
   overflow-x: hidden;
+  font-family: 'Tomorrow', sans-serif;
 }
 .cd-3d-nav-container a {
   text-decoration: none; }
