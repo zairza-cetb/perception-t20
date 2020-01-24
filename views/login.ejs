@@ -41,7 +41,7 @@
 
     <!-- home button -->
     <%- include('partials/navbar') %>
- 
+
     <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
         <div class="wrapper wrapper--w780">
             <div class="card card-3">
@@ -52,15 +52,16 @@
                         <div class="input-group">
                             <input class="input--style-3" type="text" placeholder="Email" name="username">
                         </div>
-                        <a class="forgot-link" href="/forgotpassword">Forgot password?</a>
+
                         <div class="input-group">
                             <input class="input--style-3" type="password" placeholder="Password" name="password">
                         </div>
-                        
+
                         <div class="p-t-10">
                             <button class="btn btn--pill btn--green" type="submit">Log In</button>
                         </div>
-                        <a class="login-link" href="/register">Not registered?</a>
+                        <a class="login-link" href="/register">Not registered?</a> <br>
+                        <a class="forgot-link" href="/forgotpassword">Forgot password?</a>
                     </form>
                 </div>
             </div>
@@ -69,7 +70,7 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
-    
+
     <% if(err) { %>
         <script src="js/sweet.js"></script>
         <script>
