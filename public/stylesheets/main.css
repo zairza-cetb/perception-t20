@@ -248,7 +248,7 @@ h6 {
   font-family: "Source Code Pro";
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 30px;  
+  font-size: 30px;
   color: #000;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -278,7 +278,7 @@ h6 {
 
 .btn--green:hover {
   /* background-image: linear-gradient(to right, #05f7fe, #01fdfb, #04fdfe, #06feff, #3cffc0, #66f997, #9efc6c, #c6fd3e, #eff935, #f9fb07, #d1f14d); */
-  
+
 }
 
 /* ==========================================================================
@@ -543,9 +543,21 @@ input {
   font-size: large;
   position: relative;
   top: 20px;
+  color:lightskyblue;
+
 }
+
+.forgot-link{
+  font-size: 15px;
+  /* margin-left: -28px; */
+  position: relative;
+  top: 20px ;
+  color:lightskyblue;
+  left: 10px;
+}
+
 @media (max-width: 767px) {
-  
+
   .page-wrapper {
     padding:0px;
     left:20px;
@@ -555,10 +567,19 @@ input {
     position: relative;
     top: 25px;
     left: 24%;
+    color: lightskyblue;
+
   }
   .login-link{
     font-size: 20px;
     left: 30%;
+    position: relative;
+    top: 20px;
+    color: lightskyblue;
+  }
+  .forgot-link{
+    font-size: 20px;
+    left: 27%;
     position: relative;
     top: 20px;
     color: lightskyblue;

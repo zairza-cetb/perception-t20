@@ -13,7 +13,7 @@
       html {
         font-size: 18px;
         line-height: 1.5;
-        font-weight: 300;
+        font-weight: 200;
         color: white;
         /* font-family: "Nunito Sans", sans-serif; */
         /* font-family: 'Gelasio', serif; */
@@ -38,16 +38,16 @@
       }
 
       .p.i.fa:hover {
-        background-color: #1a57e6 no-repeat; 
+        background-color: #1a57e6 no-repeat;
       }
 
       body {
         margin: 0;
         padding: 0;
         height: 100vh;
-        background: #3a6186;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #796d70 , #3a6186 );  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #89253e , #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #3a6186;
+        background: -webkit-linear-gradient(to right, #796d70 , #3a6186 );
+        background: linear-gradient(to right, #89253e , #3a6186);
 
 
         background-attachment: fixed;
@@ -253,19 +253,19 @@
     <%- include('partials/preloader') %>
     <div class="conatiner">
       <div class="row">
-        
-          <div class="col-lg-3" style="margin-top: 6rem; margin-left:40px;color: white; ">
+
+          <div class="col-lg-3" style="margin-top: 6rem; margin-left:50;color: white; ">
           <h1 class="heading"> My Profile</h1>
-          <img src="../assets/img/profile.png" alt="" height="100" width="150">
+          <img src="../assets/img/profile.png" alt="" height="170" width="200"> <br> <br>
           <section id="details" style="margin-left: 1em;">
-            <p>Name: <%= currentUser.name %></p>
+            <p>Welcome <%= currentUser.name %></p>
             <p>Email id: <%= currentUser.username %></p>
             <p>Phone No: <%= currentUser.phone %></p>
             <p>College: <%= currentUser.college %></p>
           </section>
           </div>
 
-      
+
 
       <div class="col-lg-8" style="margin-top: 6rem; color: white;">
         <div class="content">
@@ -274,9 +274,9 @@
             You can check the details of registered events or unregister from an
             event.
           </p>
-         <% data.events.forEach(function(d){ %> 
+         <% data.events.forEach(function(d){ %>
           <a class="card" href="#!" id= <%= d %> >
-            
+
             <div
               class="front"
               style="background-image: url(/assets/img/poster/<%= d %>.jpg);"
@@ -289,7 +289,7 @@
                 <button class="button" onclick="unreg(<%= d %>)">Unregister</button>
               </div>
             </div></a>
-          <% }); %>  
+          <% }); %>
       </div>
     </div>
     </div>
@@ -300,7 +300,7 @@
            fetch(`/unregister/${id}`).then((res)=>{
               return res.text();
            }).then((d)=>{
-            if (d == "T") { 
+            if (d == "T") {
               el.remove();
            }});
         };
@@ -309,5 +309,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
-  
+
 </html>
