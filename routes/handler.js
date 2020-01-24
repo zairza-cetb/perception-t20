@@ -41,10 +41,10 @@ router.post("/register", function (req, res) {
           passport.authenticate("local")(req, res, () => {
               // res.locals.message = "Registered successfully";
               transporter.sendMail({
-                from: 'Perception Cet 2020',
-                to: 'patrabiswajit133@gmail.com',
+                from: 'Perception 2020 Team, CETB',
+                to: req.user.username,
                 subject: 'Welcome to Perception 2020',
-                text: `Hi, ${req.user.name},Go through all the events and register in your dream-events`  //TODO:email sending
+                text: `Hi, ${req.user.name}!\n\tYou have successfully registered for Perception 2020! Please visit the website for Perception 2020 to sign up for the events!\n\nThe Perception 2020 Team`  //TODO:email sending
               }, function(error, info){
                 if (error) {
                   console.log("mail error",error);
@@ -69,6 +69,7 @@ router.post("/register", function (req, res) {
       if (!user) {
          return res.redirect(`/login?err=${info.message}`); 
         }
+        // console.log('hash',user.getHash());
       req.logIn(user, function(err) {
         if (err) {
            return console.log(err); 
@@ -87,6 +88,51 @@ router.post("/register", function (req, res) {
   router.get("/logout", (req, res) => {
     req.logOut();
     res.redirect("/?logoutSuccess=1");
+  });
+
+  // Forgot password form posts here with username(email address) in body
+  router.post('/forgotpassword', (req, res) => {
+    console.log('hello there', req.body);
+    User.findOne({
+      username: req.body.username,
+      phone: req.body.phone,
+    }, (err, user) => {
+      if (err) {
+        console.log('pwresterr');
+        // TODO: Something
+      } else if (!user) {
+        console.log('nousererr');
+         // TODO TODO: Something
+      } else {
+        
+        // Set the password to the new supplied password
+        return user.setPassword(req.body.password, (err, user) => {
+            console.log(user);
+            user.save()
+            if (err) {
+              return res.redirect(`/login?err=${err.message}`);
+            }
+            // Send an E-Mail to notify a password change
+            transporter.sendMail({
+              from: 'Perception 2020 Team, CETB',
+              to: user.username,
+              subject: 'Your password has changed',
+              text: `Hi, ${user.name}\n\tWe received a request to reset your Perception 2020 password. If this was you, you can safely ignore this email, otherwise please contact us immediately in order to recover your account.\n\nThe Perception 2020 Team`,
+            }, function(error, info){
+              if (error) {
+                console.log("mail error",error);
+              } else {
+                console.log('Email sent: ' + info.response);
+              }
+            });
+          });
+      }
+    });
+    if (req.query.ref) {
+      return res.redirect(`/login?ref=${req.query.ref}`);
+    } else {
+      res.redirect('/login?ref=');
+    }
   });
 
 ///////////////////////////////////////////////////////////////////////
