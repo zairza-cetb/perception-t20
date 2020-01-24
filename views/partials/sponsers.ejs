@@ -140,39 +140,94 @@
 
 }
 
-.carousel-item {
+.sponsors {
   background: #ADA996;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+.separator2::before,
+  .separator2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+  }
+  .separator2{
+    /* letter-spacing: 0.2em; */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 70px;
+    font-size: 20px;
+    padding-top: 20px;
+    color: black;
+  }
+  .separator2::before {
+    margin-right: 5em;
+  }
+  .separator2::after {
+    margin-left: 5em;
+  }
+  .img{
+      height: 100px!important;
+      width: 100px!important;
+  }
+  @media only screen and (max-width: 768px) {
+    .separator2{
+    /* letter-spacing: 0.2em; */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 70px;
+    font-size:small;
+    padding-top: 20px;
+    color: black;
+  }   
+  .separator2::before,
+  .separator2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+    margin:auto;
+  }
+    .separator1::before {
+    margin-right: .2em;
+  }
+  .separator1::after {
+    margin-left: .2em;
+  }
+  }
 </style>
 <div class="container">
-  <div class="separator" style="height: 120px;"><h1>SPONSORS</h1></div>
+  <div class="separator2"  "><h1>SPONSORS</h1></div>
   <div class="top-content">
     <div class="container-fluid">
         <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="2000">
             <div class="carousel-inner row w-100 mx-auto" role="listbox">
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active" role="option">
-                    <img src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" class="img-fluid mx-auto d-block" alt="img1">
+                    <img src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" class="img-fluid mx-auto d-block img"  alt="img1">
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
-                    <img src="assets/img/LOGO.png" class="img-fluid mx-auto d-block" alt="img2">
+                    <img src="assets/img/Logo.png" class="img-fluid mx-auto d-block img" alt="img2">
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
-                    <img src="assets/img/vector.png" class="img-fluid mx-auto d-block" alt="img3">
+                    <img src="assets/img/vector.png" class="img-fluid mx-auto d-block img" alt="img3">
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
-                    <img src="assets/img/MY_BBSR.jpg" class="img-fluid mx-auto d-block" alt="img4">
+                    <img src="assets/img/MY_BBSR.jpg" class="img-fluid mx-auto d-block img" alt="img4">
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
-                    <img src="assets/img/OS9.PNG" class="img-fluid mx-auto d-block" alt="img5">
+                    <img src="assets/img/OS9.png" class="img-fluid mx-auto d-block img" alt="img5">
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
-                    <img src="assets/img/hanuel.png" class="img-fluid mx-auto d-block" alt="img6">
+                    <img src="assets/img/hanuel.png" class="img-fluid mx-auto d-block img" alt="img6">
                 </div>
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
-                    <img src="assets/img/lgv.png" class="img-fluid mx-auto d-block" alt="img6">
+                    <img src="assets/img/lgv.png" class="img-fluid mx-auto d-block img" alt="img6">
                 </div>
 
             </div>
@@ -188,11 +243,10 @@ background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C
     </div>
 </div>
 </div>
-<script>
 
+<script>
 // for every slide in carousel, copy the next slide's item in the slide.
 // Do the same for the next, next item.
-
 $('#carousel-example').on('slide.bs.carousel', function (e) {
 var $e = $(e.relatedTarget);
 var idx = $e.index();
@@ -213,3 +267,5 @@ if (idx >= totalItems-(itemsPerSlide-1)) {
 }
 });
 </script>
+ 
+
