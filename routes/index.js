@@ -121,6 +121,10 @@ router.get('/profile', function(req,res,next) {
   }
 });
 
+router.get('/forgotpassword', function(req, res) {
+	res.render('forgotpassword');
+})
+
 
 /* POST admin page. */
 router.post("/admin", (req, res) => {

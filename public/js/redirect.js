@@ -12,20 +12,23 @@ $(document).ready(function() {
 
     // Check if the user was sent here from another page
     let ref = getParameterByName('ref'), refpath
-    if (ref !== '' && ref !== null) {
+    if (ref !== undefined && ref !== null) {
 
         // Check query parameters for referrer
         refpath = ref;
-    } else if (document.referrer !== "") {
+    } else if (document.referrer !== undefined && document.referrer !== null && document.referrer !== '') {
 
         // Otherwise get the path component of the previously visited URL
         refpath = (new URL(document.referrer)).pathname.slice(1);
+    }else {
+        refpath = '';
     }
     console.log('reff',refpath);
     // Set the ref query parameter for the submit action
     $("form").attr("action", `${window.location.pathname}?ref=${refpath}`);
 
     // Set the ref query parameter for links to login/register page
-    $(".register-link").attr("href", `/login?ref=${refpath}`)
-    $(".login-link").attr("href", `/register?ref=${refpath}`);
+    $("[href*='/login']").attr("href", `/login?ref=${refpath}`);
+    $("[href*='/register']").attr("href", `/register?ref=${refpath}`);
+    $(".forgot-link").attr("href", `/forgotpassword?ref=${refpath}`);
 });
