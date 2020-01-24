@@ -18,21 +18,11 @@ router.use((req, res, next) => {
   next();
 });
 
-// const transporter=nodemailer.createTransport({
-//   service:"gmail",
-//   auth:{
-//     user:"perceptioncet@gmail.com",
-//     pass:"********"                                 //TODO:use the password after hosting
-//   }
-// });
-
-// Ethereal email for testing nodemailer functionality
-const transporter = nodemailer.createTransport({
-  host: 'smtp.ethereal.email',
-  port: 587,
-  auth: {
-      user: 'leanna.haag93@ethereal.email',
-      pass: 'pjjZxwuBXAAs39hhsn'
+const transporter=nodemailer.createTransport({
+  service:"gmail",
+  auth:{
+    user:"perceptioncet@gmail.com",
+    pass:"********"                                 //TODO:use the password after hosting
   }
 });
 
