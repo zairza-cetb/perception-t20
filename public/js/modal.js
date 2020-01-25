@@ -22,8 +22,8 @@ $(document).ready(function() {
         console.log(message);
         if (message == "T") {
 
-          // Make the button into a Deregister button
-          buttonText = "Deregister";
+          // Make the button into a Unregister button
+          buttonText = "Unregister";
           $("#regbtn")
             .removeClass("btn-success")
             .addClass("btn-danger")
@@ -113,8 +113,8 @@ $(document).ready(function() {
 
         if (data == "T") { // If Registered successfully
 
-          // Change text to Deregister
-          $("#regbtn").text("Deregister");
+          // Change text to Unregister
+          $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
         }
 
@@ -123,18 +123,18 @@ $(document).ready(function() {
         $("#regbtn").removeClass("hide");
 
       })
-    } else if ($("#regbtn").text() == "Deregister") {
+    } else if ($("#regbtn").text() == "Unregister") {
 
-      // If the button says Deregister
+      // If the button says Unregister
       // make a GET request to the unregister route
       fetch(`/unregister/${mod.eventID}`).then(function(res) {
 
         return res.text();
       }).then(function(data) {
 
-        if (data == "T") { // If Deregistered successfully
+        if (data == "T") { // If Unregistered successfully
 
-          // Change text to Deregister
+          // Change text to Unregister
           $("#regbtn").text("Register");
           $("#regbtn").addClass("btn-success");
         }

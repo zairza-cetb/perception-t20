@@ -38,7 +38,7 @@
       }
 
       .p.i.fa:hover {
-        background-color: #1a57e6 no-repeat; 
+        background-color: #1a57e6 no-repeat;
       }
 
       body {
@@ -253,11 +253,12 @@
     <%- include('partials/preloader') %>
     <div class="conatiner">
       <div class="row">
-        
-          <div class="col-lg-3" style="margin-top: 6rem; margin-left:40px;color: white; ">
+
+          <div class="col-lg-3" style="margin-top: 6rem; margin-left:40px;color: white;s">
           <h1 class="heading"> My Profile</h1>
-          <img src="../assets/img/profile.png" alt="" height="100" width="150">
-          <section id="details" style="margin-left: 1em;">
+          <img src="../assets/img/profile.png" alt="" height="190" width="200">
+          <br><br>
+          <section id="details" style="margin-left: 1em; font-family: poppins">
             <p>Name: <%= currentUser.name %></p>
             <p>Email id: <%= currentUser.username %></p>
             <p>Phone No: <%= currentUser.phone %></p>
@@ -265,18 +266,18 @@
           </section>
           </div>
 
-      
+
 
       <div class="col-lg-8" style="margin-top: 6rem; color: white;">
         <div class="content">
           <h1 class="heading">Registered Events</h1>
-          <p class="description">
+          <p class="description" style="font-family: poppins">
             You can check the details of registered events or unregister from an
             event.
           </p>
-         <% data.events.forEach(function(d){ %> 
+         <% data.events.forEach(function(d){ %>
           <a class="card" href="#!" id= <%= d %> >
-            
+
             <div
               class="front"
               style="background-image: url(/assets/img/poster/<%= d %>.jpg);"
@@ -284,12 +285,12 @@
             </div>
             <div class="back">
               <div>
-                <div style="color: black; word-wrap:break-word;"><%= evjson[d]["desc"].substring(0,100) %>...</div>
-                <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
+                <div style="color: black; word-wrap:break-word; font-family: poppins"><%= evjson[d]["desc"].substring(0,100) %>...</div>
+                <br>
                 <button class="button" onclick="unreg(<%= d %>)">Unregister</button>
               </div>
             </div></a>
-          <% }); %>  
+          <% }); %>
       </div>
     </div>
     </div>
@@ -300,7 +301,7 @@
            fetch(`/unregister/${id}`).then((res)=>{
               return res.text();
            }).then((d)=>{
-            if (d == "T") { 
+            if (d == "T") {
               el.remove();
            }});
         };
@@ -309,5 +310,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
-  
+
 </html>
