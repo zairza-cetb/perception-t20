@@ -37,11 +37,11 @@ html {
 }
  /*.main .title_section {
   background-image: url("../assets/img/homepage-desktop.jpeg");
-  /* width: 100vw; */
-  position: relative;
-  /* height: 100%; */
-  /* position: fixed; */
- /* background-attachment: fixed;
+  width: 100vw;
+  /* position: relative; */
+  height: 100%;
+
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

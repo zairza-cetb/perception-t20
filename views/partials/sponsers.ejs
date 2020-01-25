@@ -1,147 +1,147 @@
- <style>
+<style>
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Show 4th slide on md if col-md-4*/
-    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -33.3333%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
+   /* Show 4th slide on md if col-md-4*/
+   .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+       position: absolute;
+       top: 0;
+       right: -33.3333%;  /*change this with javascript in the future*/
+       z-index: -1;
+       display: block;
+       visibility: visible;
+   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-    /* Show 3rd slide on sm if col-sm-6*/
-    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -50%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
+   /* Show 3rd slide on sm if col-sm-6*/
+   .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+       position: absolute;
+       top: 0;
+       right: -50%;  /*change this with javascript in the future*/
+       z-index: -1;
+       display: block;
+       visibility: visible;
+   }
 }
 @media (min-width: 576px) {
-    .carousel-item {
-        margin-right: 0;
-    }
-    /* show 2 items */
-    .carousel-inner .active + .carousel-item {
-        display: block;
-    }
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-        transition: none;
-    }
-    .carousel-inner .carousel-item-next {
-        position: relative;
-        transform: translate3d(0, 0, 0);
-    }
-    /* left or forward direction */
-    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-    .carousel-item-next.carousel-item-left + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    /* farthest right hidden item must be also positioned for animations */
-    .carousel-inner .carousel-item-prev.carousel-item-right {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    /* right or prev direction */
-    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-    .carousel-item-prev.carousel-item-right + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-    .carousel-item .img-fluid{
-        height: 250px;
-        width: 250px;
-    }
+   .carousel-item {
+       margin-right: 0;
+   }
+   /* show 2 items */
+   .carousel-inner .active + .carousel-item {
+       display: block;
+   }
+   .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+   .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+       transition: none;
+   }
+   .carousel-inner .carousel-item-next {
+       position: relative;
+       transform: translate3d(0, 0, 0);
+   }
+   /* left or forward direction */
+   .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+   .carousel-item-next.carousel-item-left + .carousel-item,
+   .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+       position: relative;
+       transform: translate3d(-100%, 0, 0);
+       visibility: visible;
+   }
+   /* farthest right hidden item must be also positioned for animations */
+   .carousel-inner .carousel-item-prev.carousel-item-right {
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: -1;
+       display: block;
+       visibility: visible;
+   }
+   /* right or prev direction */
+   .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+   .carousel-item-prev.carousel-item-right + .carousel-item,
+   .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+       position: relative;
+       transform: translate3d(100%, 0, 0);
+       visibility: visible;
+       display: block;
+       visibility: visible;
+   }
+   .carousel-item .img-fluid{
+       height: 250px;
+       width: 250px;
+   }
 }
 /* MD */
 @media (min-width: 768px) {
-    /* show 3rd of 3 item slide */
-    .carousel-inner .active + .carousel-item + .carousel-item {
-        display: block;
-    }
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-        transition: none;
-    }
-    .carousel-inner .carousel-item-next {
-        position: relative;
-        transform: translate3d(0, 0, 0);
-    }
-    /* left or forward direction */
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    /* right or prev direction */
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-    .carousel-item .img-fluid{
-        height: 250px;
-        width: 250px;
-    }
+   /* show 3rd of 3 item slide */
+   .carousel-inner .active + .carousel-item + .carousel-item {
+       display: block;
+   }
+   .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+       transition: none;
+   }
+   .carousel-inner .carousel-item-next {
+       position: relative;
+       transform: translate3d(0, 0, 0);
+   }
+   /* left or forward direction */
+   .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+       position: relative;
+       transform: translate3d(-100%, 0, 0);
+       visibility: visible;
+   }
+   /* right or prev direction */
+   .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+       position: relative;
+       transform: translate3d(100%, 0, 0);
+       visibility: visible;
+       display: block;
+       visibility: visible;
+   }
+   .carousel-item .img-fluid{
+       height: 250px;
+       width: 250px;
+   }
 }
 /* LG */
 @media (min-width: 991px) {
-    /* show 4th item */
-    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-        display: block;
-    }
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-        transition: none;
-    }
-    /* Show 5th slide on lg if col-lg-3 */
-    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -25%;  /*change this with javascript in the future*/
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    /* left or forward direction */
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    /* right or prev direction //t - previous slide direction last item animation fix */
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-    .carousel-item.carousel-item-prev:hover , .carousel-item-right:hover{
-        background-color: rgba(0, 0, 0, 0.4);
-    }
+   /* show 4th item */
+   .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+       display: block;
+   }
+   .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+       transition: none;
+   }
+   /* Show 5th slide on lg if col-lg-3 */
+   .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+       position: absolute;
+       top: 0;
+       right: -25%;  /*change this with javascript in the future*/
+       z-index: -1;
+       display: block;
+       visibility: visible;
+   }
+   /* left or forward direction */
+   .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+       position: relative;
+       transform: translate3d(-100%, 0, 0);
+       visibility: visible;
+   }
+   /* right or prev direction //t - previous slide direction last item animation fix */
+   .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+       position: relative;
+       transform: translate3d(100%, 0, 0);
+       visibility: visible;
+       display: block;
+       visibility: visible;
+   }
+   .carousel-item.carousel-item-prev:hover , .carousel-item-right:hover{
+       background-color: rgba(0, 0, 0, 0.4);
+   }
 
 
 }
 
-.sponsors {
-  background: #ADA996;  /* fallback for old browsers */
+.carousel-item {
+ background: #ADA996;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -186,7 +186,7 @@ background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C
     font-size:small;
     padding-top: 20px;
     color: black;
-  }   
+  }
   .separator2::before,
   .separator2::after {
     content: "";
@@ -203,6 +203,34 @@ background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C
   }
 </style>
 <div class="container">
+<<<<<<< HEAD
+ <div class="separator" style="height: 120px;"><h1>SPONSORS</h1></div>
+ <div class="top-content">
+   <div class="container-fluid">
+       <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="2000">
+           <div class="carousel-inner row w-100 mx-auto" role="listbox">
+               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active" role="option">
+                   <img src="https://www.bigprofitbuzz.com/wp-content/uploads/2019/10/NALCO.png" class="img-fluid mx-auto d-block" alt="img1">
+               </div>
+               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
+                   <img src="assets/img/LOGO.png" class="img-fluid mx-auto d-block" alt="img2">
+               </div>
+               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
+                   <img src="assets/img/vector.PNG" class="img-fluid mx-auto d-block" alt="img3">
+               </div>
+               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
+                   <img src="assets/img/MY_BBSR.jpg" class="img-fluid mx-auto d-block" alt="img4">
+               </div>
+               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
+                   <img src="assets/img/OS9.PNG" class="img-fluid mx-auto d-block" alt="img5">
+               </div>
+               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
+                   <img src="assets/img/hanuel.png" class="img-fluid mx-auto d-block" alt="img6">
+               </div>
+               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
+                   <img src="assets/img/lgv.png" class="img-fluid mx-auto d-block" alt="img6">
+               </div>
+=======
   <div class="separator2"  "><h1>SPONSORS</h1></div>
   <div class="top-content">
     <div class="container-fluid">
@@ -229,18 +257,19 @@ background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C
                 <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3" role="option">
                     <img src="assets/img/lgv.png" class="img-fluid mx-auto d-block img" alt="img6">
                 </div>
+>>>>>>> 53d88f37ace001d4ada427da58febd07d9e2be2c
 
-            </div>
-            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev" >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next"  >
-                <span class="carousel-control-next-icon" aria-hidden="true" ></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
+           </div>
+           <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev" >
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+           </a>
+           <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next"  >
+               <span class="carousel-control-next-icon" aria-hidden="true" ></span>
+               <span class="sr-only">Next</span>
+           </a>
+       </div>
+   </div>
 </div>
 </div>
 
@@ -254,18 +283,16 @@ var itemsPerSlide = 5;
 var totalItems = $('.carousel-item').length;
 
 if (idx >= totalItems-(itemsPerSlide-1)) {
-    var it = itemsPerSlide - (totalItems - idx);
-    for (var i=0; i<it; i++) {
-        // append slides to end
-        if (e.direction=="left") {
-            $('.carousel-item').eq(i).appendTo('.carousel-inner');
-        }
-        else {
-            $('.carousel-item').eq(0).appendTo('.carousel-inner');
-        }
-    }
+   var it = itemsPerSlide - (totalItems - idx);
+   for (var i=0; i<it; i++) {
+       // append slides to end
+       if (e.direction=="left") {
+           $('.carousel-item').eq(i).appendTo('.carousel-inner');
+       }
+       else {
+           $('.carousel-item').eq(0).appendTo('.carousel-inner');
+       }
+   }
 }
 });
 </script>
- 
-

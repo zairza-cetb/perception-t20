@@ -254,11 +254,12 @@
     <div class="conatiner">
       <div class="row">
 
-          <div class="col-lg-3" style="margin-top: 6rem; margin-left:50;color: white; ">
+          <div class="col-lg-3" style="margin-top: 6rem; margin-left:40px;color: white;s">
           <h1 class="heading"> My Profile</h1>
-          <img src="../assets/img/profile.png" alt="" height="170" width="200"> <br> <br>
-          <section id="details" style="margin-left: 1em;">
-            <p>Welcome <%= currentUser.name %></p>
+          <img src="../assets/img/profile.png" alt="" height="190" width="200">
+          <br><br>
+          <section id="details" style="margin-left: 1em; font-family: poppins">
+            <p>Name: <%= currentUser.name %></p>
             <p>Email id: <%= currentUser.username %></p>
             <p>Phone No: <%= currentUser.phone %></p>
             <p>College: <%= currentUser.college %></p>
@@ -270,7 +271,7 @@
       <div class="col-lg-8" style="margin-top: 6rem; color: white;">
         <div class="content">
           <h1 class="heading">Registered Events</h1>
-          <p class="description">
+          <p class="description" style="font-family: poppins">
             You can check the details of registered events or unregister from an
             event.
           </p>
@@ -284,8 +285,8 @@
             </div>
             <div class="back">
               <div>
-                <div style="color: black; word-wrap:break-word;"><%= evjson[d]["desc"].substring(0,100) %>...</div>
-                <p><i style="font-size:24px" class="fa">&#xf061;</i></p>
+                <div style="color: black; word-wrap:break-word; font-family: poppins"><%= evjson[d]["desc"].substring(0,100) %>...</div>
+                <br>
                 <button class="button" onclick="unreg(<%= d %>)">Unregister</button>
               </div>
             </div></a>
