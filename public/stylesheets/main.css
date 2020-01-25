@@ -497,7 +497,7 @@ input {
    #CARD
    ========================================================================== */
 .card {
-  overflow: hidden;
+  overflow: auto;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -543,7 +543,19 @@ input {
   font-size: large;
   position: relative;
   top: 20px;
+  color:lightskyblue;
+
 }
+
+.forgot-link{
+  font-size: 15px;
+  /* margin-left: -28px; */
+  position: relative;
+  top: 20px ;
+  color:lightskyblue;
+  left: 10px;
+}
+
 @media (max-width: 767px) {
 
   .page-wrapper {
@@ -555,10 +567,19 @@ input {
     position: relative;
     top: 25px;
     left: 24%;
+    color: lightskyblue;
+
   }
   .login-link{
     font-size: 20px;
     left: 30%;
+    position: relative;
+    top: 20px;
+    color: lightskyblue;
+  }
+  .forgot-link{
+    font-size: 20px;
+    left: 27%;
     position: relative;
     top: 20px;
     color: lightskyblue;

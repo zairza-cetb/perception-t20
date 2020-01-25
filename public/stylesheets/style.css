@@ -35,7 +35,7 @@ html {
   height: 100vh;
   width: 100%;
 }
-.main .title_section {
+ /*.main .title_section {
   background-image: url("../assets/img/homepage-desktop.jpeg");
   width: 100vw;
   /* position: relative; */
@@ -45,7 +45,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 .box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -197,6 +197,10 @@ html {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .glitch__img:nth-child(n + 2) {
@@ -825,7 +829,7 @@ body .base.close .section-static {
 .separator::after {
   content: "";
   flex: 1;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff!important;
 }
 .separator::before {
   margin-right: 2em;
