@@ -41,7 +41,7 @@ userSchema.pre('save', function(next) {
       if(error)
         return next(error);
 
-      doc.uid = `PID20${counter.seq+999}`;
+      doc.uid = `P${counter.seq+999}`;
       console.log('saving user id: ', doc.uid);
       next();
     });
