@@ -4,7 +4,7 @@ var express = require("express"),
     User = require("../models/model"),
     router = express.Router(),
     nodemailer =require("nodemailer");
-    
+
 //Initialization of passportjs
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
@@ -22,7 +22,7 @@ const transporter=nodemailer.createTransport({
   service:"gmail",
   auth:{
     user:"perceptioncet@gmail.com",
-    pass:"********"                                 //TODO:use the password after hosting
+    pass:"Perceptiocet20"                                 //TODO:use the password after hosting
   }
 });
 
@@ -40,11 +40,12 @@ router.post("/register", function (req, res) {
           }
           passport.authenticate("local")(req, res, () => {
               // res.locals.message = "Registered successfully";
+              console.log("hello");
               transporter.sendMail({
                 from: 'Perception 2020 Team, CETB',
                 to: req.user.username,
                 subject: 'Welcome to Perception 2020',
-                text: `Hi, ${req.user.name}!\n\tYou have successfully registered for Perception 2020! Please visit the website for Perception 2020 to sign up for the events!\n\nThe Perception 2020 Team`  //TODO:email sending
+                text: `Hi, ${req.user.name}!\nYou have successfully registered for Perception 2020! Please visit the website for Perception 2020 to sign up for the events!\n\nThe Perception 2020 Team`  //TODO:email sending
               }, function(error, info){
                 if (error) {
                   console.log("mail error",error);
@@ -60,19 +61,19 @@ router.post("/register", function (req, res) {
           });
       });
   });
-  
+
   router.post('/login', function(req, res, next) {
     passport.authenticate('local', function(err, user, info) {
       if (err) {
-         return console.log(err); 
+         return console.log(err);
         }
       if (!user) {
-         return res.redirect(`/login?err=${info.message}`); 
+         return res.redirect(`/login?err=${info.message}`);
         }
         // console.log('hash',user.getHash());
       req.logIn(user, function(err) {
         if (err) {
-           return console.log(err); 
+           return console.log(err);
         } else {
           // res.locals.message = `Welcome ${user.name}`;
           if (req.query.ref) {
@@ -84,7 +85,7 @@ router.post("/register", function (req, res) {
       });
     })(req, res, next);
   });
-  
+
   router.get("/logout", (req, res) => {
     req.logOut();
     res.redirect("/?logoutSuccess=1");
@@ -104,7 +105,7 @@ router.post("/register", function (req, res) {
         console.log('nousererr');
          // TODO TODO: Something
       } else {
-        
+
         // Set the password to the new supplied password
         return user.setPassword(req.body.password, (err, user) => {
             console.log(user);
@@ -158,9 +159,9 @@ router.get('/chregister/:eventID', (req, res) => {
 	  else{
 		let found = user.events.includes(ID);
 		  if(err) console.log('0');
-		  else if(found) 
+		  else if(found)
 			res.send("T");
-		  else 
+		  else
 			res.send("F");
 	  }
 	});
@@ -180,6 +181,6 @@ router.get('/unregister/:eventID', (req, res) => {
 	  })
 	})
 });
-///////////////////////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////////////////////
 
 module.exports = router;
