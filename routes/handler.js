@@ -3,6 +3,7 @@ var express = require("express"),
     localStrategy = require("passport-local"),
     User = require("../models/model"),
     router = express.Router(),
+    ejs = require("ejs")
     nodemailer =require("nodemailer");
     
 //Initialization of passportjs
@@ -22,7 +23,7 @@ const transporter=nodemailer.createTransport({
   service:"gmail",
   auth:{
     user:"perceptioncet@gmail.com",
-    pass:"********"                                 //TODO:use the password after hosting
+    pass:"Perceptiocet20"                                 //TODO:use the password after hosting
   }
 });
 
@@ -39,19 +40,24 @@ router.post("/register", function (req, res) {
               return res.redirect(`/register?err=${err.message}`);
           }
           passport.authenticate("local")(req, res, () => {
-              // res.locals.message = "Registered successfully";
-              transporter.sendMail({
-                from: 'Perception 2020 Team, CETB',
-                to: req.user.username,
-                subject: 'Welcome to Perception 2020',
-                text: `Hi, ${req.user.name}!\n\tYou have successfully registered for Perception 2020! Please visit the website for Perception 2020 to sign up for the events!\n\nThe Perception 2020 Team`  //TODO:email sending
-              }, function(error, info){
-                if (error) {
-                  console.log("mail error",error);
-                } else {
-                  console.log('Email sent: ' + info.response);
+              ejs.renderFile(__dirname+"/mailTemplate.ejs", {name: req.user.name}, (err, data) => {
+                if (err) {
+                  console.log(err)
                 }
-              });
+                // res.locals.message = "Registered successfully";
+                transporter.sendMail({
+                  from: 'Perception 2020 Team, CETB',
+                  to: req.user.username,
+                  subject: 'Welcome to Perception 2020',
+                  html: data
+                }, function(error, info){
+                  if (error) {
+                    console.log("mail error",error);
+                  } else {
+                    console.log('Email sent: ' + info.response);
+                  }
+                });
+              })
               if (req.query.ref) {
                 res.redirect(`${req.query.ref}?registerSuccess=1`);
               } else {
