@@ -3,7 +3,8 @@ var express = require("express"),
     localStrategy = require("passport-local"),
     User = require("../models/model"),
     router = express.Router(),
-    ejs = require("ejs")
+    ejs = require("ejs"),
+    path = require("path"),
     nodemailer =require("nodemailer");
     
 //Initialization of passportjs
@@ -49,6 +50,13 @@ router.post("/register", function (req, res) {
                   from: 'Perception 2020 Team, CETB',
                   to: req.user.username,
                   subject: 'Welcome to Perception 2020',
+                  attachments: [
+                    {
+                      filename: "Homelogo.png",
+                      path: path.join(__dirname, "..", "public/assets/img/Homelogo.png"),
+                      cid:"logo"
+                    }
+                  ],
                   html: data
                 }, function(error, info){
                   if (error) {
