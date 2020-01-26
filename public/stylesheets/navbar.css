@@ -185,7 +185,7 @@ Main Components
   width: 100%;
   background-color: #000000;
   visibility: hidden;
-  z-index: 9999;
+  z-index: 10000;
   /* enable a 3D-space for children elements */
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
