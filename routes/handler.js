@@ -40,7 +40,7 @@ router.post("/register", function (req, res) {
               return res.redirect(`/register?err=${err.message}`);
           }
           passport.authenticate("local")(req, res, () => {
-              ejs.renderFile('mailTemplate', {name: req.user.name}, (err, data) => {
+              ejs.renderFile(__dirname+"/mailTemplate.ejs", {name: req.user.name}, (err, data) => {
                 if (err) {
                   console.log(err)
                 }
