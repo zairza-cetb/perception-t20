@@ -13,7 +13,8 @@ const userSchema = new mongoose.Schema ({
     password: String,
     phone: Number,
     college: String,
-    events: [Number]
+    events: [Number],
+    paymentStatus: { type: String, default: 'unpaid' }
   });
 
 userSchema.plugin(localMongoose);
