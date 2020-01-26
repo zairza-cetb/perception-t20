@@ -131,7 +131,7 @@ Primary style
   .cd-bouncy-nav {
     position: absolute;
     left: 50%;
-    top: 48vh;
+    top: 40vh;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
