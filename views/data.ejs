@@ -81,25 +81,27 @@
     <h1 style="text-align: center;">Main Table</h1>
     <table border="1" class="Table">
             <tr class="header">
-                <th>Sl No.</th>
+                <th>UID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Gender</th>
                 <th>No.</th>
                 <th>college</th>
                 <th>Events</th>
+                <th>Paid Status</th>
             </tr>
         <% let j=0; %>
         <% data.forEach(function(data){ %>
             <% j++; %>
             <tr>
-                <td> <%= j %>.</td>
+                <td> <%= data.uid%></td>
                 <td> <%= data.name %> </td>
                 <td> <%= data.username%> </td>
                 <td> <%= data.gender%> </td>
                 <td> <%= data.phone %> </td>
                 <td> <%= data.college%> </td>
                 <td> <%= data.events%> </td>
+                <td> <%= data.paidstatus%> </td>
             </tr>
         <% }); %>
     </table>
