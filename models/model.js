@@ -5,6 +5,7 @@ var mongoose = require("mongoose"),
     localMongoose = require("passport-local-mongoose");
 //User Schema
 const userSchema = new mongoose.Schema ({
+    uid: String,
     username: String,
     hash: String,
     salt: String,
@@ -17,6 +18,34 @@ const userSchema = new mongoose.Schema ({
   });
 
 userSchema.plugin(localMongoose);
+
+var CounterSchema = mongoose.Schema({
+  _id: {type: String, required: true},
+  seq: { type: Number, default: 0 }
+});
+var counter = mongoose.model('counter', CounterSchema);
+
+userSchema.pre('save', function(next) {
+  if(!this.isNew) return next();
+  var doc = this;
+  counter.findOneAndUpdate({
+    _id: 'entityId'
+  }, {
+    $inc: {
+      seq: 1
+    }
+  }, {
+    new: true,
+    upsert: true,
+  }, function(error, counter)   {
+      if(error)
+        return next(error);
+
+      doc.uid = `P${counter.seq+999}`;
+      console.log('saving user id: ', doc.uid);
+      next();
+    });
+});
 
 // SETUP DATABASE FOR REGISTRATION:
 mongoose.connect(mongourl, {
