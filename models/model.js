@@ -14,7 +14,11 @@ const userSchema = new mongoose.Schema ({
     password: String,
     phone: Number,
     college: String,
-    events: [Number]
+    events: [Number],
+    paidstatus: {
+      type: String,
+      default: 'unpaid'
+    }
   });
 
 userSchema.plugin(localMongoose);
