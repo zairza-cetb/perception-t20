@@ -2,6 +2,7 @@ var express = require("express"),
     passport = require("passport"),
     localStrategy = require("passport-local"),
     User = require("../models/model"),
+    ResetRequest = require('../models/resetRequest'),
     router = express.Router(),
     ejs = require("ejs"),
     path = require("path"),
@@ -24,7 +25,7 @@ const transporter=nodemailer.createTransport({
   service:"gmail",
   auth:{
     user:"perceptioncet@gmail.com",
-    pass:"***"                                 //TODO:use the password after hosting
+    pass:"Perceptioncet20"                                 //TODO:use the password after hosting
   }
 });
 
@@ -104,7 +105,7 @@ router.post("/register", function (req, res) {
     res.redirect("/?logoutSuccess=1");
   });
 
-  // Forgot password form posts here with username(email address) in body
+  // Forgot password form posts here with username(email address) and phone number in body
   router.post('/forgotpassword', (req, res) => {
     console.log('hello there', req.body);
     User.findOne({
@@ -116,34 +117,68 @@ router.post("/register", function (req, res) {
         // TODO: Something
       } else if (!user) {
         console.log('nousererr');
-         // TODO TODO: Something
+        // TODO TODO: Something more
       } else {
-        
-        // Set the password to the new supplied password
-        return user.setPassword(req.body.password, (err, user) => {
-            console.log(user);
-            user.save()
-            if (err) {
-              return res.redirect(`/login?err=${err.message}`);
+        // create a new password reset request
+        const resetRequest = new ResetRequest({
+          r_id: user._id,
+        });
+
+        // save the request to the database
+        resetRequest.save((err, request) => {
+          console.log(request);
+          if (err) {
+            // TODO TODO TODO : Handle error in saving request
+            return;
+          }
+
+          // Send an E-Mail with a password reset link with id of the request
+          transporter.sendMail({
+            from: 'Perception 2020 Team, CETB',
+            to: user.username,
+            subject: 'Your password has changed',
+            text: `Hi, ${user.name}\n\tWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception-t20.herokuapp.com/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
+          }, function (error, info) {
+            if (error) {
+              console.log("mail error", error);
+            } else {
+              console.log('Email sent: ' + info.response);
             }
-            // Send an E-Mail to notify a password change
-            transporter.sendMail({
-              from: 'Perception 2020 Team, CETB',
-              to: user.username,
-              subject: 'Your password has changed',
-              text: `Hi, ${user.name}\n\tWe received a request to reset your Perception 2020 password. If this was you, you can safely ignore this email, otherwise please contact us immediately in order to recover your account.\n\nThe Perception 2020 Team`,
-            }, function(error, info){
-              if (error) {
-                console.log("mail error",error);
-              } else {
-                console.log('Email sent: ' + info.response);
-              }
-            });
           });
+        });
       }
     });
     if (req.query.ref) {
-      return res.redirect(`/login?ref=${req.query.ref}`);
+      res.redirect(`/login?ref=${req.query.ref}&message=Please check your email inbox for resetting your password`);
+    } else {
+      res.redirect('/login?message=Please check your email inbox for resetting your password&ref=');
+    }
+  });
+
+  // Reset password form posts here with new password
+  router.post('/resetpassword/:resetRequestID', function(req, res) {
+    ResetRequest.findByIdAndDelete(req.params.resetRequestID, function(requestError, resetRequest) {
+      if (requestError || !resetRequest) {
+        //TODO: Handle resetRequest not found
+        console.log('reset request error', requestError);
+      } else {
+        User.findById(resetRequest.r_id, function(userError, user) {
+          user.setPassword(req.body.password, function(hashingError, updatedUser) {
+            if (hashingError || !updatedUser) {
+              // TODO: Handle hashing errors
+              console.log('hashing errors', hashingError);
+            } else {
+              updatedUser.save().catch(saveError => {
+                console.log('saving error', saveError);
+                // TODO: Handle saving error
+              });
+            }
+          });
+        });
+      }
+    });
+    if (req.query.ref) {
+      res.redirect(`/login?ref=${req.query.ref}`);
     } else {
       res.redirect('/login?ref=');
     }
