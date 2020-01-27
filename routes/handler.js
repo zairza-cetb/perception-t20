@@ -41,7 +41,7 @@ router.post("/register", function (req, res) {
               return res.redirect(`/register?err=${err.message}`);
           }
           passport.authenticate("local")(req, res, () => {
-              ejs.renderFile(__dirname+"/mailTemplate.ejs", {name: req.user.name}, (err, data) => {
+              ejs.renderFile(__dirname+"/mailTemplate.ejs", {name: req.user.name, pid: req.user.uid}, (err, data) => {
                 if (err) {
                   console.log(err)
                 }
@@ -52,8 +52,8 @@ router.post("/register", function (req, res) {
                   subject: 'Welcome to Perception 2020',
                   attachments: [
                     {
-                      filename: "Homelogo.png",
-                      path: path.join(__dirname, "..", "public/assets/img/Homelogo.png"),
+                      filename: "Perception.png",
+                      path: path.join(__dirname, "..", "public/assets/img/Perception.png"),
                       cid:"logo"
                     }
                   ],
