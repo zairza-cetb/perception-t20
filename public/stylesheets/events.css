@@ -130,7 +130,7 @@ Primary style
   
   .cd-bouncy-nav {
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 40vh;
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
@@ -141,7 +141,7 @@ Primary style
     max-width: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 90px;
+    margin-top: 85px;
   }
   .cd-bouncy-nav li {
     width: 50%;
@@ -271,11 +271,14 @@ Primary style
       margin-top: 0;
       max-height: 700px;
       justify-content: space-between;
-
+      left: 50%;
+      margin-top: 100px;
+      
     }
     .cd-bouncy-nav li {
       width: 33.33%;
       float: left;
+      
 
     }
 
