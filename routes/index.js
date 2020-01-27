@@ -125,6 +125,10 @@ router.get('/forgotpassword', function(req, res) {
 	res.render('forgotpassword');
 })
 
+router.get('/resetpassword/:resetRequestID', function(req, res) {
+	res.render('resetpassword');
+})
+
 
 /* POST admin page. */
 router.post("/admin", (req, res) => {
