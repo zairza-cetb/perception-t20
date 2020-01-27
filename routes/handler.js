@@ -49,7 +49,7 @@ router.post("/register", function (req, res) {
                 transporter.sendMail({
                   from: 'Perception 2020 Team, CETB',
                   to: req.user.username,
-                  subject: 'Welcome to Perception 2020',
+                  subject: 'Perception 2020 | Registration Successful',
                   attachments: [
                     {
                       filename: "Perception.png",
