@@ -845,10 +845,10 @@ body .base.close .section-static {
     background-size: center;
   }
   .separator::before {
-    margin-right: .2em;
+    margin-right: .5em;
   }
   .separator::after {
-    margin-left: .2em;
+    margin-left: .5em;
   }
 
   .box {
