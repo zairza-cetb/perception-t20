@@ -60,7 +60,19 @@
         flex-wrap: wrap;
         max-width: 1000px;
       }
-
+      
+      .heading1 {
+        width: 100%;
+        margin-left: 0.1 rem;
+        font-weight: 900;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1ch;
+        line-height: 1;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.1rem;
+        position: relative;
+      }
       .heading {
         width: 100%;
         margin-left: 1rem;
@@ -82,7 +94,7 @@
         background: linear-gradient(135deg, #1a9be6, #1a57e6);
         bottom: 0;
       }
-
+     
       .description {
         width: 100%;
         margin-top: 0;
@@ -90,14 +102,11 @@
         margin-bottom: 3rem;
       }
     
-      /* .card-deck {
+      /* .box {
         width: 100%;
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-        -webkit-column-gap: 10px;
-        -moz-column-gap: 10px;
-        column-gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-column-gap: 10%;
       } */
       .card {
         color: inherit;
@@ -110,16 +119,11 @@
         margin: 1rem;
         position: relative;
       }
-      @media screen and (max-width: 800px) {
+      /* @media screen and (max-width: 800px) {
         .card {
           width: calc(50% - 2rem);
         }
-      }
-      @media screen and (max-width: 500px) {
-        .card {
-          width: 100%;
-        }
-      }
+      } */
 
       .front,
       .back {
@@ -246,11 +250,6 @@
       .row1 .row1-section{
         margin-left: 8em;
       }
-      @media screen and (max-width: 800px) {
-       .row1 .row1-section{
-         margin-left: 0em;
-       }
-      }
 
     .link-to-home {
       position:absolute;
@@ -277,6 +276,12 @@
     @media (max-width: 767px){
     .Homelogo{
         height: 40px;
+    }
+    .row1 .row1-section{
+         margin-left: 0em;
+    }
+    .card {
+      width: 100%;
     }
     
 }
@@ -326,8 +331,8 @@
             You can check the details of registered events or unregister from an
             event.
           </p>
-        
-          <!-- <div class="card-deck"> -->
+        <!-- <div class="box"> -->
+        <!-- <div class="card-deck"> -->
          <% data.events.forEach(function(d){ %>
           <div class="card" href="#!" id= <%= d %> >
             <div class="front">
@@ -335,6 +340,7 @@
             </div>
             <div class="back">
               <div>
+                <h1 class="heading1" style="color: black;"><%= evjson[d]["event"] %> </h1>
                 <div style="color: black; word-wrap:break-word; font-family: poppins"><%= evjson[d]["desc"].substring(0,100) %>...</div>
                 <br>
                 <button class="button" onclick="unreg(<%= d %>)">Unregister</button>
@@ -343,6 +349,7 @@
           </div>
           <% }); %>
           <!-- </div>   -->
+         <!-- </div > -->
       </div>
     </div>
     </div>
