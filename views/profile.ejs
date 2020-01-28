@@ -1,6 +1,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
@@ -86,7 +89,16 @@
         margin-left: 1rem;
         margin-bottom: 3rem;
       }
-
+    
+      /* .card-deck {
+        width: 100%;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+        -webkit-column-gap: 10px;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+      } */
       .card {
         color: inherit;
         cursor: pointer;
@@ -240,27 +252,27 @@
        }
       }
 
-      .link-to-home {
-    position:absolute;
-    top: 20px;
-    left: 50px;
-    z-index: 9999;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 3px;
-    background-position: center center;
-    background-size: cover;
-    background-image: url('../assets/img/Homelogo.png');
-    box-shadow: 0 0 0 2px rgba(12,12,12,.1);
-    transition: opacity .2s, border-radius .2s, box-shadow .2s;
-    transition-timing-function: ease-out;
+    .link-to-home {
+      position:absolute;
+      top: 20px;
+      left: 50px;
+      z-index: 9999;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 3px;
+      background-position: center center;
+      background-size: cover;
+      background-image: url('../assets/img/Homelogo.png');
+      box-shadow: 0 0 0 2px rgba(12,12,12,.1);
+      transition: opacity .2s, border-radius .2s, box-shadow .2s;
+      transition-timing-function: ease-out;
     }
     .link-to-home:hover {
-    opacity: 0.8;
-    border-radius: 50%;
-    box-shadow: 0 0 0 20px rgba(12,12,12,.1);
+        opacity: 0.8;
+        border-radius: 50%;
+        box-shadow: 0 0 0 20px rgba(12,12,12,.1);
     }
     @media (max-width: 767px){
     .Homelogo{
@@ -291,7 +303,7 @@
     <div class="conatiner">
       <div class="row">
 
-          <div class="col-lg-3" style="margin-top: 6rem; margin-left:40px;color: white;s">
+          <div class="col-lg-3" style="margin-top: 6rem; margin-left:40px;color: white;">
           <h1 class="heading"> My Profile</h1>
           <img src="../assets/img/profile.png" alt="" height="190" width="200">
           <br><br>
@@ -314,14 +326,12 @@
             You can check the details of registered events or unregister from an
             event.
           </p>
-          
+        
+          <!-- <div class="card-deck"> -->
          <% data.events.forEach(function(d){ %>
           <div class="card" href="#!" id= <%= d %> >
-
-            <div
-              class="front"
-            >
-            <img onerror="this.src='/assets/img/alt.jpeg';" src="/assets/img/poster/<%= d %>.jpg" />
+            <div class="front">
+              <img onerror="this.src='/assets/img/alt.jpeg';" src="/assets/img/poster/<%= d %>.jpg" />
             </div>
             <div class="back">
               <div>
@@ -332,7 +342,7 @@
             </div>
           </div>
           <% }); %>
-          
+          <!-- </div>   -->
       </div>
     </div>
     </div>
@@ -342,7 +352,7 @@
            fetch(`/unregister/${id}`).then((res)=>{
               return res.text();
            }).then((d)=>{
-  d == "T") {
+            if (d == "T"){
               el.remove();
            }});
         };
