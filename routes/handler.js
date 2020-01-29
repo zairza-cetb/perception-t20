@@ -25,7 +25,7 @@ const transporter=nodemailer.createTransport({
   service:"gmail",
   auth:{
     user:"perceptioncet@gmail.com",
-    pass:"Perceptioncet20"                                 //TODO:use the password after hosting
+    pass: process.env.GMAIL_PASSWORD,                                 //TODO:use the password after hosting
   }
 });
 
