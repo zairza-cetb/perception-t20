@@ -22,10 +22,13 @@ router.use((req, res, next) => {
 });
 
 const transporter=nodemailer.createTransport({
-  service:"gmail",
+  service:"Gmail",
   auth:{
-    user:"perceptioncet@gmail.com",
-    pass:"Perceptioncet20"                                 //TODO:use the password after hosting
+  type:"OAuth2",
+    user:"perception.cetb@gmail.com", //TODO: use environment variables after hosting
+    clientId: "408361162632-gh5634uanva94clel791fhsodfg4vc5g.apps.googleusercontent.com",
+    clientSecret: "ZK5uE6H8vYjxMhdlAJbhq2LS",
+    refreshToken: "1//04Ut61xHb3p2VCgYIARAAGAQSNwF-L9IrR2K2rhYQZhE_8tc1OjsmLbxsSBUOK1hGI0k6nLoSnFbx_wNE30kv4AtvP40IoArJxKo"
   }
 });
 
@@ -137,7 +140,8 @@ router.post("/register", function (req, res) {
             from: 'Perception 2020 Team, CETB',
             to: user.username,
             subject: 'Your password has changed',
-            text: `Hi, ${user.name}\n\tWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception.cet.edu.in/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
+            //TODO: change password reset link to perception.cet.edu.in instead of perception-t20.herokuapp.com after hosting
+            text: `Hi, ${user.name}\n\tWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception-t20.herokuapp.com/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
           }, function (error, info) {
             if (error) {
               console.log("mail error", error);
