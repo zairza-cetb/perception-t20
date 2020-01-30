@@ -7,6 +7,11 @@ var express = require("express"),
     ejs = require("ejs"),
     path = require("path"),
     nodemailer =require("nodemailer");
+
+// Utility to check if a string is a valid event ID
+function isValidEventID(value) {
+  return /^\d+$/.test(value);
+}
     
 //Initialization of passportjs
 passport.use(new localStrategy(User.authenticate()));
@@ -191,47 +196,66 @@ router.post("/register", function (req, res) {
 ///////////////////////////////////////////////////////////////////////
 /* Backend for event registration */
 router.get('/register/:eventID', (req, res) => {
-	User.findOne({_id:req.user._id},(err,user)=>{
-	  user.events.push(req.params.eventID)
-	  user.save((err, data)=>{
-		if(err) {
-      console.log(err);
-      res.send("F")
-    }
-		else { res.send("T");
-	   }
-	  })
-	})
+  // Checks if the eventID is a valid event ID
+  if (!isValidEventID(req.params.eventID)) {
+    User.findOne({ _id: req.user._id }, (err, user) => {
+      user.events.push(req.params.eventID)
+      user.save((err, data) => {
+        if (err) {
+          console.log(err);
+          res.send("F");
+        }
+        else {
+          res.send("T");
+        }
+      });
+    });
+  } else {
+    next(Error('Invalid Event ID: Event ID must be a positive whole number'));
+  }
 });
 
 router.get('/chregister/:eventID', (req, res) => {
-	var ID = req.params.eventID;
-	User.findOne({_id: req.user._id}, (err,user) => {
-	  if(err) console.log(err);
-	  else{
-		let found = user.events.includes(ID);
-		  if(err) console.log('0');
-		  else if(found) 
-			res.send("T");
-		  else 
-			res.send("F");
-	  }
-	});
+  // Checks if the eventID is a valid event ID
+  if (!isValidEventID(req.params.eventID)) {
+    var ID = req.params.eventID;
+    User.findOne({ _id: req.user._id }, (err, user) => {
+      if (err) {
+        console.log(err)
+        next(err);
+      }
+      else {
+
+        let found = user.events.includes(ID);
+        if (found)
+          res.send("T");
+        else
+          res.send("F");
+      }
+    });
+  } else {
+    next(Error('Invalid Event ID: Event ID must be a positive whole number'));
+  }
 });
 
 router.get('/unregister/:eventID', (req, res) => {
-	User.findOne({_id:req.user._id},(err,user)=>{
-	  user.events.pull(req.params.eventID)
-	  user.save((err, data)=>{
-		if(err) {
-      console.log(err);
-      res.send("F");
-    }
-		else {
-      res.send("T");
-		}
-	  })
-	})
+  // Checks if the eventID is a valid event ID
+  if (!isValidEventID(req.params.eventID)) {
+    User.findOne({ _id: req.user._id }, (err, user) => {
+      user.events.pull(req.params.eventID)
+      user.save((err, data) => {
+        if (err) {
+          console.log(err);
+          res.send("F");
+        }
+        else {
+          res.send("T");
+        }
+      });
+    });
+  } else {
+    next(Error('Invalid Event ID: Event ID must be a positive whole number'));
+  }
 });
 ///////////////////////////////////////////////////////////////////////// 
 
