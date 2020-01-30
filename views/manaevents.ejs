@@ -54,10 +54,9 @@
             }
 
 
-        }
 
         
-        @media screen(min-width: 768px;) {
+        @media screen and (min-width: 768px) {
         .container{
           margin-top:-350px;
       }
@@ -166,7 +165,7 @@
         <script>
           let message = "<%= message %>";
           Toast.fire({
-              position: 'top-left',
+              position: 'top-middle',
             title: message
           });
         </script>

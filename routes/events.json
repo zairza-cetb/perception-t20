@@ -1,7 +1,10 @@
 {
     "1": {
         "event": "Rescue Rangers",
-        "desc": "The participating teams will have to build their manual robot that conquers the various obstacles and hurdles put forward. Inclined planes, rough terrain, fire and water, slippery roads and whatnot. The robot that finishes the track in one piece, scoring the highest points in the minimum amount of time, earns its team the winning title."
+        "desc": "The participating teams will have to build their manual robot that conquers the various obstacles and hurdles put forward. Inclined planes, rough terrain, fire and water, slippery roads and whatnot. The robot that finishes the track in one piece, scoring the highest points in the minimum amount of time, earns its team the winning title.",
+        "cat":"",
+        "form-link":"",
+        
     },
     "2": {
         "event": "Code Busters",
