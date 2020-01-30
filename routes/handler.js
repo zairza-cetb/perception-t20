@@ -139,7 +139,7 @@ router.post("/register", function (req, res) {
           transporter.sendMail({
             from: 'Perception 2020 Team, CETB',
             to: user.username,
-            subject: 'Your password has changed',
+            subject: 'Perception 2020 | Password reset',
             //TODO: change password reset link to perception.cet.edu.in instead of perception-t20.herokuapp.com after hosting
             text: `Hi, ${user.name}\n\tWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception-t20.herokuapp.com/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
           }, function (error, info) {
