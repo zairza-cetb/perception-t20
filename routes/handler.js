@@ -11,7 +11,7 @@ var express = require("express"),
 
 // Utility to check if a string is a valid event ID
 function isValidEventID(value) {
-  return (/^\d+$/.test(value)) && (event_json.prototype.hasOwnProperty(value));
+  return (/^\d+$/.test(value)) && (event_json.hasOwnProperty(value));
 }
     
 //Initialization of passportjs
@@ -226,7 +226,7 @@ router.post("/register", function (req, res) {
 /* Backend for event registration */
 router.get('/register/:eventID', (req, res) => {
   // Checks if the eventID is a valid event ID
-  if (!isValidEventID(req.params.eventID)) {
+  if (isValidEventID(req.params.eventID)) {
     User.findOne({ _id: req.user._id }, (err, user) => {
       user.events.push(req.params.eventID)
       user.save((err, data) => {
@@ -240,18 +240,19 @@ router.get('/register/:eventID', (req, res) => {
       });
     });
   } else {
-    res.send('F')
+    res.statusCode = 500;
+    res.send('F');
   }
 });
 
 router.get('/chregister/:eventID', (req, res) => {
   // Checks if the eventID is a valid event ID
-  if (!isValidEventID(req.params.eventID)) {
+  if (isValidEventID(req.params.eventID)) {
     var ID = req.params.eventID;
     User.findOne({ _id: req.user._id }, (err, user) => {
       if (err) {
-        console.log(err)
-        next(err);
+        res.statusCode = 500;
+        res.send('F');
       }
       else {
 
@@ -263,18 +264,19 @@ router.get('/chregister/:eventID', (req, res) => {
       }
     });
   } else {
-    res.send('F')
+    res.statusCode = 500;
+    res.send('F');
   }
 });
 
 router.get('/unregister/:eventID', (req, res) => {
   // Checks if the eventID is a valid event ID
-  if (!isValidEventID(req.params.eventID)) {
+  if (isValidEventID(req.params.eventID)) {
     User.findOne({ _id: req.user._id }, (err, user) => {
       user.events.pull(req.params.eventID)
       user.save((err, data) => {
         if (err) {
-          console.log(err);
+          res.statusCode = 500;
           res.send("F");
         }
         else {
@@ -283,7 +285,8 @@ router.get('/unregister/:eventID', (req, res) => {
       });
     });
   } else {
-    res.send('F')
+    res.statusCode = 500;
+    res.send('F');
   }
 });
 ///////////////////////////////////////////////////////////////////////// 
