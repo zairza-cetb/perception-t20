@@ -6,11 +6,12 @@ var express = require("express"),
     router = express.Router(),
     ejs = require("ejs"),
     path = require("path"),
-    nodemailer =require("nodemailer");
+    nodemailer =require("nodemailer"),
+    event_json=require("./events.json");
 
 // Utility to check if a string is a valid event ID
 function isValidEventID(value) {
-  return /^\d+$/.test(value);
+  return (/^\d+$/.test(value)) && (event_json.prototype.hasOwnProperty(value));
 }
     
 //Initialization of passportjs
@@ -239,7 +240,7 @@ router.get('/register/:eventID', (req, res) => {
       });
     });
   } else {
-    next(Error('Invalid Event ID: Event ID must be a positive whole number'));
+    res.send('F')
   }
 });
 
@@ -262,7 +263,7 @@ router.get('/chregister/:eventID', (req, res) => {
       }
     });
   } else {
-    next(Error('Invalid Event ID: Event ID must be a positive whole number'));
+    res.send('F')
   }
 });
 
@@ -282,7 +283,7 @@ router.get('/unregister/:eventID', (req, res) => {
       });
     });
   } else {
-    next(Error('Invalid Event ID: Event ID must be a positive whole number'));
+    res.send('F')
   }
 });
 ///////////////////////////////////////////////////////////////////////// 
