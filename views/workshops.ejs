@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Workshops </title>
+        <meta name="description" content="Workshops of Perception 2020">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/stylenew.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    </head>
+    <body>
+        <%- include('partials/preloader') %>
+        <%- include('partials/navbar') %> 
+        <%- include('partials/modal') %>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
+        <style type="text/css">
+            .card {
+                opacity: 0;
+                -webkit-transform: translateX(-100px);
+                     -moz-transform: translateX(-100px);
+                        -ms-transform: translateX(-100px);
+                         -o-transform: translateX(-100px);
+                                transform: translateX(-100px);
+                -webkit-transition: all 2.6s ease-out;
+                     -moz-transition: all 1.6s ease-out;
+                        -ms-transition: all 1.6s ease-out;
+                         -o-transition: all 1.6s ease-out;
+                                transition: all 0.6s ease-out;
+            }
+            .card.visible {
+                opacity: 1;
+                -webkit-transform: none;
+                     -moz-transform: none;
+                        -ms-transform: none;
+                         -o-transform: none;
+                                transform: none;
+               
+            }
+
+            .link-to-home {
+    position:absolute;
+    top: 20px;
+    left: 50px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../assets/img/Homelogo.png');
+    box-shadow: 0 0 0 2px rgba(12,12,12,.1);
+    transition: opacity .2s, border-radius .2s, box-shadow .2s;
+    transition-timing-function: ease-out;
+    }
+    .link-to-home:hover {
+    opacity: 0.8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(12,12,12,.1);
+    }
+    @media (max-width: 767px){
+    .Homelogo{
+        height: 40px;
+    }
+    
+}
+
+
+        </style>
+
+    <section">    
+
+                <!-- home button -->
+    <section class="Homelogo">
+        <a href="/" class="link-to-home" target=”_blank”></a>
+    </section>
+
+      <center ><div class="gradient-box"><span>Workshops</span></div></center>
+      <div class="wrapper">
+        <div class="container">
+            <div class="card">
+                <div class="imgBx" data-text="Udaan">
+                    <img src="assets/img/eventicons/53.png">
+                </div>
+                <div class="content">
+                    <div data-title="Udaan" data-id="53" data-desc="How does it feel when you see something flying? How will it exhilarate you when we say you will be able to determine its movements?
+                    Mark the date of 13th February 2020. To add wings to your wishes, PERCEPTION 2020 presents an exciting workshop on 'Micro-drone making'. Grab the opportunity to experience hands-on drone making with a free kit worth Rs. 4500 only per Team.
+                    Gear up yourselves, be the strongest birdie among many. Participate in large numbers. A team of a maximum of 5 students are allowed for the workshop.">
+                       <h3 class="glitch" data-text="Udaan">Udaan</h3>
+                       <p class="glitch" data-text="Workshop on Micro-drone making">Workshop on Micro-drone making</p>
+                       <button id="eventButton37" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                    </div>
+                </div>
+          </div>
+          <div class="card">
+            <div class="imgBx" data-text="Autoworkshop">
+                <img src="assets/img/eventicons/54.png">
+            </div>
+            <div class="content">
+                <div data-title="Autoworkshop" data-id="54" data-desc="Are you an Automotive Enthusiast!! Do you get the gut feeling to revolutionise the automobile industry with some great advanced level technology!! 
+                Perception presents to you an workshop on E-vehicle statics and dynamics on 9th and 10th of Feb. ISO rated certificates will be provided along with practical demonstration of the vehicle in our college. Add an extra feather in your resume with this workshop.">
+                   <h3 class="glitch" data-text="Autoworkshop">Autoworkshop</h3>
+                   <p class="glitch" data-text="Workshop by AMZ Automotive">Workshop by AMZ Automotive</p>
+                   <button id="eventButton37" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                </div>
+            </div>
+      </div>
+          
+    </div>
+      </div>
+</section>
+
+      <script>
+        // build scenes
+        var revealElements = document.getElementsByClassName("card");
+        for (var i=0; i<revealElements.length; i++) {
+            new ScrollMagic.Scene({
+                                triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+                                offset: 30,												 // start a little later
+                                triggerHook: 0.98,
+                                reverse:false,
+                            })
+                            .setClassToggle(revealElements[i], "visible") // add class toggle
+                         //   .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+                            .addTo(controller);
+        }
+    </script>
+    <% if(message) { %>
+        <script src="js/sweet.js"></script>
+        <script>
+          let message = "<%= message %>";
+          Toast.fire({
+              position: 'top-left',
+            title: message
+          });
+        </script>
+      <% } %>
+    </body>
+</html>
