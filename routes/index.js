@@ -79,7 +79,7 @@ router.get('/manevents', function(req,res,next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('manaevents', { message: message });
+	res.render('manaevents', { message: message , evjson: event_json });
 });
 /* GET flagship events page. */
 router.get('/flagevents', function(req,res,next) {
