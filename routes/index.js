@@ -39,7 +39,8 @@ router.get("/login", function (req, res, next) {
 	if(req.user){
 		res.redirect("/");
 	}else{res.render("login", {
-		err: req.query.err
+		err: req.query.err,
+		message: req.query.message
 	});}
 });
 
