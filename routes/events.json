@@ -6,7 +6,7 @@
         "form-link":"https://forms.gle/MgiviaR3xbir7SDi6",
         "doc-link":"https://drive.google.com/file/d/1d-8yfXaRKT0FEK6D17KDUgGkuZGKF47a/view?usp=sharing",
         "heading":"Rescue Rangers",
-        "small-desc":"  "
+        "small_desc":"  "
     },
     "2": {
         "event": "Code Busters",
@@ -15,7 +15,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Code Busters",
-        "small-desc":"Coding challenge"
+        "small_desc":"Coding challenge"
     },
     "3": {
         "event": "Web Weavers",
@@ -24,7 +24,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Web Weavers",
-        "small-desc":"Difficult task to search from web"
+        "small_desc":"Difficult task to search from web"
     },
     "4": {
         "event": "Dig the Web",
@@ -33,7 +33,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Dig the Web",
-        "small-desc":"Find Clues from Google"
+        "small_desc":"Find Clues from Google"
     },
     "5": {
         "event": "Enchanted Maze",
@@ -42,7 +42,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Enchanted Maze",
-        "small-desc":"Line following robot"
+        "small_desc":"Line following robot"
     },
     "6": {
         "event": "Wartalaap",
@@ -51,7 +51,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Wartalaap",
-        "small-desc":"Don't Settle! Debate!"
+        "small_desc":"Don't Settle! Debate!"
     },
     "7": {
         "event": "Wordsworth",
@@ -60,7 +60,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Wordsworth",
-        "small-desc":"Challenge your Vocabulary!"
+        "small_desc":"Challenge your Vocabulary!"
     },
     "8": {
         "event": "Qurious",
@@ -69,7 +69,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Qurious",
-        "small-desc":"  "
+        "small_desc":"  "
     },
     "9": {
         "event": "Dress your Book",
@@ -78,7 +78,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Dress your Book",
-        "small-desc":"Design a cover for your book"
+        "small_desc":"Design a cover for your book"
     },
     "10": {
         "event": "Twist in the Tale",
@@ -87,7 +87,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"TITT",
-        "small-desc":"Tell your story with a alternative endings!"
+        "small_desc":"Tell your story with a alternative endings!"
     },
     "11": {
         "event": "Mock Loksabha",
@@ -96,7 +96,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Mock Loksabha",
-        "small-desc":"Experience a mock Lok Sabha"
+        "small_desc":"Experience a mock Lok Sabha"
     },
     "12": {
         "event": "India Quiz (Cancelled)",
@@ -105,7 +105,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"",
-        "small-desc":"  "
+        "small_desc":"  "
     },
     "13": {
         "event": "Biz Quiz",
@@ -114,7 +114,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Biz Quiz",
-        "small-desc":"Quiz on Business"
+        "small_desc":"Quiz on Business"
     },
     "14": {
         "event": "Idea Challenge",
@@ -123,7 +123,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Idea Challenge",
-        "small-desc":"Present Your Creative Idea!"
+        "small_desc":"Present Your Creative Idea!"
     },
     "15": {
         "event": "Logo Quiz",
@@ -132,7 +132,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Logo Quiz",
-        "small-desc":"Guess the Logo!"
+        "small_desc":"Guess the Logo!"
     },
     "16": {
         "event": "Karobaar",
@@ -141,7 +141,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Karobaar",
-        "small-desc":"Sell me this!"
+        "small_desc":"Sell me this!"
     },
     "17": {
         "event": "Hoverpod",
@@ -150,7 +150,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Hoverpod",
-        "small-desc":"Hoverpod! Hoverpod!"
+        "small_desc":"Hoverpod! Hoverpod!"
     },
     "18": {
         "event": "Robo Dangal",
@@ -159,7 +159,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Robo Dangal",
-        "small-desc":"Robot is indeed a fighter!"
+        "small_desc":"Robot is indeed a fighter!"
     },
     "19": {
         "event": "Electrivia",
@@ -168,7 +168,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Electrivia",
-        "small-desc":"Electrical Quiz"
+        "small_desc":"Electrical Quiz"
     },
     "20": {
         "event": "Daily Hacks",
@@ -177,7 +177,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Daily Hacks",
-        "small-desc":"Technical layout of waste"
+        "small_desc":"Technical layout of waste"
     },
     "21": {
         "event": "Rube Goldberg Challenge",
@@ -186,7 +186,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"RBC",
-        "small-desc":"Build a Rube Goldberg Machine"
+        "small_desc":"Build a Rube Goldberg Machine"
     },
     "22": {
         "event": "Catapult Throw",
@@ -195,7 +195,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Catapult Throw",
-        "small-desc":"Design a Catapult"
+        "small_desc":"Design a Catapult"
     },
     "23": {
         "event": "Product modification challenge",
@@ -204,7 +204,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"PMC",
-        "small-desc":"Modify your product"
+        "small_desc":"Modify your product"
     },
     "24": {
         "event": "Test your endurance",
@@ -212,7 +212,7 @@
         "cat":"fun",
         "form-link":"TYE",
         "doc-link":"Knock out cycle race",
-        "small-desc":"  "
+        "small_desc":"  "
     },
     "25": {
         "event": "Water Rocket",
@@ -221,7 +221,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Water Rocket",
-        "small-desc":"It’s simple! Complex it!"
+        "small_desc":"It’s simple! Complex it!"
     },
     "26": {
         "event": "Widget Mania",
@@ -230,7 +230,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Widget Mania",
-        "small-desc":"Welcome motorheads!"
+        "small_desc":"Welcome motorheads!"
     },
     "27": {
         "event": "Designstein",
@@ -239,7 +239,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Designstein",
-        "small-desc":"Design a CAD"
+        "small_desc":"Design a CAD"
     },
     "28": {
         "event": "Junkyard Wars",
@@ -248,7 +248,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Junkyard Wars",
-        "small-desc":"Build from Junk"
+        "small_desc":"Build from Junk"
     },
     "29": {
         "event": "Auto Quiz",
@@ -257,7 +257,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Auto Quiz",
-        "small-desc":"Auto Trivia"
+        "small_desc":"Auto Trivia"
     },
     "30": {
         "event": "Lead the Beast",
@@ -266,7 +266,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Lead the Beast",
-        "small-desc":"Ride an ATV!"
+        "small_desc":"Ride an ATV!"
     },
     "31": {
         "event": "Embrace the speed",
@@ -275,7 +275,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Embrace the speed",
-        "small-desc":"Ride an e-Vehicle!"
+        "small_desc":"Ride an e-Vehicle!"
     },
     "32": {
         "event": "Tech Paper Presentation",
@@ -284,7 +284,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"TTP",
-        "small-desc":"Presentation on Automobile Industry"
+        "small_desc":"Presentation on Automobile Industry"
     },
     "33": {
         "event": "Automotive Hunt",
@@ -293,7 +293,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Automotive Hunt",
-        "small-desc":"Thrilling treasure hunt awaits you!"
+        "small_desc":"Thrilling treasure hunt awaits you!"
     },
     "34": {
         "event": "Claw your way out",
@@ -302,7 +302,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"CYWO",
-        "small-desc":"Contest on Real Time Problem Solving"
+        "small_desc":"Contest on Real Time Problem Solving"
     },
     "35": {
         "event": "Robo soccer",
@@ -311,7 +311,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Robo soccer",
-        "small-desc":"Hey bots! Time for a soccer match!"
+        "small_desc":"Hey bots! Time for a soccer match!"
     },
     "36": {
         "event": "Find the Electronics",
@@ -320,7 +320,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"FET",
-        "small-desc":"Electronics treasure hunt"
+        "small_desc":"Electronics treasure hunt"
     },
     "37": {
         "event": "CETronics",
@@ -329,7 +329,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"CETronics",
-        "small-desc":"Electronics Quiz"
+        "small_desc":"Electronics Quiz"
     },
     "38": {
         "event": "UAV killer.",
@@ -338,7 +338,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"UAV killer",
-        "small-desc":"Make a RC-Drone"
+        "small_desc":"Make a RC-Drone"
     },
     "39": {
         "event": "Paper Wings Challenge ",
@@ -347,7 +347,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Paper Wings",
-        "small-desc":"Build a Paper Plane"
+        "small_desc":"Build a Paper Plane"
     },
     "40": {
         "event": "Turbulence",
@@ -356,7 +356,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Turbulence",
-        "small-desc":"Aerospace Quiz"
+        "small_desc":"Aerospace Quiz"
     },
     "41": {
         "event": "Light Speed Presentation Challenge",
@@ -365,7 +365,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"LPSC",
-        "small-desc":"  "
+        "small_desc":"  "
     },
     "42": {
         "event": "Biobuzz",
@@ -374,7 +374,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Biobuzz",
-        "small-desc":"Biology Quiz"
+        "small_desc":"Biology Quiz"
     },
     "43": {
         "event": "EL Cartel",
@@ -383,7 +383,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"EL Cartel",
-        "small-desc":"Poster Making on Biology,Biotech"
+        "small_desc":"Poster Making on Biology,Biotech"
     },
     "44": {
         "event": "Pictionary",
@@ -392,7 +392,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Pictionary",
-        "small-desc":"Remember childhood Dumb Charades game?"
+        "small_desc":"Remember childhood Dumb Charades game?"
     },
     "45": {
         "event": "Tech talk",
@@ -401,7 +401,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Tech talk",
-        "small-desc":"Seminar on Technology"
+        "small_desc":"Seminar on Technology"
     },
     "46": {
         "event": "Hocus Focus",
@@ -410,7 +410,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Hocus Focus",
-        "small-desc":"Are you good at solving puzzles?"
+        "small_desc":"Are you good at solving puzzles?"
     },
     "47": {
         "event": "Technical Poster Presentation",
@@ -419,7 +419,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"TPP",
-        "small-desc":"  "
+        "small_desc":"  "
     },
     "48": {
         "event": "Design Challenge",
@@ -428,7 +428,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Design Challenge",
-        "small-desc":"Present your solution"
+        "small_desc":"Present your solution"
     },
     "49": {
         "event": "Construzione",
@@ -437,7 +437,7 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Construzione",
-        "small-desc":"Making Bridge"
+        "small_desc":"Making Bridge"
     },
     "50": {
         "event": "Civi Quiz",
@@ -446,6 +446,6 @@
         "form-link":"",
         "doc-link":"",
         "heading":"Civi Quiz",
-        "small-desc":"  "
+        "small_desc":"  "
     }
 }
