@@ -8,7 +8,11 @@
         "heading":"Rescue Rangers",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "2": {
         "event": "Code Busters",
@@ -19,7 +23,11 @@
         "heading":"Code Busters",
         "small_desc":"Coding challenge",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "3": {
         "event": "Web Weavers",
@@ -30,7 +38,11 @@
         "heading":"Web Weavers",
         "small_desc":"Difficult task to search from web",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "4": {
         "event": "Dig the Web",
@@ -41,7 +53,11 @@
         "heading":"Dig the Web",
         "small_desc":"Find Clues from Google",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "5": {
         "event": "Enchanted Maze",
@@ -52,7 +68,11 @@
         "heading":"Enchanted Maze",
         "small_desc":"Line following robot",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "6": {
         "event": "Wartalaap",
@@ -63,7 +83,11 @@
         "heading":"Wartalaap",
         "small_desc":"Don't Settle! Debate!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "7": {
         "event": "Wordsworth",
@@ -74,7 +98,11 @@
         "heading":"Wordsworth",
         "small_desc":"Challenge your Vocabulary!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "8": {
         "event": "Qurious",
@@ -85,7 +113,11 @@
         "heading":"Qurious",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "9": {
         "event": "Dress your Book",
@@ -96,7 +128,11 @@
         "heading":"Dress your Book",
         "small_desc":"Design a cover for your book",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "10": {
         "event": "Twist in the Tale",
@@ -107,7 +143,11 @@
         "heading":"TITT",
         "small_desc":"Tell your story with a alternative endings!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "11": {
         "event": "Mock Loksabha",
@@ -118,7 +158,11 @@
         "heading":"Mock Loksabha",
         "small_desc":"Experience a mock Lok Sabha",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "12": {
         "event": "India Quiz (Cancelled)",
@@ -129,7 +173,11 @@
         "heading":"",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "13": {
         "event": "Biz Quiz",
@@ -140,7 +188,11 @@
         "heading":"Biz Quiz",
         "small_desc":"Quiz on Business",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "14": {
         "event": "Idea Challenge",
@@ -151,7 +203,11 @@
         "heading":"Idea Challenge",
         "small_desc":"Present Your Creative Idea!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "15": {
         "event": "Logo Quiz",
@@ -162,7 +218,11 @@
         "heading":"Logo Quiz",
         "small_desc":"Guess the Logo!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "16": {
         "event": "Karobaar",
@@ -173,7 +233,11 @@
         "heading":"Karobaar",
         "small_desc":"Sell me this!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "17": {
         "event": "Hoverpod",
@@ -184,7 +248,11 @@
         "heading":"Hoverpod",
         "small_desc":"Hoverpod! Hoverpod!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "18": {
         "event": "Robo Dangal",
@@ -195,7 +263,11 @@
         "heading":"Robo Dangal",
         "small_desc":"Robot is indeed a fighter!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "19": {
         "event": "Electrivia",
@@ -206,7 +278,11 @@
         "heading":"Electrivia",
         "small_desc":"Electrical Quiz",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "20": {
         "event": "Daily Hacks",
@@ -217,7 +293,11 @@
         "heading":"Daily Hacks",
         "small_desc":"Technical layout of waste",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "21": {
         "event": "Rube Goldberg Challenge",
@@ -228,7 +308,11 @@
         "heading":"RBC",
         "small_desc":"Build a Rube Goldberg Machine",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "22": {
         "event": "Catapult Throw",
@@ -239,7 +323,11 @@
         "heading":"Catapult Throw",
         "small_desc":"Design a Catapult",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "23": {
         "event": "Product modification challenge",
@@ -250,7 +338,11 @@
         "heading":"PMC",
         "small_desc":"Modify your product",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "24": {
         "event": "Test your endurance",
@@ -260,7 +352,11 @@
         "doc_link":"Knock out cycle race",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "25": {
         "event": "Water Rocket",
@@ -271,7 +367,11 @@
         "heading":"Water Rocket",
         "small_desc":"It’s simple! Complex it!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "26": {
         "event": "Widget Mania",
@@ -282,7 +382,11 @@
         "heading":"Widget Mania",
         "small_desc":"Welcome motorheads!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "27": {
         "event": "Designstein",
@@ -293,7 +397,11 @@
         "heading":"Designstein",
         "small_desc":"Design a CAD",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "28": {
         "event": "Junkyard Wars",
@@ -304,7 +412,11 @@
         "heading":"Junkyard Wars",
         "small_desc":"Build from Junk",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "29": {
         "event": "Auto Quiz",
@@ -315,7 +427,11 @@
         "heading":"Auto Quiz",
         "small_desc":"Auto Trivia",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "30": {
         "event": "Lead the Beast",
@@ -326,7 +442,11 @@
         "heading":"Lead the Beast",
         "small_desc":"Ride an ATV!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "31": {
         "event": "Embrace the speed",
@@ -337,7 +457,11 @@
         "heading":"Embrace the speed",
         "small_desc":"Ride an e-Vehicle!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "32": {
         "event": "Tech Paper Presentation",
@@ -348,7 +472,11 @@
         "heading":"TTP",
         "small_desc":"Presentation on Automobile Industry",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "33": {
         "event": "Automotive Hunt",
@@ -359,7 +487,11 @@
         "heading":"Automotive Hunt",
         "small_desc":"Thrilling treasure hunt awaits you!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "34": {
         "event": "Claw your way out",
@@ -370,7 +502,11 @@
         "heading":"CYWO",
         "small_desc":"Contest on Real Time Problem Solving",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "35": {
         "event": "Robo soccer",
@@ -381,7 +517,11 @@
         "heading":"Robo soccer",
         "small_desc":"Hey bots! Time for a soccer match!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "36": {
         "event": "Find the Electronics",
@@ -392,7 +532,11 @@
         "heading":"FET",
         "small_desc":"Electronics treasure hunt",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "37": {
         "event": "CETronics",
@@ -403,7 +547,11 @@
         "heading":"CETronics",
         "small_desc":"Electronics Quiz",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "38": {
         "event": "UAV killer.",
@@ -414,7 +562,11 @@
         "heading":"UAV killer",
         "small_desc":"Make a RC-Drone",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "39": {
         "event": "Paper Wings Challenge ",
@@ -425,7 +577,11 @@
         "heading":"Paper Wings",
         "small_desc":"Build a Paper Plane",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "40": {
         "event": "Turbulence",
@@ -436,7 +592,11 @@
         "heading":"Turbulence",
         "small_desc":"Aerospace Quiz",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "41": {
         "event": "Light Speed Presentation Challenge",
@@ -447,7 +607,11 @@
         "heading":"LPSC",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "42": {
         "event": "Biobuzz",
@@ -458,7 +622,11 @@
         "heading":"Biobuzz",
         "small_desc":"Biology Quiz",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "43": {
         "event": "EL Cartel",
@@ -469,7 +637,11 @@
         "heading":"EL Cartel",
         "small_desc":"Poster Making on Biology,Biotech",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "44": {
         "event": "Pictionary",
@@ -480,7 +652,11 @@
         "heading":"Pictionary",
         "small_desc":"Remember childhood Dumb Charades game?",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "45": {
         "event": "Tech talk",
@@ -491,7 +667,11 @@
         "heading":"Tech talk",
         "small_desc":"Seminar on Technology",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "46": {
         "event": "Hocus Focus",
@@ -502,7 +682,11 @@
         "heading":"Hocus Focus",
         "small_desc":"Are you good at solving puzzles?",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "47": {
         "event": "Technical Poster Presentation",
@@ -513,7 +697,11 @@
         "heading":"TPP",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "48": {
         "event": "Design Challenge",
@@ -524,7 +712,11 @@
         "heading":"Design Challenge",
         "small_desc":"Present your solution",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "49": {
         "event": "Construzione",
@@ -535,7 +727,11 @@
         "heading":"Construzione",
         "small_desc":"Making Bridge",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "50": {
         "event": "Civi Quiz",
@@ -546,7 +742,11 @@
         "heading":"Civi Quiz",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "51": {
         "event": "Memeology",
@@ -557,7 +757,11 @@
         "heading":"Memeology",
         "small_desc":"Everywhere I go, I see memes",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "52": {
         "event": "Tasveer",
@@ -568,7 +772,11 @@
         "heading":"Tasveer",
         "small_desc":"'TASVEER': the online photography contest",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "53": {
         "event": "Udaan",
@@ -579,7 +787,11 @@
         "heading":"Udaan",
         "small_desc":"Workshop on Micro-drone making",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" yet to reveal",
+        "coordinators":{
+            "name1":"phone1",
+            "name2":"phone2"
+        }
     },
     "54": {
         "event": "Autoworkshop",
