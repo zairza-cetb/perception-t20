@@ -16,10 +16,13 @@ $(document).ready(function() {
       // Check if the user is already registered for the event
       // and set the function of the button as required
       fetch(`/chregister/${eventID}`).then(function(res) {
+        if (res.ok) {
         return res.text();
+        } else {
+          return "E";
+        }
       }).then(function(message) {
         let buttonText;
-        console.log(message);
         if (message == "T") {
 
           // Make the button into a Unregister button
@@ -107,7 +110,11 @@ $(document).ready(function() {
       // If the button says Register
       // make a GET request to the register route
       fetch(`/register/${mod.eventID}`).then(function(res) {
-        return res.text();
+        if (res.ok) {
+          return res.text();
+          } else {
+            return "E";
+          }
       })
       .then(function(data) {
 
@@ -116,6 +123,22 @@ $(document).ready(function() {
           // Change text to Unregister
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
+        } else {
+          // Change text back to Register
+          $("#regbtn").text("Register");
+          $("#regbtn").addClass("btn-success");
+        }
+
+        if (data == "E") {
+          // Close the modal
+          $(mod).toggleClass("mod--show");
+          $("body").toggleClass("hide-overflow");
+          // Notify errors
+          Toast.fire({
+            icon: "info",
+            title: "Sorry, we couldn't do that. Please reload the page."
+          });
+
         }
 
         // Enable the button
@@ -129,14 +152,33 @@ $(document).ready(function() {
       // make a GET request to the unregister route
       fetch(`/unregister/${mod.eventID}`).then(function(res) {
 
-        return res.text();
+        if (res.ok) {
+          return res.text();
+          } else {
+            return "E";
+          }
       }).then(function(data) {
 
         if (data == "T") { // If Unregistered successfully
 
-          // Change text to Unregister
+          // Change text to Register
           $("#regbtn").text("Register");
           $("#regbtn").addClass("btn-success");
+        } else {
+          // Change text back to Unregister
+          $("#regbtn").text("Unregister");
+          $("#regbtn").addClass("btn-danger");
+        }
+
+        if (data == "E") {
+          // Close the modal
+          $(mod).toggleClass("mod--show");
+          $("body").toggleClass("hide-overflow");
+          // Notify errors
+          Toast.fire({
+            icon: "info",
+            title: "Sorry, we couldn't do that. Please reload the page."
+          });
         }
 
         // Enable the button
