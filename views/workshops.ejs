@@ -99,12 +99,12 @@
                 <% if (Object.prototype.hasOwnProperty.call(evjson, d)) { %>
                     <% if (evjson[d].cat.trim() == "workshop") {%>
                         <div class="card">
-                            <div class="imgBx" data-text="<%= evjson[d].heading %>">
+                            <div class="imgBx" data-text="<%= evjson[d].heading %>"> 
                                 <img src="assets/img/eventicons/<%= d %>.png">
                             </div>
                             <div class="content">
                                 <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>">
-                                <h3 class="glitch" data-text="<%= evjson[d].event %>"><%= evjson[d].event %></h3>
+                                <h3 class="glitch" data-text="<%= evjson[d].event %>"><%= evjson[d].event %></h3><br>
                                 <p class="glitch" data-text="<%= evjson[d].small_desc %>"><%= evjson[d].small_desc %></p>
                                 <button class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
                                 </div>
