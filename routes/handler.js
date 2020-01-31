@@ -158,7 +158,7 @@ router.post("/register", function (req, res) {
             from: 'Perception 2020 Team, CETB',
             to: user.username,
             subject: 'Perception 2020 | Password reset',
-            text: `Hi, ${user.name}\t\nWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception-t20.herokuapp.com/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
+            text: `Hi, ${user.name}\t\nWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception.cet.edu.in/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
           }, function (error, info) {
             if (error) {
               message = "Sorry, There seems to be a problem at our end";
