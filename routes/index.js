@@ -104,6 +104,18 @@ router.get('/funevents', function(req,res,next) {
 	}
 	res.render('funevents', { message: message });
 });
+// get workshops page 
+router.get('/workshops', function(req,res,next) {
+	let message;
+	if (req.query.loginSuccess == "1") {
+		message = `Welcome, ${req.user.name}`;
+	}
+	if (req.query.logoutSuccess == "1"){
+		message = "Successfully logged you out";
+	}
+	res.render('workshops', { message: message });
+});
+
 /* GET comingsoon page. */
 router.get('/comingsoon', function(req,res,next) {
 	res.render('comingsoon');
