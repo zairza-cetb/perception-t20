@@ -6,7 +6,13 @@ var express = require("express"),
     router = express.Router(),
     ejs = require("ejs"),
     path = require("path"),
-    nodemailer =require("nodemailer");
+    nodemailer =require("nodemailer"),
+    event_json=require("./events.json");
+
+// Utility to check if a string is a valid event ID
+function isValidEventID(value) {
+  return (/^\d+$/.test(value)) && (event_json.hasOwnProperty(value));
+}
     
 //Initialization of passportjs
 passport.use(new localStrategy(User.authenticate()));
@@ -21,11 +27,14 @@ router.use((req, res, next) => {
   next();
 });
 
-const transporter=nodemailer.createTransport({
-  service:"gmail",
+const transporter = nodemailer.createTransport({
+  service:"Gmail",
   auth:{
-    user:"perceptioncet@gmail.com",
-    pass:process.env.EMAIL_PASSWORD,                       //TODO:use the password after hosting
+  type:"OAuth2",
+    user:"perception.cetb@gmail.com",
+    clientId: "408361162632-gh5634uanva94clel791fhsodfg4vc5g.apps.googleusercontent.com",
+    clientSecret: "ZK5uE6H8vYjxMhdlAJbhq2LS",
+    refreshToken: "1//04Ut61xHb3p2VCgYIARAAGAQSNwF-L9IrR2K2rhYQZhE_8tc1OjsmLbxsSBUOK1hGI0k6nLoSnFbx_wNE30kv4AtvP40IoArJxKo"
   }
 });
 
@@ -107,17 +116,25 @@ router.post("/register", function (req, res) {
 
   // Forgot password form posts here with username(email address) and phone number in body
   router.post('/forgotpassword', (req, res) => {
-    console.log('hello there', req.body);
     User.findOne({
       username: req.body.username,
       phone: req.body.phone,
     }, (err, user) => {
+      let message;
       if (err) {
-        console.log('pwresterr');
-        // TODO: Something
+        message = "Sorry, There seems to be a problem at our end";
+        if (req.query.ref) {
+          res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+        } else {
+          res.redirect(`/login?err=${message}&ref=`);
+        }
       } else if (!user) {
-        console.log('nousererr');
-        // TODO TODO: Something more
+        message = "An account with the given credentials does not exist";
+        if (req.query.ref) {
+          res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+        } else {
+          res.redirect(`/login?err=${message}&ref=`);
+        }
       } else {
         // create a new password reset request
         const resetRequest = new ResetRequest({
@@ -126,9 +143,13 @@ router.post("/register", function (req, res) {
 
         // save the request to the database
         resetRequest.save((err, request) => {
-          console.log(request);
           if (err) {
-            // TODO TODO TODO : Handle error in saving request
+            message = "Sorry, There seems to be a problem at our end";
+            if (req.query.ref) {
+              res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+            } else {
+              res.redirect(`/login?err=${message}&ref=`);
+            }
             return;
           }
 
@@ -136,98 +157,137 @@ router.post("/register", function (req, res) {
           transporter.sendMail({
             from: 'Perception 2020 Team, CETB',
             to: user.username,
-            subject: 'Your password has changed',
-            text: `Hi, ${user.name}\n\tWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception.cet.edu.in/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
+            subject: 'Perception 2020 | Password reset',
+            text: `Hi, ${user.name}\t\nWe received a request to reset your Perception 2020 password. If this wasn't you, you can safely ignore this email, otherwise please go to the following link to reset your password:\nhttps://perception-t20.herokuapp.com/resetpassword/${resetRequest._id}\n\nThe Perception 2020 Team`,
           }, function (error, info) {
             if (error) {
-              console.log("mail error", error);
+              message = "Sorry, There seems to be a problem at our end";
+              if (req.query.ref) {
+                res.redirect(`/login?ref=${req.query.ref}&err=${message}`);
+              } else {
+                res.redirect(`/login?err=${message}&ref=`);
+              }
             } else {
-              console.log('Email sent: ' + info.response);
+              message = "Please check your E-Mail (also check your spam folder) for instructions on how to reset your password";
+              if (req.query.ref) {
+                res.redirect(`/login?ref=${req.query.ref}&message=${message}`);
+              } else {
+                res.redirect(`/login?message=${message}&ref=`);
+              }
             }
           });
         });
       }
     });
-    if (req.query.ref) {
-      res.redirect(`/login?ref=${req.query.ref}&message=Please check your email inbox for resetting your password`);
-    } else {
-      res.redirect('/login?message=Please check your email inbox for resetting your password&ref=');
-    }
   });
 
   // Reset password form posts here with new password
-  router.post('/resetpassword/:resetRequestID', function(req, res) {
+  router.post('/resetpassword/:resetRequestID', function(req, res, next) {
     ResetRequest.findByIdAndDelete(req.params.resetRequestID, function(requestError, resetRequest) {
       if (requestError || !resetRequest) {
-        //TODO: Handle resetRequest not found
-        console.log('reset request error', requestError);
+        if (req.query.ref) {
+          res.redirect(`/login?ref=${req.query.ref}&err=Invalid password reset link, Please go to Forgot Password to request another link`);
+        } else {
+          res.redirect('/login?err=Invalid password reset link, Please go to Forgot Password to request another link&ref=');
+        }
       } else {
         User.findById(resetRequest.r_id, function(userError, user) {
           user.setPassword(req.body.password, function(hashingError, updatedUser) {
             if (hashingError || !updatedUser) {
-              // TODO: Handle hashing errors
-              console.log('hashing errors', hashingError);
+              if (req.query.ref) {
+                res.redirect(`/login?ref=${req.query.ref}&err=Sorry, There seems to be a problem at our end`);
+              } else {
+                res.redirect('/login?err=Sorry, There seems to be a problem at our end&ref=');
+              }
             } else {
-              updatedUser.save().catch(saveError => {
-                console.log('saving error', saveError);
-                // TODO: Handle saving error
+              updatedUser.save()
+              .then(() => {
+                if (req.query.ref) {
+                  res.redirect(`/login?ref=${req.query.ref}&message=Your password has been successfully reset. Please login to continue`);
+                } else {
+                  res.redirect('/login?message=Your password has been successfully reset. Please login to continue&ref=');
+                }
+              })
+              .catch(saveError => {
+                if (req.query.ref) {
+                  res.redirect(`/login?ref=${req.query.ref}&err=Sorry, There seems to be a problem at our end`);
+                } else {
+                  res.redirect('/login?err=Sorry, There seems to be a problem at our end&ref=');
+                }
               });
             }
           });
         });
       }
     });
-    if (req.query.ref) {
-      res.redirect(`/login?ref=${req.query.ref}`);
-    } else {
-      res.redirect('/login?ref=');
-    }
   });
 
 ///////////////////////////////////////////////////////////////////////
 /* Backend for event registration */
 router.get('/register/:eventID', (req, res) => {
-	User.findOne({_id:req.user._id},(err,user)=>{
-	  user.events.push(req.params.eventID)
-	  user.save((err, data)=>{
-		if(err) {
-      console.log(err);
-      res.send("F")
-    }
-		else { res.send("T");
-	   }
-	  })
-	})
+  // Checks if the eventID is a valid event ID
+  if (isValidEventID(req.params.eventID)) {
+    User.findOne({ _id: req.user._id }, (err, user) => {
+      user.events.push(req.params.eventID)
+      user.save((err, data) => {
+        if (err) {
+          console.log(err);
+          res.send("F");
+        }
+        else {
+          res.send("T");
+        }
+      });
+    });
+  } else {
+    res.statusCode = 500;
+    res.send('F');
+  }
 });
 
 router.get('/chregister/:eventID', (req, res) => {
-	var ID = req.params.eventID;
-	User.findOne({_id: req.user._id}, (err,user) => {
-	  if(err) console.log(err);
-	  else{
-		let found = user.events.includes(ID);
-		  if(err) console.log('0');
-		  else if(found) 
-			res.send("T");
-		  else 
-			res.send("F");
-	  }
-	});
+  // Checks if the eventID is a valid event ID
+  if (isValidEventID(req.params.eventID)) {
+    var ID = req.params.eventID;
+    User.findOne({ _id: req.user._id }, (err, user) => {
+      if (err) {
+        res.statusCode = 500;
+        res.send('F');
+      }
+      else {
+
+        let found = user.events.includes(ID);
+        if (found)
+          res.send("T");
+        else
+          res.send("F");
+      }
+    });
+  } else {
+    res.statusCode = 500;
+    res.send('F');
+  }
 });
 
 router.get('/unregister/:eventID', (req, res) => {
-	User.findOne({_id:req.user._id},(err,user)=>{
-	  user.events.pull(req.params.eventID)
-	  user.save((err, data)=>{
-		if(err) {
-      console.log(err);
-      res.send("F");
-    }
-		else {
-      res.send("T");
-		}
-	  })
-	})
+  // Checks if the eventID is a valid event ID
+  if (isValidEventID(req.params.eventID)) {
+    User.findOne({ _id: req.user._id }, (err, user) => {
+      user.events.pull(req.params.eventID)
+      user.save((err, data) => {
+        if (err) {
+          res.statusCode = 500;
+          res.send("F");
+        }
+        else {
+          res.send("T");
+        }
+      });
+    });
+  } else {
+    res.statusCode = 500;
+    res.send('F');
+  }
 });
 ///////////////////////////////////////////////////////////////////////// 
 
