@@ -211,7 +211,8 @@
         "desc": "The 'Test your Endurance' is a knock out cycle race between the riders to test their endurance.",
         "cat":"fun",
         "form-link":"TYE",
-        "doc-link":"Knock out cycle race"
+        "doc-link":"Knock out cycle race",
+        "small-desc":"  "
     },
     "25": {
         "event": "Water Rocket",
