@@ -52,15 +52,6 @@
                          -o-transform: none;
                                 transform: none;
             }
-
-
-
-        
-        @media screen and (min-width: 768px) {
-        .container{
-          margin-top:-350px;
-      }
-      }
             
       .link-to-home {
     position:absolute;
@@ -104,27 +95,27 @@
     <center ><div class="gradient-box"><span>MANAGEMENT EVENTS</span></div></center>
     <div class="wrapper">
         <div class="container">
-            <% let i=1; %>
         <% for (var d in evjson) { %>
             <% if (Object.prototype.hasOwnProperty.call(evjson, d)) { %>
-            <% if (evjson[d].cat === "management") {%>
-                <div class="card">
-                    <div class="imgBx" data-text="<%= evjson[d].heading %>">
-                        <img src="assets/img/eventicons/<%= d %>.png">
-                    </div>
-                    <div class="content">
-                        <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>">
-                        <h3 class="glitch" data-text="<%= evjson[d].event %>"><%= evjson[d].event %></h3>
-                        <p class="glitch" data-text="<%= evjson[d].small-desc %>"><%= evjson[d].small-desc %></p>
-                        <button class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                <% if (evjson[d].cat.trim() == "management") {%>
+                    <div class="card">
+                        <div class="imgBx" data-text="<%= evjson[d].heading %>">
+                            <img src="assets/img/eventicons/<%= d %>.png">
+                        </div>
+                        <div class="content">
+                            <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>">
+                            <h3 class="glitch" data-text="<%= evjson[d].event %>"><%= evjson[d].event %></h3>
+                            <p class="glitch" data-text="<%= evjson[d].small_desc %>"><%= evjson[d].small_desc %></p>
+                            <button class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <% } %>
-            <% i=i+1; %>
+                <% } %>
             <% } %>
         <% } %>
 
+        
+        
         </div>
     </div>
       
