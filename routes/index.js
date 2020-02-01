@@ -58,7 +58,7 @@ router.get('/techevents', function(req, res, next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('techevents', { message: message });
+	res.render('techevents', { message: message , evjson: event_json });
 });
 /* GET litevents page. */
 router.get('/litevents', function(req,res,next) {
@@ -69,7 +69,7 @@ router.get('/litevents', function(req,res,next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('litevents', { message: message });
+	res.render('litevents', { message: message , evjson: event_json });
 });
 /* GET management events page. */
 router.get('/manevents', function(req,res,next) {
@@ -80,7 +80,7 @@ router.get('/manevents', function(req,res,next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('manaevents', { message: message });
+	res.render('manaevents', { message: message , evjson: event_json });
 });
 /* GET flagship events page. */
 router.get('/flagevents', function(req,res,next) {
@@ -91,7 +91,7 @@ router.get('/flagevents', function(req,res,next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('flagshipevents', { message: message });
+	res.render('flagshipevents', { message: message , evjson: event_json });
 });
 /* GET fun events page. */
 router.get('/funevents', function(req,res,next) {
@@ -102,7 +102,7 @@ router.get('/funevents', function(req,res,next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('funevents', { message: message });
+	res.render('funevents', { message: message , evjson: event_json });
 });
 // get workshops page 
 router.get('/workshops', function(req,res,next) {
@@ -113,7 +113,7 @@ router.get('/workshops', function(req,res,next) {
 	if (req.query.logoutSuccess == "1"){
 		message = "Successfully logged you out";
 	}
-	res.render('workshops', { message: message });
+	res.render('workshops', { message: message, evjson: event_json });
 });
 
 /* GET comingsoon page. */

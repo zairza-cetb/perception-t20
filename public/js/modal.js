@@ -3,13 +3,14 @@ $(document).ready(function() {
 
   $(".evbtn").click(function(event) {
     window.currentItem = $(event.target).parent();
-    console.log("clicked", currentItem);
+    // console.log("clicked", currentItem);
     if (!$(mod).hasClass("mod--show")) {
       let eventID = $(currentItem).attr("data-id")
       mod.eventID = eventID;
       let coverURL = `/assets/img/poster/${eventID}.jpg`;
       let title = $(currentItem).attr("data-title");
       let desc = $(currentItem).attr('data-desc');
+      let link = $(currentItem).attr('data-link');
 
       $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
 
@@ -45,7 +46,7 @@ $(document).ready(function() {
         // $("#regbtn").text(buttonText);
         // $("#regbtn").removeClass("hide");
       });
-      console.log("clicked", title, coverURL, desc);
+      // console.log("clicked", title, coverURL, desc);
 
       // Add a cover image, title and description to the modal
       $("#mod__cover").attr("src", coverURL);
@@ -65,7 +66,7 @@ $(document).ready(function() {
       $("#mod__desc").text("");
     }
 
-    console.log("btn clicked");
+    // console.log("btn clicked");
 
     // Show the modal
     $(mod).toggleClass("mod--show");

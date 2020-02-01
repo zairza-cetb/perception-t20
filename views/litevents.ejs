@@ -95,68 +95,24 @@
       <center ><div class="gradient-box"><span>LITERARY EVENTS</span></div></center>
       <div class="wrapper">
         <div class="container">
-            <div class="card">
-                <div class="imgBx" data-text="Dress Your Book">
-                    <img src="assets/img/eventicons/9.png">
-                </div>
-                <div class="content">
-                    <div data-title="Dress Your Book" data-id="9" data-desc="Do not judge a book by its covers. Well, not this time. Your book will be judged by the covers you make. In 'Dress your Book', show off your creative and artistic skills by decorating your book with a cover. The participating teams will have to design a cover for a given book.">
-                       <h3 class="glitch" data-text="Dress Your Book">Dress Your Book</h3>
-                       <p class="glitch" data-text="Design a cover for your book">Design a cover for your book</p>
-                       <button id="eventButton37" class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
-                    </div>
-                </div>
-          </div>
-          <div class="card">
-            <div class="imgBx" data-text="Wordsworth">
-                <img src="assets/img/eventicons/7.png">
-            </div>
-            <div class="content">
-                <div data-title="Wordsworth" data-id="7" data-desc="We are ready to begin the vocabulary marathon. Pack your dictionaries and join the run because PERCEPTION brings you the event 'Wordsworth' where your knowledge of vocabulary will be tested. Tiptoe them with words; with anagrams, crosswords and vocabulary-based fun challenges, we will bring out the creative quotient in you. So keep your 'word-root' strong, for we come to thrill your brains.">
-                   <h3 class="glitch" data-text="Wordsworth">Wordsworth</h3>
-                   <p class="glitch" data-text="Challenge Your Vocabulary!">Challenge Your Vocabulary!</p>
-                   <button id="eventButton46" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
-                </p>
-               </div>
-            </div>
-      </div>
-          <div class="card">
-            <div class="imgBx" data-text="Wartalap">
-                <img src="assets/img/eventicons/6.png">
-            </div>
-            <div class="content">
-                <div data-title="Wartalap" data-id="6" data-desc="Would India achieve its economic targets or collapse? Is world peace at stake? What about climate change? Questions are plenty and the voices should be huge. Come make an impact and be heard. PERCEPTION brings you 'Wartalaap', a debate competition which revolves around current topics.">
-                   <h3 class="glitch" data-text="Wartalap">Wartalap</h3>
-                   <p class="glitch" data-text="Don’t settle! Debate!">Don’t settle! Debate!</p>
-                   <button id="eventButton45" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
-                </p>
-               </div>
-            </div>
-      </div>
-      <div class="card">
-            <div class="imgBx" data-text="TITT">
-                <img src="assets/img/eventicons/10.png">
-            </div>
-            <div class="content">
-                <div data-title="TITT" data-id="10" data-desc="Ever zoned out in the middle of the day thinking about alternate endings to your favourite movie, or how the movie would have turned out if some plots or scenes were changed? Are you someone who scripts make-believe stories and get a kick out of it? Do you like making really weird jokes about seemingly unrelated topics and have a great laugh? Look no further. In 'Twist in the Tale', we will go bonkers about movies, controversies, politics and so much more.">
-                   <h3 class="glitch" data-text="Twist in The Tale">Twist in The Tale</h3>
-                   <p class="glitch" data-text="Tell your story with alternate endings!">Tell your story with alternate endings!</p>
-                   <button id="eventButton38" class="evbtn btn btn-light-green" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
-                </div>
-            </div>
-      </div>
-      <!-- <div class="card">
-            <div class="imgBx" data-text="India Quiz">
-                <img src="assets/img/eventicons/thinking.png">
-            </div>
-            <div class="content">
-                <div data-title="India Quiz" data-id="9" data-desc="Ever zoned out in the middle of the day thinking about alternate endings to your favourite movie, or how the movie would have turned out if some plots or scenes were changed? Are you someone who scripts make-believe stories and get a kick out of it? Do you like making really weird jokes about seemingly unrelated topics and have a great laugh? Look no further. In 'Twist in the Tale', we will go bonkers about movies, controversies, politics and so much more.">
-                   <h3 class="glitch" data-text="India Quiz">India Quiz</h3>
-                   <p class="glitch" data-text="Tech and Business Tasks and Fundas">Tech and Business Tasks and Fundas</p>
-                   <button id="eventButton39" class="evbtn btn btn-light-green" data-toggle="modal" data-target="#eventModal39" style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
-                </div>
-            </div>
-      </div> -->
+            <% for (var d in evjson) { %>
+                <% if (Object.prototype.hasOwnProperty.call(evjson, d)) { %>
+                    <% if (evjson[d].cat.trim() == "literary") {%>
+                        <div class="card">
+                            <div class="imgBx" data-text="<%= evjson[d].heading %>">
+                                <img src="assets/img/eventicons/<%= d %>.png">
+                            </div>
+                            <div class="content">
+                                <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>">
+                                <h3 class="glitch" data-text="<%= evjson[d].event %>"><%= evjson[d].event %></h3><br>
+                                <p class="glitch" data-text="<%= evjson[d].small_desc %>"><%= evjson[d].small_desc %></p>
+                                <button class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                <% } %>
+            <% } %>
     </div>
       </div>
 </section>
