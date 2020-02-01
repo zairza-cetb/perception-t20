@@ -62,7 +62,7 @@
 }
 
 .mod__contents p {
-  margin: 2rem;
+  margin: 0.5rem 2rem;
 }
 
 .mod__contents img {
@@ -71,7 +71,7 @@
 }
 
 .mod__contents button {
-  margin: 2rem;
+  margin: 0 1rem;
 }
 
 .mod__close {
@@ -175,11 +175,13 @@
   display: flex;
   justify-content: center;
   visibility: hidden;
+  position: absolute;
 }
 
 #regbtn.hide + .spinner__container {
   visibility: visible;
   margin-top: 20px;
+  position: relative;
 }
 
 .hide {
@@ -190,4 +192,5 @@
 
 .mod__text a {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
