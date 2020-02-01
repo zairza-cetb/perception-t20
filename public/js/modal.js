@@ -10,7 +10,9 @@ $(document).ready(function() {
       let coverURL = `/assets/img/poster/${eventID}.jpg`;
       let title = $(currentItem).attr("data-title");
       let desc = $(currentItem).attr('data-desc');
-      let link = $(currentItem).attr('data-link');
+      let date_time = $(currentItem).attr('data-date_time');
+      let venue = $(currentItem).attr('data-venue');
+      // let link = $(currentItem).attr('data-link');
 
       $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
 
@@ -52,6 +54,7 @@ $(document).ready(function() {
       $("#mod__cover").attr("src", coverURL);
       $("#mod__title").text(title);
       $("#mod__desc").text(desc);
+      $("#mod__date_time_venue").text("Slot : "+date_time+"  Venue :" + venue);
     } else {
 
       // When the modal closes, remove both classes and hide the button
@@ -64,6 +67,7 @@ $(document).ready(function() {
       // Empty the title and description
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
+      $("#mod__date_time_venue").text("Slot : Loading...  Venue : Loading..." );
     }
 
     // console.log("btn clicked");
@@ -83,6 +87,7 @@ $(document).ready(function() {
     // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
     $("#mod__title").text("Loading...");
     $("#mod__desc").text("");
+    $("#mod__date_time_venue").text("Slot : Loading...  Venue : Loading..." );
   });
 
   $(".mod__close").click(function() {
@@ -95,6 +100,8 @@ $(document).ready(function() {
       // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
+      $("#mod__date_time_venue").text("Slot : Loading...  Venue : Loading..." );
+
   });
 
   $("#regbtn").click(function() {
