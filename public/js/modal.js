@@ -54,7 +54,7 @@ $(document).ready(function() {
       $("#mod__cover").attr("src", coverURL);
       $("#mod__title").text(title);
       $("#mod__desc").text(desc);
-      $("#mod__date_time_venue").text("Slot : "+date_time+"  Venue :" + venue);
+      $("#mod__date_time_venue").html("<strong>Slot :</strong> "+date_time+"  <strong>Venue :</strong>" + venue);
     } else {
 
       // When the modal closes, remove both classes and hide the button
@@ -67,7 +67,7 @@ $(document).ready(function() {
       // Empty the title and description
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
-      $("#mod__date_time_venue").text("Slot : Loading...  Venue : Loading..." );
+      $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Slot :</strong> Loading..." );
     }
 
     // console.log("btn clicked");
@@ -87,7 +87,7 @@ $(document).ready(function() {
     // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
     $("#mod__title").text("Loading...");
     $("#mod__desc").text("");
-    $("#mod__date_time_venue").text("Slot : Loading...  Venue : Loading..." );
+    $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Slot :</strong> Loading..." );
   });
 
   $(".mod__close").click(function() {
@@ -100,7 +100,7 @@ $(document).ready(function() {
       // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
-      $("#mod__date_time_venue").text("Slot : Loading...  Venue : Loading..." );
+      $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Slot :</strong> Loading..." );
 
   });
 
