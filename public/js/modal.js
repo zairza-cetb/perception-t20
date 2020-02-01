@@ -12,7 +12,9 @@ $(document).ready(function() {
       let desc = $(currentItem).attr('data-desc');
       let date_time = $(currentItem).attr('data-date_time');
       let venue = $(currentItem).attr('data-venue');
-      // let link = $(currentItem).attr('data-link');
+      let rule_link = $(currentItem).attr('data-rule_link');
+      let form_link = $(currentItem).attr('data-form_link');
+      // (rule_link === "")?(rule_link = '#'):(rule_link=rule_link);
 
       $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
 
@@ -35,6 +37,8 @@ $(document).ready(function() {
             .addClass("btn-danger")
             .text(buttonText)
             .removeClass("hide");
+          $("#mod__form_desc").addClass("show");
+          $("#mod__form_link").attr("href",form_link);  
         } else {
 
           // Make the button into a Register button
@@ -44,17 +48,39 @@ $(document).ready(function() {
             .addClass("btn-success")
             .text(buttonText)
             .removeClass("hide");
+            $("#mod__form_desc").addClass("hide");
         }
-        // $("#regbtn").text(buttonText);
-        // $("#regbtn").removeClass("hide");
       });
-      // console.log("clicked", title, coverURL, desc);
+
 
       // Add a cover image, title and description to the modal
       $("#mod__cover").attr("src", coverURL);
       $("#mod__title").text(title);
       $("#mod__desc").text(desc);
       $("#mod__date_time_venue").html("<strong>Slot :</strong> "+date_time+"  <strong>Venue :</strong>" + venue);
+      $('#mod__rule_link').attr("href",rule_link);
+      console.log(rule_link); 
+      $('#downloadbtn').click(function(){
+        
+        if(rule_link === '#'){
+          Toast.fire({
+            icon: "info",
+            title: "Sorry, Rule are not available yet."
+          });
+        }else{
+          window.location.href=rule_link;
+        }
+      });
+      $('#formbtn').click(function(){
+        if(rule_link === '#'){
+          Toast.fire({
+            icon: "info",
+            title: "Sorry, Forms are not available yet."
+          });
+        }else{
+          window.location.href=rule_link;
+        }
+      });
     } else {
 
       // When the modal closes, remove both classes and hide the button
@@ -67,7 +93,7 @@ $(document).ready(function() {
       // Empty the title and description
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
-      $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Slot :</strong> Loading..." );
+      $("#mod__date_time_venue").html("<strong>Slot :</strong> Loading...  <strong>Venue :</strong> Loading..." );
     }
 
     // console.log("btn clicked");
@@ -87,7 +113,7 @@ $(document).ready(function() {
     // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
     $("#mod__title").text("Loading...");
     $("#mod__desc").text("");
-    $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Slot :</strong> Loading..." );
+    $("#mod__date_time_venue").html("<strong>Slot :</strong> Loading...  <strong>Venue :</strong> Loading..." );
   });
 
   $(".mod__close").click(function() {
@@ -97,11 +123,11 @@ $(document).ready(function() {
 
 
     $("#regbtn").removeClass("btn-success").removeClass("btn-danger").addClass("hide");
+
       // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
-      $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Slot :</strong> Loading..." );
-
+      $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Venue :</strong> Loading..." );
   });
 
   $("#regbtn").click(function() {
@@ -131,10 +157,14 @@ $(document).ready(function() {
           // Change text to Unregister
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
+          $("#mod__form_desc").addClass("show");
+          $("#mod__form_link").attr("href",form_link); 
+          
         } else {
           // Change text back to Register
           $("#regbtn").text("Register");
           $("#regbtn").addClass("btn-success");
+          $("#mod__form_desc").addClass("hide");
         }
 
         if (data == "E") {
