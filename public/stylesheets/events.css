@@ -262,7 +262,7 @@ Primary style
     /* background-position: -320px 0; */
   }
   .cd-bouncy-nav li:nth-of-type(6) a::before {
-    background-image: url(/assets/img/bubble-icons/star.png);
+    background-image: url(/assets/img/bubble-icons/workshop.png);
     /* background-position: -400px 0; */
   }
   @media only screen and (min-width: 768px) {

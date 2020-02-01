@@ -2,8 +2,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Fun Events </title>
-        <meta name="description" content="Fun events of Perception 2020">
+        <title> Workshops </title>
+        <meta name="description" content="Workshops of Perception 2020">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/stylenew.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
@@ -21,7 +21,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
     </head>
-    <body >
+    <body>
         <%- include('partials/preloader') %>
         <%- include('partials/navbar') %> 
         <%- include('partials/modal') %>
@@ -81,26 +81,29 @@
     }
     
 }
+
+
         </style>
 
-    <!-- home button -->
+    <section">    
+
+                <!-- home button -->
     <section class="Homelogo">
         <a href="/" class="link-to-home" target=”_blank”></a>
     </section>
 
-    <section>    
-      <center ><div class="gradient-box"><span>FUN EVENTS</span></div></center>
+      <center ><div class="gradient-box"><span>Workshops</span></div></center>
       <div class="wrapper">
         <div class="container">
             <% for (var d in evjson) { %>
                 <% if (Object.prototype.hasOwnProperty.call(evjson, d)) { %>
-                    <% if (evjson[d].cat.trim() == "fun") {%>
+                    <% if (evjson[d].cat.trim() == "workshop") {%>
                         <div class="card">
-                            <div class="imgBx" data-text="<%= evjson[d].heading %>">
+                            <div class="imgBx" data-text="<%= evjson[d].heading %>"> 
                                 <img src="assets/img/eventicons/<%= d %>.png">
                             </div>
                             <div class="content">
-                                <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>" >
+                                <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>">
                                 <h3 class="glitch" data-text="<%= evjson[d].event %>"><%= evjson[d].event %></h3><br>
                                 <p class="glitch" data-text="<%= evjson[d].small_desc %>"><%= evjson[d].small_desc %></p>
                                 <button class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
@@ -109,7 +112,8 @@
                         </div>
                     <% } %>
                 <% } %>
-            <% } %>
+            <% } %> 
+          
     </div>
       </div>
 </section>
@@ -129,8 +133,8 @@
                             .addTo(controller);
         }
     </script>
-        <script src="js/sweet.js"></script>
     <% if(message) { %>
+        <script src="js/sweet.js"></script>
         <script>
           let message = "<%= message %>";
           Toast.fire({
