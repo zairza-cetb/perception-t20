@@ -6,6 +6,7 @@ var logger = require('morgan');
 var bodyParser = require("body-parser");
 var favicon = require('serve-favicon');
 const compression = require('compression');
+var secure = require('express-force-https');
 
 require('dotenv').config()
 
@@ -26,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public','assets','img', 'favicon.png')));
 app.use(compression());
-
+app.use(secure);
 //Express-Session n
 app.use(require("express-session")({
   secret: "Secrets shall not be disclosed",
