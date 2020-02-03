@@ -26,10 +26,9 @@ jQuery(document).ready(function($){
 	function updateSelectedNav(type) {
 		var selectedItem = $('.cd-selected'),
 			selectedItemPosition = selectedItem.index() + 1, 
-			leftPosition = selectedItem.offset().left,
+			leftPosition = $(".cd-selected").last().offset().left,
 			backgroundColor = selectedItem.data('color');
-		
-			console.log('mema',leftPosition)
+			// console.log('mema',leftPosition);
 
 		$('.cd-marker').removeClassPrefix('color').addClass('color-'+ selectedItemPosition).css({
 			'left': leftPosition,
@@ -53,7 +52,7 @@ jQuery(document).ready(function($){
 	};
   
   $(window).on('scroll',function() {
-    console.log('hihi');
+    // console.log('hihi');
     toggle3dBlock(false);
   });
    $(".cd-header").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function() {
@@ -64,7 +63,13 @@ jQuery(document).ready(function($){
 		 '/profile': 'cd-profile-link',
 		 '/register': 'cd-register-link',
 		 '/login': 'cd-login-link',
-		 '/events': 'cd-event-link'
+		 '/techevents':'cd-events-link',
+		 "/litevents":'cd-events-link',
+		 "/manevents":'cd-events-link',
+		 "/funevents":'cd-events-link',
+		 "/flagevents":'cd-events-link',
+		 "/workshops":'cd-events-link'
+
 	 }
 	 $(`#${tabIndex[pathname]}`).addClass('cd-selected');
 	 updateSelectedNav();
