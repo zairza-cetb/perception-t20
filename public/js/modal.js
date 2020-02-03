@@ -14,7 +14,8 @@ $(document).ready(function() {
       let venue = $(currentItem).attr('data-venue');
       let rule_link = $(currentItem).attr('data-rule_link');
       let form_link = $(currentItem).attr('data-form_link');
-      // (rule_link === "")?(rule_link = '#'):(rule_link=rule_link);
+      $("#mod__form_desc").hide();
+      
 
       $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
 
@@ -37,7 +38,7 @@ $(document).ready(function() {
             .addClass("btn-danger")
             .text(buttonText)
             .removeClass("hide");
-          $("#mod__form_desc").addClass("show");
+          $("#mod__form_desc").show();
           $("#mod__form_link").attr("href",form_link);  
         } else {
 
@@ -48,7 +49,7 @@ $(document).ready(function() {
             .addClass("btn-success")
             .text(buttonText)
             .removeClass("hide");
-            $("#mod__form_desc").addClass("hide");
+            $("#mod__form_desc").hide();
         }
       });
 
@@ -138,7 +139,7 @@ $(document).ready(function() {
       .addClass("hide")
       .removeClass("btn-success")
       .removeClass("btn-danger");
-
+    $("#mod__form_desc").hide();
     if ($("#regbtn").text() == "Register") {
 
       // If the button says Register
@@ -157,14 +158,14 @@ $(document).ready(function() {
           // Change text to Unregister
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
-          $("#mod__form_desc").addClass("show");
+          $("#mod__form_desc").show();
           $("#mod__form_link").attr("href",form_link); 
           
         } else {
           // Change text back to Register
           $("#regbtn").text("Register");
           $("#regbtn").addClass("btn-success");
-          $("#mod__form_desc").addClass("hide");
+          $("#mod__form_desc").hide();
         }
 
         if (data == "E") {
@@ -202,10 +203,12 @@ $(document).ready(function() {
           // Change text to Register
           $("#regbtn").text("Register");
           $("#regbtn").addClass("btn-success");
+          $("#mod__form_desc").hide();
         } else {
           // Change text back to Unregister
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
+          $("#mod__form_desc").hide();
         }
 
         if (data == "E") {
