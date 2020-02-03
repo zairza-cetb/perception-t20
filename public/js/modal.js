@@ -11,7 +11,8 @@ $(document).ready(function() {
       let title = $(currentItem).attr("data-title");
       let desc = $(currentItem).attr('data-desc');
       let link = $(currentItem).attr('data-link');
-
+      $("#mod__link").attr("href",link);
+      $("#mod__link").hide();
       $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
 
       // Check if the user is already registered for the event
@@ -33,6 +34,7 @@ $(document).ready(function() {
             .addClass("btn-danger")
             .text(buttonText)
             .removeClass("hide");
+          $("#mod__link").show();
         } else {
 
           // Make the button into a Register button
@@ -42,6 +44,8 @@ $(document).ready(function() {
             .addClass("btn-success")
             .text(buttonText)
             .removeClass("hide");
+          $("#mod__link").hide();
+          
         }
         // $("#regbtn").text(buttonText);
         // $("#regbtn").removeClass("hide");
@@ -105,7 +109,7 @@ $(document).ready(function() {
       .addClass("hide")
       .removeClass("btn-success")
       .removeClass("btn-danger");
-
+    $("#mod__link").hide();
     if ($("#regbtn").text() == "Register") {
 
       // If the button says Register
@@ -124,10 +128,12 @@ $(document).ready(function() {
           // Change text to Unregister
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
+          $("#mod__link").show();
         } else {
           // Change text back to Register
           $("#regbtn").text("Register");
           $("#regbtn").addClass("btn-success");
+          $("#mod__link").hide();
         }
 
         if (data == "E") {
@@ -165,10 +171,12 @@ $(document).ready(function() {
           // Change text to Register
           $("#regbtn").text("Register");
           $("#regbtn").addClass("btn-success");
+          $("#mod__link").hide();
         } else {
           // Change text back to Unregister
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
+          $("#mod__link").hide();
         }
 
         if (data == "E") {
