@@ -62,7 +62,6 @@ $(document).ready(function() {
       $('#mod__rule_link').attr("href",rule_link);
       console.log(rule_link); 
       $('#downloadbtn').click(function(){
-        
         if(rule_link === '#'){
           Toast.fire({
             icon: "info",
