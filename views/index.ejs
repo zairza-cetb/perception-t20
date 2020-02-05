@@ -44,6 +44,35 @@
       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
 
+  <style>
+    .link-to-home {
+    position:absolute;
+    top: 20px;
+    left: 50px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../assets/img/Homelogo.png');
+    box-shadow: 0 0 0 2px rgba(12,12,12,.1);
+    transition: opacity .2s, border-radius .2s, box-shadow .2s;
+    transition-timing-function: ease-out;
+    }
+    .link-to-home:hover {
+    opacity: 0.8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(12,12,12,.1);
+    }
+    @media (max-width: 767px){
+    .Homelogo{
+        height: 40px;
+    }
+    }
+  </style>
 
 <body>
     <%- include('partials/main_preloader') %>
@@ -79,6 +108,11 @@
       </div> 
     </section>
     <div>
+
+      <!-- home button -->
+    <section class="Homelogo">
+      <a href="#" class="link-to-home"></a>
+    </section>
 
       <section class="aboutus" style= "width: 100%;position:relative;background-color:#f9f9f9; padding-bottom: 30px;">
         <%- include('partials/aboutus') %>
