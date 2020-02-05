@@ -8,7 +8,7 @@
         "heading":"Rescue Rangers",
         "small_desc":"  ",
         "date_time":" 14th Feb 10:00am (Round 1)",
-        "venue":" yet to reveal"
+        "venue":"Basketball Court"
     },
     "2": {
         "event": "Code Busters",
@@ -19,7 +19,7 @@
         "heading":"Code Busters",
         "small_desc":"Coding challenge",
         "date_time":"14th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor"
     },
     "3": {
         "event": "Web Weavers",
@@ -30,7 +30,7 @@
         "heading":"Web Weavers",
         "small_desc":"Difficult task to search from web",
         "date_time":" 14th Feb 1:30 pm",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor"
     },
     "4": {
         "event": "Dig the Web",
@@ -41,7 +41,7 @@
         "heading":"Dig the Web",
         "small_desc":"Find Clues from Google",
         "date_time":"15th Feb 10:00am ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor "
     },
     "5": {
         "event": "Enchanted Maze",
@@ -52,7 +52,7 @@
         "heading":"Enchanted Maze",
         "small_desc":"Line following robot",
         "date_time":"14th Feb 3:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"Badminton Court "
     },
     "6": {
         "event": "Wartalaap",
@@ -63,7 +63,7 @@
         "heading":"Wartalaap",
         "small_desc":"Don't Settle! Debate!",
         "date_time":"16th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "7": {
         "event": "Wordsworth",
@@ -74,7 +74,7 @@
         "heading":"Wordsworth",
         "small_desc":"Challenge your Vocabulary!",
         "date_time":"16th Feb 2:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor "
     },
     "8": {
         "event": "Qurious",
@@ -85,7 +85,7 @@
         "heading":"Qurious",
         "small_desc":"  ",
         "date_time":"14th Feb 3:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "9": {
         "event": "Dress your Book",
@@ -96,7 +96,7 @@
         "heading":"Dress your Book",
         "small_desc":"Design a cover for your book",
         "date_time":"15th Feb 1:30pm ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "10": {
         "event": "Twist in the Tale",
@@ -107,7 +107,7 @@
         "heading":"TITT",
         "small_desc":"Tell your story with a alternative endings!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "11": {
         "event": "Mock Loksabha",
@@ -118,7 +118,7 @@
         "heading":"Mock Loksabha",
         "small_desc":"Experience a mock Lok Sabha",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"A 201 "
     },
     "12": {
         "event": "India Quiz (Cancelled)",
@@ -129,7 +129,7 @@
         "heading":"",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" "
     },
     "13": {
         "event": "Biz Quiz",
@@ -140,7 +140,7 @@
         "heading":"Biz Quiz",
         "small_desc":"Quiz on Business",
         "date_time":"14th Feb 3:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "14": {
         "event": "Idea Challenge",
@@ -151,7 +151,7 @@
         "heading":"Idea Challenge",
         "small_desc":"Present Your Creative Idea!",
         "date_time":"14th Feb 11:00 am ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor "
     },
     "15": {
         "event": "Logo Quiz",
@@ -162,7 +162,7 @@
         "heading":"Logo Quiz",
         "small_desc":"Guess the Logo!",
         "date_time":"15th Feb 2:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor "
     },
     "16": {
         "event": "Karobaar",
@@ -173,7 +173,7 @@
         "heading":"Karobaar",
         "small_desc":"Sell me this!",
         "date_time":"15th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"SAC Area "
     },
     "17": {
         "event": "Hoverpod",
@@ -184,7 +184,7 @@
         "heading":"Hoverpod",
         "small_desc":"Hoverpod!",
         "date_time":"14th Feb 1:30 pm ",
-        "venue":" yet to reveal"
+        "venue":"Tennis Area "
     },
     "18": {
         "event": "Robo Dangal",
@@ -195,7 +195,7 @@
         "heading":"Robo Dangal",
         "small_desc":"Robot is indeed a fighter!",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"SAC Area/Badminton Court "
     },
     "19": {
         "event": "Electrivia",
@@ -206,7 +206,7 @@
         "heading":"Electrivia",
         "small_desc":"Electrical Quiz",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor "
     },
     "20": {
         "event": "Daily Hacks",
@@ -217,7 +217,7 @@
         "heading":"Daily Hacks",
         "small_desc":"Technical layout of waste",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "21": {
         "event": "Rube Goldberg Challenge",
@@ -228,7 +228,7 @@
         "heading":"RBC",
         "small_desc":"Build a Rube Goldberg Machine",
         "date_time":"14th Feb 11:00 am ",
-        "venue":" yet to reveal"
+        "venue":" ED Room A block "
     },
     "22": {
         "event": "Catapult Throw",
@@ -239,7 +239,7 @@
         "heading":"Catapult Throw",
         "small_desc":"Design a Catapult",
         "date_time":"14th Feb 2:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"Tennis Area "
     },
     "23": {
         "event": "Product modification challenge",
@@ -250,7 +250,7 @@
         "heading":"PMC",
         "small_desc":"Modify your product",
         "date_time":"16th Feb 2:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "24": {
         "event": "Test your endurance",
@@ -260,7 +260,7 @@
         "doc_link":"Knock out cycle race",
         "small_desc":"  ",
         "date_time":"16th Feb 11:00 am ",
-        "venue":" yet to reveal"
+        "venue":"Stage Area/ Bus Stop Area"
     },
     "25": {
         "event": "Water Rocket",
@@ -271,7 +271,7 @@
         "heading":"Water Rocket",
         "small_desc":"It’s simple! Complex it!",
         "date_time":"15th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"Ground "
     },
     "26": {
         "event": "Widget Mania",
@@ -282,7 +282,7 @@
         "heading":"Widget Mania",
         "small_desc":"Welcome motorheads!",
         "date_time":"15th Feb 1:30 pm(Round 1) ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor"
     },
     "27": {
         "event": "Designstein",
@@ -293,7 +293,7 @@
         "heading":"Designstein",
         "small_desc":"Design a CAD",
         "date_time":"14th Feb 11:00 am(Round 1) ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "28": {
         "event": "Junkyard Wars",
@@ -304,7 +304,7 @@
         "heading":"Junkyard Wars",
         "small_desc":"Build from Junk",
         "date_time":"14th Feb 1:30 pm ",
-        "venue":" yet to reveal"
+        "venue":"yet to be decided "
     },
     "29": {
         "event": "Auto Quiz",
@@ -315,7 +315,7 @@
         "heading":"Auto Quiz",
         "small_desc":"Auto Trivia",
         "date_time":"16th Feb 12:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor "
     },
     "30": {
         "event": "Lead the Beast",
@@ -326,7 +326,7 @@
         "heading":"Lead the Beast",
         "small_desc":"Ride an ATV!",
         "date_time":"14th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"Ground "
     },
     "31": {
         "event": "Embrace the speed",
@@ -337,7 +337,7 @@
         "heading":"Embrace the speed",
         "small_desc":"Ride an e-Vehicle!",
         "date_time":"14th Feb 10:00 am  ",
-        "venue":" yet to reveal"
+        "venue":"Ground "
     },
     "32": {
         "event": "Tech Paper Presentation",
@@ -348,7 +348,7 @@
         "heading":"TTP",
         "small_desc":"Presentation on Automobile Industry",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"A201 "
     },
     "33": {
         "event": "Automotive Hunt",
@@ -359,7 +359,7 @@
         "heading":"Automotive Hunt",
         "small_desc":"Thrilling treasure hunt awaits you!",
         "date_time":"16th Feb 2:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor "
     },
     "34": {
         "event": "Claw your way out",
@@ -370,7 +370,7 @@
         "heading":"CYWO",
         "small_desc":"Contest on Real Time Problem Solving",
         "date_time":"16th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "35": {
         "event": "Robo soccer",
@@ -381,7 +381,7 @@
         "heading":"Robo soccer",
         "small_desc":"Hey bots! Time for a soccer match!",
         "date_time":"14th Feb 2:00 pm(Round 1) ",
-        "venue":" yet to reveal"
+        "venue":"SAC Area/Tennis Court "
     },
     "36": {
         "event": "Find the Electronics",
@@ -392,7 +392,7 @@
         "heading":"FET",
         "small_desc":"Electronics treasure hunt",
         "date_time":"14th Feb 3:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"C Block, 1st floor "
     },
     "37": {
         "event": "CETronics",
@@ -403,7 +403,7 @@
         "heading":"CETronics",
         "small_desc":"Electronics Quiz",
         "date_time":"15th Feb 3:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"C Block, 1st floor"
     },
     "38": {
         "event": "UAV killer",
@@ -414,7 +414,7 @@
         "heading":"UAV killer",
         "small_desc":"Make a RC-Drone",
         "date_time":"14th Feb 10:00am(Round 1) ",
-        "venue":" yet to reveal"
+        "venue":"Ground "
     },
     "39": {
         "event": "Paper Wings Challenge ",
@@ -425,7 +425,7 @@
         "heading":"Paper Wings",
         "small_desc":"Build a Paper Plane",
         "date_time":"14th Feb 2:00 pm ",
-        "venue":" yet to reveal"
+        "venue":"Badminton Court "
     },
     "40": {
         "event": "Turbulence",
@@ -436,7 +436,7 @@
         "heading":"Turbulence",
         "small_desc":"Aerospace Quiz",
         "date_time":"15th Feb 1:30 pm ",
-        "venue":" yet to reveal"
+        "venue":" A Block, 4th floor"
     },
     "41": {
         "event": "Light Speed Presentation Challenge",
@@ -447,7 +447,7 @@
         "heading":"LPSC",
         "small_desc":"  ",
         "date_time":"16th Feb 11:00 am ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "42": {
         "event": "Biobuzz",
@@ -458,7 +458,7 @@
         "heading":"Biobuzz",
         "small_desc":"Biology Quiz",
         "date_time":"14th Feb 1:30 pm ",
-        "venue":" yet to reveal"
+        "venue":"Language Lab "
     },
     "43": {
         "event": "EL Cartel",
@@ -469,7 +469,7 @@
         "heading":"EL Cartel",
         "small_desc":"Poster Making on Biology,Biotech",
         "date_time":"15th Feb 12:00 pm(Round 1) ",
-        "venue":" yet to reveal"
+        "venue":"Biotech Department "
     },
     "44": {
         "event": "Pictionary",
@@ -480,7 +480,7 @@
         "heading":"Pictionary",
         "small_desc":"Remember childhood Dumb Charades game?",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"B Block, 4th floor "
     },
     "45": {
         "event": "Tech talk",
@@ -491,7 +491,7 @@
         "heading":"Tech talk",
         "small_desc":"Seminar on Technology",
         "date_time":"15th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"Biotech Smart Classroom/ Language Lab "
     },
     "46": {
         "event": "Hocus Focus",
@@ -502,7 +502,7 @@
         "heading":"Hocus Focus",
         "small_desc":"Are you good at solving puzzles?",
         "date_time":"16th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"A Block, 4th floor"
     },
     "47": {
         "event": "Technical Poster Presentation",
@@ -513,7 +513,7 @@
         "heading":"TPP",
         "small_desc":"  ",
         "date_time":"14th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"EWB Room "
     },
     "48": {
         "event": "Design Challenge",
@@ -524,62 +524,62 @@
         "heading":"Design Challenge",
         "small_desc":"Present your solution",
         "date_time":"15th Feb 10:00 am ",
-        "venue":" yet to reveal"
+        "venue":"EWB Room"
     },
     "49": {
         "event": "Construzione",
         "desc": "Bridges are one of the finest inventions engineers have produced. Although some of the basic bridges are made of logs and ropes, the bridge construction has never been easy. The real challenge is whether it can be built using any given material and whether you have the required skills. Unleash your creative ideas in 'Construzione' to construct a bridge using the given materials, making sure it sustains because we may ask you to stand on it.",
-        "cat":"technical",
+        "cat":" ",
         "form_link":"",
         "doc_link":"",
         "heading":"Construzione",
         "small_desc":"Making Bridge",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" "
     },
     "50": {
         "event": "Civi Quiz",
         "desc": "Our world is surrounded by products designed by civil engineers. From buildings to roads, there is a huge number of processes required to design and construct, keeping my mind the different aspects of it. We bring you the Civi Quiz, a civil engineering quiz. Participate in this quiz to showcase your knowledge in the field of civil engineering.",
-        "cat":"technical",
+        "cat":" ",
         "form_link":"",
         "doc_link":"",
         "heading":"Civi Quiz",
         "small_desc":"  ",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":" "
     },
     "51": {
         "event": "Memeology",
         "desc": "In this era of the Internet, meme creation has become one of the most important course. To honour all the meme creators, PERCEPTION 2020 is organizing the 'MEME CONTEST' - an online meme-making competition. So start scratching your head to produce a quality meme that will break the Internet and give people something to talk and laugh about the whole decade. Be original, be creative! ",
         "cat":"fun",
-        "form_link":"",
+        "form_link":"https://www.facebook.com/perception.cetb/photos/a.1544602079124637/2453785241539645/?type=3&theater",
         "doc_link":"",
         "heading":"Memeology",
         "small_desc":"Everywhere I go, I see memes",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"Online Event "
     },
     "52": {
         "event": "Tasveer",
         "desc": "Perception 2020 brings an opportunity for all the photography noobs and aces to participate in 'TASVEER': the online photography contest. THEME: Any photograph (portrait/landscape) that is to be submitted must be on the basis of the themes provided below: 1. CULTURE 2. STREET",
         "cat":"fun",
-        "form_link":"",
+        "form_link":"https://www.facebook.com/perception.cetb/photos/rpp.1532050600379785/2453380968246739/?type=3&theater",
         "doc_link":"",
         "heading":"Tasveer",
         "small_desc":"'TASVEER': the online photography contest",
         "date_time":" ",
-        "venue":" yet to reveal"
+        "venue":"Online Event "
     },
     "53": {
         "event": "Udaan",
         "desc": "How does it feel when you see something flying? How will it exhilarate you when we say you will be able to determine its movements? Mark the date of 13th February 2020. To add wings to your wishes, PERCEPTION 2020 presents an exciting workshop on 'Micro-drone making'. Grab the opportunity to experience hands-on drone making with a free kit worth Rs. 4500 only per Team. Gear up yourselves, be the strongest birdie among many. Participate in large numbers. A team of a maximum of 5 students are allowed for the workshop.",
         "cat":"workshop",
-        "form_link":"",
+        "form_link":"Registrations Closed",
         "doc_link":"https://drive.google.com/file/d/1LpjySWUCOxLx7mh69S-326kQY5XKDXb9/view?fbclid=IwAR0rSyPCgoMDAJrVY7o6wK12MWTDnWAjj9D3ysvAk8kSufZIkynp5IBINfk",
         "heading":"Udaan",
         "small_desc":"Workshop on Micro-drone making",
-        "date_time":" ",
-        "venue":" yet to reveal"
+        "date_time":"13th Feb ",
+        "venue":" "
     },
     "54": {
         "event": "Autoworkshop",
@@ -589,8 +589,8 @@
         "doc_link":"https://drive.google.com/open?id=1F0e0Ol_Ob1nFz-nIn742awQiCJpKH8Ei",
         "heading":"Autoworkshop",
         "small_desc":"Workshop by AMZ Automotive",
-        "date_time":" ",
-        "venue":" yet to reveal"
+        "date_time":"9th-10th Feb ",
+        "venue":" "
     }
 
 }
