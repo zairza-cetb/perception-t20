@@ -7,7 +7,7 @@
           box-sizing: border-box;
         }
         
-        #myInput {
+        #myInput, #myInput2 {
           background-position: 10px 10px;
           background-repeat: no-repeat;
           width: 800px;
@@ -79,7 +79,10 @@
     </table>
 
     <h1 style="text-align: center;">Main Table</h1>
-    <table border="1" class="Table">
+
+    <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search for events.." title="Type in a name">
+
+    <table border="1" id="myTable2" class="Table">
             <tr class="header">
                 <th>UID</th>
                 <th>Name</th>
@@ -95,7 +98,7 @@
             <% j++; %>
             <tr>
                 <td> <%= data.uid%></td>
-                <td> <%= data.name %> </td>
+                <td class="name"> <%= data.name %> </td>
                 <td> <%= data.username%> </td>
                 <td> <%= data.gender%> </td>
                 <td> <%= data.phone %> </td>
@@ -115,6 +118,24 @@
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        }
+        function myFunction2() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput2");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable2");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByClassName("name")[0];
             if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
