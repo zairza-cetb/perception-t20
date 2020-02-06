@@ -40,6 +40,11 @@ $(document).ready(function() {
             .removeClass("hide");
           $("#mod__form_desc").show();
           $("#mod__form_link").attr("href",form_link);  
+          if(form_link === '#'){
+            
+          }else{
+            $("#mod__form_link").attr("target","_blank");
+          }
         } else {
 
           // Make the button into a Register button
@@ -60,15 +65,17 @@ $(document).ready(function() {
       $("#mod__desc").text(desc);
       $("#mod__date_time_venue").html("<strong>Slot :</strong> "+date_time+"  <strong>Venue :</strong>" + venue);
       $('#mod__rule_link').attr("href",rule_link);
-      console.log(rule_link); 
+      if(rule_link === '#'){
+        
+      }else{
+        $("#mod__rule_link").attr("target","_blank");
+      }
       $('#downloadbtn').click(function(){
         if(rule_link === '#'){
           Toast.fire({
             icon: "info",
             title: "Sorry, Rule are not available yet."
           });
-        }else{
-          window.location.href=rule_link;
         }
       });
       $('#formbtn').click(function(){
@@ -77,8 +84,6 @@ $(document).ready(function() {
             icon: "info",
             title: "Sorry, Forms are not available yet."
           });
-        }else{
-          window.location.href=rule_link;
         }
       });
     } else {
