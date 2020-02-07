@@ -151,7 +151,6 @@ $(document).ready(function() {
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
           $("#mod__form_desc").show();
-          $("#mod__form_link").attr("href",form_link); 
           
         } else {
           // Change text back to Register
