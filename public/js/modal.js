@@ -38,7 +38,11 @@ $(document).ready(function() {
             .addClass("btn-danger")
             .text(buttonText)
             .removeClass("hide");
-          $("#mod__form_desc").show();
+            if(form_link === "#"){
+              $("#mod__form_desc").hide();
+            }else{
+              $("#mod__form_desc").show();
+            }
          
         } else {
 
@@ -64,7 +68,9 @@ $(document).ready(function() {
       if(!(rule_link === '#')){
         $("#mod__rule_link").attr("target","_blank");
       } 
-      if(!(form_link === '#')){
+      if(form_link === '#'){
+        $("#mod__form_desc").hide();
+      }else{
         $("#mod__form_link").attr("target","_blank");
       }
       $('#downloadbtn').click(function(){
@@ -147,10 +153,15 @@ $(document).ready(function() {
 
         if (data == "T") { // If Registered successfully
 
+          let form_link = $(currentItem).attr('data-form_link');
           // Change text to Unregister
           $("#regbtn").text("Unregister");
           $("#regbtn").addClass("btn-danger");
-          $("#mod__form_desc").show();
+          if(form_link === "#"){
+            $("#mod__form_desc").hide();
+          }else{
+            $("#mod__form_desc").show();
+          }
           
         } else {
           // Change text back to Register
