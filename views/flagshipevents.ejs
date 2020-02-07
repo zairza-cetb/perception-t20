@@ -34,23 +34,23 @@
             .card {
                 opacity: 0;
                 -webkit-transform: translateX(-100px);
-                     -moz-transform: translateX(-100px);
-                        -ms-transform: translateX(-100px);
-                         -o-transform: translateX(-100px);
-                                transform: translateX(-100px);
+                -moz-transform: translateX(-100px);
+                -ms-transform: translateX(-100px);
+                -o-transform: translateX(-100px);
+                transform: translateX(-100px);
                 -webkit-transition: all 2.6s ease-out;
-                     -moz-transition: all 1.6s ease-out;
-                        -ms-transition: all 1.6s ease-out;
-                         -o-transition: all 1.6s ease-out;
-                                transition: all 0.6s ease-out;
+                -moz-transition: all 1.6s ease-out;
+                -ms-transition: all 1.6s ease-out;
+                -o-transition: all 1.6s ease-out;
+                transition: all 0.6s ease-out;
             }
             .card.visible {
                 opacity: 1;
                 -webkit-transform: none;
-                     -moz-transform: none;
-                        -ms-transform: none;
-                         -o-transform: none;
-                                transform: none;
+                -moz-transform: none;
+                -ms-transform: none;
+                -o-transform: none;
+                transform: none;
             }
 
      .link-to-home {
@@ -101,7 +101,7 @@
                             <img src="assets/img/eventicons/<%= d %>.png">
                         </div>
                         <div class="content">
-                            <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>">
+                            <div data-title="<%= evjson[d].event %>" data-id="<%= d %>" data-desc="<%= evjson[d].desc %>" data-date_time="<%= evjson[d].date_time %>" data-venue="<%= evjson[d].venue %>" data-form_link="<%= evjson[d].form_link %>" data-rule_link="<%= evjson[d].doc_link %>">
                             <h3 class="glitch" data-text="<%= evjson[d].event %>"><%= evjson[d].event %></h3><br>
                             <p class="glitch" data-text="<%= evjson[d].small_desc %>"><%= evjson[d].small_desc %></p>
                             <button class="evbtn btn btn-light-green"  style="background:cornflowerblue; float: right;">Know More<i class="fa fa-arrow-circle-right ml-1"></i></button>
