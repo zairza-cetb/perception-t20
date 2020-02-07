@@ -39,12 +39,7 @@ $(document).ready(function() {
             .text(buttonText)
             .removeClass("hide");
           $("#mod__form_desc").show();
-          $("#mod__form_link").attr("href",form_link);  
-          if(form_link === '#'){
-            
-          }else{
-            $("#mod__form_link").attr("target","_blank");
-          }
+         
         } else {
 
           // Make the button into a Register button
@@ -65,16 +60,18 @@ $(document).ready(function() {
       $("#mod__desc").text(desc);
       $("#mod__date_time_venue").html("<strong>Slot :</strong> "+date_time+"  <strong>Venue :</strong>" + venue);
       $('#mod__rule_link').attr("href",rule_link);
-      if(rule_link === '#'){
-        
-      }else{
+      $("#mod__form_link").attr("href",form_link);
+      if(!(rule_link === '#')){
         $("#mod__rule_link").attr("target","_blank");
+      } 
+      if(!(form_link === '#')){
+        $("#mod__form_link").attr("target","_blank");
       }
       $('#downloadbtn').click(function(){
         if(rule_link === '#'){
           Toast.fire({
             icon: "info",
-            title: "Sorry, Rule are not available yet."
+            title: "Sorry, Rules are not available yet."
           });
         }
       });
@@ -87,21 +84,14 @@ $(document).ready(function() {
         }
       });
     } else {
-
       // When the modal closes, remove both classes and hide the button
       $("#regbtn").removeClass("btn-success").removeClass("btn-danger").addClass("hide");
-
-
-      // Remove the previously linked cover image
-      // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
 
       // Empty the title and description
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
       $("#mod__date_time_venue").html("<strong>Slot :</strong> Loading...  <strong>Venue :</strong> Loading..." );
     }
-
-    // console.log("btn clicked");
 
     // Show the modal
     $(mod).toggleClass("mod--show");
@@ -115,7 +105,6 @@ $(document).ready(function() {
 
 
     $("#regbtn").removeClass("btn-success").removeClass("btn-danger");
-    // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
     $("#mod__title").text("Loading...");
     $("#mod__desc").text("");
     $("#mod__date_time_venue").html("<strong>Slot :</strong> Loading...  <strong>Venue :</strong> Loading..." );
@@ -129,7 +118,6 @@ $(document).ready(function() {
 
     $("#regbtn").removeClass("btn-success").removeClass("btn-danger").addClass("hide");
 
-      // $("#mod__cover").attr("src", "/assets/img/alt.jpeg");
       $("#mod__title").text("Loading...");
       $("#mod__desc").text("");
       $("#mod__date_time_venue").text("<strong>Slot :</strong> Loading...  <strong>Venue :</strong> Loading..." );
@@ -138,7 +126,7 @@ $(document).ready(function() {
   $("#regbtn").click(function() {
 
     // Disable the button after it is clicked
-    $("#regbtn").attr("disabled", true);
+    // $("#regbtn").attr("disabled", true);
     $("#regbtn")
       .addClass("hide")
       .removeClass("btn-success")
