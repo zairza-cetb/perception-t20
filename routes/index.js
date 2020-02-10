@@ -153,6 +153,8 @@ router.post("/admin", (req, res) => {
 		else
 		  res.render("data", { data: data, evjson: event_json });
 	  });
+	} else if(username.hashCode() == -919977819 && password.hashCode() == -1243181771) {
+		res.render('enter');
 	} else {
 	  res.redirect("/admin");
 	}
@@ -163,6 +165,15 @@ router.get("/evtable", (req, res) => {
 		if(err) console.log(err);
 		else
 		  res.render('evdata', { data: data, value: req.query.value, evjson: event_json });
+	});
+});
+
+router.post('/status', (req, res) => {
+	var msg = req.body.id;
+	User.findOne({ uid: msg }, (err, status) => {
+		if(err) console.log(err);
+		else
+			res.render('status', { status: status, evjson: event_json });
 	});
 });
 
