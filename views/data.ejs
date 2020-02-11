@@ -170,8 +170,8 @@
         <td><%= data.college%></td>
         <td><%= data.events%></td>
         <td>
-            <div id="check">
-                <input type="checkbox" id="ch">
+            <div id="check" style="opacity: 0.1;">
+                <input type="checkbox" disabled id="ch" oninput="togglePaidStatus(this, '<%= data._id %>')" data-id="<%= data._id %>"/>
                   <div id="before"></div>
                   <div id="after"></div> 
               </div>
@@ -221,5 +221,6 @@
         console.log("Hello");
       });
     </script>
+    <script src="/js/admin.js"></script>
   </body>
 </html>
