@@ -38,6 +38,47 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+
+router.get('/getpaidstatus/:uid', (req, res, next) => {
+
+  var res_data = {};
+    User.findById(req.params.uid, (err ,document) => {
+        if (document.paidstatus == "unpaid") {
+          res_data.paid = false
+        }
+        if (document.paidstatus == "paid") {
+          res_data.paid = true
+        }
+        if (err) {
+          res_data.err = err;
+        }
+        res.send(JSON.stringify(res_data));
+      })
+});
+
+router.get('/togglepaidstatus/:uid', (req, res, next) => {
+  User.findById(req.params.uid, (err, doc) => {
+    if (err) {
+      res.statusCode = 500;
+      res.end();
+    } else {
+      if (doc.paidstatus === "unpaid") {
+        doc.paidstatus = "paid"
+      }else {
+        doc.paidstatus = "unpaid"
+      }
+      doc.save((err) => {
+        if (err) {
+          res.statusCode = 500;
+          res.end();
+        } else {
+          res.send("OK");
+        }
+      });
+    }
+  });
+});
+
 router.post("/register", function (req, res) {
     const newUser = new User({
       username: req.body.username,
@@ -289,6 +330,7 @@ router.get('/unregister/:eventID', (req, res) => {
     res.send('F');
   }
 });
+
 ///////////////////////////////////////////////////////////////////////// 
 
 module.exports = router;
