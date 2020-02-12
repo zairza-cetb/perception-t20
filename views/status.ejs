@@ -51,7 +51,7 @@
       </style>
 </head>
 <body>
-  <h1 style="text-align: center;">Details of <%= status.name %></h1>
+  <h1 style="text-align: center;">Details of <%= status.uid %></h1>
     <table border="1" class="Table">
         <tr class="header">
           <th>UID</th>
@@ -69,10 +69,13 @@
 
       <table border="1" class="Table2">
         <tr class="header">
+          <th>Sl No.</th>
           <th>Events</th>
         </tr>
+        <% let i = 0; %>
         <% status.events.forEach(function(ev) { %>
         <tr class="header">
+          <td><%= ++i; %></td>
           <td><%= evjson[ev]["event"] %></td>
         </tr>
         <% }); %>

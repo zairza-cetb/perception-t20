@@ -142,6 +142,9 @@ router.get('/resetpassword/:resetRequestID', function(req, res) {
 	res.render('resetpassword');
 })
 
+router.get("/coordinator", (req, res) => {
+	res.render("enter");
+});
 
 /* POST admin page. */
 router.post("/admin", (req, res) => {
@@ -153,8 +156,6 @@ router.post("/admin", (req, res) => {
 		else
 		  res.render("data", { data: data, evjson: event_json });
 	  });
-	} else if(username.hashCode() == -919977819 && password.hashCode() == -1243181771) {
-		res.render('enter');
 	} else {
 	  res.redirect("/admin");
 	}
