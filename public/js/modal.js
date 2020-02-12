@@ -65,7 +65,10 @@ $(document).ready(function() {
       $("#mod__date_time_venue").html("<strong>Slot :</strong> "+date_time+"  <strong>Venue :</strong>" + venue);
       $('#mod__rule_link').attr("href",rule_link);
       $("#mod__form_link").attr("href",form_link);
-      if(!(rule_link === '#')){
+      if(rule_link === '#'){
+        $("#mod__rule_desc").hide();
+      }else{
+        $("#mod__rule_desc").show();
         $("#mod__rule_link").attr("target","_blank");
       } 
       if(form_link === '#'){
