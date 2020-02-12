@@ -1,7 +1,6 @@
 function checkPaidStatusAndSet(element, uid) {
     fetch(`/getpaidstatus/${uid}`)
         .then((res) => {
-            console.log('res')
             if (res.ok) {
                 return res.json()
             } else {
@@ -9,7 +8,6 @@ function checkPaidStatusAndSet(element, uid) {
             }
         })
         .then((data) => {
-            console.log(data);
             if (!data.err) {
                 $(element).attr('disabled', false).parent().css({
                     "opacity": 1

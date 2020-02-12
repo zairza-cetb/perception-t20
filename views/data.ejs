@@ -138,6 +138,16 @@
       </tr>
       <% i++; } %>
     </table>
+    <h1 style="text-align: center;">Payment Status</h1>
+    
+        <table border="1" class="Table2">
+          <% let p=0; %> <% data.forEach(function(data){ %> <%  if(data.paidstatus === "paid") p++; }); %>
+          <tr class="header">
+            <th>No. of Students Paid</th>
+            <th><%= p%></th>
+          </tr>
+        </table>
+
 
     <h1 style="text-align: center;">Main Table</h1>
 
@@ -145,7 +155,7 @@
       type="text"
       id="myInput2"
       onkeyup="myFunction2()"
-      placeholder="Search for events.."
+      placeholder="Search for PID "
       title="Type in a name"
     />
 
@@ -162,7 +172,7 @@
       </tr>
       <% let j=0; %> <% data.forEach(function(data){ %> <% j++; %>
       <tr>
-        <td><%= data.uid%></td>
+        <td class="uid"><%= data.uid%></td>
         <td class="name"><%= data.name %></td>
         <td><%= data.username%></td>
         <td><%= data.gender%></td>
@@ -206,7 +216,7 @@
         table = document.getElementById("myTable2");
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
-          td = tr[i].getElementsByClassName("name")[0];
+          td = tr[i].getElementsByClassName("uid")[0];
           if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -217,9 +227,6 @@
           }
         }
       }
-      $("#check").click(function() {
-        console.log("Hello");
-      });
     </script>
     <script src="/js/admin.js"></script>
   </body>
