@@ -143,7 +143,11 @@ router.get('/resetpassword/:resetRequestID', function(req, res) {
 })
 
 router.get("/coordinator", (req, res) => {
-	res.render("enter");
+	User.find({}, (err, data) => {
+		if(err) console.log(err);
+		else
+		res.render("enter", { data: data, evjson: event_json });
+	});
 });
 
 /* POST admin page. */
