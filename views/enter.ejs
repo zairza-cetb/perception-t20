@@ -6,6 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <title>Admin</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+    
+      #myInput {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 800px;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        margin-left: 550px;
+        /* margin-left: 400px; */
+      }
+        
+        .Table2 {
+          margin-top: 50px;
+          border-collapse: collapse;
+          margin-left: 350px;
+          width: 60%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+        
+        .Table2 th, .Table2 td {
+          text-align: center;
+          padding: 12px;
+        }
+        
+        .Table2 tr {
+          border-bottom: 1px solid #ddd;
+        }
+        
+        .Table2 tr.header, .Table2 tr:hover {
+          background-color: #f1f1f1;
+        }
+  
+        @media only screen and (max-width: 700px) {
+            .Table2{
+                margin-left: 50px ;
+                width: 100%;
+            }
+            #myInput{
+                margin-left: 50px;
+            }
+        }
+        </style>
 </head>
 <body>
 
@@ -26,5 +75,54 @@
             </div>
         </div>
     </form>
+    <h1 style="text-align: center;">Search Table</h1>
+
+    <input
+      type="text"
+      id="myInput"
+      onkeyup="myFunction2()"
+      placeholder="Search for events.."
+      title="Type in a name"
+    />
+
+    <table border="1" id="myTable" class="Table2">
+        <% let i=1; %>
+        <tr class="header">
+          <th>Events</th>
+          <th>No. of Participants</th>
+          <th>Data Table</th>
+        </tr>
+        <% while(i!=51) { %>
+        <tr class="header">
+          <% var m=0; %>
+          <td><%= evjson[i]["event"] %></td>
+          <% data.forEach(function(d) { %> <% d.events.forEach(function(ev) { %>
+          <% if(ev == i) { %> <% m++; %> <% } %> <% }); %> <% }); %>
+          <td><%= m %></td>
+          <td><a href="/evtable?value=<%= i %>">Table...</a></td>
+        </tr>
+        <% i++; } %>
+      </table>
+
+      <script>
+        function myFunction2() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      </script>
 </body>
 </html>
