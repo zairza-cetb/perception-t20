@@ -52,7 +52,12 @@ function updateTimer() {
   h = hours - days  * 24;
   m = mins  - hours * 60;
   s = secs  - mins  * 60;
-
+  if(diff<0){
+   d=0;
+   h=0;
+   m=0;
+   s=0; 
+  }
   document.getElementById("timer")
     .innerHTML =
       '<div>' + d + '<span>days</span></div>' +
