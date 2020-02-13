@@ -173,6 +173,14 @@ router.get("/evtable", (req, res) => {
 	});
 });
 
+router.get("/evadmintable", (req, res) => {
+	User.find({}, (err, data) => {
+		if(err) console.log(err);
+		else
+		  res.render('evadmindata', { data: data, value: req.query.value, evjson: event_json });
+	});
+});
+
 router.post('/status', (req, res) => {
 	var msg = req.body.id;
 	User.findOne({ uid: msg }, (err, status) => {
